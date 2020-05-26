@@ -1,4 +1,3 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -6,39 +5,101 @@
 {% endblock %}
 
 {% block content %}
+<!-- Main content starts -->
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-       Standards versioning design history
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+ <!-- Full width heading starts -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-tag">DISCOVERY</span><br>
+      {{serviceName}} design history      
+    </h1>
+  </div>
+</div>
+ <!-- Full width heading ends -->
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+  <!-- Two thirds header section starts -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">    
+    <h2 class="govuk-heading-m govuk-!-margin-top-6">
+      What is Standards versioning?
+    </h2>
+    <p class="govuk-body">
+      This is <a href="#" class="govuk-link govuk-link--no-visited-state">the full context</a>.
+    </p>
+    <p class="govuk-body">
+      This documents the Discovery phase of the Standards versioning project, June &mdash; ? 2020.
+    </p>    
+    
+    <h2 class="govuk-heading-m govuk-!-margin-top-6">
+      Who's working on this project?
+    </h2>
+    <ul class="govuk-list govuk-list--bullet">      
+      <li><a  class="govuk-link govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/wiki/people/5caf4ce4f4c2b72785f452e2" title="Link to Helen's profile on Confluence">Helen Dickerson</a> &ndash; Content Designer</li>
+      <li><a  class="govuk-link govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/wiki/people/5b18ff545f02415b9f02adf5" title="Link to Rob's profile on Confluence">Rob Langdon</a> &ndash; Interaction Designer</li>
+      <li><a  class="govuk-link govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/wiki/people/557058:20dfd1f1-310c-4998-93c9-cab76f699b1d" title="Link to Mayur's profile on Confluence">Mayur Shah</a> &ndash; User Researcher</li>
+      <li><a  class="govuk-link govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/wiki/people/557058:b10f7671-5e62-4701-af37-f9b021da9ec1" title="Link to Andy's profile on Confluence">Andy Walsh</a> &ndash; Product Owner</li>
+    </ul>
+  </div>
+  <!-- Two thirds header section ends -->
 
-      <h2 class="govuk-heading-m">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/docs/tutorials-and-examples">Example pages and documentation</a>
-        </li>
-        <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-        </li>
+  <!-- One third header section starts -->
+  <div class="govuk-grid-column-one-third">
+    <!--<h2 class="govuk-heading-m">
+      <br>Design artefacts
+    </h2>
+    <div class="govuk-inset-text">
+      <ul class='govuk-list govuk-list--bullet'>                
+        <li><a href='#' class='govuk-link govuk-link--no-visited-state'>Thing #1</a></li>
       </ul>
-    </div>
+    </div>-->
+  </div>
+  <!-- One third header section ends -->
 </div>
 
+<div class="govuk-grid-row">
+  <!-- Full width header section starts -->
+  <div class="govuk-grid-column-full">
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <h2 class="govuk-heading-m">
+      What are our design goals and what are we doing?
+    </h2>
+    <p class="govuk-body">
+      {{ govukDetails({
+        summaryText: "Discovery design goals",
+        html: "<table class='govuk-table'>                    
+          <thead class='govuk-table__head'>
+            <tr class='govuk-table__row'>
+              <th scope='col' class='govuk-table__header'>What we're doing</th>
+              <th scope='col' class='govuk-table__header'>Why we're doing it</th>
+            </tr>
+          </thead>
+          <tbody class='govuk-table__body'>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'>---</td>
+              <td class='govuk-table__cell'>---</td>
+            </tr>            
+          </tbody>
+        </table>"
+      }) }}     
+    </p>    
+    <hr class="govuk-section-break--l">
+  </div>   
+  <!-- Full width header section ends -->
+</div>
+
+<div class="govuk-grid-row">
+  <!-- Sprints section starts -->
+  <div class="govuk-grid-column-two-thirds">
+    {% include './sprint-0/_summary.html' %}
+                
+    <!--<h2 class="govuk-heading-l govuk-!-margin-top-9">
+      Past sprints
+    </h2>-->
+    
+  </div>
+  <!-- Sprints section ends -->
+</div>
+
+<!-- Main content ends -->
 {% endblock %}
