@@ -22,3 +22,13 @@ module.exports = {
   // Insert values here
 
 }
+
+require("request").get("https://www.instituteforapprenticeships.org/api/apprenticeshipstandards", (error, response, body) => {
+    var _apiData = JSON.parse(body),
+        _versionTypes = {}
+    console.log(_apiData.length + " standards in API (https://www.instituteforapprenticeships.org/api/apprenticeshipstandards)")
+    _apiData.forEach(function(_standard, index) {
+        _versionTypes["version " + _standard.version] = (_versionTypes["version " + _standard.version] || 0) + 1
+    });
+    console.log(_versionTypes)
+});
