@@ -11,7 +11,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-xl">
-      <span class="govuk-tag">DISCOVERY</span><br>
+      <!--<span class="govuk-tag">ALPHA</span><br>-->
       {{serviceName}} design history      
     </h1>
   </div>
@@ -28,7 +28,7 @@
       All documents and links are being collected on <a href="https://skillsfundingagency.atlassian.net/wiki/spaces/NDL/pages/1998881080/Standards%2BVersioning%2B-%2BSV" class="govuk-link govuk-link--no-visited-state">a Confluence page</a>.
     </p>
     <p class="govuk-body">
-      This documents the Discovery phase of the {{serviceName}} project, June 2020 onwards.
+      This documents the pre-Alpha phase of the {{serviceName}} project, June 2020 onwards.
     </p>    
     
     <h2 class="govuk-heading-m govuk-!-margin-top-6">
@@ -65,7 +65,7 @@
     </h2>
     <p class="govuk-body">
       {{ govukDetails({
-        summaryText: "Discovery design goals",
+        summaryText: "Project design goals",
         html: "<table class='govuk-table'>                    
           <thead class='govuk-table__head'>
             <tr class='govuk-table__row'>
@@ -90,12 +90,37 @@
 <div class="govuk-grid-row">
   <!-- Sprints section starts -->
   <div class="govuk-grid-column-two-thirds">
-    {% include './sprint-0/_summary.html' %}
+    {% include './sprint-1/_summary.html' %}
                 
-    <!--<h2 class="govuk-heading-l govuk-!-margin-top-9">
-      Past sprints
-    </h2>-->
+    <h2 class="govuk-heading-l govuk-!-margin-top-9">
+      Previous sprints
+    </h2>
     
+    {% set sprint0Html %}
+    {% include './sprint-0/_summary.html' %}
+    {% endset %}
+
+    {{ govukAccordion({
+      id: "accordion-default",
+      items:
+      [      
+      {
+        heading:
+        {
+          text: "Sprint 0"
+        },
+        content:
+        {
+          html: sprint0Html
+        },
+        summary:
+        {
+          html: '9th &mdash;23rd June 2020'
+        }
+      }
+      ]
+    }) }}
+
   </div>
   <!-- Sprints section ends -->
 </div>
