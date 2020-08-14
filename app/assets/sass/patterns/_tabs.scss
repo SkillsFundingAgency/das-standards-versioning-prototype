@@ -2,31 +2,31 @@
      display: inline-block;
      width: 100%;
      margin-bottom: 1em;
-     &.school-hub {
+     &.standards-tabs {
           ul.govuk-list {
                li {
-                    width: 33.333%;
+                    width: 20%;
                }
           }
      }
-     &.request-tabs {
-          ul.govuk-list {
-               li {
-                    width: 25%;
-                    // &:last-of-type {
-                    //      width: 20%;
-                    //      margin: 0 0 0 5%;
-                    // }
-               }
-          }
-     }
-     &.planning-meeting-tabs {
-          ul.govuk-list {
-               li {
-                    width: 25%;
-               }
-          }
-     }
+     // &.request-tabs {
+     //      ul.govuk-list {
+     //           li {
+     //                width: 25%;
+     //                // &:last-of-type {
+     //                //      width: 20%;
+     //                //      margin: 0 0 0 5%;
+     //                // }
+     //           }
+     //      }
+     // }
+     // &.planning-meeting-tabs {
+     //      ul.govuk-list {
+     //           li {
+     //                width: 25%;
+     //           }
+     //      }
+     // }
      ul.govuk-list {
           li {
                display: inline-block;
@@ -39,9 +39,9 @@
                          border-bottom: 10px solid govuk-colour("light-grey");
                          border-radius: 0;
                          width: 100%;
-                         padding: 1em ;
+                         padding: 1em 0.5em;
                          text-align: center;
-                         font-size: 1.2rem;
+                         font-size: 1rem;
                          font-weight: bold;
                          color: black;
                          &:active, &:focus, &:hover {
@@ -54,6 +54,23 @@
                          &.selected {
                               border-bottom: 10px solid $govuk-link-colour;
                               color: $govuk-link-colour;
+                         }
+                         .number {
+                              color: $govuk-link-colour;
+                              &.alert {
+                                   display: flex;
+                                   align-items: center;
+                                   justify-content: center;
+                                   background: $govuk-error-colour;
+                                   color: white;
+                                   float: left;
+                                   width: 1.5em;
+                                   height: 1.5em;
+                                   margin: -0.25em -1em -0.25em 0;
+                                   border-radius: 50%;
+                                   position: relative;
+                                   top: 0.1em;
+                              }
                          }
                     }
                }

@@ -14,32 +14,36 @@
      <div class="govuk-grid-row dashboard-title">
           <div class="govuk-grid-column-full">
                <h1 class="govuk-heading-xl">
-                    Apprenticeship standards
-                    <span class="govuk-caption-xl">Training provider name</span>
+                    <span class="govuk-caption-xl">
+                         <span class="icon approved"></span>Approved for delivery
+                         <a href="#" class="email-preferences">Email preferences</a>
+                    </span>
+                    Compressed air and vacuum technician
                </h1>
 
-               {% include "../../includes/hub-page/tabs-hub-page.html" %}
-
-               {% include "../../includes/hub-page/filter-hub-page.html" %}
+               {% include "../includes/standards-page/tabs-standards-page.html" %}
 
           </div>
      </div>
 
      <!-- ======================================= TAB CONTENT - ONE - START ======================================= -->
-     {% include "../../includes/hub-page/standards-all.html" %}
+     {% include "../includes/standards-page/standards-changes.html" %}
      <!-- ======================================= TAB CONTENT - ONE - END ======================================= -->
 
      <!-- ======================================= TAB CONTENT - TWO - START ======================================= -->
-     {% include "../../includes/hub-page/standards-upcoming.html" %}
+     {% include "../includes/standards-page/standards-contacts.html" %}
      <!-- ======================================= TAB CONTENT - TWO - END ======================================= -->
 
      <!-- ======================================= TAB CONTENT - THREE - START ======================================= -->
-     {% include "../../includes/hub-page/standards-recent.html" %}
+     {% include "../includes/standards-page/standards-old.html" %}
      <!-- ======================================= TAB CONTENT - THREE - END ======================================= -->
 
      <!-- ======================================= TAB CONTENT - FOUR - START ======================================= -->
-     {% include "../../includes/hub-page/standards-review.html" %}
+     {% include "../includes/standards-page/standards-employers.html" %}
      <!-- ======================================= TAB CONTENT - FOUR - END ======================================= -->
 
+     <!-- ======================================= TAB CONTENT - FIVE - START ======================================= -->
+     {% include "../includes/standards-page/standards-docs.html" %}
+     <!-- ======================================= TAB CONTENT - FIVE - END ======================================= -->
 
 {% endblock %}

@@ -76,6 +76,14 @@ hr {
      }
 }
 
+.email-preferences {
+     padding-left: 2em;
+     font-size: 1rem;
+     float: right;
+     background: url('../images/contact-email.svg') no-repeat 0% 50%;
+     background-size: contain;
+}
+
 .icon {
      display: inline-block;
      width: 1em;
@@ -86,6 +94,10 @@ hr {
      // &:first-of-type {
      //      margin-left: 0;
      // }
+     &.approved {
+          background: url('../images/tick-green.svg') no-repeat 50% 50%;
+          background-size: contain;
+     }
      &.contact {
           background: url('../images/contact-person.svg') no-repeat 50% 50%;
           background-size: contain;
