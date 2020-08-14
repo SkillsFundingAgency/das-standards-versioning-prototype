@@ -7,121 +7,133 @@
 {% block content %}
 <!-- Main content starts -->
 
- <!-- Full width heading starts -->
+<!-- Full width heading starts -->
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <h1 class="govuk-heading-xl">
-      <!--<span class="govuk-tag">ALPHA</span><br>-->
-      {{serviceName}} design history      
-    </h1>
-  </div>
+     <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-xl">
+               <!--<span class="govuk-tag">ALPHA</span><br>-->
+               {{serviceName}} design history
+          </h1>
+     </div>
 </div>
- <!-- Full width heading ends -->
+<!-- Full width heading ends -->
 
-  <!-- Two thirds header section starts -->
+<!-- Two thirds header section starts -->
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">    
-    <h2 class="govuk-heading-m govuk-!-margin-top-6">
-      What is {{serviceName}}?
-    </h2>
-    <p class="govuk-body">
-      All documents and links are being collected on <a href="https://skillsfundingagency.atlassian.net/wiki/spaces/NDL/pages/1998881080/Standards%2BVersioning%2B-%2BSV" class="govuk-link govuk-link--no-visited-state">a Confluence page</a>.
-    </p>
-    <p class="govuk-body">
-      This documents the pre-Alpha phase of the {{serviceName}} project, June 2020 onwards.
-    </p>    
-    
-    <h2 class="govuk-heading-m govuk-!-margin-top-6">
-      Who's working on this project?
-    </h2>
-    <ul class="govuk-list govuk-list--bullet">      
-      <li><a  class="govuk-link govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/wiki/people/5caf4ce4f4c2b72785f452e2" title="Link to Helen's profile on Confluence">Helen Dickerson</a> &ndash; Content Designer</li>
-      <li><a  class="govuk-link govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/wiki/people/5b18ff545f02415b9f02adf5" title="Link to Rob's profile on Confluence">Rob Langdon</a> &ndash; Interaction Designer</li>
-      <li><a  class="govuk-link govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/wiki/people/5d10c0fe17233d0c9c3d4e44" title="Link to Kerry's profile on Confluence">Kerry Baugh</a> &ndash; User Researcher</li>
-    </ul>
-  </div>
-  <!-- Two thirds header section ends -->
+     <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-m govuk-!-margin-top-6">
+               What is {{serviceName}}?
+          </h2>
+          <p class="govuk-body">
+               All documents and links are being collected on <a href="https://skillsfundingagency.atlassian.net/wiki/spaces/NDL/pages/1998881080/Standards%2BVersioning%2B-%2BSV" class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank">a Confluence page</a>.
+          </p>
+          <p class="govuk-body">
+               This documents the pre-Alpha phase of the {{serviceName}} project, June 2020 onwards.
+          </p>
 
-  <!-- One third header section starts -->
-  <div class="govuk-grid-column-one-third">
-    <!--<h2 class="govuk-heading-m">
-      <br>Design artefacts
-    </h2>
-    <div class="govuk-inset-text">
-      <ul class='govuk-list govuk-list--bullet'>                
-        <li><a href='#' class='govuk-link govuk-link--no-visited-state'>Thing #1</a></li>
-      </ul>
-    </div>-->
-  </div>
-  <!-- One third header section ends -->
-</div>
+          <h2 class="govuk-heading-m govuk-!-margin-top-6">
+               Who's working on this project?
+          </h2>
+          <ul class="govuk-list govuk-list--bullet">
+               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/people/5caf4ce4f4c2b72785f452e2" title="Link to Helen's profile on Confluence">Helen Dickerson</a> &ndash; Content Designer</li>
+               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/people/5bd824414d969945b2bead6b" title="Link to Chris's profile on Confluence">Chris Hewison</a> &ndash; Interaction Designer</li>
+               <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/wiki/people/5b18ff545f02415b9f02adf5" title="Link to Rob's profile on Confluence">Rob Langdon</a> &ndash; Interaction Designer</li> -->
+               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/people/5d10c0fe17233d0c9c3d4e44" title="Link to Kerry's profile on Confluence">Kerry Baugh</a> &ndash; User Researcher</li>
+          </ul>
+     </div>
+     <!-- Two thirds header section ends -->
 
-<div class="govuk-grid-row">
-  <!-- Full width header section starts -->
-  <div class="govuk-grid-column-full">
-  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-    <h2 class="govuk-heading-m">
-      What are our design goals and what are we doing?
-    </h2>
-    <p class="govuk-body">
-      {{ govukDetails({
-        summaryText: "Project design goals",
-        html: "<table class='govuk-table'>                    
-          <thead class='govuk-table__head'>
-            <tr class='govuk-table__row'>
-              <th scope='col' class='govuk-table__header'>What we're doing</th>
-              <th scope='col' class='govuk-table__header'>Why we're doing it</th>
-            </tr>
-          </thead>
-          <tbody class='govuk-table__body'>
-            <tr class='govuk-table__row'>
-              <td class='govuk-table__cell'>---</td>
-              <td class='govuk-table__cell'>---</td>
-            </tr>            
-          </tbody>
-        </table>"
-      }) }}     
-    </p>    
-    <hr class="govuk-section-break--l">
-  </div>   
-  <!-- Full width header section ends -->
+     <!-- One third header section starts -->
+     <div class="govuk-grid-column-one-third">
+          <!--<h2 class="govuk-heading-m">
+               <br>Design artefacts
+          </h2>
+          <div class="govuk-inset-text">
+               <ul class='govuk-list govuk-list--bullet'>
+                    <li><a href='#' class='govuk-link govuk-link--no-visited-state'>Thing #1</a></li>
+               </ul>
+          </div>-->
+     </div>
+     <!-- One third header section ends -->
 </div>
 
 <div class="govuk-grid-row">
-  <!-- Sprints section starts -->
-  <div class="govuk-grid-column-two-thirds">
-    {% include './sprint-1/_summary.html' %}
-                
-    <h2 class="govuk-heading-l govuk-!-margin-top-9">
-      Previous sprints
-    </h2>
-    
-    {% set sprint0Html %}
-    {% include './sprint-0/_summary.html' %}
-    {% endset %}
+     <!-- Full width header section starts -->
+     <div class="govuk-grid-column-full">
+          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+          <h2 class="govuk-heading-m">
+               What are our design goals and what are we doing?
+          </h2>
+          <p class="govuk-body">
+               {{ govukDetails({
+                    summaryText: "Project design goals",
+                    html: "<table class='govuk-table'>
+                         <thead class='govuk-table__head'>
+                              <tr class='govuk-table__row'>
+                                   <th scope='col' class='govuk-table__header'>What we're doing</th>
+                                   <th scope='col' class='govuk-table__header'>Why we're doing it</th>
+                              </tr>
+                         </thead>
+                         <tbody class='govuk-table__body'>
+                              <tr class='govuk-table__row'>
+                                   <td class='govuk-table__cell'>---</td>
+                                   <td class='govuk-table__cell'>---</td>
+                              </tr>
+                         </tbody>
+                    </table>"
+               }) }}
+          </p>
+          <hr class="govuk-section-break--l">
+     </div>
+     <!-- Full width header section ends -->
+</div>
 
-    {{ govukAccordion({
-      id: "accordion-default",
-      items:
-      [      
-      {
-        heading:
-        {
-          text: "Sprint 0"
-        },
-        content:
-        {
-          html: sprint0Html
-        },
-        summary:
-        {
-          html: '9th &mdash;23rd June 2020'
-        }
-      }
-      ]
-    }) }}
+<div class="govuk-grid-row">
+     <!-- Sprints section starts -->
+     <div class="govuk-grid-column-two-thirds">
+          {% include './sprint-2/_summary.html' %}
 
-  </div>
+          <h2 class="govuk-heading-l govuk-!-margin-top-9">
+               Previous sprints
+          </h2>
+
+          {% set sprint1Html %}
+               {% include './sprint-1/_summary.html' %}
+          {% endset %}
+
+          {% set sprint0Html %}
+               {% include './sprint-0/_summary.html' %}
+          {% endset %}
+
+          {{ govukAccordion({
+               id: "accordion-default",
+               items: [
+                    {
+                         heading: {
+                              text: "Sprint 1"
+                         },
+                         content: {
+                              html: sprint1Html
+                         },
+                         summary: {
+                              html: '24th June — 4th August 2020'
+                         }
+                    },
+                    {
+                         heading: {
+                              text: "Sprint 0"
+                         },
+                         content: {
+                              html: sprint0Html
+                         },
+                         summary: {
+                              html: '9th &mdash; 23rd June 2020'
+                         }
+                    }
+               ]
+          }) }}
+
+     </div>
   <!-- Sprints section ends -->
 </div>
 

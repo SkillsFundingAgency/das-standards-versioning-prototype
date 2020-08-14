@@ -1,0 +1,285 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-column-full govuk-grid-row">
+  <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+      <h1 class="govuk-fieldset__heading">
+        Manage your apprentices
+      </h1>
+    </legend>      
+  </fieldset>
+</div>
+
+<!--Filters-->
+<div class="govuk-grid-column-full" style="background-color:#DEE0E2; margin-bottom: 20px; padding-top: 15px">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">                  
+            <!-- Employer -->
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="employer">
+                Employer
+              </label>
+              <select class="govuk-select" id="employer" name="employer" style="min-width:100%;">
+                <option value="all">All</option>
+                <option value="grooverider">Grooverider</option>
+                <option value="redshoeslimited">Red Shoes Limited</option>
+              </select>
+            </div>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <!-- Apprenticeship training course -->
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="course">
+                Apprenticeship training course
+              </label>          
+              <select class="govuk-select" id="course" name="course" style="min-width:100%;">
+                <option value="All" selected>All</option>
+                <option value="accountancy-level7">Accountancy: Level 7 (Standard)</option>
+                <option value="accountancy-level3">Accountancy: Level 3 (Standard)</option>
+                <option value="saddler">Bespoke Saddler: Level 3 (Standard)</option>
+              </select>          
+            </div> 
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <!-- Status -->
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="status">
+                Status
+              </label>
+              <select class="govuk-select" id="status" name="status" style="min-width:100%;">
+                  <option value="All" selected>Live, Paused, Waiting to start</option>
+                  <!--<option value="Completed">Completed</option>
+                  <option value="Live">Live</option>
+                  <option value="Paused">Paused</option>
+                  <option value="Stopped">Stopped</option>
+                  <option value="Waiting to start">Waiting to start</option>-->
+                </select>
+            </div>    
+          </div>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <div class="gov-form-group">
+              <label class="govuk-label" for="start-date">
+                Planned start date
+              </label>
+              <select class="govuk-select" id="start-date" name="start-date" style="min-width:100%;">
+                <option value="All" selected>All</option>
+                <option value="feb2019">Feb 2019</option>
+                <option value="feb2021">Feb 2021</option>
+                <option value="mar2021">Mar 2021</option>
+                <option value="apr2021">Apr 2021</option>
+                <option value="apr2022">Apr 2022</option>
+              </select>
+            </div>              
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="status">
+                Planned end date
+              </label>
+              <select class="govuk-select" id="end-date" name="status" style="min-width:100%;">
+                <option value="All">All</option>
+                <option value="Completed">Completed</option>
+                <option value="Live">Live</option>
+                <option value="Paused">Paused</option>
+                <option value="Stopped">Stopped</option>
+                <option value="Waiting to start">Waiting to start</option>
+              </select>      
+            </div> 
+          </div>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <a class="govuk-button" href="#" style="margin-bottom: 20px">Apply filters</a>
+          </div>
+        </div>
+  </div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+      <p class="govuk-body">
+          <a href="#" class="govuk-link govuk-link--no-visited-state">Clear search and filters</a>
+        </p>
+  </div>
+</div>
+
+
+<div class="govuk-grid-column-full govuk-grid-row govuk-!-margin-bottom-4">
+  <p class="govuk-grid-row" style="background-color:#fff;"> 
+    <span style="float:left; padding-left:15px;">3 apprentice records matching <b>Live</b>, <b>Paused</b> or <b>Waiting to start</b>.</span>          
+    <span style="float:right;"><a href="#" class="govuk-link govuk-link--no-visited-state" title="Download filtered data (CSV))">Download filtered data (CSV)</a></span>
+  </p>
+</div>
+
+<div class="govuk-visually-hidden">
+  {%for record in data.providerrecords%}
+  <span class="data-name">{{record.name}}</span>          
+  <span class="data-uln">{{record.uln}}</span>
+  {%endfor%}
+</div>
+
+<table class="govuk-table" id="apprentice-table" style="font-size:18px;">          
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col" aria-sort="ascending" style="width:15%;">Apprentice name</th>      
+            <th class="govuk-table__header" scope="col" aria-sort="ascending">ULN</th>        
+            <th class="govuk-table__header" scope="col" aria-sort="ascending">Employer</th>    
+            <th class="govuk-table__header" scope="col" aria-sort="ascending" style="width:20%;">Apprenticeship training course</th>
+            <th class="govuk-table__header" scope="col" aria-sort="ascending">Planned start date</th>
+            <th class="govuk-table__header" scope="col" aria-sort="ascending">Planned end date</th>
+            <th class="govuk-table__header" scope="col" aria-sort="ascending" style="width:5%;">Status</th>
+            <th class="govuk-table__header" scope="col" aria-sort="ascending">Alerts</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="apprentice-details" class="govuk-link govuk-link--no-visited-state">Darren Diamond</a></td>
+            <td class="govuk-table__cell">123456789A</td>                            
+            <td class="govuk-table__cell">Grooveholding UK Ltd</td>
+            <td class="govuk-table__cell">Bespoke Saddler: Level 3 (Standard)</td>
+            <td class="govuk-table__cell">Mar 2019</td>   
+            <td class="govuk-table__cell">Apr 2021</td>             
+            <td class="govuk-table__cell">Live</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Darryl Hannah</a></td>
+            <td class="govuk-table__cell">13579252</td>                            
+            <td class="govuk-table__cell">Red Shoes Limited</td>
+            <td class="govuk-table__cell">Bespoke Saddler: Level 3 (Standard)</td>
+            <td class="govuk-table__cell">Mar 2019</td> 
+            <td class="govuk-table__cell">Apr 2021</td>              
+            <td class="govuk-table__cell">Paused</td>
+            <td class="govuk-table__cell"></td>
+          </tr>   
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Fred Quimby</a></td>
+            <td class="govuk-table__cell">13579456</td>                            
+            <td class="govuk-table__cell">Red Shoes Limited</td>
+            <td class="govuk-table__cell">Bespoke Saddler: Level 3 (Standard)</td>
+            <td class="govuk-table__cell">Apr 2020</td> 
+            <td class="govuk-table__cell">Apr 2022</td>              
+            <td class="govuk-table__cell">Waiting to start</td>
+            <td class="govuk-table__cell"></td>
+          </tr>     
+      </tbody>
+      <!--<tbody class="govuk-table__body">
+        {%for record in data.providerrecords%}
+        {%if query.search %}
+          {% if query.search in record.name or query.search in record.uln %}
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="apprentice-details">{{record.name}}</a></td>
+            <td class="govuk-table__cell">{{record.uln}}</td>                            
+            <td class="govuk-table__cell">{{record.employer}}</td>
+            <td class="govuk-table__cell">{{record.course}}</td>
+            <td class="govuk-table__cell">{{record.startDate}}</td>   
+            <td class="govuk-table__cell">{{record.endDate}}</td>             
+            <td class="govuk-table__cell">{{record.status}}</td>
+            <td class="govuk-table__cell"><a href="alerts">{{record.alert}}</a></td>
+          </tr>
+          {%endif%} 
+          {%else%}
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="apprentice-details">{{record.name}}</a></td>
+            <td class="govuk-table__cell">{{record.uln}}</td>                            
+            <td class="govuk-table__cell">{{record.employer}}</td>
+            <td class="govuk-table__cell">{{record.course}}</td>
+            <td class="govuk-table__cell">{{record.startDate}}</td> 
+            <td class="govuk-table__cell">{{record.endDate}}</td>              
+            <td class="govuk-table__cell">{{record.status}}</td>
+            <td class="govuk-table__cell"><a href="alerts">{{record.alert}}</a></td>
+          </tr>
+          {%endif%}          
+        {%endfor%}            
+      </tbody>-->
+</table>      
+
+{% endblock %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/javascripts/sortable-table.js"></script>
+<script>
+var table = document.getElementById('apprentice-table');
+new SortableTable(table); 
+</script>
+
+{{super()}}
+<script src="/public/javascripts/accessible-autocomplete.min.js"></script>
+<script type="text/javascript">
+function getData() {
+  var names = document.getElementsByClassName("data-name");
+  var uln = document.getElementsByClassName("data-uln");
+  var data = [];
+  for (var i = 0; i < names.length; i++) {
+    var name = names[i].textContent
+    if (!data.includes(name)) {
+      data.push(name);
+    }
+  }
+  for (var i = 0; i < uln.length; i++) {
+    var org = uln[i].textContent;
+    if (data.indexOf(org) == -1) {
+      // no duplicate
+      data.push(org);
+    }
+
+  }
+  return data;
+}
+
+function suggest(data, populateResults) {
+  const results = getData();
+  const filteredResults = results.filter(
+    result => result.toUpperCase().indexOf(data.trim().toUpperCase()) !== -1
+  )
+   console.log(filteredResults)
+  populateResults(filteredResults);
+}
+
+// Trigger search click.  Taken out the clich for the prototype.
+function fireSearch() {
+  //console.log("search fired")
+  setTimeout(function() {
+    $("#searchSubmit").trigger("click")
+  }, 200);
+}
+var myInput = document.querySelector('#search');
+var myInputID = myInput.id;
+var element = document.createElement('div');
+var value = ""
+
+if (document.getElementById('search-default-value').innerHTML != "") {
+  value = document.getElementById("search-default-value").innerHTML;
+}
+
+element.className = "autocomplete__parent_wrapper";
+myInput.parentNode.insertBefore(element, myInput)
+accessibleAutocomplete({
+  // other options
+  element: element,
+  id: myInputID,
+  name: myInput.name,
+  source: suggest,
+  defaultValue: value,
+  confirmOnBlur: false,
+  autoselect: true,
+  minLength: 1,
+  onConfirm: fireSearch,
+  //placeholder: 'Search by apprentice name or ULN',
+  displayMenu: 'overlay'
+});
+myInput.style.display = 'none';
+myInput.id = myInputID + '-old';
+myInput.name = '';
+</script>
+{% endblock %}

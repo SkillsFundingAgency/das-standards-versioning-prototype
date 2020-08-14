@@ -1,0 +1,62 @@
+.tabs {
+     display: inline-block;
+     width: 100%;
+     margin-bottom: 1em;
+     &.school-hub {
+          ul.govuk-list {
+               li {
+                    width: 33.333%;
+               }
+          }
+     }
+     &.request-tabs {
+          ul.govuk-list {
+               li {
+                    width: 25%;
+                    // &:last-of-type {
+                    //      width: 20%;
+                    //      margin: 0 0 0 5%;
+                    // }
+               }
+          }
+     }
+     &.planning-meeting-tabs {
+          ul.govuk-list {
+               li {
+                    width: 25%;
+               }
+          }
+     }
+     ul.govuk-list {
+          li {
+               display: inline-block;
+               float: left;
+               width: 25%;
+               button {
+                    &.govuk-link {
+                         background: none;
+                         border: none;
+                         border-bottom: 10px solid govuk-colour("light-grey");
+                         border-radius: 0;
+                         width: 100%;
+                         padding: 1em ;
+                         text-align: center;
+                         font-size: 1.2rem;
+                         font-weight: bold;
+                         color: black;
+                         &:active, &:focus, &:hover {
+                              outline: none;
+                              box-shadow: none;
+                              cursor: pointer;
+                              border-bottom: 10px solid $govuk-link-hover-colour;
+                              color: $govuk-link-hover-colour;
+                         }
+                         &.selected {
+                              border-bottom: 10px solid $govuk-link-colour;
+                              color: $govuk-link-colour;
+                         }
+                    }
+               }
+          }
+     }
+}

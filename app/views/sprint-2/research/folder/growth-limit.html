@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% set currentPage = 'growth-limit' %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-full">
+		<h1 class="govuk-heading-xl heading-dashboard" id="provider-name">
+			Apprenticeship funding tracker			
+		</h1>		
+	</div>
+</div>
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-full">
+		<div class="govuk-grid-row page-dashboard">		
+			<div class="govuk-grid-column-two-thirds">
+				<p>
+					View the growth limit and a breakdown of confirmed and planned apprenticeship funding.					
+					The total amount of funding used cannot be more than the growth limit at any time.
+				</p>
+
+				<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-bottom-6">
+										
+				<div class="govuk-grid-row">
+					<div class="govuk-grid-column-one-half">
+						<h2 class="govuk-heading-m">
+							Funding left to use
+						</h2>
+						<h3 class="govuk-heading-l">
+							£125,000
+						</h3>
+						<p class="govuk-body-s" style="color:slategray;">Figure last updated at 6.00am on 26 May 2020</p>
+					</div>
+					
+					<div class="govuk-grid-column-one-half">
+						<h2 class="govuk-heading-m">
+							Growth limit
+						</h2>						
+						<h3 class="govuk-heading-l govuk-!-font-weight-regular">
+							£500,000
+						</h3>
+						<p class="govuk-body-s" style="color:slategray;">Your growth limit is due to end on 31 August 2021</p>
+					</div>
+				</div>
+
+				<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-bottom-6">
+
+				<div class="govuk-grid-row">
+					<div class="govuk-grid-column-one-half">
+						<h2 class="govuk-heading-m">
+							<a href="manage-your-apprentices-filtered-view" class="govuk-link govuk-link--no-visited-state">Funding used</a>
+						</h2>
+						<p class="govuk-body-s" style="color:slategray;">Records that are live, paused or waiting to start</p>	
+						<h3 class="govuk-heading-l">
+							£375,000
+						</h3>				
+					</div>
+				</div>
+
+				<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-bottom-6">
+
+				<div class="govuk-grid-row govuk-!-margin-top-9">
+					<div class="govuk-grid-column-one-half">
+						<h2 class="govuk-heading-m">
+							Planned
+						</h2>
+						<p class="govuk-body-s" style="color:slategray;">Records that are waiting for approval</p>	
+						<h3 class="govuk-heading-m">
+							£130,000
+						</h3>
+						<ul class="govuk-list govuk-body-s">
+							<li>
+							  <a class="govuk-link govuk-link--no-visited-state" href="waiting-for-employer-approval">Waiting for employer approval</a> <span style="float:right;">£100,000</span>
+							</li>
+							<li>
+								<a class="govuk-link govuk-link--no-visited-state" href="ready-to-review">Ready to review</a> <span style="float:right;">£12,500</span>
+							</li>
+							<li>
+								<a class="govuk-link govuk-link--no-visited-state" href="with-transfer-sending-employers">With transfer sending employers</a> <span style="float:right;">£17,500</span>
+							</li>
+						  </ul>
+					</div>
+					<div class="govuk-grid-column-one-half">						
+					</div>
+				</div>	
+				
+
+			</div>
+
+			<div class="govuk-grid-column-one-third">
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

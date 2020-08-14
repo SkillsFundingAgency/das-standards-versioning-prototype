@@ -1,0 +1,57 @@
+.navigation {
+     background: $govuk-link-colour;
+     margin: 0;
+     text-align: center;
+     margin-top: -10px;
+     position: relative;
+     z-index: 10;
+     .govuk-width-container {
+          text-align: left;
+     }
+     ul {
+          display: flex;
+          // float: left;
+          margin: 0;
+          // padding: 0.5em 0 0.5em 0;
+          padding: 0;
+          li {
+               float: left;
+               display: inline-block;
+               margin: 0 0 0 0;
+               a.govuk-link {
+                    color: white;
+                    font-weight: bold;
+                    padding: 0.5em 1em 0.75em 1em;
+                    display: inline-block;
+                    position: relative;
+                    &.selected {
+                         background: $govuk-link-hover-colour;
+                         &:after {
+                              content: ' ';
+                              display: inline-block;
+                              width: 0;
+                              height: 0;
+                              border-style: solid;
+                              border-width: 0 10px 8px 10px;
+                              border-color: transparent transparent white transparent;
+                              // background: white;
+                              position: absolute;
+                              left: 50%;
+                              bottom: 0;
+                              margin-left: -10px;
+                         }
+                    }
+                    &:hover, &:focus, &:active {
+                         outline: none;
+                         box-shadow: none;
+                         background: darken($govuk-link-colour, 5%);
+                    }
+                    &.dropdown {
+                         padding-right: 1em;
+                         background: url('../images/arrow-down-white.svg') no-repeat 100% 70%;
+                         background-size: 0.75em;
+                    }
+               }
+          }
+     }
+}

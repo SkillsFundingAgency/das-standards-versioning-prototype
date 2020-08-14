@@ -1,0 +1,45 @@
+
+{% extends "layout-hub.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+     <div class="govuk-grid-row dashboard-title">
+          <div class="govuk-grid-column-full">
+               <h1 class="govuk-heading-xl">
+                    Apprenticeship standards
+                    <span class="govuk-caption-xl">Training provider name</span>
+               </h1>
+
+               {% include "../../includes/hub-page/tabs-hub-page.html" %}
+
+               {% include "../../includes/hub-page/filter-hub-page.html" %}
+
+          </div>
+     </div>
+
+     <!-- ======================================= TAB CONTENT - ONE - START ======================================= -->
+     {% include "../../includes/hub-page/standards-all.html" %}
+     <!-- ======================================= TAB CONTENT - ONE - END ======================================= -->
+
+     <!-- ======================================= TAB CONTENT - TWO - START ======================================= -->
+     {% include "../../includes/hub-page/standards-upcoming.html" %}
+     <!-- ======================================= TAB CONTENT - TWO - END ======================================= -->
+
+     <!-- ======================================= TAB CONTENT - THREE - START ======================================= -->
+     {% include "../../includes/hub-page/standards-recent.html" %}
+     <!-- ======================================= TAB CONTENT - THREE - END ======================================= -->
+
+     <!-- ======================================= TAB CONTENT - FOUR - START ======================================= -->
+     {% include "../../includes/hub-page/standards-review.html" %}
+     <!-- ======================================= TAB CONTENT - FOUR - END ======================================= -->
+
+
+{% endblock %}

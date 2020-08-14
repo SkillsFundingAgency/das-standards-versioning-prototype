@@ -1,0 +1,49 @@
+.govuk-email-width-container, .email-page, .email-banner {
+     max-width: 600px;
+     margin: 0 auto;
+}
+
+.govuk-email-width-container {
+     border-bottom: none;
+     .govuk-header__content {
+          // display: none;
+          .govuk-header__link--service-name {
+               display: none;
+          }
+     }
+     .govuk-header__content {
+          nav {
+               ul {
+                    display: inline-block;
+                    float: right;
+               }
+          }
+     }
+}
+
+.email-banner {
+     margin-top: 1em;
+     img {
+          height: 4em;
+     }
+}
+
+footer {
+     &.email-footer {
+          .govuk-width-container {
+               max-width: 600px;
+          }
+     }
+}
+
+.tandcs-wrapper {
+     background: darken(#f3f2f1,5%);
+     padding: 1em;
+     .govuk-width-container {
+          max-width: 600px;
+          p {
+               margin: 0;
+               font-size: 0.875rem;
+          }
+     }
+}

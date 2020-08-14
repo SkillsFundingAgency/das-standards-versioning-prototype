@@ -13,8 +13,108 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/step-by-step-related";
 @import "patterns/task-list";
 @import "patterns/related-items";
+@import "patterns/email";
+@import "patterns/dashboard";
+@import "patterns/navigation";
+@import "patterns/tabs";
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+.no-top-margin {
+     margin-top: 0 !important;
+}
+
+.no-bottom-margin {
+     margin-bottom: 0 !important;
+}
+
+hr {
+     margin: 2.5em 0 2em 0;
+}
+
+.hub-page {
+     padding-top: 0;
+}
+
+.filter {
+     &.search-requested-support {
+          display: inline-block;
+          width: 100%;
+          margin: 0 0 2em 0;
+          .govuk-form-group {
+               margin: 0;
+          }
+          .search {
+               display: inline-block;
+               float: left;
+               width: 40%;
+               position: relative;
+               .govuk-button {
+                    right: 2px;
+                    // top: 0;
+                    bottom: 2px;
+                    margin: 0;
+                    text-indent: -1000em;
+                    position: absolute;
+                    width: 2em;
+                    height: 1.9em;
+                    background: url('../images/search-white.svg') no-repeat 50% 50% $govuk-link-colour;
+                    background-size: 1em;
+               }
+          }
+          .dropdowns {
+               display: inline-block;
+               float: right;
+               width: 60%;
+               .govuk-form-group {
+                    float: right;
+                    margin-left: 2em;
+               }
+          }
+     }
+}
+
+.icon {
+     display: inline-block;
+     width: 1em;
+     height: 1em;
+     // float: left;
+     margin: 0 0.25em -0.15em 0;
+     text-indent: -1000em;
+     // &:first-of-type {
+     //      margin-left: 0;
+     // }
+     &.contact {
+          background: url('../images/contact-person.svg') no-repeat 50% 50%;
+          background-size: contain;
+     }
+     &.telephone {
+          background: url('../images/contact-phone.svg') no-repeat 50% 50%;
+          background-size: contain;
+     }
+     &.email {
+          background: url('../images/contact-email.svg') no-repeat 50% 50%;
+          background-size: contain;
+     }
+     &.delete {
+          background: url('../images/delete.svg') no-repeat 50% 50%;
+          background-size: contain;
+     }
+     &.date {
+          background: url('../images/calendar.svg') no-repeat 50% 50%;
+          background-size: contain;
+     }
+     &.tick {
+          width: 1.5em;
+          height: 1.5em;
+          margin: 0 0.25em -0.35em 1em;
+          background: url('../images/tick-white.svg') no-repeat 50% 50%;
+          background-size: contain;
+     }
+     &.excel {
+          background: url('../images/excel.svg') no-repeat 50% 50%;
+          background-size: contain;
+     }
+}
