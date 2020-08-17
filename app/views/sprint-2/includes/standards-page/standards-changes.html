@@ -1,8 +1,61 @@
 <div class="govuk-grid-row tab-number" id="tab-content-1">
      <div class="govuk-grid-column-full request-list">
 
-          <h2 class="govuk-heading-m sub-heading">4 changes</h2>
+          <h2 class="govuk-heading-m sub-heading">
+               4 changes
+               <span class="govuk-caption-m"><strong>Change date:</strong> 26/08/2020</span>
+          </h2>
 
+          <p class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">
+               Header change
+          </p>
+
+          <p>
+               <span class="govuk-caption-m">What's changing?</span>
+               <strong class="govuk-tag govuk-tag--red">Compressed air and vacuum specialist</strong> changing to <strong class="govuk-tag govuk-tag--green">Compressed air and vacuum technician</strong><br>
+          </p>
+
+          <p>
+               <span class="govuk-caption-m">When will it update?</span>
+               26/08/20
+          </p>
+
+          <p>
+               <span class="govuk-caption-m">Why is it changing?</span>
+               Standard name and description is being reviewed to better reflect the role.
+          </p>
+
+          <hr>
+
+          <p class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">
+               Description change
+          </p>
+
+          <p>
+               <span class="govuk-caption-m">What's changing?</span>
+               <strong class="govuk-tag govuk-tag--red">Compressed air and vacuum specialist</strong> changing to <strong class="govuk-tag govuk-tag--green">Compressed air and vacuum technician</strong><br>
+               <a href="#" class="govuk-link govuk-link--no-visited-state">Visit IfATE to find out more</a>
+          </p>
+
+          <p>
+               <span class="govuk-caption-m">When will it update?</span>
+               26/08/20
+          </p>
+
+          <p>
+               <span class="govuk-caption-m">Why is it changing?</span>
+               Standard name and description is being reviewed to better reflect the role.
+          </p>
+
+          <hr>
+
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+
+          {{ govukButton({
+               text: "Compare to current version",
+               classes: "no-bottom-margin",
+               href: "#"
+          }) }}
 
      </div>
 </div>

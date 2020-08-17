@@ -1,0 +1,41 @@
+article {
+     &.standard-document {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          &.error-message {
+               border-left: 5px solid $govuk-error-colour;
+               padding-left: 15px;
+               .govuk-error-message {
+                    margin-bottom: 0.25em;
+               }
+          }
+          .image {
+               display: inline-block;
+               width: 8em;
+               height: 10em;
+               background: govuk-colour("light-grey");
+               margin-right: 1em;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               span {
+                    color: govuk-colour("mid-grey");
+                    margin: 0;
+               }
+          }
+          .text {
+               a {
+                    margin-top: 0;
+               }
+               p {
+                    margin: 0;
+                    span {
+                         width: auto;
+                         float: left;
+                         margin-right: 0.25em;
+                    }
+               }
+          }
+     }
+}

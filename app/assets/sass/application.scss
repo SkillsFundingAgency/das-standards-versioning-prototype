@@ -17,6 +17,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/dashboard";
 @import "patterns/navigation";
 @import "patterns/tabs";
+@import "patterns/standard-details";
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
@@ -128,5 +129,16 @@ hr {
      &.excel {
           background: url('../images/excel.svg') no-repeat 50% 50%;
           background-size: contain;
+     }
+     &.pdf-download {
+          background: url('../images/pdf-blue.svg') no-repeat 0% 50%;
+          background-size: contain;
+          &.govuk-heading-m {
+               width: auto;
+               height: auto;
+               text-indent: inherit;
+               margin: 0 0 0.5em 0;
+               padding-left: 1.25em;
+          }
      }
 }

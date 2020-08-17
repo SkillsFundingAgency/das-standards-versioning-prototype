@@ -18,6 +18,7 @@ $(document).ready(function () {
      $('.read-more').on('click',function(e) {
           e.preventDefault();
           $(this).parent().find('.govuk-caption-m').toggleClass('truncate');
+          $(this).html($(this).text() == 'Show less' ? 'Read more' : 'Show less');
      });
 
 });
