@@ -1,0 +1,81 @@
+
+{% extends "layout-hub.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+     <div class="govuk-grid-row dashboard-title">
+          <div class="govuk-grid-column-full">
+               <h1 class="govuk-heading-xl">
+                    Manage your apprenticeship standards emails
+               </h1>
+          </div>
+     </div>
+
+     {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+     {{ govukCheckboxes({
+          idPrefix: "what-emails",
+          name: "what-emails",
+          fieldset: {
+               legend: {
+                    text: "What emails would you like to recieve?",
+                    isPageHeading: false,
+                    classes: "govuk-fieldset__legend--m"
+               }
+          },
+          hint: {
+               text: "Select all that apply."
+          },
+          items: [
+               {
+                    value: "Planned updates to standards",
+                    text: "Planned updates to standards"
+               },
+               {
+                    value: "When an updated standard goes live",
+                    text: "When an updated standard goes live"
+               },
+               {
+                    value: "Notice of review dates",
+                    text: "Notice of review dates"
+               }
+          ]
+     }) }}
+
+     {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+     {{ govukRadios({
+          idPrefix: "where-do-you-live",
+          name: "where-do-you-live",
+          fieldset: {
+               legend: {
+               text: "Choose how often you'd like to recieve emails",
+               isPageHeading: false,
+                    classes: "govuk-fieldset__legend--m"
+               }
+          },
+          items: [
+               {
+                    value: "Daily",
+                    text: "Daily"
+               },
+               {
+                    value: "Weekly",
+                    text: "Weekly"
+               },
+               {
+                    value: "Monthly",
+                    text: "Monthly"
+               }
+          ]
+     }) }}
+
+{% endblock %}
