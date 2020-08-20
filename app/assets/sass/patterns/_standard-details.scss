@@ -135,7 +135,7 @@ article {
                     p {
                          margin: 0;
                          width: auto;
-                         float: left;
+                         float: left; 
                          margin: 0 0 0 2em;
                          &.summary-text {
                               width: 100%;
@@ -158,3 +158,11 @@ article {
           }
      }
 }
+
+// #emails {
+//      .govuk-form-group {
+//           &:first-of-type {
+//                margin: 0;
+//           }
+//      }
+// }

@@ -19,6 +19,8 @@
           </div>
      </div>
 
+     <p>&nbsp;</p>
+
      {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
      {{ govukCheckboxes({
@@ -53,8 +55,8 @@
      {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
      {{ govukRadios({
-          idPrefix: "where-do-you-live",
-          name: "where-do-you-live",
+          idPrefix: "recieve-emails",
+          name: "recieve-emails",
           fieldset: {
                legend: {
                text: "Choose how often you'd like to recieve emails",
@@ -76,6 +78,54 @@
                     text: "Monthly"
                }
           ]
+     }) }}
+
+     <div class="govuk-!-margin-bottom-6 updates-emails">
+          <hr>
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Planned updates to standards</legend>
+          <div id="emails" data-email-count="{{numberOfEmails}}">
+               {{ govukInput({
+                    id: "updates-email[url1]",
+                    name: "updates-email[url1]",
+                    value: data['updates-email']['url1'],
+                    classes: "govuk-input--width-20",
+                    label: {
+                         text: "Email address"
+                    },
+                    hint: {
+                         text: "Where would you the emails to be sent?"
+                    },
+                    attributes: {
+                         spellcheck: "false"
+                    }
+               }) }}
+
+               {% for url, email in emails -%} 
+                    {% if url != 'url1' %}
+                    {% if email != '' %}
+                         <div class="govuk-form-group">
+                              <label class="govuk-label" for="updates-email[{{url}}]">
+                                   Additional email address
+                              </label>
+                              <input class="govuk-input govuk-input--width-20" id="updates-email[{{url}}]" name="updates-email[{{url}}]" type="text" value="{{email}}" spellcheck="false" />
+                              <p class="govuk-body">
+                                   <a class="govuk-link govuk-link--no-visited-state" data-remove="{{url}}" href="#">remove</a>
+                              </p>
+                         </div>
+                    {% endif %}
+                    {% endif %}
+               {%- endfor %}
+          </div>
+
+          <p class="govuk-body govuk-!-margin-bottom-6">
+               <a class="govuk-link govuk-link--no-visited-state add-email" href="#" id="addAnotherEmail">Add another email</a>
+          </p>
+     </div>
+
+     {% from "govuk/components/button/macro.njk" import govukButton %}
+
+     {{ govukButton({
+          text: "Update"
      }) }}
 
 {% endblock %}
