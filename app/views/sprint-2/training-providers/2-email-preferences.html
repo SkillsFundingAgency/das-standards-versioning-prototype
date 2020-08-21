@@ -21,111 +21,203 @@
 
      <p>&nbsp;</p>
 
-     {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+     <form id="" class="" action="1-standard-details" method="post"> 
 
-     {{ govukCheckboxes({
-          idPrefix: "what-emails",
-          name: "what-emails",
-          fieldset: {
-               legend: {
-                    text: "What emails would you like to recieve?",
-                    isPageHeading: false,
-                    classes: "govuk-fieldset__legend--m"
-               }
-          },
-          hint: {
-               text: "Select all that apply."
-          },
-          items: [
-               {
-                    value: "Planned updates to standards",
-                    text: "Planned updates to standards"
-               },
-               {
-                    value: "When an updated standard goes live",
-                    text: "When an updated standard goes live"
-               },
-               {
-                    value: "Notice of review dates",
-                    text: "Notice of review dates"
-               }
-          ]
-     }) }}
+          <div class="govuk-form-group">
+               <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
 
-     {% from "govuk/components/radios/macro.njk" import govukRadios %}
+                    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
-     {{ govukRadios({
-          idPrefix: "recieve-emails",
-          name: "recieve-emails",
-          fieldset: {
-               legend: {
-               text: "Choose how often you'd like to recieve emails",
-               isPageHeading: false,
-                    classes: "govuk-fieldset__legend--m"
-               }
-          },
-          items: [
-               {
-                    value: "Daily",
-                    text: "Daily"
-               },
-               {
-                    value: "Weekly",
-                    text: "Weekly"
-               },
-               {
-                    value: "Monthly",
-                    text: "Monthly"
-               }
-          ]
-     }) }}
+                    {{ govukCheckboxes({
+                         idPrefix: "what-emails",
+                         name: "what-emails",
+                         fieldset: {
+                              legend: {
+                                   text: "What emails would you like to recieve?",
+                                   isPageHeading: false,
+                                   classes: "govuk-fieldset__legend--m"
+                              }
+                         },
+                         hint: {
+                              text: "Select all that apply."
+                         },
+                         items: [
+                              {
+                                   value: "Planned updates to standards",
+                                   text: "Planned updates to standards"
+                              },
+                              {
+                                   value: "When an updated standard goes live",
+                                   text: "When an updated standard goes live"
+                              },
+                              {
+                                   value: "Notice of review dates",
+                                   text: "Notice of review dates"
+                              }
+                         ]
+                    }) }}
 
-     <div class="govuk-!-margin-bottom-6 updates-emails">
-          <hr>
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Planned updates to standards</legend>
-          <div id="emails" data-email-count="{{numberOfEmails}}">
-               {{ govukInput({
-                    id: "updates-email[url1]",
-                    name: "updates-email[url1]",
-                    value: data['updates-email']['url1'],
-                    classes: "govuk-input--width-20",
-                    label: {
-                         text: "Email address"
-                    },
-                    hint: {
-                         text: "Where would you the emails to be sent?"
-                    },
-                    attributes: {
-                         spellcheck: "false"
-                    }
-               }) }}
+                    {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-               {% for url, email in emails -%} 
-                    {% if url != 'url1' %}
-                    {% if email != '' %}
-                         <div class="govuk-form-group">
-                              <label class="govuk-label" for="updates-email[{{url}}]">
-                                   Additional email address
-                              </label>
-                              <input class="govuk-input govuk-input--width-20" id="updates-email[{{url}}]" name="updates-email[{{url}}]" type="text" value="{{email}}" spellcheck="false" />
-                              <p class="govuk-body">
-                                   <a class="govuk-link govuk-link--no-visited-state" data-remove="{{url}}" href="#">remove</a>
-                              </p>
+                    {{ govukRadios({
+                         idPrefix: "recieve-emails",
+                         name: "recieve-emails",
+                         fieldset: {
+                              legend: {
+                              text: "Choose how often you'd like to recieve emails",
+                              isPageHeading: false,
+                                   classes: "govuk-fieldset__legend--m"
+                              }
+                         },
+                         items: [
+                              {
+                                   value: "Daily",
+                                   text: "Daily"
+                              },
+                              {
+                                   value: "Weekly",
+                                   text: "Weekly"
+                              },
+                              {
+                                   value: "Monthly",
+                                   text: "Monthly"
+                              }
+                         ]
+                    }) }}
+
+                    <div class="govuk-!-margin-bottom-6 updates-emails">
+                         <hr>
+                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Planned updates to standards</legend>
+                         <div id="emails" data-email-count="{{numberOfEmails}}">
+                              {{ govukInput({
+                                   id: "updates-email[url1]",
+                                   name: "updates-email[url1]",
+                                   value: data['updates-email']['url1'],
+                                   classes: "govuk-input--width-20",
+                                   label: {
+                                        text: "Email address"
+                                   },
+                                   hint: {
+                                        text: "Where would you the emails to be sent?"
+                                   },
+                                   attributes: {
+                                        spellcheck: "false"
+                                   }
+                              }) }}
+
+                              {% for url, email in emails -%}
+                                   {% if url != 'url1' %}
+                                   {% if email != '' %}
+                                        <div class="govuk-form-group">
+                                             <label class="govuk-label" for="updates-email[{{url}}]">
+                                                  Additional email address
+                                             </label>
+                                             <input class="govuk-input govuk-input--width-20" id="updates-email[{{url}}]" name="updates-email[{{url}}]" type="text" value="{{email}}" spellcheck="false" />
+                                             <p class="govuk-body">
+                                                  <a class="govuk-link govuk-link--no-visited-state" data-remove="{{url}}" href="#">remove</a>
+                                             </p>
+                                        </div>
+                                   {% endif %}
+                                   {% endif %}
+                              {%- endfor %}
                          </div>
-                    {% endif %}
-                    {% endif %}
-               {%- endfor %}
+                         <p class="govuk-body govuk-!-margin-bottom-6">
+                              <a class="govuk-link govuk-link--no-visited-state add-email" href="#" id="addAnotherEmail">Add another email</a>
+                         </p>
+                    </div>
+
+                    <div class="govuk-!-margin-bottom-6 updated-standard">
+                         <hr>
+                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">When an updated standard goes live</legend>
+                         <div id="emailsTwo" data-email-count="{{numberOfEmailsTwo}}">
+                              {{ govukInput({
+                                   id: "updates-emailTwo[url1Two]",
+                                   name: "updates-emailTwo[url1Two]",
+                                   value: data['updates-emailTwo']['url1Two'],
+                                   classes: "govuk-input--width-20",
+                                   label: {
+                                        text: "Email address"
+                                   },
+                                   hint: {
+                                        text: "Where would you the emails to be sent?"
+                                   },
+                                   attributes: {
+                                        spellcheck: "false"
+                                   }
+                              }) }}
+
+                              {% for url, emailTwo in emailsTwo -%}
+                                   {% if urlTwo != 'url1Two' %}
+                                   {% if emailTwo != '' %}
+                                        <div class="govuk-form-group">
+                                             <label class="govuk-label" for="updates-emailTwo[{{urlTwo}}]">
+                                                  Additional email address
+                                             </label>
+                                             <input class="govuk-input govuk-input--width-20" id="updates-emailTwo[{{urlTwo}}]" name="updates-emailTwo[{{urlTwo}}]" type="text" value="{{emailTwo}}" spellcheck="false" />
+                                             <p class="govuk-body">
+                                                  <a class="govuk-link govuk-link--no-visited-state" data-remove="{{urlTwo}}" href="#">remove</a>
+                                             </p>
+                                        </div>
+                                   {% endif %}
+                                   {% endif %}
+                              {%- endfor %}
+                         </div>
+                         <p class="govuk-body govuk-!-margin-bottom-6">
+                              <a class="govuk-link govuk-link--no-visited-state add-email" href="#" id="addAnotherEmailTwo">Add another email</a>
+                         </p>
+                    </div>
+
+                    <div class="govuk-!-margin-bottom-6 review-dates">
+                         <hr>
+                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Notice of review dates</legend>
+                         <div id="emailsThree" data-email-count="{{numberOfEmailsThree}}">
+                              {{ govukInput({
+                                   id: "updates-emailThree[url1Three]",
+                                   name: "updates-emailThree[url1Three]",
+                                   value: data['updates-emailThree']['url1Three'],
+                                   classes: "govuk-input--width-20",
+                                   label: {
+                                        text: "Email address"
+                                   },
+                                   hint: {
+                                        text: "Where would you the emails to be sent?"
+                                   },
+                                   attributes: {
+                                        spellcheck: "false"
+                                   }
+                              }) }}
+
+                              {% for url, emailThree in emailsThree -%}
+                                   {% if urlThree != 'url1Three' %}
+                                   {% if emailThree != '' %}
+                                        <div class="govuk-form-group">
+                                             <label class="govuk-label" for="updates-emailThree[{{urlThree}}]">
+                                                  Additional email address
+                                             </label>
+                                             <input class="govuk-input govuk-input--width-20" id="updates-emailThree[{{urlThree}}]" name="updates-emailThree[{{urlThree}}]" type="text" value="{{emailThree}}" spellcheck="false" />
+                                             <p class="govuk-body">
+                                                  <a class="govuk-link govuk-link--no-visited-state" data-remove="{{urlThree}}" href="#">remove</a>
+                                             </p>
+                                        </div>
+                                   {% endif %}
+                                   {% endif %}
+                              {%- endfor %}
+                         </div>
+                         <p class="govuk-body govuk-!-margin-bottom-6">
+                              <a class="govuk-link govuk-link--no-visited-state add-email" href="#" id="addAnotherEmailThree">Add another email</a>
+                         </p>
+                    </div>
+
+                    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                    {{ govukButton({
+                         text: "Update"
+                    }) }}
+
+               </fieldset>
+
           </div>
 
-          <p class="govuk-body govuk-!-margin-bottom-6">
-               <a class="govuk-link govuk-link--no-visited-state add-email" href="#" id="addAnotherEmail">Add another email</a>
-          </p>
-     </div>
-
-     {% from "govuk/components/button/macro.njk" import govukButton %}
-
-     {{ govukButton({
-          text: "Update"
-     }) }}
+     </form>
 
 {% endblock %}
