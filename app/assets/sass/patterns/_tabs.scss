@@ -4,8 +4,12 @@
      margin-bottom: 1em;
      &.standards-tabs {
           ul.govuk-list {
+               display: inline-block;
                li {
                     width: 20%;
+                    button {
+                         min-height: 5em;
+                    }
                }
           }
      }
@@ -66,7 +70,7 @@
                                    float: left;
                                    width: 1.5em;
                                    height: 1.5em;
-                                   margin: -0.25em -1em -0.25em 0;
+                                   margin: -0.25em 0.25em -0.25em 0;
                                    border-radius: 50%;
                                    position: relative;
                                    top: 0.1em;
