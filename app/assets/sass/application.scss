@@ -88,7 +88,7 @@ hr {
 }
 
 .add-email {
-     padding-left: 2em; 
+     padding-left: 2em;
      font-size: 1rem;
      margin: 0 0 0 0;
      // position: relative;
@@ -154,4 +154,8 @@ hr {
                padding-left: 1.25em;
           }
      }
+}
+
+.highlight {
+     color: $govuk-link-colour;
 }
