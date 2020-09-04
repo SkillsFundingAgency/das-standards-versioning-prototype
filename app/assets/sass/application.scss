@@ -32,6 +32,35 @@ $govuk-assets-path: '/govuk/assets/';
      margin-bottom: 0 !important;
 }
 
+.govuk-header__container {
+     border-bottom: 10px solid #134273;
+     z-index: 20;
+}
+
+.govuk-width-container {
+     &.title-overide {
+          margin: 0;
+          max-width: 100%;
+     }
+}
+
+#service-title-section {
+     background: #f0f3f7;
+     padding: 0 0 3em 0;
+     &.standard-details-page {
+          // margin-bottom: 2em;
+          .govuk-back-link {
+               margin-bottom: 5px;
+          }
+          .govuk-heading-xl {
+               margin-top: 0;
+          }
+     }
+     .dashboard-title {
+          margin-top: 1em;
+     }
+}
+
 hr {
      margin: 2.5em 0 2em 0;
 }

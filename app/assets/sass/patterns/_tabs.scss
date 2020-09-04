@@ -4,7 +4,6 @@
      margin-bottom: 1em;
      &.standards-tabs {
           ul.govuk-list {
-               display: inline-block;
                li {
                     width: 20%;
                     button {
@@ -32,6 +31,9 @@
      //      }
      // }
      ul.govuk-list {
+          display: inline-block;
+          width: 100%;
+          margin-top: 1.5em;
           li {
                display: inline-block;
                float: left;

@@ -23,6 +23,8 @@ $(document).ready(function () {
 
 });
 
+$('#service-title-section').parent().addClass('title-overide');
+
 // Tabs
 function openTab(tabNumber) {
      var i;
@@ -127,7 +129,7 @@ $("#addAnotherEmailTwo").on("click", addAnotherEmailTwo);
 $("[data-removeTwo]").on("click", removeEmailTwo);
 
 // THREE
-function addAnotherEmailThree() { 
+function addAnotherEmailThree() {
      event.preventDefault();
      emailNumberThree++;
      $("#emailsThree").append(`

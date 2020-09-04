@@ -1,4 +1,3 @@
-
 {% extends "layout-hub.html" %}
 
 {% block pageTitle %}
@@ -6,25 +5,16 @@
 {% endblock %}
 
 {% block beforeContent %}
-     <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+     {% include "../includes/banners/standards-hub.html" %}
 {% endblock %}
 
 {% block content %}
+<div class="govuk-width-container">
 
-     <div class="govuk-grid-row dashboard-title">
+     <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
-               <h1 class="govuk-heading-xl">
-                    <span class="govuk-caption-xl">
-                         Training provider name
-                         <a href="2-email-preferences" class="email-preferences">Email preferences</a>
-                    </span>
-                    Apprenticeship standards
-               </h1>
-
                {% include "../includes/hub-page/tabs-hub-page.html" %}
-
                {% include "../includes/hub-page/filter-hub-page.html" %}
-
           </div>
      </div>
 
@@ -44,5 +34,5 @@
      {% include "../includes/hub-page/standards-review.html" %}
      <!-- ======================================= TAB CONTENT - FOUR - END ======================================= -->
 
-
+</div>
 {% endblock %}
