@@ -1,0 +1,40 @@
+{% extends "layout-hub.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+     {% include "../includes/banners/standards-hub.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+               {% include "../includes/hub-page/tabs-hub-page.html" %}
+               {% include "../includes/hub-page/filter-hub-page.html" %}
+          </div>
+     </div>
+
+     <!-- ======================================= TAB CONTENT - ONE - START ======================================= -->
+     {% include "../includes/hub-page/standards-all.html" %}
+     <!-- ======================================= TAB CONTENT - ONE - END ======================================= -->
+
+     <!-- ======================================= TAB CONTENT - TWO - START ======================================= -->
+     {% include "../includes/hub-page/standards-upcoming.html" %}
+     <!-- ======================================= TAB CONTENT - TWO - END ======================================= -->
+
+     <!-- ======================================= TAB CONTENT - THREE - START ======================================= -->
+     {% include "../includes/hub-page/standards-recent.html" %}
+     <!-- ======================================= TAB CONTENT - THREE - END ======================================= -->
+
+     <!-- ======================================= TAB CONTENT - FOUR - START ======================================= -->
+     {% include "../includes/hub-page/standards-review.html" %}
+     <!-- ======================================= TAB CONTENT - FOUR - END ======================================= -->
+
+     {% include "../includes/back-to-top.html" %}
+
+</div>
+{% endblock %}

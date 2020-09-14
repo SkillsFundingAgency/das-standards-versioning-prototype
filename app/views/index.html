@@ -91,11 +91,19 @@
 <div class="govuk-grid-row">
      <!-- Sprints section starts -->
      <div class="govuk-grid-column-two-thirds">
-          {% include './sprint-2/_summary.html' %}
+          {% include './sprint-4/_summary.html' %}
 
           <h2 class="govuk-heading-l govuk-!-margin-top-9">
                Previous sprints
           </h2>
+
+          {% set sprint3Html %}
+               {% include './sprint-3/_summary.html' %}
+          {% endset %}
+
+          {% set sprint2Html %} 
+               {% include './sprint-2/_summary.html' %}
+          {% endset %}
 
           {% set sprint1Html %}
                {% include './sprint-1/_summary.html' %}
@@ -108,6 +116,28 @@
           {{ govukAccordion({
                id: "accordion-default",
                items: [
+                    {
+                         heading: {
+                              text: "Sprint 3"
+                         },
+                         content: {
+                              html: sprint3Html
+                         },
+                         summary: {
+                              html: '19th August — 1st September 2020'
+                         }
+                    },
+                    {
+                         heading: {
+                              text: "Sprint 2"
+                         },
+                         content: {
+                              html: sprint2Html
+                         },
+                         summary: {
+                              html: '5th August — 18th August 2020'
+                         }
+                    },
                     {
                          heading: {
                               text: "Sprint 1"
