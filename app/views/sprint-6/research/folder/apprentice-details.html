@@ -1,0 +1,241 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Apprentice details
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" class="form">
+
+      <h1 class="govuk-heading-xl">
+        Darren Diamond
+      </h1>
+
+      {{ govukDetails({
+        summaryText: "Help with changes in apprentice's circumstances",
+        html: "<p class='govuk-body'>If an apprentice you're training needs to move to a new employer, you should:</p><ul class='govuk-list govuk-list--bullet'><li>contact their original employer and ask them to stop the apprentice record</li><li>speak to the new employer to agree new training dates, price and request permission to move the apprentice to their apprenticeship service account</li></ul><p class='govuk-body'>Once you've agreed these details, you can change the employer.</p><p class='govuk-body'>Non-levy employers will not need apprenticeship funding reserved when taking on an apprentice from another employer.</p>"
+      }) }}
+
+      
+        <!--only add a heading for a list if there is more than one list-->
+        <h2 class="govuk-heading-m">
+          Apprentice status
+        <!--<span style="float:right; text-align:right; font-weight:400; font-size:19px;"><a href="#">Edit</a></span>-->
+        </h2>
+        <dl class="app-check-your-answers app-check-your-answers--short">        
+          <div class="app-check-your-answers__contents">
+            <dt class="app-check-your-answers__question">
+              Status
+            </dt>
+            <dd class="app-check-your-answers__answer">
+              Live
+            </dd>
+            <dd class="app-check-your-answers__change">
+              <a href="change-apprentice-status">
+                <span class="govuk-visually-hidden">Edit status</span>
+              </a>
+            </dd>
+          </div>
+          <!--<div class="app-check-your-answers__contents">
+            <dt class="app-check-your-answers__question">
+              Stop applies from
+            </dt>
+            <dd class="app-check-your-answers__answer">
+              January 2020
+            </dd>
+            <dd class="app-check-your-answers__change">
+              <a href="change-apprentice-status">
+                <span class="govuk-visually-hidden">Edit stop date</span>
+              </a>
+            </dd>
+          </div>-->
+          
+      </dl>
+
+
+      <h2 class="govuk-heading-m">
+        Overview
+      </h2>
+      <dl class="app-check-your-answers app-check-your-answers--short">
+      <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+          Employer
+        </dt>
+        <dd class="app-check-your-answers__answer">
+          Grooveholding UK Ltd
+        </dd>
+        <dd class="app-check-your-answers__change">
+          <a href="what-youll-need" class="govuk-link govuk-link--no-visited-state">
+            <span class="govuk-visually-hidden">Change</span>
+          </a>
+        </dd>
+      </div>
+      <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+          Reference
+        </dt>
+        <dd class="app-check-your-answers__answer">
+          VKKG8P
+        </dd>
+        <dd class="app-check-your-answers__change">
+          <a href="#">
+            <span class="govuk-visually-hidden">Edit reference</span>
+          </a>
+        </dd>
+      </div>
+      <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+          Agreement ID
+        </dt>
+        <dd class="app-check-your-answers__answer">
+          76X9MV
+        </dd>
+        <dd class="app-check-your-answers__change">
+          <a href="#">
+            <span class="govuk-visually-hidden">Edit agreement id</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+      <h2 class="govuk-heading-m">
+        Apprentice
+      </h2>
+
+
+        <dl class="app-check-your-answers app-check-your-answers--short">
+          <div class="app-check-your-answers__contents">
+            <dt class="app-check-your-answers__question">
+              Name
+            </dt>
+            <dd class="app-check-your-answers__answer">
+              Darren Diamond
+            </dd>
+            <dd class="app-check-your-answers__change">
+              <a href="apprentice-details#name">
+                <span class="govuk-visually-hidden">Edit name</span>
+              </a>
+            </dd>
+          </div>              
+          <div class="app-check-your-answers__contents">
+            <dt class="app-check-your-answers__question">
+              Date of birth
+            </dt>
+            <dd class="app-check-your-answers__answer">
+              5 Jan 2002
+            </dd>
+            <dd class="app-check-your-answers__change">
+              <a href="#">
+                <span class="govuk-visually-hidden">Edit date of birth</span>
+              </a>
+            </dd>
+          </div>
+          <div class="app-check-your-answers__contents">
+            <dt class="app-check-your-answers__question">
+              Unique learner number
+            </dt>
+            <dd class="app-check-your-answers__answer">
+              123456789A
+            </dd>
+            <dd class="app-check-your-answers__change">
+              <a href="#">
+                <span class="govuk-visually-hidden"> </span>
+              </a>
+            </dd>
+          </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Apprenticeship training course
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            Bespoke Saddler: Level 3 (Standard)
+          </dd>
+          <dd class="app-check-your-answers__change">
+            <a href="#">
+              <span class="govuk-visually-hidden">Edit apprenticeship training course</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Training start date
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            March 2019
+          </dd>
+          <dd class="app-check-your-answers__change">
+            <a href="#">
+              <span class="govuk-visually-hidden">Edit planned training start date</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Training end date
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            April 2021
+          </dd>
+          <dd class="app-check-your-answers__change">
+            <a href="#">
+              <span class="govuk-visually-hidden">Edit planned training finish date</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Total agreed apprenticeship price
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            £5,000 excluding VAT
+          </dd>
+          <dd class="app-check-your-answers__change">
+            <a href="#">
+              <span class="govuk-visually-hidden">Edit total agreed apprenticeship price (excluding VAT)</span>
+            </a>
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Your reference
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            
+          </dd>
+          <dd class="app-check-your-answers__change">
+            <a href="#">
+              <span class="govuk-visually-hidden">Edit reference</span>
+            </a>
+          </dd>
+        </div>
+        <!--<div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+              End-point assessor
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            The end-point assessor has not been declared
+          </dd>
+          <dd class="app-check-your-answers__change">
+            <a href="#">
+              <span class="govuk-visually-hidden">Edit End-point assessor</span>
+            </a>
+          </dd>
+        </div>-->
+      </dl>
+    </form>
+    </div>
+  </div>
+{% endblock %}

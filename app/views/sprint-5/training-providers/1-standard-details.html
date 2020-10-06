@@ -1,0 +1,44 @@
+
+{% extends "layout-standard.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+     {% include "../includes/banners/standards-details.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+               {% include "../includes/standards-page/tabs-standards-page.html" %}
+          </div>
+     </div>
+
+     <!-- ======================================= TAB CONTENT - ONE - START ======================================= -->
+     {% include "../includes/standards-page/standards-changes.html" %}
+     <!-- ======================================= TAB CONTENT - ONE - END ======================================= -->
+
+     <!-- ======================================= TAB CONTENT - TWO - START ======================================= -->
+     {% include "../includes/standards-page/standards-contacts.html" %}
+     <!-- ======================================= TAB CONTENT - TWO - END ======================================= -->
+
+     <!-- ======================================= TAB CONTENT - THREE - START ======================================= -->
+     {% include "../includes/standards-page/standards-old.html" %}
+     <!-- ======================================= TAB CONTENT - THREE - END ======================================= -->
+
+     <!-- ======================================= TAB CONTENT - FOUR - START ======================================= -->
+     {% include "../includes/standards-page/standards-employers.html" %}
+     <!-- ======================================= TAB CONTENT - FOUR - END ======================================= -->
+
+     <!-- ======================================= TAB CONTENT - FIVE - START ======================================= -->
+     {% include "../includes/standards-page/standards-docs.html" %}
+     <!-- ======================================= TAB CONTENT - FIVE - END ======================================= -->
+
+     {% include "../includes/back-to-top.html" %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+<div id="service-title-section" class="standard-details-page">
+
+     <div class="govuk-width-container">
+
+          {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+          {{ govukPhaseBanner({
+              tag: {
+                    text: "alpha"
+              },
+              html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+          }) }}
+          <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-full">
+                    <h1 class="govuk-heading-xl">
+                         <span class="govuk-caption-xl">
+                              <span class="icon approved"></span>Approved for delivery
+                         </span>
+                         Compressed air and vacuum technician
+                    </h1>
+                    <details class="govuk-details standard-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">More details</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <div class="">
+                                   <p><span class="govuk-caption-m">Level:</span> 3</p>
+                                   <p><span class="govuk-caption-m">Updated date:</span> 31/09/2020</p>
+                                   <p><span class="govuk-caption-m">Reference:</span> ST0817</p>
+                                   <p><span class="govuk-caption-m">Reviewed date:</span> 26/08/2020</p>
+                                   <p><span class="govuk-caption-m">LARS Code:</span> 562</p>
+                                   <p><span class="govuk-caption-m">Published date:</span> 26/08/2020</p>
+                                   <!-- <div class="contact-details">
+                                        <p class="govuk-!-font-size-19">
+                                             <span class="icon contact"></span> Joe Bloggs - (Relationship manager)
+                                             <span class="icon telephone"></span> <a href="tel:0191 496 0026">0191 496 0026</a>
+                                             <span class="icon email"></span> <a href="mailto:joe.bloggs@education.gov.uk">joe.bloggs@education.gov.uk</a>
+                                        </p>
+                                   </div> -->
+                              </div>
+                         </div>
+                    </details>
+               </div>
+          </div>
+
+     </div>
+
+</div>
