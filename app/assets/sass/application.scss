@@ -64,6 +64,10 @@ $govuk-assets-path: '/govuk/assets/';
 
 hr {
      margin: 2.5em 0 2em 0;
+     &.hr-sep {
+          border-top: 5px dashed govuk-colour("light-grey");
+          border-bottom: none;
+     }
 }
 
 .hub-page {
