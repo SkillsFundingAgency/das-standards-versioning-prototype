@@ -1,0 +1,70 @@
+<div class="filter search-requested-support">
+     <div class="search">
+          {% from "govuk/components/input/macro.njk" import govukInput %}
+
+          {{ govukInput({
+               label: {
+                    text: "Search standards"
+               },
+               id: "search-standards",
+               name: "Search standards"
+          }) }}
+
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+
+          {{ govukButton({
+               text: "Search"
+          }) }}
+     </div>
+     <div class="dropdowns">
+          {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+          {{ govukSelect({
+               id: "standards-per-page",
+               name: "standards-per-page",
+               label: {
+                    text: "Per page"
+               },
+               items: [
+                    {
+                         value: "item-15",
+                         text: "15"
+                    },
+                    {
+                         value: "item-30",
+                         text: "30"
+                    },
+                    {
+                         value: "item-45",
+                         text: "45"
+                    },
+                    {
+                         value: "all-items",
+                         text: "All items"
+                    }
+               ]
+          }) }}
+
+          {{ govukSelect({
+               id: "standards-sort",
+               name: "standards-sort",
+               label: {
+                    text: "Sort by"
+               },
+               items: [
+                    {
+                         value: "standards",
+                         text: "Recently updated"
+                    },
+                    {
+                         value: "a-z",
+                         text: "A to Z"
+                    },
+                    {
+                         value: "z-a",
+                         text: "Z to A"
+                    }
+               ]
+          }) }}
+     </div>
+</div>

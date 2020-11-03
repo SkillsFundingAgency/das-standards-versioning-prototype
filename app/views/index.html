@@ -91,11 +91,15 @@
 <div class="govuk-grid-row">
      <!-- Sprints section starts -->
      <div class="govuk-grid-column-two-thirds">
-          {% include './sprint-6/_summary.html' %}
+          {% include './sprint-7/_summary.html' %}
 
           <h2 class="govuk-heading-l govuk-!-margin-top-9">
                Pre-Alpha sprints
           </h2>
+
+          {% set sprint6Html %}
+               {% include './sprint-6/_summary.html' %}
+          {% endset %}
 
           {% set sprint5Html %}
                {% include './sprint-5/_summary.html' %}
@@ -124,6 +128,17 @@
           {{ govukAccordion({
                id: "accordion-default",
                items: [
+                    {
+                         heading: {
+                              text: "Sprint 6"
+                         },
+                         content: {
+                              html: sprint6Html
+                         },
+                         summary: {
+                              html: '29th September - 13th October 2020'
+                         }
+                    },
                     {
                          heading: {
                               text: "Sprint 5"

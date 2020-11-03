@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">    
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-9">
+      Cohorts to review, update or approve
+    </h1>
+    <p class="govuk-body">
+      You have <b>1</b> cohort ready for you to review, update or approve:
+    </p>
+   
+
+    {{ govukTable({
+            
+      firstCellIsHeader: false,
+      head: [
+        {
+          text: "Employer",
+          classes: 'govuk-!-width-one-quarter'
+        },
+        {
+          text: "Reference",
+          classes: 'govuk-!-width-one-quarter'
+        },        
+        {
+          text: "Last message",
+          classes: 'govuk-!-width-one-half'
+        },
+        {
+          text: ""
+        }
+      ],
+      rows: [
+        [
+          {
+            text: "Grooveholding UK Ltd"
+          },                
+          {
+            text: "VFGHKU"
+          },
+          {
+            text: "No message added"
+          },
+          {
+            html: "<a href='review-your-cohort-1' class='govuk-link govuk-link--no-visited-state' title='Details' aria-describedby='Details'>Details</a>",
+            format: "numeric"
+          }
+        ]
+      ]
+    }) }}
+
+  </div>
+</div>    
+{% endblock %}
