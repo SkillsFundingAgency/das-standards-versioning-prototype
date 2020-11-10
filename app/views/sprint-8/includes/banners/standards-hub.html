@@ -1,0 +1,26 @@
+<div id="service-title-section">
+
+     <div class="govuk-width-container">
+
+          {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+          {{ govukPhaseBanner({
+              tag: {
+                    text: "alpha"
+              },
+              html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+          }) }}
+
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-full">
+                    <h1 class="govuk-heading-xl">
+                         <span class="govuk-caption-xl">
+                              Training provider name
+                         </span>
+                         Apprenticeship standards
+                    </h1>
+               </div>
+          </div>
+
+     </div>
+
+</div>
