@@ -1,0 +1,95 @@
+<div id="service-title-section">
+
+     <div class="govuk-width-container">
+
+          {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+          {{ govukPhaseBanner({
+              tag: {
+                    text: "beta"
+              },
+              html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+          }) }}
+
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-full">
+                    <h1 class="govuk-heading-xl">
+                         Record a grade
+                    </h1>
+               </div>
+          </div>
+
+     </div>
+
+</div>
+
+<div class="govuk-width-container">
+
+     <main class="govuk-main-wrapper">
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-two-thirds">
+
+                    {% from "govuk/components/input/macro.njk" import govukInput %}
+
+                    {{ govukInput({
+                         label: {
+                              text: "Family name",
+                              classes: "govuk-label--m",
+                              isPageHeading: true
+                         },
+                         classes: "govuk-input--width-20",
+                         hint: {
+                              text: "For example smith"
+                         },
+                         id: "epao-family-name",
+                         name: "epao-family-name"
+                    }) }}
+
+                    {{ govukInput({
+                         label: {
+                              text: "Unique learner number (ULN)",
+                              classes: "govuk-label--m",
+                              isPageHeading: false
+                         },
+                         classes: "govuk-input--width-10",
+                         hint: {
+                              text: "For example, 1234567890"
+                         },
+                         id: "epao-uln",
+                         name: "epao-uln"
+                    }) }}
+
+                    {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+                    {{ govukDetails({
+                         summaryText: "What is a ULN?",
+                         text: "Text"
+                    }) }}
+
+                    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+                    {{ govukCheckboxes({
+                         idPrefix: "epao-prviately-funded",
+                         name: "epao-prviately-funded",
+                         items: [
+                              {
+                                   value: "The apprenticeship is privately funded",
+                                   text: "The apprenticeship is privately funded"
+                              }
+                         ]
+                    }) }}
+
+                    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                    {{ govukButton({
+                         text: "Continue"
+                    }) }}
+
+                    {{ govukDetails({
+                         summaryText: "How do I know if the apprenticeship is privately funded?",
+                         text: "Text"
+                    }) }}
+
+               </div>
+          </div>
+     </main>
+</div>
