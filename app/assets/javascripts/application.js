@@ -162,3 +162,23 @@ function removeEmailThree() {
 var emailNumberThree = $("#emailsThree").data("email-countThree");
 $("#addAnotherEmailThree").on("click", addAnotherEmailThree);
 $("[data-removeThree]").on("click", removeEmailThree);
+
+// EPAO error summary
+$('.govuk-error-summary').hide();
+
+$(document).ready(function () {
+     $('#address-search').on('click',function(e) {
+          if ( $('#epao-address').val().length === 0 ) {
+               e.preventDefault();
+               $('.govuk-error-summary').show();
+               $('#address-search-input').addClass('govuk-form-group--error');
+               $(this).addClass('govuk-input--error');
+               $(this).parent().prepend(`
+                    <span id="national-insurance-number-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> Select an address or enter one manually</span>
+               `);
+          } else if ( $('#epao-address').val().length >= 1 ) {
+               $('#address-search').attr('href','7-confirm-address');
+          }
+     });
+});

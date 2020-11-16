@@ -1,0 +1,54 @@
+{% extends "layout-epao.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+     <div id="service-title-section" class="epao-page">
+
+          <div class="govuk-width-container">
+
+               <div class="govuk-grid-row dashboard-title">
+                    <div class="govuk-grid-column-two-thirds">
+                         <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+                         <h1 class="govuk-heading-xl">
+                              Confirm the address we are sending the certificate
+                         </h1>
+                    </div>
+               </div>
+
+          </div>
+
+     </div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <p>
+                    Some employers are not open due to the coronavirus (COVID-19) outbreak. You can temporarily choose to send
+                    certificates to the apprentice, employer or training provider.
+               </p>
+
+               <div class="govuk-form-group" id="address-search-input">
+                    <label class="govuk-label govuk-label--m" for="epao-address">Start typing the company name, address or postcode</label>
+                    <div>
+                         <input class="govuk-input" id="epao-address" name="epao-address" type="text">
+                    </div>
+               </div>
+
+               <p>
+                    <a href="#">Enter the address manually</a>
+               </p>
+
+               <button class="govuk-button" data-module="govuk-button" id="address-search">Continue</button>
+
+          </div>
+     </div>
+
+</div>
+{% endblock %}

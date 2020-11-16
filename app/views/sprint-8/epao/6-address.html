@@ -12,6 +12,19 @@
                <div class="govuk-grid-row dashboard-title">
                     <div class="govuk-grid-column-two-thirds">
                          <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+                         {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+                         {{ govukErrorSummary({
+                              titleText: "There is a problem",
+                              errorList: [
+                                   {
+                                        text: "Select an address or enter one manually",
+                                        href: "#passport-issued-error"
+                                   }
+                              ]
+                         }) }}
+
                          <h1 class="govuk-heading-xl">
                               Search for the address that you'd like to us to send the certificate to
                          </h1>
@@ -29,36 +42,28 @@
      <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
 
-               <form method="post" action="6-address" class="">
+               <form class="search-address">
 
                     <p>
                          Some employers are not open due to the coronavirus (COVID-19) outbreak. You can temporarily choose to send
                          certificates to the apprentice, employer or training provider.
                     </p>
 
-                    {% from "govuk/components/input/macro.njk" import govukInput %}
-
-                    {{ govukInput({
-                         label: {
-                              text: "Start typing the company name, address or postcode",
-                              classes: "govuk-label--m",
-                              isPageHeading: false
-                         },
-                         id: "epao-address",
-                         name: "epao-address"
-                    }) }}
+                    <div class="govuk-form-group" id="address-search-input">
+                         <label class="govuk-label govuk-label--m" for="epao-address">Start typing the company name, address or postcode</label>
+                         <div>
+                              <input class="govuk-input" id="epao-address" name="epao-address" type="text">
+                         </div>
+                    </div>
 
                     <p>
                          <a href="#">Enter the address manually</a>
                     </p>
 
-                    {% from "govuk/components/button/macro.njk" import govukButton %}
-
-                    {{ govukButton({
-                         text: "Continue"
-                    }) }}
+                    <a class="govuk-button" data-module="govuk-button" id="address-search">Continue</a>
 
                </form>
+
           </div>
      </div>
 
