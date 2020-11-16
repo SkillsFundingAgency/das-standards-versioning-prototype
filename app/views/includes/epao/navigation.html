@@ -1,0 +1,55 @@
+<div class="navigation epao">
+
+     <!-- DETAILS - START -->
+     <div class="epao-details">
+          <div class="govuk-width-container">
+               <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                         <p>
+                              Preprod Epao008<br>
+                              <strong>City and Guilds(London/ILM)</strong> (EPAO0008)
+                         </p>
+                    </div>
+                    <div class="govuk-grid-column-one-third">
+                         <p>
+                              <br>
+                              <a href="#">Sign out</a>
+                              <a href="2-email-preferences" class="govuk-link email-preferences">Email preferences</a>
+                              <a href="#">Contact</a>
+                         </p>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <!-- DETAILS - END -->
+
+     <!-- BETA - START -->
+     <div class="beta-details">
+          <div class="govuk-width-container">
+               {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+               {{ govukPhaseBanner({
+                   tag: {
+                         text: "beta"
+                   },
+                   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+               }) }}
+          </div>
+     </div>
+     <!-- BETA - END -->
+
+     <!-- NAVIGATION - START -->
+     <div class="nav">
+          <div class="govuk-width-container">
+               <ul class="govuk-list">
+                    <li><a href="../training-providers/index" class="govuk-link link-one">Home</a></li>
+                    <li><a href="#" class="govuk-link link-two">Pipeline</a></li>
+                    <li><a href="../epao/index" class="govuk-link link-three selected">Record a grade</a></li>
+                    <li><a href="#" class="govuk-link link-four">Completed assessments</a></li>
+                    <li><a href="#" class="govuk-link link-five">Standards</a></li>
+                    <li><a href="#" class="govuk-link link-six">Organisation details</a></li>
+               </ul>
+          </div>
+     </div>
+     <!-- NAVIGATION - END -->
+
+</div>

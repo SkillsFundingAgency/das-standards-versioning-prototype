@@ -33,6 +33,10 @@ $govuk-assets-path: '/govuk/assets/';
      margin-bottom: 0 !important;
 }
 
+.hidden {
+     display: none;
+}
+
 .govuk-header__container {
      border-bottom: 10px solid #134273;
      z-index: 20;
@@ -48,6 +52,11 @@ $govuk-assets-path: '/govuk/assets/';
 #service-title-section {
      background: #f0f3f7;
      padding: 0 0 3em 0;
+     &.epao-page {
+          background: none;
+          margin-top: -0.5em;
+          padding-bottom: 1em;
+     }
      &.standard-details-page {
           // margin-bottom: 2em;
           .govuk-back-link {
@@ -183,4 +192,16 @@ hr {
 
 .highlight {
      color: $govuk-link-colour;
+}
+
+.banner {
+     &.blue {
+          padding: 1em;
+          border: 5px solid govuk-colour("light-blue");
+          margin: 0 0 2em 0;
+          p {
+               margin: 0;
+               color: govuk-colour("light-blue");
+          }
+     }
 }

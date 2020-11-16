@@ -43,13 +43,13 @@
      {{ govukHeader({
           homepageUrl: "index",
           containerClasses: "govuk-width-container",
-          serviceName: "Standard versioning",
+          serviceName: "Apprenticeship assessment service",
           serviceUrl: "index"
      }) }}
-     {% include "./includes/hub-page/navigation-admin.html" %}
+     {% include "./includes/epao/navigation.html" %}
 {% endblock %}
 
-{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing hub-page govuk-width-container") %}
+{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing govuk-width-container") %}
 
 {% if useAutoStoreData %}
   {% block footer %}
