@@ -226,3 +226,23 @@ hr {
           }
      }
 }
+
+.address-selector {
+     padding: 1em;
+     margin-bottom: 1.5em;
+     background: govuk-colour("light-grey");
+     @include govuk-font(19, $weight: normal);
+     border-left: 10px solid govuk-colour("dark-blue");
+}
+
+table {
+     tbody {
+          tr {
+               td {
+                    &.right-align {
+                         text-align: right;
+                    }
+               }
+          }
+     }
+}
