@@ -1,0 +1,97 @@
+{% extends "layout-epao.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+     <div id="service-title-section" class="epao-page">
+
+          <div class="govuk-width-container">
+
+               <div class="govuk-grid-row dashboard-title">
+                    <div class="govuk-grid-column-two-thirds">
+                         <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+                         <h1 class="govuk-heading-xl">
+                              What grade did the apprentice achieve?
+                         </h1>
+                    </div>
+               </div>
+
+          </div>
+
+     </div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <form method="post" action="5-apprentice-date" class="">
+
+                    {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+                    {{ govukWarningText({
+                         text: "You are not expected to record the partial elements of course withdrawals",
+                         iconFallbackText: "Warning"
+                    }) }}
+
+                    <div class="govuk-form-group">
+                         <div class="govuk-radios">
+                              <div class="govuk-radios__item">
+                                   <input class="govuk-radios__input" id="epao-apprentice-grade" name="epao-apprentice-grade" type="radio" value="Pass">
+                                   <label class="govuk-label govuk-radios__label" for="epao-apprentice-grade">Pass</label>
+                              </div>
+                              <div class="govuk-radios__item">
+                                   <input class="govuk-radios__input" id="epao-apprentice-grade-2" name="epao-apprentice-grade" type="radio" value="Credit">
+                                   <label class="govuk-label govuk-radios__label" for="epao-apprentice-grade-2">Credit</label>
+                              </div>
+                              <div class="govuk-radios__item">
+                                   <input class="govuk-radios__input" id="epao-apprentice-grade-3" name="epao-apprentice-grade" type="radio" value="Merit">
+                                   <label class="govuk-label govuk-radios__label" for="epao-apprentice-grade-3">Merit</label>
+                              </div>
+                              <div class="govuk-radios__item">
+                                   <input class="govuk-radios__input" id="epao-apprentice-grade-4" name="epao-apprentice-grade" type="radio" value="Distinction">
+                                   <label class="govuk-label govuk-radios__label" for="epao-apprentice-grade-4">Distinction</label>
+                              </div>
+                              <div class="govuk-radios__item">
+                                   <input class="govuk-radios__input" id="epao-apprentice-grade-5" name="epao-apprentice-grade" type="radio" value="Pass with excellence">
+                                   <label class="govuk-label govuk-radios__label" for="epao-apprentice-grade-5">Pass with excellence</label>
+                              </div>
+                              <div class="govuk-radios__item">
+                                   <input class="govuk-radios__input" id="epao-apprentice-grade-6" name="epao-apprentice-grade" type="radio" value="Outstanding">
+                                   <label class="govuk-label govuk-radios__label" for="epao-apprentice-grade-6">Outstanding</label>
+                              </div>
+                              <div class="govuk-radios__item">
+                                   <input class="govuk-radios__input" id="epao-apprentice-grade-7" name="epao-apprentice-grade" type="radio" value="No grade awarded">
+                                   <label class="govuk-label govuk-radios__label" for="epao-apprentice-grade-7">No grade awarded</label>
+                              </div>
+                              <div class="govuk-radios__divider">or</div>
+                              <div class="govuk-radios__item">
+                                   <input class="govuk-radios__input" id="epao-apprentice-grade-9" name="epao-apprentice-grade" type="radio" value="Fail" checked>
+                                   <label class="govuk-label govuk-radios__label" for="epao-apprentice-grade-9">Fail</label>
+                              </div>
+                         </div>
+                    </div>
+
+                    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                    {{ govukButton({
+                         text: "Continue"
+                    }) }}
+
+                    {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+                    {{ govukDetails({
+                         summaryText: "What do 'No grade awarded' and 'Fail' mean?",
+                         text: "Text"
+                    }) }}
+
+               </form>
+          </div>
+     </div>
+
+</div>
+{% endblock %}
