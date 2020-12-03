@@ -13,7 +13,7 @@
                     <div class="govuk-grid-column-two-thirds">
                          <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
                          <h1 class="govuk-heading-xl">
-                           Confirm the apprentice and choose a version of the standard
+                           Confirm the apprentice and choose the version of the standard
                          </h1>
                     </div>
                </div>
@@ -48,14 +48,14 @@
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Level</th>
                                    <td class="govuk-table__cell">2</td>
-                              </tr>
+                              </tr><!--
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Version</th>
                                    <td class="govuk-table__cell">1.0</td>
-                              </tr>
+                              </tr>-->
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Learner start date</th>
-                                   <td class="govuk-table__cell">1 April 2015</td>
+                                   <td class="govuk-table__cell">1 April 2018</td>
                               </tr>
                               <!--
                               <tr class="govuk-table__row">
@@ -82,11 +82,6 @@
                          and the employer. The training provider needs to then update the Individual Learner Record (ILR).
                     </p>
 
-                    {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-
-                    {{ govukInsetText({
-                      text: "Currently on: Adult care worker - level 2 - version 1.0"
-                    }) }}
 
                     {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -95,32 +90,20 @@
                       name: "change-version",
                       fieldset: {
                         legend: {
-                          text: "Select a version of the standard",
+                          text: "Which standard version did you assess?",
                           isPageHeading: true,
                           classes: "govuk-fieldset__legend--m"
                         }
                       },
                       items: [
                         {
-                          value: "1",
-                          text: "Version 1.0",
-                          hint: {
-                              text: "Keep the apprentice on version 1.0"
-                            }
+                          value: "1.0",
+                          text: "Version 1.0"
+
                         },
                         {
-                          text: "2",
-                          text: "Version 1.1",
-                          hint: {
-                            text: "Change apprentice to 1.1 - Multiple changes to course content, see Ifate documentation"
-                          }
-                        },
-                        {
-                          text: "3",
-                          text: "Version 2.0",
-                          hint: {
-                            text: "Upgrade apprentice to version 2.0 - Substantial changes to assesment or content, see Ifate documentation"
-                          }
+                          value: "1.1",
+                          text: "Version 1.1"
                         }
                       ]
                     }) }}
