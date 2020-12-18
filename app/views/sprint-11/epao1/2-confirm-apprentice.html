@@ -1,0 +1,93 @@
+{% extends "layout-epao.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+     <div id="service-title-section" class="epao-page">
+
+          <div class="govuk-width-container">
+
+               <div class="govuk-grid-row dashboard-title">
+                    <div class="govuk-grid-column-two-thirds">
+                         <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+                         <h1 class="govuk-heading-xl">
+                           Confirm the apprentice and choose the standard
+                         </h1>
+                    </div>
+               </div>
+
+          </div>
+
+     </div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <form method="post" action="2a-choose-version" class="">
+
+
+
+
+
+
+
+
+
+
+
+
+                    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+                    {{ govukRadios({
+                      idPrefix: "choose-standard-multi",
+                      name: "choose-standard-multi",
+                      fieldset: {
+                        legend: {
+                          text: "Which standard did you assess?",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--m"
+                        }
+                      },
+                      items: [
+                        {
+                          value: "Capentry and joinery",
+                          text: "Capentry and joinery",
+                          hint: {
+                            text: "Level 2"
+                                    }
+
+                        },
+                        {
+                          value: "Advanced carpentry and joinery",
+                          text: "Advanced carpentry and joinery",
+                          hint: {
+                          text: "Level 3"
+                                  }
+
+                        }
+                      ]
+                    }) }}
+
+
+                    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                    {{ govukButton({
+                         text: "Confirm and continue"
+                    }) }}
+
+                    <p>
+                         <a href="index">Search again</a> if this isn't the correct apprentice.
+                    </p>
+
+               </form>
+          </div>
+     </div>
+
+</div>
+{% endblock %}
