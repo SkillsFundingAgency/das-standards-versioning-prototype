@@ -13,7 +13,7 @@
                     <div class="govuk-grid-column-two-thirds">
                          <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
                          <h1 class="govuk-heading-xl">
-                           Confirm the apprentice and choose the standard and version
+                           Confirm the apprentice and choose the version
                          </h1>
                     </div>
                </div>
@@ -29,7 +29,8 @@
      <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
 
-               <form method="post" action="3-declaration" class="">
+               <form method="post" action="/sprint-11/epao3/2-confirm-apprentice1" class="form">
+
 
                     <table class="govuk-table">
                          <tbody class="govuk-table__body">
@@ -42,15 +43,15 @@
                                    <td class="govuk-table__cell">{{ data['epao-uln'] }}</td>
                               </tr>
 
-                              <!--
+
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Standard</th>
-                                   <td class="govuk-table__cell">Adult care worker</td>
+                                   <td class="govuk-table__cell">Military engineering construction technician</td>
                               </tr>
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Level</th>
-                                   <td class="govuk-table__cell">2</td>
-                              </tr>
+                                   <td class="govuk-table__cell">3</td>
+                              </tr><!--
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Version</th>
                                    <td class="govuk-table__cell">1.0</td>
@@ -75,7 +76,7 @@
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Date recorded</th>
                                    <td class="govuk-table__cell">7 November 2020</td>
-                              </tr>-->
+                              </tr> -->
                          </tbody>
                     </table>
 
@@ -87,65 +88,42 @@
 
 
 
+<!--
+
+Actually ST0414 Military engineering construction technician
+Level 3
+Version 1.0
+Military engineering construction technician
+"Bricklayer & Concreter",
+"Building & Structural Finisher",
+"Carpenter & Joiner"
+
+Version 1.1
+                     Military engineering construction technician
+                    "Carpenter & Joiner",
+                    "Bricklayer & Concreter",
+                    "Building & Structural Finisher",
+                    "Plumbing & Heating Engineer",
+                    "Plant Operator & Mechanic"
+
+
+Version 1.2
+                    Military engineering construction technician
+                    "Carpenter & Joiner",
+                    "Bricklayer & Concreter",
+                    "Building & Structural Finisher",
+                    "Plumbing & Heating Engineer",
+                    "Plant Operator & Mechanic"
+
+
+-->
 
 
 
 
 
 
-                    {% set Standard1 %}
 
-
-                    {{ govukRadios({
-                     idPrefix: "choose-version",
-                     name: "choose-version",
-                     fieldset: {
-                       legend: {
-                         text: "",
-                         isPageHeading: true,
-                         classes: "govuk-fieldset__legend--l"
-                       }
-                     },
-                     items: [
-                       {
-                         value: "1.0",
-                         text: "Version 1.0"
-                       },
-                       {
-                         value: "1.1",
-                         text: "Version 1.1"
-                       }
-                     ]
-                    }) }}
-
-                    {% endset -%}
-
-
-
-
-                    {% set Standard2 %}
-                    {{ govukRadios({
-                     idPrefix: "choose-version",
-                     name: "choose-version",
-                     fieldset: {
-                       legend: {
-                         text: "",
-                         isPageHeading: true,
-                         classes: "govuk-fieldset__legend--l"
-                       }
-                     },
-                     items: [
-                       {
-                         value: "1.0",
-                         text: "Version 1.0"
-                       },
-                       {
-                         value: "1.1",
-                         text: "Version 1.1"
-                       }
-                     ]
-                    }) }}
-                    {% endset -%}
 
 
 
@@ -159,36 +137,41 @@
                     {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
                     {{ govukRadios({
-                      idPrefix: "choose-standard",
-                      name: "choose-standard",
+                      idPrefix: "chooseversionoption",
+                      name: "chooseversionoption",
                       fieldset: {
                         legend: {
-                          text: "Which standard and version did you assess?",
+                          text: "What version and options did the apprentice study?",
                           isPageHeading: true,
                           classes: "govuk-fieldset__legend--m"
                         }
                       },
+
+
+
+
+
+
+
+
                       items: [
                         {
-                          value: "Carpentry and joinery",
-                          text: "Carpentry and joinery",
-                          hint: {
-                            text: "Level 2"
-                                    },
-                          conditional: {
-                            html: Standard1
-                          }
+                          value: "Version 1.0",
+                          text: "Version 1.0"
 
                         },
+
+
                         {
-                          value: "Advanced carpentry and joinery",
-                          text: "Advanced carpentry and joinery",
-                          hint: {
-                          text: "Level 3"
-                                  },
-                          conditional: {
-                            html: Standard2
-                          }
+                          value: "Version 1.1",
+                          text: "Version 1.1"
+                        },
+
+
+
+                          {
+                            value: "Version 1.2",
+                            text: "Version 1.2"
                         }
                       ]
                     }) }}
