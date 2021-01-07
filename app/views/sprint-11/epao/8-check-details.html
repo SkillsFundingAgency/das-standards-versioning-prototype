@@ -1,6 +1,6 @@
-{% extends "layout-epao.html" %} 
+{% extends "layout-epao.html" %}
 
-{% block pageTitle %} GOV.UK Prototype Kit {% endblock %} 
+{% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
 
 {% block beforeContent %}
   <div id="service-title-section" class="epao-page">
@@ -15,7 +15,7 @@
       </div>
     </div>
   </div>
-{% endblock %} 
+{% endblock %}
 
 {% block content %}
   <div class="govuk-width-container">
@@ -68,7 +68,7 @@
                 <th scope="row" class="govuk-table__header">Standard</th>
                 <td class="govuk-table__cell">{{ data['choose-standard'] }}</td>
                 <td class="govuk-table__cell right-align">
-                  <a href="2-confirm-apprentice">Change</a>
+                
                 </td>
               </tr>
               <tr class="govuk-table__row">
@@ -76,8 +76,8 @@
 
                 {% if (data['choose-standard'] == "Carpentry and joinery") %}
                   <td class="govuk-table__cell">2</td>
-                {% endif %} 
-                
+                {% endif %}
+
                 {% if (data['choose-standard'] == "Advanced carpentry and joinery") %}
                   <td class="govuk-table__cell">3</td>
                 {% endif %}
@@ -151,10 +151,10 @@
             </tbody>
           </table>
 
-          {% from "govuk/components/button/macro.njk" import govukButton %} 
-          
-          {{ govukButton({ 
-            text: "Confirm and submit" 
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+
+          {{ govukButton({
+            text: "Confirm and submit"
           }) }}
 
         </form>
