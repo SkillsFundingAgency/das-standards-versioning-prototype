@@ -1,0 +1,80 @@
+
+{% extends "layout-email.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+     <div class="email-banner">
+          <img src="/public/images/ESFA-logo.jpg" alt="Education & Skills Funding Agency">
+     </div>
+{% endblock %}
+
+{% block content %}
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+               <h1 class="govuk-heading-m">
+                    Apprenticeship standards upcoming changes
+                    <br>
+                    <br>
+                    Hi "NAME",
+               </h1>
+
+               <p class="govuk-body">
+                    Please find below planned updates to your apprenticeship standards:
+               </p>
+
+               <hr>
+
+               <!-- Entry 1 - START -->
+               <p>
+                    <a href="../training-providers/1-standard-details" class="govuk-body govuk-!-font-weight-bold govuk-body govuk-!-font-size-24">Compressed air and vacuum technician</a>
+               </p>
+
+               <p class="govuk-body">
+                    There are <strong>4</strong> upcoming changes to Compressed air and vacuum technician. Planned live date for these change <strong>10/09/2020</strong>.
+               </p>
+
+               <p class="govuk-body">
+                    You currently have <strong>67 apprentices</strong> on this standard. <strong>4 Employers</strong> are using this standard.
+               </p>
+
+               {% from "govuk/components/button/macro.njk" import govukButton %}
+
+               {{ govukButton({
+                    text: "View changes",
+                    classes: "no-bottom-margin",
+                    href: "../training-providers/1-standard-details"
+               }) }}
+               <!-- Entry 1 - END -->
+
+               <hr>
+
+               <!-- Entry 2 - START -->
+               <p>
+                    <a href="#" class="govuk-body govuk-!-font-weight-bold govuk-body govuk-!-font-size-24">Systems thinking practitioner</a>
+               </p>
+
+               <p class="govuk-body">
+                    There are <strong>4</strong> upcoming changes to Compressed air and vacuum technician. Planned live date for these change <strong>10/09/2020</strong>.
+               </p>
+
+               <p class="govuk-body">
+                    You currently have <strong>67 apprentices</strong> on this standard. <strong>4 Employers</strong> are using this standard.
+               </p>
+
+               {% from "govuk/components/button/macro.njk" import govukButton %}
+
+               {{ govukButton({
+                    text: "View changes",
+                    href: "#"
+               }) }}
+               <!-- Entry 2 - END -->
+
+          </div>
+
+     </div>
+
+{% endblock %}
