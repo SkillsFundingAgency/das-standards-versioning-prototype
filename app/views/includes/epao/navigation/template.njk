@@ -43,8 +43,8 @@
                <ul class="govuk-list">
                     <li><a href="../training-providers/index" class="govuk-link link-one">Home</a></li>
                     <li><a href="#" class="govuk-link link-two">Pipeline</a></li>
-                    <li><a href="../epao/index" class="govuk-link link-three selected">Record a grade</a></li>
-                    <li><a href="#" class="govuk-link link-four">Completed assessments</a></li>
+                    <li><a href="../epao/index" class="govuk-link link-three {% if params.activeLink == "record-a-grade" %}selected{% endif %}">Record a grade</a></li>
+                    <li><a href="../completed-assessments/index" class="govuk-link link-four {% if params.activeLink == "completed-assessments" %}selected{% endif %}">Completed assessments</a></li>
                     <li><a href="#" class="govuk-link link-five">Standards</a></li>
                     <li><a href="#" class="govuk-link link-six">Organisation details</a></li>
                </ul>
