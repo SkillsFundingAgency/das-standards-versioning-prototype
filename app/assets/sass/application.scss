@@ -311,3 +311,12 @@ table {
 .js-enabled .expandble-cell--hidden {
   display: none;
 }
+
+.complete-font{
+  td{
+    font-size: 16px;
+  }
+  .das-no-wrap {
+    white-space: nowrap;
+  }
+}
