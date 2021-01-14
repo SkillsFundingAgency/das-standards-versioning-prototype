@@ -208,26 +208,23 @@ hr {
 }
 
 .autocomplete-suggestions {
+  box-sizing: border-box;
   background: white;
+  overflow: scroll;
   border: 2px solid $govuk-border-colour;
-  width: 98%;
   .autocomplete-suggestion {
     @include govuk-font(19, $weight: normal);
     padding: 0.25em;
-    strong {
-      color: $govuk-link-hover-colour;
-    }
     &:hover,
-    &:active,
     &:active {
-      background: $govuk-link-hover-colour;
-      color: white;
+      background: govuk-colour("light-grey");
       cursor: pointer;
-      strong {
-        color: white;
-      }
     }
   }
+}
+
+.autocomplete-selected {
+  background:govuk-colour("light-grey");
 }
 
 .address-selector {
