@@ -320,3 +320,22 @@ table {
     white-space: nowrap;
   }
 }
+/* ====================================== Fixes for full images on Template ================================= */
+.govuk-header__container.remove-blue-line{
+      border-bottom: none;
+      padding-bottom: 10px;
+}
+.govuk-main-wrapper.top-space-fix{
+  margin-top: -10px;
+  padding-top: 0px;
+  margin-bottom: -14px;
+  a:focus{
+    background-color: white;
+    box-shadow: none;
+  }
+}
+.image-demo{
+  outline: none;
+  border: none;
+    margin-bottom: -14px;
+}
