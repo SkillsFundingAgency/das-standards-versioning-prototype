@@ -14,7 +14,7 @@
 <div class="govuk-width-container">
 
     <a href="#" class="govuk-back-link">Back</a>
-        <main class="govuk-main-wrapper " id="main-content" role="main">
+        <main class="govuk-main-wrapper" id="main-content" role="main">
 
 
 
@@ -28,7 +28,7 @@
             <p class="govuk-body">You'll only be able to authorise payments for this apprentice once all the fields have been completed - either by yourself or your training provider</p>
         </div>
 
-        <form action="6-approve" id="addApprenticeship" novalidate="" method="post">
+        <form action="5a-add-full-details" novalidate="" method="post">
 
             <input data-val="true" data-val-required="The ProviderId field is required." id="ProviderId" name="ProviderId" type="hidden" value="10005760">
             <input id="AccountLegalEntityHashedId" name="AccountLegalEntityHashedId" type="hidden" value="79D8GJ">
@@ -106,53 +106,6 @@
     </div>
 
 
-    {{ govukInput({
-      id: "standards",
-      name: "standards",
-      label: {
-        text: "Add an apprenticeship",
-        classes: "govuk-label--s"
-      },
-      hint: {
-        text: "Start typing to search apprenticeships"
-      },
-      value: ""
-    }) }}
-
-
-    <div class="js-hidden-version-select">
-      {{ govukRadios({
-        idPrefix: "versions",
-        name: "versions",
-        fieldset: {
-          legend: {
-            text: "Select version",
-            isPageHeading: false,
-            classes: "govuk-fieldset__legend--s"
-          }
-        },
-        hint: {
-          text: "Choose version for this standard"
-        },
-        items: [
-          {
-            value: "1.1",
-            text: "1.1",
-            checked: false
-          },
-          {
-            value: "1.2",
-            text: "1.2",
-            checked: false
-          },
-          {
-            value: "1.3",
-            text: "1.3",
-            checked: false
-          }
-        ]
-      }) }}
-    </div>
 
 
     <!--
@@ -825,6 +778,7 @@
             <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
                     <label class="govuk-label govuk-date-input__label" for="EndYear">Year</label>
+
                     <input min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" id="EndYear" name="EndYear" value="">
                 </div>
             </div>
@@ -851,14 +805,13 @@
         <input maxlength="20" class="govuk-input govuk-!-width-three-quarters js-character-count" type="text" id="Reference" name="Reference" value="">
     </div>
 </div>
-
+<!--
 <div class="govuk-inset-text">
     <h3 class="govuk-heading-s">End-point assessments</h3>
     <p>If you have chosen an apprenticeship standard, we'll ask you to confirm the <a class="govuk-link" href="https://www.gov.uk/government/publications/using-the-register-of-apprentice-assessment-organisations" target="_blank" title="Opens in a new window">apprentice assessment organisation</a> for this apprentice. We'll do this before the end of the apprenticeship.</p>
     <p>Apprenticeship frameworks have different assessment arrangements and don't need end-point assessments.</p>
 </div>
-
-            <button id="continue-button" type="submit" class="govuk-button">Save and continue</button>
+-->            <button id="continue-button" type="submit" class="govuk-button">Save and continue</button>
         <input name="__RequestVerificationToken" type="hidden" value="CfDJ8ApxxyyFOpVMgprV5po2LDLWA2XerkYMQDD57hCRdlckKGEQAKHeVlwUrBBSMByYyGy2heAXi7PMG1pvkoaJS_pFGg-EtQ3vsatOe31RvtCSwXm1oGoALLC-pB82KeGeDcUdpB9VExDXeZTsmMLV8Q8RTqRo5Z2HOQ03qlGxVBTNthKnqmYmTuVyn2bNAhwUXg"></form>
 
     </div>

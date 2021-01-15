@@ -1,0 +1,126 @@
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<img src="/public/images/Employer-Nav.png"  width="auto" height="auto" />
+
+<div class="govuk-width-container">
+
+    <a href="#" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+
+
+
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+
+                  <h1 class="govuk-heading-xl">Add apprenticeship standard</h1>
+                  <div class="govuk-inset-text">
+          
+                      <p class="govuk-body">You'll only be able to authorise payments for this apprentice once all the fields have been completed - either by yourself or your training provider</p>
+                  </div>
+
+
+                  <form action="6-approve" method="post">
+
+
+                        {{ govukInput({
+                          id: "standards",
+                          name: "standards",
+                          label: {
+                            text: "Add an apprenticeship",
+                            classes: "govuk-label--s"
+                          },
+                          hint: {
+                            text: "Start typing to search apprenticeships"
+                          },
+                          value: ""
+                        }) }}
+
+
+                        <div class="js-hidden-version-select">
+                          {{ govukRadios({
+                            idPrefix: "versions",
+                            name: "versions",
+                            fieldset: {
+                              legend: {
+                                text: "Select version",
+                                isPageHeading: false,
+                                classes: "govuk-fieldset__legend--s"
+                              }
+                            },
+                            hint: {
+                              text: "Choose version for this standard"
+                            },
+                            items: [
+                              {
+                                value: "1.1",
+                                text: "1.1",
+                                checked: false
+                              },
+                              {
+                                value: "1.2",
+                                text: "1.2",
+                                checked: false
+                              },
+                              {
+                                value: "1.3",
+                                text: "1.3",
+                                checked: false
+                              }
+                            ]
+                          }) }}
+                        </div>
+
+
+                    <div class="govuk-inset-text">
+                        <h3 class="govuk-heading-s">End-point assessments</h3>
+                        <p>If you have chosen an apprenticeship standard, we'll ask you to confirm the <a class="govuk-link" href="https://www.gov.uk/government/publications/using-the-register-of-apprentice-assessment-organisations" target="_blank" title="Opens in a new window">apprentice assessment organisation</a> for this apprentice. We'll do this before the end of the apprenticeship.</p>
+                        <p>Apprenticeship frameworks have different assessment arrangements and don't need end-point assessments.</p>
+                    </div>
+
+                                <button id="continue-button" type="submit" class="govuk-button">Save and continue</button>
+
+
+
+
+                    </form>
+
+            </div>
+            </div>
+
+
+
+
+        </main>
+
+
+</div>
+
+
+{% endblock %}
+
+
+{% block pageScripts %}
+
+<script src="/public/javascripts/standards.js"></script>
+<script>
+  $(function(){
+    $(".js-hidden-version-select").hide();
+    $('#standards').autocomplete({
+      lookup: standardData,
+      onSelect: function (suggestion) {
+        $(".js-hidden-version-select").show();
+        $('#versions-hint').html('Choose a version for the standard: ' + suggestion.value);
+      }
+    });
+  });
+</script>
+{% endblock %}
