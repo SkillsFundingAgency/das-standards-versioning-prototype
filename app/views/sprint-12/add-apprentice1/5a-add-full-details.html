@@ -21,9 +21,9 @@
           <div class="govuk-grid-row">
               <div class="govuk-grid-column-two-thirds">
 
-                  <h1 class="govuk-heading-xl">Add apprenticeship standard</h1>
+                  <h1 class="govuk-heading-xl">Add apprenticeship details</h1>
                   <div class="govuk-inset-text">
-          
+
                       <p class="govuk-body">You'll only be able to authorise payments for this apprentice once all the fields have been completed - either by yourself or your training provider</p>
                   </div>
 
@@ -79,6 +79,80 @@
                           }) }}
                         </div>
 
+
+
+
+                        <div class="govuk-form-group  ">
+                            <fieldset class="govuk-fieldset" aria-describedby="start-date-hint" role="group">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                    Planned training start date
+                                </legend>
+                                <span id="start-date-hint" class="govuk-hint">
+                                    For example, 09 2017
+                                </span>
+                                <span class="field-validation-valid govuk-error-message" data-valmsg-for="StartDate" data-valmsg-replace="true" id="error-message-StartDate"></span>
+                                <div class="govuk-date-input">
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="StartMonth">Month</label>
+                                            <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="StartMonth" name="StartMonth" value="">
+                                        </div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="StartYear">Year</label>
+                                            <input min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" id="StartYear" name="StartYear" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="govuk-form-group  ">
+                            <fieldset class="govuk-fieldset" aria-describedby="finish-date-hint" role="group">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                    Planned training end date
+                                </legend>
+                                <span id="finish-date-hint" class="govuk-hint">
+                                    For example, 09 2019
+                                </span>
+                                <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate" data-valmsg-replace="true" id="error-message-EndDate"></span>
+                                <div class="govuk-date-input">
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="EndMonth">Month</label>
+                                            <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="EndMonth" name="EndMonth" value="">
+                                        </div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="EndYear">Year</label>
+
+                                            <input min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" id="EndYear" name="EndYear" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="govuk-form-group ">
+                            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Total agreed apprenticeship price (excluding VAT)</label>
+                            <span id="price-hint" class="govuk-hint">
+                                Enter the price, including any end-point assessment costs, in whole pounds. For example, for £1,500 enter 1500
+                            </span>
+                            <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true" id="error-message-Cost"></span>
+                            <input class="govuk-input govuk-input--width-5" type="number" id="Cost" name="Cost" value="">
+                        </div>
+
+                        <div class="govuk-character-count" data-module="character-count" data-maxlength="20">
+                            <div class="govuk-form-group ">
+                                <label class="govuk-label govuk-!-font-weight-bold" for="Reference">Reference (optional)</label>
+                                <span class="govuk-hint">
+                                    Add a reference, such as employee number or location - this won't be seen by the training provider
+                                </span>
+                                <span class="field-validation-valid govuk-error-message" data-valmsg-for="Reference" data-valmsg-replace="true" id="error-message-Reference"></span>
+
+                                <input maxlength="20" class="govuk-input govuk-!-width-three-quarters js-character-count" type="text" id="Reference" name="Reference" value="">
+                            </div>
+                        </div>
 
                     <div class="govuk-inset-text">
                         <h3 class="govuk-heading-s">End-point assessments</h3>
