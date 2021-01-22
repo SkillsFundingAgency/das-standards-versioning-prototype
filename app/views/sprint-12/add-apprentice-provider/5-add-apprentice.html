@@ -1,0 +1,942 @@
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<img src="/public/images/tp-header.png"  width="auto" height="auto" />
+
+
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Add apprentice details</h1>
+        <div class="govuk-inset-text">
+            <p class="govuk-body">You must add the apprentice’s first and last names - fill in as many other fields as you can. You'll be able to return later to make changes or add more information. </p>
+            <p class="govuk-body">You'll only be able to authorise payments for this apprentice once all the fields have been completed - either by yourself or your training provider</p>
+        </div>
+
+        <form action="6-approve" id="addApprenticeship" novalidate="" method="post">
+
+            <input data-val="true" data-val-required="The ProviderId field is required." id="ProviderId" name="ProviderId" type="hidden" value="10005760">
+            <input id="AccountLegalEntityHashedId" name="AccountLegalEntityHashedId" type="hidden" value="79D8GJ">
+            <input id="TransferSenderId" name="TransferSenderId" type="hidden" value="">
+            <input data-val="true" data-val-required="The Origin field is required." id="Origin" name="Origin" type="hidden" value="Apprentices">
+
+
+<input id="ReservationId" name="ReservationId" type="hidden" value="9ebbbce0-ff05-45fb-a019-6c3a7e550dda">
+
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Training provider
+        </legend>
+        <div>
+            <span class="govuk-label">National Garages Ltd</span>
+        </div>
+    </fieldset>
+</div>
+
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                Apprentice name
+            </legend>
+            <div class="govuk-form-group ">
+                <label class="govuk-label" for="FirstName">First name</label>
+                <span class="field-validation-valid govuk-error-message" data-valmsg-for="FirstName" data-valmsg-replace="true" id="error-message-FirstName"></span>
+                <input class="govuk-input" type="text" id="FirstName" name="FirstName" value="">
+            </div>
+            <div class="govuk-form-group ">
+                <label class="govuk-label" for="LastName">Last name</label>
+                <span class="field-validation-valid govuk-error-message" data-valmsg-for="LastName" data-valmsg-replace="true" id="error-message-LastName"></span>
+                <input class="govuk-input" type="text" id="LastName" name="LastName" value="">
+            </div>
+        </fieldset>
+    </div>
+    <div class="govuk-form-group  ">
+        <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                Date of birth
+            </legend>
+            <span id="dob-hint" class="govuk-hint">
+                For example, 31 3 1980
+            </span>
+            <span class="field-validation-valid govuk-error-message" data-valmsg-for="DateOfBirth" data-valmsg-replace="true" id="error-message-DateOfBirth"></span>
+            <div class="govuk-date-input">
+                <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="BirthDay">Day</label>
+                        <input min="1" max="31" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="BirthDay" name="BirthDay" value="">
+                    </div>
+                </div>
+                <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="BirthMonth">Month</label>
+                        <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="BirthMonth" name="BirthMonth" value="">
+                    </div>
+                </div>
+                <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="BirthYear">Year</label>
+                        <input min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" id="BirthYear" name="BirthYear" value="">
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+
+    <div class="govuk-form-group ">
+            <label class="govuk-label govuk-!-font-weight-bold" for="Uln">Unique learner number</label>
+            <span class="field-validation-valid govuk-error-message" data-valmsg-for="Uln" data-valmsg-replace="true" id="error-message-Uln"></span>
+            <input class="govuk-input govuk-!-width-three-quarters" type="text" id="Uln" name="Uln" value="">
+        </div>
+
+
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--s" for="standards">
+    Add an apprenticeship
+  </label>
+
+
+
+  <div id="standards-hint" class="govuk-hint">
+    Start typing to search apprenticeships
+  </div>
+
+<input class="govuk-input" id="standards" name="standards" type="text" aria-describedby="standards-hint" autocomplete="off">
+</div>
+
+
+
+    <div class="js-hidden-version-select" style="display: none;">
+
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset" aria-describedby="versions-hint">
+
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+
+    Select version
+
+  </legend>
+
+
+  <div id="versions-hint" class="govuk-hint">
+    Choose version for this standard
+  </div>
+
+
+  <div class="govuk-radios">
+
+
+
+
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="versions" name="versions" type="radio" value="1.1">
+          <label class="govuk-label govuk-radios__label" for="versions">
+        1.1
+      </label>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="versions-2" name="versions" type="radio" value="1.2">
+          <label class="govuk-label govuk-radios__label" for="versions-2">
+        1.2
+      </label>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="versions-3" name="versions" type="radio" value="1.3">
+          <label class="govuk-label govuk-radios__label" for="versions-3">
+        1.3
+      </label>
+
+        </div>
+
+
+
+
+  </div>
+
+
+</fieldset>
+
+
+</div>
+
+    </div>
+
+
+    <!--
+    <div class="govuk-form-group ">
+        <label class="govuk-label govuk-!-font-weight-bold" for="CourseCode">Apprenticeship training course</label>
+        <span id="course-name-hint" class="govuk-hint">Start typing the name of the course or choose an option from the list </span>
+        <span class="field-validation-valid govuk-error-message" data-valmsg-for="CourseCode" data-valmsg-replace="true" id="error-message-CourseCode"></span>
+        <select class="govuk-select govuk-!-width-three-quarters" aria-describedby="course-name-hint" id="CourseCode" name="CourseCode">
+            <option value="">Please select an option</option>
+        <option value="274">Abattoir Worker, Level: 2 (Standard)</option>
+<option value="34">Able seafarer (deck), Level: 2 (Standard)</option>
+<option value="272">Academic Professional, Level: 7 (Standard)</option>
+<option value="176">Accident Repair Technician, Level: 3 (Standard)</option>
+<option value="204">Accountancy Taxation Professional, Level: 7 (Standard)</option>
+<option value="488">Accounts / Finance Assistant, Level: 2 (Standard)</option>
+<option value="463">Acoustics Technician, Level: 4 (Standard)</option>
+<option value="17">Actuarial technician, Level: 4 (Standard)</option>
+<option value="255">Actuary, Level: 7 (Standard)</option>
+<option value="119">Adult care worker, Level: 2 (Standard)</option>
+<option value="545">Advanced and Creative Hair Professional, Level: 3 (Standard)</option>
+<option value="271">Advanced Baker, Level: 3 (Standard)</option>
+<option value="563">Advanced Beauty Therapist, Level: 3 (Standard)</option>
+<option value="152">Advanced butcher, Level: 3 (Standard)</option>
+<option value="240">Advanced Carpentry and Joinery, Level: 3 (Standard)</option>
+<option value="252">Advanced Clinical Practitioner, Level: 7 (Standard)</option>
+<option value="148">Advanced credit controller / debt collection specialist, Level: 3 (Standard)</option>
+<option value="149">Advanced dairy technologist, Level: 5 (Standard)</option>
+<option value="489">Advanced Forensic Practitioner (Custody or Sexual Offence), Level: 7 (Standard)</option>
+<option value="509">Advanced Furniture CNC Technician, Level: 3 (Standard)</option>
+<option value="535">Advanced Golf Greenkeeper, Level: 3 (Standard)</option>
+<option value="525">Advanced Upholsterer, Level: 3 (Standard)</option>
+<option value="373">Advertising and Media Executive, Level: 3 (Standard)</option>
+<option value="37">Aerospace engineer, Level: 6 (Standard)</option>
+<option value="3">Aerospace manufacturing fitter, Level: 3 (Standard)</option>
+<option value="56">Aerospace manufacturing, electrical, mechanical and systems fitter, Level: 3 (Standard)</option>
+<option value="38">Aerospace software development engineer, Level: 6 (Standard)</option>
+<option value="572">Agriculture / Horticulture Professional Adviser, Level: 6 (Standard)</option>
+<option value="490">Air Traffic Controller, Level: 5 (Standard)</option>
+<option value="114">Aircraft maintenance certifying engineer, Level: 4 (Standard)</option>
+<option value="113">Aircraft maintenance fitter / technician (fixed and rotary wing), Level: 3 (Standard)</option>
+<option value="121">Airside operator, Level: 2 (Standard)</option>
+<option value="115">Airworthiness planning, quality and safety technician, Level: 3 (Standard)</option>
+<option value="298">Ambulance Support Worker (Emergency, Urgent and Non-Urgent), Level: 3 (Standard)</option>
+<option value="332">Animal Care and Welfare Assistant, Level: 2 (Standard)</option>
+<option value="179">Animal Technologist, Level: 3 (Standard)</option>
+<option value="379">Animal Trainer, Level: 4 (Standard)</option>
+<option value="180">Arborist, Level: 2 (Standard)</option>
+<option value="484">Archaeological Specialist, Level: 7 (Standard)</option>
+<option value="429">Archaeological Technician, Level: 3 (Standard)</option>
+<option value="300">Architect (degree), Level: 7 (Standard)</option>
+<option value="299">Architectural Assistant (degree), Level: 6 (Standard)</option>
+<option value="561">Artificial Intelligence (AI) Data Specialist, Level: 7 (Standard)</option>
+<option value="432">Arts Therapist (degree), Level: 7 (Standard)</option>
+<option value="303">Asbestos Analyst/Surveyor, Level: 3 (Standard)</option>
+<option value="601">Asbestos Removal Operative, Level: 2 (Standard)</option>
+<option value="401">Assessor / Coach, Level: 4 (Standard)</option>
+<option value="133">Assistant accountant, Level: 3 (Standard)</option>
+<option value="485">Assistant Buyer / Assistant Merchandiser, Level: 6 (Standard)</option>
+<option value="526">Assistant Puppet Maker, Level: 3 (Standard)</option>
+<option value="85">Assistant technical director (visual effects), Level: 4 (Standard)</option>
+<option value="156">Associate Ambulance Practitioner, Level: 4 (Standard)</option>
+<option value="483">Associate Continuing Healthcare Practitioner, Level: 5 (Standard)</option>
+<option value="128">Associate project manager, Level: 4 (Standard)</option>
+<option value="283">Autocare Technician, Level: 2 (Standard)</option>
+<option value="474">Automation and Controls Engineering Technician, Level: 4 (Standard)</option>
+<option value="304">Automotive Glazing Technician, Level: 3 (Standard)</option>
+<option value="87">Aviation ground operative, Level: 2 (Standard)</option>
+<option value="86">Aviation ground specialist, Level: 3 (Standard)</option>
+<option value="141">Aviation maintenance mechanic (military), Level: 2 (Standard)</option>
+<option value="123">Aviation operations manager, Level: 4 (Standard)</option>
+<option value="177">Baker, Level: 2 (Standard)</option>
+<option value="390">Beauty and Make-Up Consultant, Level: 2 (Standard)</option>
+<option value="363">Beauty Therapist, Level: 2 (Standard)</option>
+<option value="544">BEMS (Building Energy Management Systems) Controls Engineer, Level: 4 (Standard)</option>
+<option value="521">Bespoke Furniture Maker, Level: 3 (Standard)</option>
+<option value="183">Bespoke Saddler, Level: 3 (Standard)</option>
+<option value="72">Bespoke tailor and cutter, Level: 5 (Standard)</option>
+<option value="339">Bicycle Mechanic, Level: 2 (Standard)</option>
+<option value="400">Bid and Proposal Co-ordinator, Level: 3 (Standard)</option>
+<option value="406">Bioinformatics Scientist, Level: 7 (Standard)</option>
+<option value="534">Blacksmith, Level: 3 (Standard)</option>
+<option value="76">Boatbuilder, Level: 3 (Standard)</option>
+<option value="522">Boatmaster, Level: 3 (Standard)</option>
+<option value="599">Bookbinder, Level: 2 (Standard)</option>
+<option value="294">Brewer, Level: 4 (Standard)</option>
+<option value="287">Bricklayer, Level: 2 (Standard)</option>
+<option value="354">Broadcast and Media Systems Engineer (degree), Level: 6 (Standard)</option>
+<option value="460">Broadcast and Media Systems Technical Operator, Level: 3 (Standard)</option>
+<option value="547">Broadcast and Media Systems Technician, Level: 5 (Standard)</option>
+<option value="112">Broadcast production assistant, Level: 3 (Standard)</option>
+<option value="447">Building Control Surveyor (degree), Level: 6 (Standard)</option>
+<option value="198">Building Services Design Engineer, Level: 6 (Standard)</option>
+<option value="178">Building Services Design Technician, Level: 3 (Standard)</option>
+<option value="173">Building Services Engineering Craftsperson, Level: 3 (Standard)</option>
+<option value="185">Building Services Engineering Ductwork Craftsperson, Level: 3 (Standard)</option>
+<option value="192">Building Services Engineering Ductwork Installer, Level: 2 (Standard)</option>
+<option value="164">Building Services Engineering Installer, Level: 2 (Standard)</option>
+<option value="193">Building Services Engineering Service and Maintenance Engineer, Level: 3 (Standard)</option>
+<option value="276">Building Services Engineering Site Management (Degree), Level: 6 (Standard)</option>
+<option value="275">Building Services Engineering Technician, Level: 4 (Standard)</option>
+<option value="194">Building Services Engineering Ventilation Hygiene Technician, Level: 3 (Standard)</option>
+<option value="134">Bus and coach engineering technician, Level: 3 (Standard)</option>
+<option value="196">Business Administrator, Level: 3 (Standard)</option>
+<option value="250">Business Fire Safety Advisor, Level: 3 (Standard)</option>
+<option value="311">Business to Business Sales Professional (degree), Level: 6 (Standard)</option>
+<option value="54">Butcher, Level: 2 (Standard)</option>
+<option value="458">Buying and Merchandising Assistant, Level: 4 (Standard)</option>
+<option value="305">Cabin Crew, Level: 3 (Standard)</option>
+<option value="573">Camera Prep Technician, Level: 3 (Standard)</option>
+<option value="453">Career Development Professional, Level: 6 (Standard)</option>
+<option value="239">Carpentry and Joinery, Level: 2 (Standard)</option>
+<option value="41">Chartered legal executive, Level: 6 (Standard)</option>
+<option value="55">Chartered manager degree apprenticeship, Level: 6 (Standard)</option>
+<option value="50">Chartered surveyor, Level: 6 (Standard)</option>
+<option value="424">Chartered Town Planner (degree), Level: 7 (Standard)</option>
+<option value="169">Chef De Partie, Level: 3 (Standard)</option>
+<option value="308">Children,Young People and Families Manager, Level: 5 (Standard)</option>
+<option value="309">Children,Young People and Families Practitioner, Level: 4 (Standard)</option>
+<option value="510">Church Minister, Level: 6 (Standard)</option>
+<option value="200">Civil Engineer, Level: 6 (Standard)</option>
+<option value="277">Civil Engineering Site Management (Degree), Level: 6 (Standard)</option>
+<option value="199">Civil Engineering Technician, Level: 3 (Standard)</option>
+<option value="591">Clinical Associate in Psychology (CAP), Level: 7 (Standard)</option>
+<option value="444">Clinical Coder, Level: 3 (Standard)</option>
+<option value="581">Clinical Dental Technician, Level: 5 (Standard)</option>
+<option value="604">Clinical Pharmacology Scientist, Level: 7 (Standard)</option>
+<option value="609">Clinical Scientist, Level: 7 (Standard)</option>
+<option value="307">Clinical Trials Specialist (degree), Level: 6 (Standard)</option>
+<option value="533">Clock Maker, Level: 3 (Standard)</option>
+<option value="555">Coaching Professional, Level: 5 (Standard)</option>
+<option value="479">Commercial Catering Equipment Technician, Level: 3 (Standard)</option>
+<option value="222">Commercial Procurement and Supply, Level: 4 (Standard)</option>
+<option value="234">Commercial Thermal Insulation Operative, Level: 2 (Standard)</option>
+<option value="93">Commis chef, Level: 2 (Standard)</option>
+<option value="215">Community Activator Coach, Level: 2 (Standard)</option>
+<option value="242">Community Energy Specialist, Level: 4 (Standard)</option>
+<option value="427">Community Safety Advisor, Level: 3 (Standard)</option>
+<option value="251">Community Sport and Health Officer, Level: 3 (Standard)</option>
+<option value="143">Compliance / risk officer, Level: 3 (Standard)</option>
+<option value="160">Composites Technician, Level: 3 (Standard)</option>
+<option value="562">Compressed Air and Vacuum Technician, Level: 3 (Standard)</option>
+<option value="467">Construction Assembly and Installation Operative, Level: 2 (Standard)</option>
+<option value="500">Construction Design and Build Technician, Level: 4 (Standard)</option>
+<option value="588">Construction Equipment Maintenance Mechanic, Level: 2 (Standard)</option>
+<option value="575">Construction Plant Operative, Level: 2 (Standard)</option>
+<option value="468">Construction Quantity Surveying Technician, Level: 4 (Standard)</option>
+<option value="482">Construction Quantity Surveyor (degree), Level: 6 (Standard)</option>
+<option value="259">Construction Site Engineering Technician, Level: 4 (Standard)</option>
+<option value="501">Construction Site Management, Level: 6 (Standard)</option>
+<option value="502">Construction Site Supervisor, Level: 4 (Standard)</option>
+<option value="171">Construction Steel Fixer, Level: 2 (Standard)</option>
+<option value="9">Control / technical support engineer, Level: 6 (Standard)</option>
+<option value="39">Conveyancing technician, Level: 4 (Standard)</option>
+<option value="606">Costume Performance Technician, Level: 3 (Standard)</option>
+<option value="503">Counter Fraud Investigator, Level: 4 (Standard)</option>
+<option value="585">Countryside Ranger, Level: 4 (Standard)</option>
+<option value="543">Countryside Worker, Level: 2 (Standard)</option>
+<option value="542">Creative Digital Design Professional, Level: 6 (Standard)</option>
+<option value="528">Creative Industries Production Manager (degree), Level: 7 (Standard)</option>
+<option value="229">Creative Venue Technician, Level: 3 (Standard)</option>
+<option value="77">Credit controller / collector, Level: 2 (Standard)</option>
+<option value="314">Crop Technician, Level: 3 (Standard)</option>
+<option value="418">Cultural Heritage Conservation Technician, Level: 4 (Standard)</option>
+<option value="451">Cultural Heritage Conservator, Level: 7 (Standard)</option>
+<option value="407">Cultural Learning and Participation Officer, Level: 3 (Standard)</option>
+<option value="554">Curator, Level: 7 (Standard)</option>
+<option value="539">Curtain Wall Installer, Level: 3 (Standard)</option>
+<option value="269">Custody and Detention Officer, Level: 3 (Standard)</option>
+<option value="122">Customer service practitioner, Level: 2 (Standard)</option>
+<option value="278">Customer Service Specialist, Level: 3 (Standard)</option>
+<option value="79">Cyber intrusion analyst, Level: 4 (Standard)</option>
+<option value="355">Cyber Security Technical Professional (degree), Level: 6 (Standard)</option>
+<option value="559">Cyber Security Technician, Level: 3 (Standard)</option>
+<option value="98">Cyber security technologist, Level: 4 (Standard)</option>
+<option value="80">Data analyst, Level: 4 (Standard)</option>
+<option value="337">Data Scientist (degree), Level: 6 (Standard)</option>
+<option value="576">Data Technician, Level: 3 (Standard)</option>
+<option value="552">Debt Adviser, Level: 3 (Standard)</option>
+<option value="343">Demolition Operative, Level: 2 (Standard)</option>
+<option value="19">Dental laboratory assistant, Level: 3 (Standard)</option>
+<option value="61">Dental nurse, Level: 3 (Standard)</option>
+<option value="20">Dental practice manager, Level: 4 (Standard)</option>
+<option value="18">Dental technician, Level: 5 (Standard)</option>
+<option value="511">Design and Construction Management (degree), Level: 6 (Standard)</option>
+<option value="548">DevOps Engineer, Level: 4 (Standard)</option>
+<option value="469">Dietitian (degree), Level: 6 (Standard)</option>
+<option value="327">Digital and Technology Solution Specialist (degree), Level: 7 (Standard)</option>
+<option value="25">Digital and technology solutions professional, Level: 6 (Standard)</option>
+<option value="491">Digital Community Manager, Level: 4 (Standard)</option>
+<option value="195">Digital Engineering Technician, Level: 3 (Standard)</option>
+<option value="78">Digital marketer, Level: 3 (Standard)</option>
+<option value="293">Digital Marketer (degree), Level: 6 (Standard)</option>
+<option value="439">Digital Support Technician, Level: 3 (Standard)</option>
+<option value="541">Digital User Experience (UX) Professional (Integrated Degree), Level: 6 (Standard)</option>
+<option value="504">District Nurse, Level: 7 (Standard)</option>
+<option value="456">Drinks Dispense Technician, Level: 3 (Standard)</option>
+<option value="26">Dual fuel smart meter installer, Level: 2 (Standard)</option>
+<option value="430">Early Years Educator, Level: 3 (Standard)</option>
+<option value="550">Early Years Practitioner, Level: 2 (Standard)</option>
+<option value="466">Ecologist (degree), Level: 7 (Standard)</option>
+<option value="10">Electrical / electronic technical support engineer, Level: 6 (Standard)</option>
+<option value="216">Electrical Power Networks Engineer, Level: 4 (Standard)</option>
+<option value="127">Electrical power protection and plant commissioning engineer, Level: 4 (Standard)</option>
+<option value="212">Electrical, Electronic Product Service and Installation Engineer, Level: 3 (Standard)</option>
+<option value="614">Electro-Mechanical Engineer, Level: 6 (Standard)</option>
+<option value="475">Electronic Systems Principal Engineer, Level: 7 (Standard)</option>
+<option value="107">Embedded electronic systems design and development engineer, Level: 6 (Standard)</option>
+<option value="262">Emergency Service Contact Handling, Level: 3 (Standard)</option>
+<option value="415">Employability Practitioner, Level: 4 (Standard)</option>
+<option value="595">Engineer Surveyor, Level: 4 (Standard)</option>
+<option value="376">Engineering Construction Erector / Rigger, Level: 3 (Standard)</option>
+<option value="202">Engineering Construction Pipefitter, Level: 3 (Standard)</option>
+<option value="92">Engineering design and draughtsperson, Level: 3 (Standard)</option>
+<option value="377">Engineering Fitter, Level: 3 (Standard)</option>
+<option value="523">Engineering Manufacturing Technician, Level: 4 (Standard)</option>
+<option value="352">Engineering Operative, Level: 2 (Standard)</option>
+<option value="167">Engineering Technician, Level: 3 (Standard)</option>
+<option value="464">Environmental Health Practitioner, Level: 6 (Standard)</option>
+<option value="465">Environmental Practitioner (degree), Level: 6 (Standard)</option>
+<option value="263">Equine Groom, Level: 2 (Standard)</option>
+<option value="159">Event Assistant, Level: 3 (Standard)</option>
+<option value="517">Express Delivery Manager (degree), Level: 6 (Standard)</option>
+<option value="338">Express Delivery Operative, Level: 2 (Standard)</option>
+<option value="162">Facilities Management Supervisor, Level: 3 (Standard)</option>
+<option value="266">Facilities Manager, Level: 4 (Standard)</option>
+<option value="440">Facilities Services Operative, Level: 2 (Standard)</option>
+<option value="481">Farrier, Level: 3 (Standard)</option>
+<option value="361">Fashion and Textiles Pattern Cutter, Level: 3 (Standard)</option>
+<option value="359">Fashion and Textiles Product Technologist, Level: 4 (Standard)</option>
+<option value="408">Fashion Studio Assistant, Level: 3 (Standard)</option>
+<option value="356">Fencing Installer, Level: 2 (Standard)</option>
+<option value="512">Fenestration Fabricator, Level: 2 (Standard)</option>
+<option value="513">Fenestration Installer, Level: 2 (Standard)</option>
+<option value="153">Financial Adviser, Level: 4 (Standard)</option>
+<option value="8">Financial services administrator, Level: 3 (Standard)</option>
+<option value="28">Financial services customer adviser, Level: 2 (Standard)</option>
+<option value="213">Financial Services Professional, Level: 6 (Standard)</option>
+<option value="126">Fire emergency and security systems technician, Level: 3 (Standard)</option>
+<option value="530">Fire Safety Inspector, Level: 4 (Standard)</option>
+<option value="410">First Officer Pilot, Level: 6 (Standard)</option>
+<option value="172">Fishmonger, Level: 2 (Standard)</option>
+<option value="498">Fitted Furniture Design Technician, Level: 3 (Standard)</option>
+<option value="372">Floorlayer, Level: 2 (Standard)</option>
+<option value="567">Florist, Level: 2 (Standard)</option>
+<option value="245">Food and Drink Advanced Engineer, Level: 6 (Standard)</option>
+<option value="129">Food and drink advanced process operator, Level: 3 (Standard)</option>
+<option value="454">Food and Drink Engineer, Level: 5 (Standard)</option>
+<option value="16">Food and drink maintenance engineer, Level: 3 (Standard)</option>
+<option value="130">Food and drink process operator, Level: 2 (Standard)</option>
+<option value="184">Food Industry Technical Professional, Level: 6 (Standard)</option>
+<option value="131">Food technologist, Level: 3 (Standard)</option>
+<option value="289">Footwear Manufacturer, Level: 2 (Standard)</option>
+<option value="589">Forensic Collision Investigator, Level: 6 (Standard)</option>
+<option value="182">Forest Operative, Level: 2 (Standard)</option>
+<option value="329">Formworker, Level: 2 (Standard)</option>
+<option value="582">Fundraiser, Level: 3 (Standard)</option>
+<option value="411">Funeral Director, Level: 3 (Standard)</option>
+<option value="412">Funeral Team Member, Level: 2 (Standard)</option>
+<option value="137">Furniture manufacturer, Level: 2 (Standard)</option>
+<option value="514">Garment Maker, Level: 3 (Standard)</option>
+<option value="74">Gas engineering, Level: 3 (Standard)</option>
+<option value="57">Gas network craftsperson, Level: 3 (Standard)</option>
+<option value="58">Gas network team leader, Level: 2 (Standard)</option>
+<option value="94">General Welder (Arc Processes), Level: 2 (Standard)</option>
+<option value="254">Geospatial Mapping and Science Degree, Level: 6 (Standard)</option>
+<option value="244">Geospatial Survey Technician, Level: 3 (Standard)</option>
+<option value="553">Golf Course Manager, Level: 5 (Standard)</option>
+<option value="21">Golf greenkeeper, Level: 2 (Standard)</option>
+<option value="388">Groundworker, Level: 2 (Standard)</option>
+<option value="157">Hair Professional, Level: 2 (Standard)</option>
+<option value="527">Harbour Master, Level: 6 (Standard)</option>
+<option value="580">Health and Care Intelligence Specialist, Level: 7 (Standard)</option>
+<option value="505">Health Play Specialist, Level: 5 (Standard)</option>
+<option value="102">Healthcare assistant practitioner, Level: 5 (Standard)</option>
+<option value="532">Healthcare Cleaning Operative, Level: 2 (Standard)</option>
+<option value="99">Healthcare science assistant, Level: 2 (Standard)</option>
+<option value="150">Healthcare science associate, Level: 4 (Standard)</option>
+<option value="168">Healthcare Science Practitioner, Level: 6 (Standard)</option>
+<option value="103">Healthcare support worker, Level: 2 (Standard)</option>
+<option value="421">Hearing Aid Dispenser, Level: 5 (Standard)</option>
+<option value="135">Heavy vehicle service and maintenance technician, Level: 3 (Standard)</option>
+<option value="341">Heritage Engineering Technician, Level: 3 (Standard)</option>
+<option value="220">High Speed Rail and Infrastructure Technician, Level: 4 (Standard)</option>
+<option value="125">Highway electrical maintenance and installation operative, Level: 2 (Standard)</option>
+<option value="124">Highways electrician / service operative, Level: 3 (Standard)</option>
+<option value="336">Highways Maintenance Skilled Operative, Level: 2 (Standard)</option>
+<option value="385">Hire Controller (Plant, Tools and Equipment), Level: 2 (Standard)</option>
+<option value="441">Historic Environment Advice Assistant, Level: 4 (Standard)</option>
+<option value="566">Historic Environment Advisor, Level: 7 (Standard)</option>
+<option value="108">HM Forces serviceperson (public services), Level: 2 (Standard)</option>
+<option value="181">Horticulture and Landscape Operative, Level: 2 (Standard)</option>
+<option value="223">Hospitality Manager, Level: 4 (Standard)</option>
+<option value="138">Hospitality supervisor, Level: 3 (Standard)</option>
+<option value="96">Hospitality team member, Level: 2 (Standard)</option>
+<option value="65">Housing / property management, Level: 3 (Standard)</option>
+<option value="64">Housing / property management assistant, Level: 2 (Standard)</option>
+<option value="190">HR Consultant / Partner, Level: 5 (Standard)</option>
+<option value="191">HR Support, Level: 3 (Standard)</option>
+<option value="584">Hygiene Specialist, Level: 4 (Standard)</option>
+<option value="405">Improvement Leader, Level: 6 (Standard)</option>
+<option value="237">Improvement Practitioner, Level: 4 (Standard)</option>
+<option value="375">Improvement Specialist, Level: 5 (Standard)</option>
+<option value="238">Improvement Technician, Level: 3 (Standard)</option>
+<option value="358">Industrial Coatings Applicator, Level: 2 (Standard)</option>
+<option value="233">Industrial Thermal Insulation Technician, Level: 3 (Standard)</option>
+<option value="540">Information Manager, Level: 4 (Standard)</option>
+<option value="82">Infrastructure technician, Level: 3 (Standard)</option>
+<option value="5">Installation electrician / maintenance electrician, Level: 3 (Standard)</option>
+<option value="60">Insurance practitioner, Level: 3 (Standard)</option>
+<option value="63">Insurance professional, Level: 4 (Standard)</option>
+<option value="382">Intelligence Analyst, Level: 4 (Standard)</option>
+<option value="470">Interior Systems Installer, Level: 2 (Standard)</option>
+<option value="295">Internal Audit Practitioner, Level: 4 (Standard)</option>
+<option value="324">Internal Audit Professional, Level: 7 (Standard)</option>
+<option value="264">International Freight Forwarding Specialist, Level: 3 (Standard)</option>
+<option value="29">Investment operations administrator, Level: 2 (Standard)</option>
+<option value="30">Investment operations specialist, Level: 4 (Standard)</option>
+<option value="33">Investment operations technician, Level: 3 (Standard)</option>
+<option value="165">IS Business Analyst, Level: 4 (Standard)</option>
+<option value="413">IT Solution Technician, Level: 3 (Standard)</option>
+<option value="142">IT technical salesperson, Level: 3 (Standard)</option>
+<option value="605">Jewellery, Silversmithing, and Allied Trades Professional, Level: 3 (Standard)</option>
+<option value="84">Junior 2D artist (visual effects), Level: 4 (Standard)</option>
+<option value="574">Junior Advertising Creative, Level: 3 (Standard)</option>
+<option value="558">Junior Animator, Level: 4 (Standard)</option>
+<option value="174">Junior Content Producer, Level: 3 (Standard)</option>
+<option value="68">Junior energy manager, Level: 3 (Standard)</option>
+<option value="310">Junior Estate Agent, Level: 2 (Standard)</option>
+<option value="22">Junior journalist, Level: 3 (Standard)</option>
+<option value="83">Junior management consultant, Level: 4 (Standard)</option>
+<option value="597">Junior VFX Artist (Generalist), Level: 4 (Standard)</option>
+<option value="492">Keeper and Aquarist, Level: 3 (Standard)</option>
+<option value="596">Knitted Product Manufacturing Technician, Level: 3 (Standard)</option>
+<option value="44">Laboratory scientist, Level: 5 (Standard)</option>
+<option value="221">Laboratory Scientist (degree), Level: 6 (Standard)</option>
+<option value="14">Laboratory technician, Level: 3 (Standard)</option>
+<option value="612">Land Referencer, Level: 4 (Standard)</option>
+<option value="69">Land-based service engineer, Level: 2 (Standard)</option>
+<option value="70">Land-based service engineering technician, Level: 3 (Standard)</option>
+<option value="565">Landscape Technician, Level: 3 (Standard)</option>
+<option value="392">Landscape/Horticulture Supervisor, Level: 3 (Standard)</option>
+<option value="110">Large goods vehicle (LGV) driver, Level: 2 (Standard)</option>
+<option value="118">Lead adult care worker, Level: 3 (Standard)</option>
+<option value="551">Lead Practitioner in Adult Care, Level: 4 (Standard)</option>
+<option value="537">Leader in Adult Care, Level: 5 (Standard)</option>
+<option value="493">Lean Manufacturing Operative, Level: 2 (Standard)</option>
+<option value="325">Learning and Development Consultant/ Business Partner, Level: 5 (Standard)</option>
+<option value="326">Learning and Development Practitioner, Level: 3 (Standard)</option>
+<option value="402">Learning and Skills Teacher, Level: 5 (Standard)</option>
+<option value="403">Learning Mentor, Level: 3 (Standard)</option>
+<option value="393">Leather Craftsperson, Level: 2 (Standard)</option>
+<option value="224">Leisure and Entertainment Maintenance Engineering Technician, Level: 3 (Standard)</option>
+<option value="228">Leisure Duty Manager, Level: 3 (Standard)</option>
+<option value="414">Leisure Team Member, Level: 2 (Standard)</option>
+<option value="395">Library, Information and Archive Services Assistant, Level: 3 (Standard)</option>
+<option value="40">Licensed conveyancer, Level: 6 (Standard)</option>
+<option value="404">Lift and Escalator Electromechanic, Level: 3 (Standard)</option>
+<option value="579">Lift Truck and Powered Access Engineering Technician, Level: 3 (Standard)</option>
+<option value="219">Lifting Technician, Level: 2 (Standard)</option>
+<option value="71">Live event rigger, Level: 3 (Standard)</option>
+<option value="383">Live Event Technician, Level: 3 (Standard)</option>
+<option value="97">Machinist - advanced manufacturing engineering, Level: 3 (Standard)</option>
+<option value="146">Maintenance and operations engineering technician, Level: 3 (Standard)</option>
+<option value="340">Mammography Associate, Level: 4 (Standard)</option>
+<option value="11">Manufacturing engineer, Level: 6 (Standard)</option>
+<option value="417">Manufacturing Manager (degree), Level: 6 (Standard)</option>
+<option value="394">Marina and Boatyard Operative, Level: 2 (Standard)</option>
+<option value="226">Marine Engineer, Level: 3 (Standard)</option>
+<option value="292">Marine Pilot, Level: 5 (Standard)</option>
+<option value="478">Marine Surveyor, Level: 6 (Standard)</option>
+<option value="455">Marine Technical Superintendent (degree), Level: 7 (Standard)</option>
+<option value="279">Maritime Caterer, Level: 2 (Standard)</option>
+<option value="362">Maritime Electrical / Mechanical Mechanic, Level: 2 (Standard)</option>
+<option value="386">Maritime Operations Officer, Level: 3 (Standard)</option>
+<option value="480">Marketing Assistant, Level: 3 (Standard)</option>
+<option value="349">Marketing Executive, Level: 4 (Standard)</option>
+<option value="348">Marketing Manager, Level: 6 (Standard)</option>
+<option value="592">Material Cutter, Level: 2 (Standard)</option>
+<option value="426">Materials Process Engineer (degree), Level: 7 (Standard)</option>
+<option value="477">Materials Science Technologist, Level: 6 (Standard)</option>
+<option value="4">Mechatronics maintenance technician, Level: 3 (Standard)</option>
+<option value="598">Media Production Co-ordinator, Level: 4 (Standard)</option>
+<option value="365">Metal Casting, Foundry and Patternmaking Technician, Level: 3 (Standard)</option>
+<option value="399">Metal Fabricator, Level: 3 (Standard)</option>
+<option value="316">Metal Recycling General Operative, Level: 2 (Standard)</option>
+<option value="577">Metal Recycling Technical Manager (MRTM), Level: 5 (Standard)</option>
+<option value="187">Metrology Technician, Level: 3 (Standard)</option>
+<option value="387">Midwife, Level: 6 (Standard)</option>
+<option value="603">Midwife (2019 NMC Standards) (degree), Level: 6 (Standard)</option>
+<option value="315">Military Construction Engineering Technician, Level: 3 (Standard)</option>
+<option value="366">Mineral and Construction Product Sampling and Testing Operations, Level: 2 (Standard)</option>
+<option value="175">Mineral Processing Mobile and Static Plant Operator, Level: 2 (Standard)</option>
+<option value="330">Mineral Processing Weighbridge Operator, Level: 2 (Standard)</option>
+<option value="497">Mineral Products Technician, Level: 5 (Standard)</option>
+<option value="62">Mortgage adviser, Level: 3 (Standard)</option>
+<option value="210">Motor Finance Specialist, Level: 3 (Standard)</option>
+<option value="59">Motor vehicle service and maintenance technician (light vehicle), Level: 3 (Standard)</option>
+<option value="347">Motorcycle Technician (Repair and Maintenance), Level: 3 (Standard)</option>
+<option value="95">Multi-positional Welder (Arc Processes), Level: 3 (Standard)</option>
+<option value="443">Museums and Galleries Technician, Level: 3 (Standard)</option>
+<option value="389">Nail Service Technician, Level: 2 (Standard)</option>
+<option value="448">Network Cable Installer, Level: 3 (Standard)</option>
+<option value="1">Network engineer, Level: 4 (Standard)</option>
+<option value="246">Network Operations, Level: 2 (Standard)</option>
+<option value="515">New Furniture Product Developer, Level: 3 (Standard)</option>
+<option value="132">Non-destructive testing (NDT) operator, Level: 2 (Standard)</option>
+<option value="207">Non-Destructive Testing Engineer, Level: 6 (Standard)</option>
+<option value="67">Non-destructive testing engineering technician, Level: 3 (Standard)</option>
+<option value="46">Nuclear health physics monitor, Level: 2 (Standard)</option>
+<option value="227">Nuclear Operative, Level: 2 (Standard)</option>
+<option value="47">Nuclear scientist and nuclear engineer, Level: 6 (Standard)</option>
+<option value="163">Nuclear Technician, Level: 5 (Standard)</option>
+<option value="35">Nuclear welding inspection technician, Level: 4 (Standard)</option>
+<option value="208">Nursing Associate, Level: 5 (Standard)</option>
+<option value="434">Nursing Associate (NMC 2018), Level: 5 (Standard)</option>
+<option value="391">Occupational Therapist, Level: 6 (Standard)</option>
+<option value="306">Operating Department Practitioner (degree), Level: 6 (Standard)</option>
+<option value="241">Operational Firefighter, Level: 3 (Standard)</option>
+<option value="600">Operational Research Specialist, Level: 7 (Standard)</option>
+<option value="104">Operations / departmental manager, Level: 5 (Standard)</option>
+<option value="247">Optical Assistant, Level: 2 (Standard)</option>
+<option value="422">Oral Health Practitioner, Level: 4 (Standard)</option>
+<option value="560">Ordnance Munitions Explosives Technician, Level: 4 (Standard)</option>
+<option value="328">Ordnance, Munitions and Explosives (OME) Professional (degree), Level: 6 (Standard)</option>
+<option value="583">Ordnance, Munitions and Explosives Specialist (degree), Level: 7 (Standard)</option>
+<option value="197">Organ Builder, Level: 3 (Standard)</option>
+<option value="608">Orthodontic Therapist (integrated), Level: 4 (Standard)</option>
+<option value="351">Outdoor Activity Instructor, Level: 3 (Standard)</option>
+<option value="75">Outside broadcasting engineer, Level: 7 (Standard)</option>
+<option value="302">Packaging Professional (degree), Level: 6 (Standard)</option>
+<option value="452">Packhouse Line Leader, Level: 3 (Standard)</option>
+<option value="290">Painter and Decorator, Level: 2 (Standard)</option>
+<option value="106">Papermaker, Level: 3 (Standard)</option>
+<option value="42">Paralegal, Level: 3 (Standard)</option>
+<option value="318">Paramedic (degree), Level: 6 (Standard)</option>
+<option value="48">Paraplanner, Level: 4 (Standard)</option>
+<option value="189">Passenger Transport Driver - bus, coach and rail, Level: 2 (Standard)</option>
+<option value="206">Passenger transport onboard and station team member, Level: 2 (Standard)</option>
+<option value="214">Passenger Transport Operations Manager, Level: 4 (Standard)</option>
+<option value="286">Payroll Administrator, Level: 3 (Standard)</option>
+<option value="613">Payroll Assistant Manager, Level: 5 (Standard)</option>
+<option value="321">Personal Trainer, Level: 3 (Standard)</option>
+<option value="268">Pest Control Technician, Level: 2 (Standard)</option>
+<option value="396">Pharmacy Services Assistant, Level: 2 (Standard)</option>
+<option value="471">Pharmacy Technician (integrated), Level: 3 (Standard)</option>
+<option value="438">Photographic Assistant, Level: 3 (Standard)</option>
+<option value="506">Physician Associate, Level: 7 (Standard)</option>
+<option value="397">Physiotherapist (degree), Level: 6 (Standard)</option>
+<option value="312">Piling Attendant, Level: 2 (Standard)</option>
+<option value="487">Pipe Welder, Level: 3 (Standard)</option>
+<option value="288">Plasterer, Level: 3 (Standard)</option>
+<option value="529">Plasterer, Level: 2 (Standard)</option>
+<option value="486">Plate Welder, Level: 3 (Standard)</option>
+<option value="225">Plumbing and Domestic Heating Technician, Level: 3 (Standard)</option>
+<option value="281">Podiatrist (Degree), Level: 6 (Standard)</option>
+<option value="282">Police Community Support Officer, Level: 4 (Standard)</option>
+<option value="256">Police Constable, Level: 6 (Standard)</option>
+<option value="231">Policy Officer, Level: 4 (Standard)</option>
+<option value="265">Port Marine Operations Officer, Level: 4 (Standard)</option>
+<option value="350">Port Operative, Level: 2 (Standard)</option>
+<option value="442">Post Production Technical Operator, Level: 4 (Standard)</option>
+<option value="166">Postgraduate Engineer, Level: 7 (Standard)</option>
+<option value="331">Poultry Technician, Level: 3 (Standard)</option>
+<option value="284">Poultry Worker, Level: 2 (Standard)</option>
+<option value="587">Power and Propulsion Gas Turbine Engineer, Level: 7 (Standard)</option>
+<option value="161">Power Engineer, Level: 7 (Standard)</option>
+<option value="6">Power network craftsperson, Level: 3 (Standard)</option>
+<option value="353">Powered Pedestrian Door Installer and Service Engineer, Level: 2 (Standard)</option>
+<option value="461">Print Technician, Level: 3 (Standard)</option>
+<option value="211">Probate Technician, Level: 4 (Standard)</option>
+<option value="495">Probation Officer, Level: 6 (Standard)</option>
+<option value="496">Probation Services Practitioner, Level: 3 (Standard)</option>
+<option value="201">Process Automation Engineer, Level: 7 (Standard)</option>
+<option value="419">Process Leader, Level: 4 (Standard)</option>
+<option value="590">Procurement and Supply Assistant, Level: 3 (Standard)</option>
+<option value="12">Product design and development engineer, Level: 6 (Standard)</option>
+<option value="13">Product design and development technician, Level: 3 (Standard)</option>
+<option value="364">Production Chef, Level: 2 (Standard)</option>
+<option value="117">Professional accounting / taxation technician, Level: 4 (Standard)</option>
+<option value="323">Professional Economist (degree), Level: 6 (Standard)</option>
+<option value="186">Project Controls Technician, Level: 3 (Standard)</option>
+<option value="291">Project Manager (degree), Level: 6 (Standard)</option>
+<option value="23">Property maintenance operative, Level: 2 (Standard)</option>
+<option value="516">Props Technician, Level: 3 (Standard)</option>
+<option value="342">Propulsion Technician, Level: 4 (Standard)</option>
+<option value="370">Prosthetic and Orthotic Technician, Level: 3 (Standard)</option>
+<option value="368">Prosthetist / Orthotist (degree), Level: 6 (Standard)</option>
+<option value="425">Psychological Wellbeing Practitioner, Level: 6 (Standard)</option>
+<option value="507">Public Health Practitioner, Level: 6 (Standard)</option>
+<option value="257">Public Relations Assistant, Level: 4 (Standard)</option>
+<option value="73">Public sector commercial professional, Level: 4 (Standard)</option>
+<option value="420">Public Sector Compliance / Investigator Officer, Level: 3 (Standard)</option>
+<option value="36">Public service operational delivery officer, Level: 3 (Standard)</option>
+<option value="280">Publishing Assistant, Level: 3 (Standard)</option>
+<option value="602">Quality Practitioner, Level: 4 (Standard)</option>
+<option value="611">Radio Network Technician, Level: 3 (Standard)</option>
+<option value="345">Rail and Rail Systems Engineer, Level: 5 (Standard)</option>
+<option value="301">Rail and Rail Systems Principal Engineer (degree), Level: 7 (Standard)</option>
+<option value="313">Rail and Rail Systems Senior Engineer (degree), Level: 6 (Standard)</option>
+<option value="88">Rail engineering advanced technician, Level: 4 (Standard)</option>
+<option value="90">Rail engineering operative, Level: 2 (Standard)</option>
+<option value="89">Rail engineering technician, Level: 3 (Standard)</option>
+<option value="188">Rail Infrastructure Operator, Level: 2 (Standard)</option>
+<option value="24">Railway engineering design technician, Level: 3 (Standard)</option>
+<option value="217">Recruitment Consultant, Level: 3 (Standard)</option>
+<option value="218">Recruitment Resourcer, Level: 2 (Standard)</option>
+<option value="49">Refrigeration air conditioning and heat pump engineering technician, Level: 3 (Standard)</option>
+<option value="170">Registered Nurse, Level: 6 (Standard)</option>
+<option value="409">Registered Nurse - degree (NMC 2018), Level: 6 (Standard)</option>
+<option value="536">Registrar (Creative and Cultural), Level: 6 (Standard)</option>
+<option value="371">Regulatory Affairs Specialist (degree), Level: 7 (Standard)</option>
+<option value="253">Regulatory Compliance Officer, Level: 4 (Standard)</option>
+<option value="243">Rehabilitation Worker (Visual Impairment), Level: 5 (Standard)</option>
+<option value="7">Relationship manager (banking), Level: 6 (Standard)</option>
+<option value="457">Research Scientist, Level: 7 (Standard)</option>
+<option value="384">Retail Leadership (degree), Level: 6 (Standard)</option>
+<option value="147">Retail manager, Level: 4 (Standard)</option>
+<option value="140">Retail team leader, Level: 3 (Standard)</option>
+<option value="101">Retailer, Level: 2 (Standard)</option>
+<option value="320">Revenues and Welfare Benefits Practitioner, Level: 4 (Standard)</option>
+<option value="346">Risk and Safety Management Professional (degree), Level: 7 (Standard)</option>
+<option value="476">Road Surfacing Operative, Level: 2 (Standard)</option>
+<option value="518">Roofer, Level: 2 (Standard)</option>
+<option value="260">Safety Health and Environment Technician, Level: 3 (Standard)</option>
+<option value="369">Sales Executive, Level: 4 (Standard)</option>
+<option value="273">Scaffolder, Level: 2 (Standard)</option>
+<option value="232">School Business Professional, Level: 4 (Standard)</option>
+<option value="45">Science industry maintenance technician, Level: 3 (Standard)</option>
+<option value="248">Science Industry Process/Plant Engineer (Degree), Level: 6 (Standard)</option>
+<option value="249">Science Manufacturing Process Operative, Level: 2 (Standard)</option>
+<option value="15">Science manufacturing technician, Level: 3 (Standard)</option>
+<option value="367">Security First Line Manager, Level: 3 (Standard)</option>
+<option value="139">Senior chef production cooking, Level: 3 (Standard)</option>
+<option value="144">Senior compliance / risk specialist, Level: 6 (Standard)</option>
+<option value="546">Senior Culinary Chef, Level: 4 (Standard)</option>
+<option value="335">Senior Equine Groom, Level: 3 (Standard)</option>
+<option value="31">Senior financial services customer adviser, Level: 3 (Standard)</option>
+<option value="151">Senior healthcare support worker, Level: 3 (Standard)</option>
+<option value="66">Senior housing / property management, Level: 4 (Standard)</option>
+<option value="205">Senior Insurance Professional, Level: 6 (Standard)</option>
+<option value="270">Senior Investment / Commercial Banking Professional, Level: 7 (Standard)</option>
+<option value="586">Senior Journalist, Level: 7 (Standard)</option>
+<option value="236">Senior Leader Master's Degree Apprenticeship, Level: 7 (Standard)</option>
+<option value="317">Senior Metrology Technician, Level: 5 (Standard)</option>
+<option value="531">Senior Professional Economist, Level: 7 (Standard)</option>
+<option value="258">Senior/Head of Facilities Management, Level: 6 (Standard)</option>
+<option value="570">Serious and Complex Crime Investigator (degree), Level: 6 (Standard)</option>
+<option value="334">Sewing Machinist, Level: 2 (Standard)</option>
+<option value="607">Signage Technician, Level: 3 (Standard)</option>
+<option value="524">Smart Home Technician, Level: 3 (Standard)</option>
+<option value="381">Social Worker (degree), Level: 6 (Standard)</option>
+<option value="2">Software developer, Level: 4 (Standard)</option>
+<option value="154">Software Development Technician, Level: 3 (Standard)</option>
+<option value="91">Software tester, Level: 4 (Standard)</option>
+<option value="43">Solicitor, Level: 7 (Standard)</option>
+<option value="494">Sonographer (degree), Level: 6 (Standard)</option>
+<option value="594">Space Engineering Technician, Level: 4 (Standard)</option>
+<option value="520">Specialist Community and Public Health Nurse, Level: 7 (Standard)</option>
+<option value="449">Specialist Rescue Operative, Level: 4 (Standard)</option>
+<option value="360">Specialist Tyre Operative, Level: 2 (Standard)</option>
+<option value="158">Spectacle Maker, Level: 3 (Standard)</option>
+<option value="473">Speech and Language Therapist (integrated degree), Level: 6 (Standard)</option>
+<option value="446">Sporting Excellence Professional, Level: 3 (Standard)</option>
+<option value="145">Sports turf operative, Level: 2 (Standard)</option>
+<option value="549">Stairlift, Platform Lift, Service Lift Electromechanic, Level: 2 (Standard)</option>
+<option value="344">Stockperson (beef, pigs, sheep, dairy), Level: 2 (Standard)</option>
+<option value="538">Storyboard Artist, Level: 7 (Standard)</option>
+<option value="378">Structural Steelwork Erector, Level: 2 (Standard)</option>
+<option value="357">Structural Steelwork Fabricator, Level: 2 (Standard)</option>
+<option value="398">Supply Chain Leadership Professional (degree), Level: 6 (Standard)</option>
+<option value="109">Supply chain operator, Level: 2 (Standard)</option>
+<option value="209">Supply Chain Practitioner, Level: 3 (Standard)</option>
+<option value="111">Supply chain warehouse operative, Level: 2 (Standard)</option>
+<option value="51">Surveying technician, Level: 3 (Standard)</option>
+<option value="116">Survival equipment fitter, Level: 3 (Standard)</option>
+<option value="564">Sustainability Business Specialist, Level: 7 (Standard)</option>
+<option value="433">Systems Engineering (degree), Level: 7 (Standard)</option>
+<option value="52">Systems engineering masters level, Level: 7 (Standard)</option>
+<option value="556">Systems Thinking Practitioner, Level: 7 (Standard)</option>
+<option value="203">Teacher, Level: 6 (Standard)</option>
+<option value="297">Teaching Assistant, Level: 3 (Standard)</option>
+<option value="105">Team leader / supervisor, Level: 3 (Standard)</option>
+<option value="459">Technical Dyer and Colourist, Level: 4 (Standard)</option>
+<option value="319">Technician Scientist, Level: 5 (Standard)</option>
+<option value="557">Telecoms Field Operative, Level: 2 (Standard)</option>
+<option value="296">Textile Care Operative, Level: 2 (Standard)</option>
+<option value="267">Textile Manufacturing Operative, Level: 2 (Standard)</option>
+<option value="519">Textile Technical Specialist, Level: 4 (Standard)</option>
+<option value="445">Therapeutic Radiographer (integrated degree), Level: 6 (Standard)</option>
+<option value="499">Through Life Engineering Services Specialist (degree), Level: 7 (Standard)</option>
+<option value="578">Tool Process Design Engineer, Level: 6 (Standard)</option>
+<option value="261">Trade Supplier, Level: 2 (Standard)</option>
+<option value="569">Trade Union Official, Level: 4 (Standard)</option>
+<option value="285">Train Driver, Level: 3 (Standard)</option>
+<option value="428">Tramway Construction Operative, Level: 2 (Standard)</option>
+<option value="462">Transport Planner (degree), Level: 6 (Standard)</option>
+<option value="100">Transport planning technician, Level: 3 (Standard)</option>
+<option value="120">Travel consultant, Level: 3 (Standard)</option>
+<option value="230">Tunnelling Operative, Level: 2 (Standard)</option>
+<option value="571">Underkeeper, Level: 2 (Standard)</option>
+<option value="155">Unified Communications Technician, Level: 3 (Standard)</option>
+<option value="81">Unified communications trouble shooter, Level: 4 (Standard)</option>
+<option value="53">Utilities engineering technician, Level: 3 (Standard)</option>
+<option value="450">Vehicle Damage Assessor, Level: 4 (Standard)</option>
+<option value="435">Vehicle Damage Mechanical, Electrical and Trim (MET) Technician, Level: 3 (Standard)</option>
+<option value="436">Vehicle Damage Paint Technician, Level: 3 (Standard)</option>
+<option value="437">Vehicle Damage Panel Technician, Level: 3 (Standard)</option>
+<option value="333">Veterinary Nurse, Level: 3 (Standard)</option>
+<option value="380">Wall and Floor Tiler, Level: 2 (Standard)</option>
+<option value="374">Waste Resource Operative, Level: 2 (Standard)</option>
+<option value="235">Watchmaker, Level: 3 (Standard)</option>
+<option value="508">Water Environment Worker, Level: 3 (Standard)</option>
+<option value="568">Water Network Operative, Level: 2 (Standard)</option>
+<option value="593">Water Process Operative, Level: 2 (Standard)</option>
+<option value="27">Water process technician, Level: 3 (Standard)</option>
+<option value="416">Water Treatment Technician, Level: 3 (Standard)</option>
+<option value="423">Wireless Communications Rigger, Level: 2 (Standard)</option>
+<option value="472">Wood Product Manufacturing Operative, Level: 2 (Standard)</option>
+<option value="322">Workboat Crewmember, Level: 3 (Standard)</option>
+<option value="32">Workplace pensions (administrator or consultant), Level: 3 (Standard)</option>
+<option value="610">Youth Support Worker, Level: 3 (Standard)</option>
+</select>
+    </div>
+-->
+
+
+
+
+<div class="govuk-form-group  ">
+    <fieldset class="govuk-fieldset" aria-describedby="start-date-hint" role="group">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Planned training start date
+        </legend>
+        <span id="start-date-hint" class="govuk-hint">
+            For example, 09 2017
+        </span>
+        <span class="field-validation-valid govuk-error-message" data-valmsg-for="StartDate" data-valmsg-replace="true" id="error-message-StartDate"></span>
+        <div class="govuk-date-input">
+            <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="StartMonth">Month</label>
+                    <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="StartMonth" name="StartMonth" value="">
+                </div>
+            </div>
+            <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="StartYear">Year</label>
+                    <input min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" id="StartYear" name="StartYear" value="">
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>
+<div class="govuk-form-group  ">
+    <fieldset class="govuk-fieldset" aria-describedby="finish-date-hint" role="group">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Planned training end date
+        </legend>
+        <span id="finish-date-hint" class="govuk-hint">
+            For example, 09 2019
+        </span>
+        <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate" data-valmsg-replace="true" id="error-message-EndDate"></span>
+        <div class="govuk-date-input">
+            <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="EndMonth">Month</label>
+                    <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="EndMonth" name="EndMonth" value="">
+                </div>
+            </div>
+            <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="EndYear">Year</label>
+                    <input min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" id="EndYear" name="EndYear" value="">
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>
+<div class="govuk-form-group ">
+    <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Total agreed apprenticeship price (excluding VAT)</label>
+    <span id="price-hint" class="govuk-hint">
+        Enter the price, including any end-point assessment costs, in whole pounds. For example, for £1,500 enter 1500
+    </span>
+    <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true" id="error-message-Cost"></span>
+    <input class="govuk-input govuk-input--width-5" type="number" id="Cost" name="Cost" value="">
+</div>
+
+<div class="govuk-character-count" data-module="character-count" data-maxlength="20">
+    <div class="govuk-form-group ">
+        <label class="govuk-label govuk-!-font-weight-bold" for="Reference">Reference (optional)</label>
+        <span class="govuk-hint">
+            Add a reference, such as employee number or location - this won't be seen by the training provider
+        </span>
+        <span class="field-validation-valid govuk-error-message" data-valmsg-for="Reference" data-valmsg-replace="true" id="error-message-Reference"></span>
+
+        <input maxlength="20" class="govuk-input govuk-!-width-three-quarters js-character-count" type="text" id="Reference" name="Reference" value="">
+    </div>
+</div>
+
+<div class="govuk-inset-text">
+    <h3 class="govuk-heading-s">End-point assessments</h3>
+    <p>If you have chosen an apprenticeship standard, we'll ask you to confirm the <a class="govuk-link" href="https://www.gov.uk/government/publications/using-the-register-of-apprentice-assessment-organisations" target="_blank" title="Opens in a new window">apprentice assessment organisation</a> for this apprentice. We'll do this before the end of the apprenticeship.</p>
+    <p>Apprenticeship frameworks have different assessment arrangements and don't need end-point assessments.</p>
+</div>
+
+            <button id="continue-button" type="submit" class="govuk-button">Save and continue</button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8ApxxyyFOpVMgprV5po2LDLWA2XerkYMQDD57hCRdlckKGEQAKHeVlwUrBBSMByYyGy2heAXi7PMG1pvkoaJS_pFGg-EtQ3vsatOe31RvtCSwXm1oGoALLC-pB82KeGeDcUdpB9VExDXeZTsmMLV8Q8RTqRo5Z2HOQ03qlGxVBTNthKnqmYmTuVyn2bNAhwUXg"></form>
+
+    </div>
+</div>
+
+
+
+
+        </main>
+
+        {% endblock %}
+
+
+        {% block pageScripts %}
+
+        <script src="/public/javascripts/standards.js"></script>
+        <script>
+          $(function(){
+            $(".js-hidden-version-select").hide();
+            $('#standards').autocomplete({
+              lookup: standardData,
+              onSelect: function (suggestion) {
+                $(".js-hidden-version-select").show();
+                $('#versions-hint').html('Choose a version for the standard: ' + suggestion.value);
+              }
+            });
+          });
+        </script>
+        {% endblock %}
