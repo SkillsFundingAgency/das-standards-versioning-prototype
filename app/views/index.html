@@ -109,13 +109,12 @@
                  <li><a href="/sprint-12/add-apprentice/1-add-apprentice" class="govuk-link govuk-link--no-visited-state">Add an Apprentice (Employer) Choose Apprenticeship Integrated</a></li>
                  <li><a href="/sprint-12/add-apprentice1/1-add-apprentice" class="govuk-link govuk-link--no-visited-state">Add an Apprentice (Employer) Choose Apprenticeship Seperated Out</a></li>
                  <li><a href="/sprint-12/manage-apprentice/1-dashboard" class="govuk-link govuk-link--no-visited-state">Manage your Apprentice (Employer)</a></li>
-
-
                  <li><a href="/sprint-12/add-apprentice-provider/1-add-apprentice" class="govuk-link govuk-link--no-visited-state">Add Apprentice (Provider)</a></li>
+                 <li><a href="/sprint-12/manage-apprentice-provider/1-dashboard" class="govuk-link govuk-link--no-visited-state">Manage your Apprentices(Provider)</a></li>
 <br />
 
-                 <li><a href="" class="govuk-link govuk-link--no-visited-state">Add an Apprentice (Provider)</a></li>
-                 <li><a href="/sprint-12/manage-apprentice-provider/1-dashboard" class="govuk-link govuk-link--no-visited-state">Manage your Apprentices(Provider)</a></li>
+
+                
                  <li><a href="" class="govuk-link govuk-link--no-visited-state">Reservations (Non - Levy)</a></li>
                  <li><a href="" class="govuk-link govuk-link--no-visited-state">Reservations (Training Provider)</a></li>
                  <li><a href="" class="govuk-link govuk-link--no-visited-state">Bulk Upload (Training Provider)</a></li>
@@ -134,19 +133,25 @@
 <div class="govuk-grid-row">
      <!-- Sprints section starts -->
      <div class="govuk-grid-column-two-thirds">
-          {% include './sprint-11/_summary.html' %}
+          {% include './sprint-1-beta/_summary.html' %}
 
 
 
           <h2 class="govuk-heading-l govuk-!-margin-top-9">
                Sprints
           </h2>
+          {% set sprint1betaHtml %}
+               {% include './sprint-1-beta/_summary.html' %}
+          {% endset %}
+
+          {% set sprint12Html %}
+               {% include './sprint-12/_summary.html' %}
+          {% endset %}
+
           {% set sprint11Html %}
                {% include './sprint-11/_summary.html' %}
           {% endset %}
-
-
-          {% set sprint10Html %}
+               {% set sprint10Html %}
                {% include './sprint-10/_summary.html' %}
           {% endset %}
 
@@ -199,7 +204,28 @@
                id: "accordion-default",
                items: [
 
+               
                {
+                    heading: {
+                         text: "Sprint 1 Beta"
+                    },
+                    content: {
+                         html: sprint1betaHtml
+                    },
+                    summary: {
+                         html: '20th Jan — 3rd Feb 2021'
+                    }
+               },{
+                    heading: {
+                         text: "Sprint 12"
+                    },
+                    content: {
+                         html: sprint12Html
+                    },
+                    summary: {
+                         html: '6th Jan — 20th Jan 2021'
+                    }
+               },{
                     heading: {
                          text: "Sprint 11"
                     },
@@ -207,7 +233,7 @@
                          html: sprint11Html
                     },
                     summary: {
-                         html: '9th December — 6th Jan 2020'
+                         html: '9th December — 6th Jan 2021'
                     }
                },
 
