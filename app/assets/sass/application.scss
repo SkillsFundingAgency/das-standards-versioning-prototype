@@ -337,3 +337,7 @@ table {
     margin-bottom: -14px;
     
 }
+
+.autocomplete__option {
+  @include govuk-font(19, $weight: normal);
+}
