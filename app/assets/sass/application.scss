@@ -24,7 +24,18 @@ $govuk-assets-path: "/govuk/assets/";
 @import "components/pagination";
 @import "components/back-to-top";
 
+
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+
+
+.das-float-left {
+  float: left;
+}
+.das-float-right {
+  float: right;
+}
 .no-top-margin {
   margin-top: 0 !important;
 }
