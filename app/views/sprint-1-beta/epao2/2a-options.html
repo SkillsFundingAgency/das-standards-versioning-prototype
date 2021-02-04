@@ -13,7 +13,8 @@
                     <div class="govuk-grid-column-two-thirds">
                          <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
                          <h1 class="govuk-heading-xl">
-                              Confirm this is the correct apprentice                   </h1>
+                           Choose the option for {{ data['choose-standard-multi'] }} {{ data['choose-version'] }}
+                         </h1>
                     </div>
                </div>
 
@@ -28,8 +29,8 @@
      <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
 
-               <form method="post" action="2-choose-version" class="">
-
+               <form method="post" action="3-declaration" class="">
+<!--
                     <table class="govuk-table">
                          <tbody class="govuk-table__body">
                               <tr class="govuk-table__row">
@@ -40,17 +41,25 @@
                                    <th scope="row" class="govuk-table__header">ULN</th>
                                    <td class="govuk-table__cell">{{ data['epao-uln'] }}</td>
                               </tr>
-                             
-                             <!--
+
+
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Standard</th>
+                                   <td class="govuk-table__cell">Military engineering construction technician</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Level</th>
+                                   <td class="govuk-table__cell">3</td>
+                              </tr>
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Version</th>
                                    <td class="govuk-table__cell">1.0</td>
-                              </tr>-->
+                              </tr>
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Learner start date</th>
                                    <td class="govuk-table__cell">1 April 2018</td>
                               </tr>
-                              <!--
+
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Failed date</th>
                                    <td class="govuk-table__cell">7 November 2020</td>
@@ -66,46 +75,98 @@
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Date recorded</th>
                                    <td class="govuk-table__cell">7 November 2020</td>
-                              </tr>-->
+                              </tr>
                          </tbody>
-                    </table>
-
+                    </table>-->
+<!--
                     <p>
                          If the name, standard or level is incorrect, you need to agree on the correct details along with the training provider
                          and the employer. The training provider needs to then update the Individual Learner Record (ILR).
                     </p>
-            
-      
+
+-->
+
+
+<!--
+
+Actually ST0414 Military engineering construction technician
+Level 3
+Version 1.0
+Military engineering construction technician
+"Bricklayer & Concreter",
+"Building & Structural Finisher",
+"Carpenter & Joiner"
+
+Version 1.1
+                     Military engineering construction technician
+                    "Carpenter & Joiner",
+                    "Bricklayer & Concreter",
+                    "Building & Structural Finisher",
+                    "Plumbing & Heating Engineer",
+                    "Plant Operator & Mechanic"
+
+
+Version 1.2
+                    Military engineering construction technician
+                    "Carpenter & Joiner",
+                    "Bricklayer & Concreter",
+                    "Building & Structural Finisher",
+                    "Plumbing & Heating Engineer",
+                    "Plant Operator & Mechanic"
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                     {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
                     {{ govukRadios({
-                      idPrefix: "choose-standard-multi",
-                      name: "choose-standard-multi",
+                      idPrefix: "choose-option",
+                      name: "choose-option",
                       fieldset: {
                         legend: {
-                          text: "Which standard did you assess?",
+                          text: "",
                           isPageHeading: true,
                           classes: "govuk-fieldset__legend--m"
                         }
                       },
-                      items: [
-                        {
-                          value: "Carpentry and joinery",
-                          text: "Carpentry and joinery (ST0264)",
-                          hint: {
-                            text: "Level 2"
-                                    }
 
+
+
+
+                      items: [
+
+
+                        {
+                          value: "Bricklayer & Concreter",
+                          text: "Bricklayer & Concreter"
+                        },
+
+                        {
+                            value: "Building & Structural Finisher",
+                            text: "Building & Structural Finisher"
                         },
                         {
-                          value: "Advanced carpentry and joinery",
-                          text: "Advanced carpentry and joinery (ST0263)",
-                          hint: {
-                          text: "Level 3"
-                                  }
+                          value: "Carpenter & Joiner",
+                          text: "Carpenter & Joiner"
 
                         }
+
                       ]
                     }) }}
 
@@ -123,6 +184,6 @@
                </form>
           </div>
      </div>
-     {% endblock %}
 
-
+</div>
+{% endblock %}
