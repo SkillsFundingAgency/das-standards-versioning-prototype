@@ -13,7 +13,8 @@
                     <div class="govuk-grid-column-two-thirds">
                          <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
                          <h1 class="govuk-heading-xl">
-                              Confirm this is the correct apprentice                   </h1>
+                              Confirm this is the correct apprentice
+                         </h1>
                     </div>
                </div>
 
@@ -28,7 +29,7 @@
      <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
 
-               <form method="post" action="2a-choose-version" class="">
+               <form method="post" action="3-declaration" class="">
 
                     <table class="govuk-table">
                          <tbody class="govuk-table__body">
@@ -40,12 +41,22 @@
                                    <th scope="row" class="govuk-table__header">ULN</th>
                                    <td class="govuk-table__cell">{{ data['epao-uln'] }}</td>
                               </tr>
-                             
-                             <!--
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Standard</th>
+                                   <td class="govuk-table__cell">Military engineering construction technician</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Level</th>
+                                   <td class="govuk-table__cell">3</td>
+                              </tr>
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Version</th>
                                    <td class="govuk-table__cell">1.0</td>
-                              </tr>-->
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Option</th>
+                                   <td class="govuk-table__cell">Bricklayer & Concreter</td>
+                              </tr>
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Learner start date</th>
                                    <td class="govuk-table__cell">1 April 2018</td>
@@ -75,40 +86,6 @@
                          and the employer. The training provider needs to then update the Individual Learner Record (ILR).
                     </p>
 
-
-                    {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-                    {{ govukRadios({
-                      idPrefix: "choose-standard-multi",
-                      name: "choose-standard-multi",
-                      fieldset: {
-                        legend: {
-                          text: "Which standard did you assess?",
-                          isPageHeading: true,
-                          classes: "govuk-fieldset__legend--m"
-                        }
-                      },
-                      items: [
-                        {
-                          value: "Carpentry and joinery",
-                          text: "Carpentry and joinery (ST0264)",
-                          hint: {
-                            text: "Level 2"
-                                    }
-
-                        },
-                        {
-                          value: "Advanced carpentry and joinery",
-                          text: "Advanced carpentry and joinery (ST0263)",
-                          hint: {
-                          text: "Level 3"
-                                  }
-
-                        }
-                      ]
-                    }) }}
-
-
                     {% from "govuk/components/button/macro.njk" import govukButton %}
 
                     {{ govukButton({
@@ -125,4 +102,3 @@
 
 </div>
 {% endblock %}
-
