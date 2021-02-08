@@ -1,0 +1,45 @@
+{% extends "layout-epao.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block content %}
+<div class="govuk-grid-row">
+     <div class="govuk-grid-column-two-thirds">
+
+          <div class="govuk-panel govuk-panel--confirmation">
+               <h1 class="govuk-panel__title">Assessment recorded</h1>
+
+               <div class="govuk-panel__body">
+                    You have recorded a {{ data['epao-apprentice-grade'] }} for <strong>Joe {{ data['epao-family-name'] }}</strong>
+                    <br>
+                    <br>
+                    The reference is <strong>00021568</strong>
+               </div>
+          </div>
+
+
+         
+
+          <h2 class="govuk-heading-m">What do you want to do next?</h2>
+
+          <p class="govuk-body">
+               <a href="index">Record another grade</a>
+               <br>
+               <a href="#">Leave feedback</a>
+               <br>
+               or
+               <br>
+               <a href="#">Return to account home</a>
+          </p>
+
+     </div>
+</div>
+{% endblock %}
