@@ -1,0 +1,105 @@
+{% extends "layout-epao.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+     <div id="service-title-section" class="epao-page">
+
+          <div class="govuk-width-container">
+
+               <div class="govuk-grid-row dashboard-title">
+                    <div class="govuk-grid-column-two-thirds">
+                         <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+                         <h1 class="govuk-heading-xl">
+                              Confirm this is the correct apprentice</h1>
+                    </div>
+               </div>
+
+          </div>
+
+     </div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <form method="post" action="2-options" class="">
+                    
+
+                    <table class="govuk-table">
+                         <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Name</th>
+                                   <td class="govuk-table__cell">{{ data['epao-family-name'] }}</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">ULN</th>
+                                   <td class="govuk-table__cell">{{ data['epao-uln'] }}</td>
+                              </tr>
+               
+                         </tbody>
+                    </table>
+
+
+
+                    
+
+                    <p>
+                         If the name, standard or level is incorrect, you need to agree on the correct details along with the training provider
+                         and the employer. The training provider needs to then update the Individual Learner Record (ILR).
+                    </p>
+
+
+                    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+                    {{ govukRadios({
+                      idPrefix: "choose-standard-multi",
+                      name: "choose-standard-multi",
+                      fieldset: {
+                        legend: {
+                          text: "Select the standard",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--m"
+                        }
+                      },
+                      items: [
+                        {
+                          value: "Gas engineering operative",
+                          text: "Gas engineering operative (ST0264)",
+                          hint: {
+                            text: "Level 2"
+                                    }
+
+                        },
+                        {
+                          value: "Gas network craftsperson",
+                          text: "Gas network craftsperson (ST0263)",
+                          hint: {
+                          text: "Level 3"
+                                  }
+
+                        }
+                      ]
+                    }) }}
+
+
+                    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                    {{ govukButton({
+                         text: "Confirm and continue"
+                    }) }}
+
+                   
+
+               </form>
+          </div>
+     </div>
+
+</div>
+{% endblock %}
+
