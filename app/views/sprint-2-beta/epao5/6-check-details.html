@@ -77,12 +77,20 @@
                               </tr>
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Level</th>
-                                   <td class="govuk-table__cell">3</td>
+   
+                                   {% if (data['choose-standard-multi'] == "Gas engineering operative") %}
+                                     <td class="govuk-table__cell">2</td>
+                                   {% endif %}
+   
+                                   {% if (data['choose-standard-multi'] == "Gas network craftsperson") %}
+                                     <td class="govuk-table__cell">3</td>
+                                   {% endif %}
+   
                                    <td class="govuk-table__cell right-align"></td>
-                              </tr>
-                              <tr class="govuk-table__row">
+                                 </tr>
+                                 <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Version</th>
-                                   <td class="govuk-table__cell">{{ data['chooseversionoption'] }}</td>
+                                   <td class="govuk-table__cell">{{ data['choose-version'] }} </td>
                                    <td class="govuk-table__cell right-align"><a href="2-choose-version">Change</a></td>
                               </tr>
                               <tr class="govuk-table__row">
