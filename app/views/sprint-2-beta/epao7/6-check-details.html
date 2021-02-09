@@ -72,17 +72,17 @@
                          <tbody class="govuk-table__body">
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Standard</th>
-                                   <td class="govuk-table__cell">{{ data['choose-standard-multi'] }} </td>
+                                   <td class="govuk-table__cell">{{ data['choosestandard'] }} </td>
                                    <td class="govuk-table__cell right-align"><a href="1-confirm-apprentice">Change</a></td>
                               </tr>
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Level</th>
    
-                                   {% if (data['choose-standard-multi'] == "Gas engineering operative") %}
+                                   {% if (data['choosestandard'] == "Gas engineering operative") %}
                                      <td class="govuk-table__cell">2</td>
                                    {% endif %}
    
-                                   {% if (data['choose-standard-multi'] == "Gas network craftsperson") %}
+                                   {% if (data['choosestandard'] == "Gas network craftsperson") %}
                                      <td class="govuk-table__cell">3</td>
                                    {% endif %}
    

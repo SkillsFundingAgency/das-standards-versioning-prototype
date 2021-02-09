@@ -29,7 +29,7 @@
      <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
 
-               <form method="post" action="2a-options" class="">
+               <form method="post" action="/sprint-2-beta/epao5/2a-options" class="">
 
 
 
@@ -43,8 +43,8 @@
                     {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
                     {{ govukRadios({
-                      idPrefix: "choose-version",
-                      name: "choose-version",
+                      idPrefix: "chooseversion",
+                      name: "chooseversion",
                       fieldset: {
                         legend: {
                           text: "",
@@ -54,11 +54,11 @@
                       },
                       items: [
                         {
-                          value: "1.0",
+                          value: "Version 1.0",
                           text: "Version 1.0"
                         },
                         {
-                          value: "1.1",
+                          value: "Version 1.1",
                           text: "Version 1.1"
                         }
                       ]
