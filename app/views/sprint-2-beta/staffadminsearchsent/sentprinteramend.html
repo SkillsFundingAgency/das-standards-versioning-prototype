@@ -1,0 +1,242 @@
+{% extends "layout-staffadmin.html" %}
+
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+
+<div class="govuk-width-container">
+        
+
+    <a class="govuk-back-link" href="sentprinter">Back to details</a>
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl">Check and submit the assessment details</h1>
+
+            <div class="banner blue">
+                <h2 class="govuk-heading-m">Please check before submitting</h2>
+                <p class="govuk-body">The apprentice and apprenticeship details will be printed on the certificate.</p>
+            </div>
+
+            <h2 class="govuk-heading-m">
+                Apprentice details
+            </h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Given name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Abram
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="#">
+                            Change<span class="govuk-visually-hidden"> given name</span>
+                        </a>
+                    </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Family name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Aamot
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="#">
+                            Change<span class="govuk-visually-hidden"> family name</span>
+                        </a>
+                    </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        <abbr title="Unique learner number">ULN</abbr>
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        7278214419
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                    </dd>
+                </div>
+            </dl>
+
+            <h2 class="govuk-heading-m">
+                Apprenticeship details
+            </h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Standard
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Healthcare assistant practitioner (102)
+                    </dd>
+                    <dd class="govuk-summary-list__actions"><a class="govuk-link govuk-link--no-visited-state" href="sentprinterchangestandard">
+                        Change<span class="govuk-visually-hidden"> standard</span>
+                    </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Level
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        5
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Version
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        1.0
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="sentprinterchangeversion">
+                            Change<span class="govuk-visually-hidden"> version</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Option
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Nurse
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="sentprinterchangeoption">
+                            Change<span class="govuk-visually-hidden"> option</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Grade
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Pass
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="#">
+                            Change<span class="govuk-visually-hidden"> grade</span>
+                        </a>
+                    </dd>
+                </div>
+
+
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Achievement date
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        01 January 2019
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="#">
+                            Change<span class="govuk-visually-hidden"> achievement date</span>
+                        </a>
+                    </dd>
+                </div>
+
+            </dl>
+
+            <h2 class="govuk-heading-m">
+                We'll send the certificate to:
+            </h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Raj
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="#">
+                            Change<span class="govuk-visually-hidden"> recipient name</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Department
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        IT
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="#">
+                            Change<span class="govuk-visually-hidden"> department</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Organisation
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Skills Funding Agency
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="#">
+                            Change<span class="govuk-visually-hidden"> organisation</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Address
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Cheylesmore House<br>
+5 Quinton Road<br>
+                                                Coventry<br>
+                        CV1 2WT
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="#">
+                            Change<span class="govuk-visually-hidden"> address</span>
+                        </a>
+                    </dd>
+                </div>
+            </dl>
+
+                <form method="post" action="sentprinterconfirmation">
+                   
+                    <button class="govuk-button">Confirm reprint</button></form>
+        </div>
+    </div>
+</main>
+    </div>
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
