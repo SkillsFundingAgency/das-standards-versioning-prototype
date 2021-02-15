@@ -1,0 +1,101 @@
+{% extends "layout-staffadmin.html" %}
+
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<div class="govuk-width-container">
+        
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+                <a class="govuk-back-link" href="5-amend">Back</a>
+    
+            <form class="apprentice-standard-codes-form js-disable-on-submit" method="post" action="7-amend1" novalidate="novalidate">
+                <input data-val="true" data-val-required="The Id field is required." id="Id" name="Id" type="hidden" value="3578681c-d9c6-4998-3ad8-08d74e343473">
+                <input data-val="true" data-val-required="The From Approval field is required." id="FromApproval" name="FromApproval" type="hidden" value="False">
+               
+    
+    
+                    <div>
+                        <h1 class="govuk-heading-xl">
+                            Search and select the standard
+                        </h1>
+    
+                        <div class="govuk-form-group">
+                            <label class="form-label" for="SelectedStandardCode">
+                                <span class="form-label-bold visually-hidden">Standard Codes</span>
+                                <span class="govuk-hint">
+                                    For example, Assistant accountant
+                                </span>
+                                <span class="govuk-error-message field-validation-valid" data-valmsg-for="SelectedStandardCode" data-valmsg-replace="true"></span>
+                            </label>
+                            <select class="govuk-input" sfa-validation-for="SelectedStandardCode" sfa-validationerror-class="govuk-input--error" data-val="true" data-val-required="Select the standard" id="SelectedStandardCode" name="SelectedStandardCode">
+                                <option value="" >Please select one</option>
+                            <option value="17">Actuarial technician (17)</option>
+    <option value="Actuary (255)">Actuary (255)</option>
+    <option value="Adult care worker (119)">Adult care worker (119)</option>
+    <option value="Advanced carpentry and joinery (240)">Advanced carpentry and joinery (240)</option>
+    <option value="Arborist (180)">Arborist (180)</option>
+    <option value="Brewer (294)">Brewer (294)</option>
+    <option value="Broadcast and media systems engineer (integrated degree) (354)">Broadcast and media systems engineer (integrated degree) (354)</option>
+    <option value="Business administrator (196)">Business administrator (196)</option>
+    <option value="Business fire safety advisor (250)">Business fire safety advisor (250)</option>
+    <option value="Carpentry and joinery (239)">Carpentry and joinery (239)</option>
+    <option value="Chartered manager (degree) (55)">Chartered manager (degree) (55)</option>
+    <option value="Chef de partie (169)">Chef de partie (169)</option>
+    <option value="Commis chef (93)">Commis chef (93)</option>
+    <option value="Customer service practitioner (122)">Customer service practitioner (122)</option>
+    <option value="Customer service specialist (278)">Customer service specialist (278)</option>
+    <option value="Dental nurse (integrated) (61)">Dental nurse (integrated) (61)</option>
+    <option value="Digital marketer (78)">Digital marketer (78)</option>
+    <option value="District nurse (504)">District nurse (504)</option>
+    <option value="Electrical power protection and plant commissioning engineer (127)">Electrical power protection and plant commissioning engineer (127)</option>
+    <option value="Engineering construction pipefitter (202)">Engineering construction pipefitter (202)</option>
+    <option value="Food and drink advanced engineer (integrated degree) (245)">Food and drink advanced engineer (integrated degree) (245)</option>
+    <option value="Forest operative (182)">Forest operative (182)</option>
+    <option value="Gas engineering operative (74)">Gas engineering operative (74)</option>
+    <option value="Golf greenkeeper (21)">Golf greenkeeper (21)</option>
+    <option value="Hair professional (157)">Hair professional (157)</option>
+    <option selected="selected" value="Healthcare assistant practitioner (102)">Healthcare assistant practitioner (102)</option>
+    <option value="Healthcare support worker (103)">Healthcare support worker (103)</option>
+    <option value="Heavy vehicle service and maintenance technician (135)">Heavy vehicle service and maintenance technician (135)</option>
+    <option value="Horticulture or landscape operative (181)">Horticulture or landscape operative (181)</option>
+    <option value="Hospitality supervisor (138)">Hospitality supervisor (138)</option>
+    <option value="Hospitality team member (96)">Hospitality team member (96)</option>
+    
+    </select>
+                        </div>
+    
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-label--m" for="ReasonForChange">
+                            Reason for change
+                        </label>
+                        <span class="govuk-hint">Provide more detail as to why this change is required.</span>
+                        <span class="govuk-error-message field-validation-valid" data-valmsg-for="ReasonForChange" data-valmsg-replace="true"></span>
+                            <textarea class="govuk-textarea" rows="5" name="ReasonForChange" id="ReasonForChange"></textarea>
+                        </div>
+                    </div>
+    
+                <button type="submit" class="govuk-button">Continue</button>
+            </form>
+        </div>
+    </div>
+    
+    
+        </div>
+
+
+
+
+
+{% endblock %}
+
+
+
