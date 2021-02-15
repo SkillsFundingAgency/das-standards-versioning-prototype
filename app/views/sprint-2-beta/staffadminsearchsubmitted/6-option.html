@@ -1,0 +1,127 @@
+{% extends "layout-staffadmin.html" %}
+
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<div class="govuk-width-container">
+        
+
+    <a class="govuk-back-link" href="5-amend">Back</a>
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">     
+
+            <form type="post" asp-method="Option" class="apprentice-option-form" action="7-amend1" method="post" novalidate="novalidate">
+               
+
+               
+
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="options-conditional-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-heading-xl">
+                                Did the apprentice take a learning option?
+                            </h1>
+                        </legend>
+                        <p class="govuk-body">
+                            You may know options as 'occupational options', 'pathways', 'specialisms' or 'specialist functions'.
+                        </p>
+                        <span id="options-conditional-hint" class="govuk-hint">
+                            The option will appear on the certificate.
+                        </span>
+                        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+
+
+{% set yesHtml %}
+{{ govukInput({
+  id: "yes",
+  name: "yes",
+  type: "tel",
+  classes: "govuk-!-width-two-third",
+  label: {
+    text: "What was the option?"
+  }
+}) }}
+{% endset -%}
+
+{% set noHtml %}
+{{ govukInput({
+  id: "no",
+  name: "no",
+  type: "tel",
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: ""
+  }
+}) }}
+{% endset -%}
+
+{{ govukRadios({
+  idPrefix: "contact",
+  name: "contact",
+  fieldset: {
+    legend: {
+      text: "",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: ""
+  },
+  items: [
+    
+    {
+      value: "Yes",
+      text: "Yes",
+      conditional: {
+        html: yesHtml
+      }
+    },
+    {
+      value: "no",
+      text: "No",
+      conditional: {
+       
+      }
+    }
+  ]
+}) }}
+
+                <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-label--m" for="ReasonForChange">
+                        Reason for change
+                    </label>
+                    <span class="govuk-hint">Provide more detail as to why this change is required.</span>
+                    <textarea class="govuk-textarea" rows="5" name="ReasonForChange" id="ReasonForChange"></textarea>
+                </div>
+
+                <button type="submit" class="govuk-button">Continue</button>
+           </form>
+        </div>
+    </div>
+</main>
+
+
+    </div>
+
+
+
+
+{% endblock %}
+
+
+
