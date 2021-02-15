@@ -17,212 +17,84 @@
 <div class="govuk-width-container">
         
 
-    <a class="govuk-back-link" href="details">Back to details</a>
+    <a class="govuk-back-link" href="5-amend">Back</a>
 
 <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-two-thirds">     
 
-            <h1 class="govuk-heading-xl">Check and submit the assessment details</h1>
+            <form type="post" asp-method="Option" class="apprentice-option-form" action="7-amend1" method="post" novalidate="novalidate">
+               
 
-            <div class="banner blue">
-                <h2 class="govuk-heading-m">Please check before submitting</h2>
-                <p class="govuk-body">The apprentice and apprenticeship details will be printed on the certificate.</p>
-            </div>
+               
 
-            <h2 class="govuk-heading-m">
-                Apprentice details
-            </h2>
 
-            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Given name
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        Annie
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                        <a class="govuk-link govuk-link--no-visited-state" href="#">
-                            Change<span class="govuk-visually-hidden"> given name</span>
-                        </a>
-                    </dd>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="options-conditional-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-heading-xl">
+                                What version did the apprentice take?
+                            </h1>
+                        </legend>
+                       
+                        <span id="options-conditional-hint" class="govuk-hint">
+                            The version will appear on the certificate.
+                        </span>
+                        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+                        {{ govukRadios({
+                          idPrefix: "chooseversion",
+                          name: "chooseversion",
+                          fieldset: {
+                            legend: {
+                              text: "",
+                              isPageHeading: true,
+                              classes: "govuk-fieldset__legend--m"
+                            }
+                          },
+    
+    
+    
+    
+                          items: [
+                            {
+                              value: "1.0",
+                              text: "Version 1.0"
+    
+                            },
+    
+    
+                            {
+                              value: "1.1",
+                              text: "Version 1.1"
+                            },
+    
+    
+    
+                              {
+                                value: "1.2",
+                                text: "Version 1.2"
+                            }
+                          ]
+                        }) }}
+
+                <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-label--m" for="ReasonForChange">
+                        Reason for change
+                    </label>
+                    <span class="govuk-hint">Provide more detail as to why this change is required.</span>
+                    <textarea class="govuk-textarea" rows="5" name="ReasonForChange" id="ReasonForChange"></textarea>
                 </div>
 
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Family name
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        Pilkington
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                         <a class="govuk-link govuk-link--no-visited-state" href="#">
-                            Change<span class="govuk-visually-hidden"> family name</span>
-                        </a>
-                    </dd>
-                </div>
-
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        <abbr title="Unique learner number">ULN</abbr>
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        4552889288
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                    </dd>
-                </div>
-            </dl>
-
-            <h2 class="govuk-heading-m">
-                Apprenticeship details
-            </h2>
-
-            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Standard
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        Power network craftsperson (6)
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                    </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Level
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        3
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                    </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Version
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        1.0
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                    </dd>
-                </div>
-                
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key">
-                            Option
-                        </dt>
-                        <dd class="govuk-summary-list__value">
-                            Overhead Lines
-                        </dd>
-                        <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="changeoption">
-                                Change<span class="govuk-visually-hidden"> option</span>
-                            </a>
-                        </dd>
-                    </div>
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key">
-                            Grade
-                        </dt>
-                        <dd class="govuk-summary-list__value">
-                            Pass
-                        </dd>
-                        <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link govuk-link--no-visited-state" href="#">
-                                Change<span class="govuk-visually-hidden"> grade</span>
-                            </a>
-                        </dd>
-                    </div>
-
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Achievement date
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        13 February 2021
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                        <a class="govuk-link govuk-link--no-visited-state" href="#">
-                            Change<span class="govuk-visually-hidden"> achievement date</span>
-                        </a>
-                    </dd>
-                </div>
-
-            </dl>
-
-            <h2 class="govuk-heading-m">
-                We'll send the certificate to:
-            </h2>
-
-            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Name
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        Mr Smith
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                        <a class="govuk-link govuk-link--no-visited-state" href="#">
-                            Change<span class="govuk-visually-hidden"> recipient name</span>
-                        </a>
-                    </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Department
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        IT
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                        <a class="govuk-link govuk-link--no-visited-state" href="#">
-                            Change<span class="govuk-visually-hidden"> department</span>
-                        </a>
-                    </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Organisation
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        ESFA
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                        <a class="govuk-link govuk-link--no-visited-state" href="#">
-                            Change<span class="govuk-visually-hidden"> organisation</span>
-                        </a>
-                    </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                        Address
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                        5<br>
-QuintonRoad<br>
-                        C House<br>
-                        Coventry<br>
-                        CV1 2WT
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                        <a class="govuk-link govuk-link--no-visited-state" href="#">
-                            Change<span class="govuk-visually-hidden"> address</span>
-                        </a>
-                    </dd>
-                </div>
-            </dl>
-
-                
-                    <button type="submit" class="govuk-button">Confirm and submit</button>
-                
+                <button type="submit" class="govuk-button">Continue</button>
+           </form>
         </div>
     </div>
 </main>
+
+
     </div>
 
 

@@ -105,9 +105,11 @@
                         Version
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        1.0
+                        {{ data['chooseversion'] }}
                     </dd>
-                    <dd class="govuk-summary-list__actions">
+                    <dd class="govuk-summary-list__actions"><a class="govuk-link govuk-link--no-visited-state" href="6-version">
+                        Change<span class="govuk-visually-hidden"> version</span>
+                    </a>
                     </dd>
                 </div>
                 
@@ -116,10 +118,10 @@
                             Option
                         </dt>
                         <dd class="govuk-summary-list__value">
-                            Overhead Lines
+                            {{ data['yes'] }}
                         </dd>
                         <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="changeoption">
+                            <a class="govuk-link govuk-link--no-visited-state" href="8-option">
                                 Change<span class="govuk-visually-hidden"> option</span>
                             </a>
                         </dd>

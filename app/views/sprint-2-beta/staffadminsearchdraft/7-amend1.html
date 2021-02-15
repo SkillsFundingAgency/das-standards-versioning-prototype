@@ -17,7 +17,7 @@
 <div class="govuk-width-container">
         
 
-    <a class="govuk-back-link" href="details">Back to details</a>
+    <a class="govuk-back-link" href="6-version">Back to details</a>
 
 <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
@@ -105,9 +105,11 @@
                         Version
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        1.0
+                        {{ data['chooseversion'] }}
                     </dd>
-                    <dd class="govuk-summary-list__actions">
+                    <dd class="govuk-summary-list__actions"><a class="govuk-link govuk-link--no-visited-state" href="6-version">
+                        Change<span class="govuk-visually-hidden"> version</span>
+                    </a>
                     </dd>
                 </div>
                 
@@ -116,11 +118,11 @@
                             Option
                         </dt>
                         <dd class="govuk-summary-list__value">
-                            Overhead Lines
+                            
                         </dd>
                         <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link" href="changeoption">
-                                Change<span class="govuk-visually-hidden"> option</span>
+                            <a class="govuk-link govuk-link--no-visited-state" href="8-option">
+                                Change <span class="govuk-visually-hidden"> option</span>
                             </a>
                         </dd>
                     </div>
