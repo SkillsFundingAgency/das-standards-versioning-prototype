@@ -78,8 +78,8 @@
                          </thead>
                          <tbody class='govuk-table__body'>
                               <tr class='govuk-table__row'>
-                                   <td class='govuk-table__cell'>---</td>
-                                   <td class='govuk-table__cell'>---</td>
+                                   <td class='govuk-table__cell'>Building clickable prototypes for Staff admin - assessment outcomes & certifications and EPAO apply.</td>
+                                   <td class='govuk-table__cell'>To account for all possible scenarios where versioning is involved and test with real users for insights that will inform future design decisions.</td>
                               </tr>
                          </tbody>
                     </table>"
@@ -187,13 +187,16 @@
 <div class="govuk-grid-row">
      <!-- Sprints section starts -->
      <div class="govuk-grid-column-two-thirds">
-          {% include './sprint-2-beta/_summary.html' %}
+          {% include './sprint-3-beta/_summary.html' %}
 
 
 
           <h2 class="govuk-heading-l govuk-!-margin-top-9">
                Sprints
           </h2>
+          {% set sprint3betaHtml %}
+          {% include './sprint-3-beta/_summary.html' %}
+     {% endset %}
           {% set sprint2betaHtml %}
           {% include './sprint-2-beta/_summary.html' %}
      {% endset %}
@@ -267,6 +270,18 @@
                
                
                
+                     
+               {
+                    heading: {
+                         text: "Sprint 3 Beta"
+                    },
+                    content: {
+                         html: sprint3betaHtml
+                    },
+                    summary: {
+                         html: '17th Feb — 3rd Mar 2021'
+                    }
+               },
                {
                     heading: {
                          text: "Sprint 2 Beta"
@@ -307,7 +322,7 @@
                          html: sprint11Html
                     },
                     summary: {
-                         html: '9th December — 6th Jan 2021'
+                         html: '9th Dec — 6th Jan 2021'
                     }
                },
 
@@ -319,7 +334,7 @@
                          html: sprint10Html
                     },
                     summary: {
-                         html: '25th November — 9th December 2020'
+                         html: '25th Nov — 9th Dec 2020'
                     }
                },
                {
@@ -330,7 +345,7 @@
                          html: sprint9Html
                     },
                     summary: {
-                         html: '10th November — 24th November 2020'
+                         html: '10th Nov — 24th Nov 2020'
                     }
                },
                {
@@ -341,12 +356,9 @@
                          html: sprint8Html
                     },
                     summary: {
-                         html: '28th October — 9th November 2020'
+                         html: '28th Oct— 9th Nov 2020'
                     }
                },
-
-
-
 
                     {
                          heading: {
@@ -356,20 +368,9 @@
                               html: sprint7Html
                          },
                          summary: {
-                              html: '14th October — 27th October 2020'
+                              html: '14th Oct— 27th Oct 2020'
                          }
                     },
-
-
-
-
-
-
-
-
-
-
-
 
                     {
                          heading: {
@@ -379,7 +380,7 @@
                               html: sprint6Html
                          },
                          summary: {
-                              html: '30th September - 13th October 2020'
+                              html: '30th Sept - 13th Oct 2020'
                          }
                     },
                     {
@@ -390,7 +391,7 @@
                               html: sprint5Html
                          },
                          summary: {
-                              html: '16th September - 29th September 2020'
+                              html: '16th Sept - 29th Sept 2020'
                          }
                     },
                     {
@@ -401,7 +402,7 @@
                               html: sprint4Html
                          },
                          summary: {
-                              html: '2nd September - 15th September 2020'
+                              html: '2nd Sept - 15th Sept 2020'
                          }
                     },
                     {
@@ -412,7 +413,7 @@
                               html: sprint3Html
                          },
                          summary: {
-                              html: '19th August — 1st September 2020'
+                              html: '19th Aug — 1st Sept 2020'
                          }
                     },
                     {
@@ -423,7 +424,7 @@
                               html: sprint2Html
                          },
                          summary: {
-                              html: '5th August — 18th August 2020'
+                              html: '5th Aug — 18th Aug 2020'
                          }
                     },
                     {
@@ -434,7 +435,7 @@
                               html: sprint1Html
                          },
                          summary: {
-                              html: '24th June — 4th August 2020'
+                              html: '24th June — 4th Aug 2020'
                          }
                     },
                     {
@@ -445,7 +446,7 @@
                               html: sprint0Html
                          },
                          summary: {
-                              html: '9th &mdash; 23rd June 2020'
+                              html: '9th June - 23rd June 2020'
                          }
                     }
                ]
