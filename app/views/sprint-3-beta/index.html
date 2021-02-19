@@ -20,10 +20,10 @@
      
      
                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
-                         <span class="govuk-caption-l govuk-!-margin-bottom-2">Confirm you want to offer the standard:</span>
-                     Animal trainer
+                         <span class="govuk-caption-l govuk-!-margin-bottom-2"> ST0398Animal trainer</span>
+                     
                  </h1>
-                 <p class="govuk-body-l">Reference: ST0398</p>
+                 
      
                  <table class="govuk-table govuk-!-margin-bottom-7">
                      <tbody class="govuk-table__body">
@@ -36,31 +36,21 @@
                              <td class="govuk-table__cell">
      Expiry date not set                        </td>
                          </tr>
-                         <tr class="govuk-table__row">
-                              <th class="govuk-table__header" scope="row">Version</th>
-                              <td class="govuk-table__cell">
-      1.0                       </td>
-                          </tr>
+                        
                      </tbody>
                  </table>
-     
+                 
+
+
+
                 
-      <form action="st" method="post">
-                         <input value="179" type="hidden" data-val="true" data-val-required="The StandardCode field is required." id="StandardCode" name="StandardCode">
-         
-                             <div class="govuk-form-group ">
-         
-         
-                                 <div class="govuk-checkboxes">
-                                     <div class="govuk-checkboxes__item">
-                                         <input class="govuk-checkboxes__input" name="IsConfirmed" type="checkbox" data-val="true" data-val-required="The IsConfirmed field is required." id="IsConfirmed" value="true">
-                                         <label class="govuk-label govuk-checkboxes__label" for="IsConfirmed">
-                                             By continuing with this application you are confirming you have <a href="#" target="_blank" class="govuk-link">read the assessment plan</a> (PDF).
-                                         </label>
-                                     </div>
-                                 </div>
-                             </div>
-                             <button type="submit" class="govuk-button">Confirm and apply</button>
+                 <form method="post" action="version1" class="">
+                         
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+     text: "Confirm and continue"
+}) }}
          
                      </form>
                  </div>
