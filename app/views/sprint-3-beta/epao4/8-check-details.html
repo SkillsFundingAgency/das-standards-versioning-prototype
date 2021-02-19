@@ -1,0 +1,149 @@
+{% extends "layout-epao.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+     <div id="service-title-section" class="epao-page">
+
+          <div class="govuk-width-container">
+
+               <div class="govuk-grid-row dashboard-title">
+                    <div class="govuk-grid-column-two-thirds">
+                         <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+                         <h1 class="govuk-heading-xl">
+                              Check and submit the assessment details
+                         </h1>
+                    </div>
+               </div>
+
+          </div>
+
+     </div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <div class="banner blue">
+                    <h1 class="govuk-heading-m">Please check before submitting</h1>
+                    <p>
+                         The apprentice and apprenticeship details will be printed on the certificate.
+                    </p>
+                    <p>
+                         If the name, standard, level or version is incorrect, you need to agree the correct details with the training provider and employer. 
+                         Once the training provider updates the Individual Learner Record (ILR), return here and continue.
+                    </p>
+               </div>
+
+               <form method="post" action="9-confirmation" class="">
+
+                    <h2 class="govuk-heading-m">
+                         Apprentice details
+                    </h2>
+
+                    <table class="govuk-table">
+                         <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Given name</th>
+                                   <td class="govuk-table__cell">John {{ data['epao-family-name'] }}</td>
+                                   <td class="govuk-table__cell right-align"></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Family name</th>
+                                   <td class="govuk-table__cell">{{ data['epao-family-name'] }}</td>
+                                   <td class="govuk-table__cell right-align"></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">ULN</th>
+                                   <td class="govuk-table__cell">{{ data['epao-uln'] }}</td>
+                                   <td class="govuk-table__cell right-align"></td>
+                              </tr>
+                         </tbody>
+                    </table>
+
+                    <h2 class="govuk-heading-m">
+                         Apprenticeship details
+                    </h2>
+
+                    
+
+                    <table class="govuk-table">
+                         <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Standard</th>
+                                   <td class="govuk-table__cell">{{ data['choose-standard-multi'] }}</td>
+                                   <td class="govuk-table__cell right-align"><a href="1-confirm-apprentice">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Level</th>
+                                   <td class="govuk-table__cell">3</td>
+                                   <td class="govuk-table__cell right-align"></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Version</th>
+                                   <td class="govuk-table__cell">1.0</td>
+                                   <td class="govuk-table__cell right-align"></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Grade</th>
+                                   <td class="govuk-table__cell">{{ data['epao-apprentice-grade'] }}</td>
+                                   <td class="govuk-table__cell right-align"><a href="#">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Achievement date</th>
+                                   <td class="govuk-table__cell">15 October 2019</td>
+                                   <td class="govuk-table__cell right-align"><a href="#">Change</a></td>
+                              </tr>
+                         </tbody>
+                    </table>
+
+                    <h2 class="govuk-heading-m">
+                         We'll send the certificate to:
+                    </h2>
+
+                    <table class="govuk-table">
+                         <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Name</th>
+                                   <td class="govuk-table__cell">Not applicable</td>
+                                   <td class="govuk-table__cell right-align"><a href="#">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Department</th>
+                                   <td class="govuk-table__cell">Not applicable</td>
+                                   <td class="govuk-table__cell right-align"><a href="#">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Organisation</th>
+                                   <td class="govuk-table__cell">Not applicable</td>
+                                   <td class="govuk-table__cell right-align"><a href="#">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Address</th>
+                                   <td class="govuk-table__cell">
+                                        3 Happy Island Way<br>
+                                        Bridport<br>
+                                        DT6 4JZ
+                                   </td>
+                                   <td class="govuk-table__cell right-align"><a href="#">Change</a></td>
+                              </tr>
+                         </tbody>
+                    </table>
+
+                    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                    {{ govukButton({
+                         text: "Confirm and submit"
+                    }) }}
+
+               </form>
+          </div>
+     </div>
+
+</div>
+{% endblock %}

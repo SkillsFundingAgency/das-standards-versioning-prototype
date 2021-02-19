@@ -1,0 +1,99 @@
+{% extends "layout-epao.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+     <div id="service-title-section" class="epao-page">
+
+          <div class="govuk-width-container">
+
+               <div class="govuk-grid-row dashboard-title">
+                    <div class="govuk-grid-column-two-thirds">
+                         <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+                         <h1 class="govuk-heading-xl">
+                              Confirm this is the correct apprentice
+                         </h1>
+                    </div>
+               </div>
+
+          </div>
+
+     </div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <form method="post" action="2-options" class="">
+
+                    <table class="govuk-table">
+                         <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Name</th>
+                                   <td class="govuk-table__cell">{{ data['epao-family-name'] }}</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">ULN</th>
+                                   <td class="govuk-table__cell">{{ data['epao-uln'] }}</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Standard</th>
+                                   <td class="govuk-table__cell">Gas network craftsperson</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Level</th>
+                                   <td class="govuk-table__cell">3</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Version</th>
+                                   <td class="govuk-table__cell">1.0</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Learner start date</th>
+                                   <td class="govuk-table__cell">1 April 2017</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Failed date</th>
+                                   <td class="govuk-table__cell">1 April 2018</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Grade</th>
+                                   <td class="govuk-table__cell">Fail</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Recorded by</th>
+                                   <td class="govuk-table__cell">Ali Chauhan</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Date recorded</th>
+                                   <td class="govuk-table__cell">1 April 2018</td>
+                              </tr>
+                         </tbody>
+                    </table>
+
+                    <p>
+                         If the name, standard, level or version is incorrect, you need to agree the correct details with the training provider and employer. 
+                         Once the training provider updates the Individual Learner Record (ILR), return here and continue.
+                    </p>
+
+                    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                    {{ govukButton({
+                         text: "Confirm and continue"
+                    }) }}
+
+                    <p>
+                         <a href="index">Search again</a> if this isn't the correct apprentice.
+                    </p>
+
+               </form>
+          </div>
+     </div>
+
+</div>
+{% endblock %}

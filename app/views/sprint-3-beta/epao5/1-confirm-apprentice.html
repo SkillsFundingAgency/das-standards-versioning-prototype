@@ -1,0 +1,203 @@
+{% extends "layout-epao.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+     <div id="service-title-section" class="epao-page">
+
+          <div class="govuk-width-container">
+
+               <div class="govuk-grid-row dashboard-title">
+                    <div class="govuk-grid-column-two-thirds">
+                         <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+                         <h1 class="govuk-heading-xl">
+                              Confirm this is the correct apprentice                   </h1>
+                    </div>
+               </div>
+
+          </div>
+
+     </div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <form method="post" action="2-options" class="">
+
+                    <table class="govuk-table">
+                         <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Name</th>
+                                   <td class="govuk-table__cell">{{ data['epao-family-name'] }}</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">ULN</th>
+                                   <td class="govuk-table__cell">{{ data['epao-uln'] }}</td>
+                              </tr>
+                             
+                             <!--
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Version</th>
+                                   <td class="govuk-table__cell">1.0</td>
+                              </tr>-->
+                             
+                              <!--
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Failed date</th>
+                                   <td class="govuk-table__cell">7 November 2020</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Grade</th>
+                                   <td class="govuk-table__cell">Fail</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Record by</th>
+                                   <td class="govuk-table__cell">Preprod Epao008</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Date recorded</th>
+                                   <td class="govuk-table__cell">7 November 2020</td>
+                              </tr>-->
+                         </tbody>
+                    </table>
+
+                    <p>
+                      If the name is incorrect, you need to agree the correct details with the training provider and employer. 
+                      Once the training provider updates the Individual Learner Record (ILR), return here and continue.
+                    </p>
+            
+                           <table class="govuk-table complete-font govuk-table--small responsive">
+                    <tbody class="govuk-table__body">
+                         <tr>
+                           <td data-label="Apprentice" class="govuk-table__cell das-no-wrap">
+                             <div role="button" tabindex="0" class="js-expand-table-row expand-table-row" data-expand-id="2155683208" aria-expanded="false" aria-controls="table-content-2155683208">
+                               <i class="arrow arrow-closed" aria-hidden="true">►</i>
+                               <span>View certificate history</span>
+                             </div>
+                           </td>
+                           
+                         <tr class="govuk-table__row js-expandble-cell expandble-cell expandble-cell--hidden" aria-hidden="true" id="table-content-2155683208">
+                           <td class="govuk-table__cell" colspan="5">
+                             <div class="expandble-cell-content">
+                               <h2 class="govuk-heading-m expandble-cell-content--first-heading">
+                                 Assessment details
+                               </h2>
+                               <dl class="govuk-summary-list govuk-summary-list--no-border">
+                                 <div class="govuk-summary-list__row">
+                                   <dt class="govuk-summary-list__key">Recorded by</dt>
+                                   <dd class="govuk-summary-list__value">PrintFunction</dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                   <dt class="govuk-summary-list__key">Standard</dt>
+                                   <dd class="govuk-summary-list__value">
+                                    Gas network craftsperson
+                                   </dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                   <dt class="govuk-summary-list__key">Level</dt>
+                                   <dd class="govuk-summary-list__value">2</dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                   <dt class="govuk-summary-list__key">Version</dt>
+                                   <dd class="govuk-summary-list__value">1.0</dd>
+                                 </div>
+                 
+                                 <div class="govuk-summary-list__row">
+                                   <dt class="govuk-summary-list__key">Grade</dt>
+                                   <dd class="govuk-summary-list__value">Fail</dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                   <dt class="govuk-summary-list__key">Option</dt>
+                                   <dd class="govuk-summary-list__value">
+                                   Gas Fitter
+                                   </dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                   <dt class="govuk-summary-list__key">
+                                     Apprenticeship start date
+                                   </dt>
+                                   <dd class="govuk-summary-list__value">01/04/2017</dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                   <dt class="govuk-summary-list__key">Fail date</dt>
+                                   <dd class="govuk-summary-list__value">01/04/2018</dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                   <dt class="govuk-summary-list__key">Certificate number</dt>
+                                   <dd class="govuk-summary-list__value">00021832</dd>
+                                 </div>
+                                 <div class="govuk-summary-list__row">
+                                   <dt class="govuk-summary-list__key">Certificate status</dt>
+                                   <dd class="govuk-summary-list__value">
+                                     <text>Submitted</text>
+                                   </dd>
+                                 </div>
+                               </dl>
+                 
+                              
+                             </div>
+                           </td>
+                         </tr>
+                         </tbody>
+                    </table>
+              
+
+                    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+                    {{ govukRadios({
+                      idPrefix: "choose-standard-multi",
+                      name: "choose-standard-multi",
+                      fieldset: {
+                        legend: {
+                          text: "Which standard did you assess?",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--m"
+                        }
+                      },
+                      items: [
+                        {
+                          value: "Gas engineering operative",
+                          text: "Gas engineering operative",
+                          hint: {
+                            text: "Failed on 1 April 2018"}
+                            
+
+                        },
+                        {
+                          value: "Gas network craftsperson",
+                          text: "Gas network craftsperson",
+                          hint: {
+                          text: ""
+                                  }
+
+                        }
+                      ]
+                    }) }}
+
+
+                    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                    {{ govukButton({
+                         text: "Confirm and continue"
+                    }) }}
+
+                    <p>
+                         <a href="index">Search again</a> if this isn't the correct apprentice.
+                    </p>
+
+               </form>
+          </div>
+     </div>
+     {% endblock %}
+
+{% block pageScripts %}
+<script>
+  window.DASFrontend.expandableTable.init();
+</script>
+{% endblock %}
