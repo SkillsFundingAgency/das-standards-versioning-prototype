@@ -1,0 +1,466 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+// We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
+$govuk-assets-path: "/govuk/assets/";
+
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import "lib/extensions/extensions";
+
+// Patterns that aren't in Frontend
+@import "patterns/step-by-step-header";
+@import "patterns/step-by-step-nav";
+@import "patterns/step-by-step-related";
+@import "patterns/task-list";
+@import "patterns/related-items";
+@import "patterns/email";
+@import "patterns/dashboard";
+@import "patterns/navigation";
+@import "patterns/tabs";
+@import "patterns/standard-details";
+
+// Components that aren't in Frontend
+@import "components/cookie-banner";
+@import "components/pagination";
+@import "components/back-to-top";
+
+
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+
+.dashboard-box__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #bfc1c3;
+  
+}
+.dashboard-box__body {
+  padding: 15px 15px 0;
+}
+.dashboard-box__header {
+  color: #fff;
+  padding: 15px;
+  margin-top: 0;
+  display: block;
+}
+
+.dashboard-box--green .dashboard-box__content {
+  border-color: #28a197;
+}
+.dashboard-box--green .dashboard-box__header {
+  background-color: #28a197;
+}
+.govuk-body, .govuk-body-m {
+  color: #0b0c0c;
+  font-family: GDS Transport,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.dashboard-box__count, .dashboard-box__name {
+  color: #fff;
+  font-weight: 700;
+}
+.das-wrap {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.govuk-main-wrapper {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.govuk-grid-column-full {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+}
+.govuk-grid-row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.govuk-grid-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.dashboard-boxes {
+  margin: 0 -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+
+
+
+.dashboard-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 33.3%;
+}
+
+.dashboard-box--lightblue .dashboard-box__content {
+  border-color: #2b8cc4;
+}
+.dashboard-box--lightblue .dashboard-box__header {
+  background-color: #2b8cc4;
+}
+.dashboard-box--darkblue .dashboard-box__content {
+  border-color: #005ea5;
+}
+.dashboard-box--darkblue .dashboard-box__header {
+  background-color: #005ea5;
+}
+.dashboard-box--grey .dashboard-box__content {
+  background-color: #f8f8f8;
+  border: 0 none;
+}
+.das-float-left {
+  float: left;
+}
+.das-float-right {
+  float: right;
+}
+.no-top-margin {
+  margin-top: 0 !important;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0 !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.govuk-header__container {
+  border-bottom: 10px solid #134273;
+  z-index: 20;
+}
+
+.govuk-width-container {
+  &.title-overide {
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+#service-title-section {
+  background: #f0f3f7;
+  padding: 0 0 3em 0;
+  &.epao-page {
+    background: none;
+    margin-top: -0.5em;
+    padding-bottom: 1em;
+  }
+  &.standard-details-page {
+    // margin-bottom: 2em;
+    .govuk-back-link {
+      margin-bottom: 5px;
+    }
+    .govuk-heading-xl {
+      margin-top: 0;
+    }
+  }
+  .dashboard-title {
+    margin-top: 1em;
+  }
+}
+
+hr {
+  margin: 2.5em 0 2em 0;
+  &.hr-sep {
+    border-top: 5px dashed govuk-colour("light-grey");
+    border-bottom: none;
+  }
+}
+
+.hub-page {
+  padding-top: 0;
+}
+
+.filter {
+  &.search-requested-support {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 2em 0;
+    .govuk-form-group {
+      margin: 0;
+    }
+    .search {
+      display: inline-block;
+      float: left;
+      width: 40%;
+      position: relative;
+      .govuk-button {
+        right: 2px;
+        // top: 0;
+        bottom: 2px;
+        margin: 0;
+        text-indent: -1000em;
+        position: absolute;
+        width: 2em;
+        height: 1.9em;
+        background: url("../images/search-white.svg") no-repeat 50% 50%
+          $govuk-link-colour;
+        background-size: 1em;
+      }
+    }
+    .dropdowns {
+      display: inline-block;
+      float: right;
+      width: 60%;
+      .govuk-form-group {
+        float: right;
+        margin-left: 2em;
+      }
+    }
+  }
+}
+
+.add-email {
+  padding-left: 2em;
+  font-size: 1rem;
+  margin: 0 0 0 0;
+  // position: relative;
+  // top: -1.75em;
+  display: inline-block;
+  background: url("../images/add.svg") no-repeat 0% 50%;
+  background-size: contain;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  // float: left;
+  margin: 0 0.25em -0.15em 0;
+  text-indent: -1000em;
+  // &:first-of-type {
+  //      margin-left: 0;
+  // }
+  &.approved {
+    background: url("../images/tick-green.svg") no-repeat 50% 50%;
+    background-size: contain;
+  }
+  &.contact {
+    background: url("../images/contact-person.svg") no-repeat 50% 50%;
+    background-size: contain;
+  }
+  &.telephone {
+    background: url("../images/contact-phone.svg") no-repeat 50% 50%;
+    background-size: contain;
+  }
+  &.email {
+    background: url("../images/contact-email.svg") no-repeat 50% 50%;
+    background-size: contain;
+  }
+  &.delete {
+    background: url("../images/delete.svg") no-repeat 50% 50%;
+    background-size: contain;
+  }
+  &.date {
+    background: url("../images/calendar.svg") no-repeat 50% 50%;
+    background-size: contain;
+  }
+  &.tick {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 0.25em -0.35em 1em;
+    background: url("../images/tick-white.svg") no-repeat 50% 50%;
+    background-size: contain;
+  }
+  &.excel {
+    background: url("../images/excel.svg") no-repeat 50% 50%;
+    background-size: contain;
+  }
+  &.pdf-download {
+    background: url("../images/pdf-blue.svg") no-repeat 0% 50%;
+    background-size: contain;
+    &.govuk-heading-m {
+      width: 100%;
+      height: auto;
+      text-indent: inherit;
+      margin: 0 0 0.5em 0;
+      padding-left: 1.25em;
+    }
+  }
+}
+
+.highlight {
+  color: $govuk-link-colour;
+}
+
+.banner {
+  &.blue {
+    padding: 1em;
+    border: 5px solid govuk-colour("light-blue");
+    margin: 0 0 2em 0;
+    p {
+      margin: 0;
+      color: govuk-colour("light-blue");
+    }
+  }
+}
+
+.autocomplete-suggestions {
+  box-sizing: border-box;
+  background: white;
+  overflow: scroll;
+  border: 2px solid $govuk-border-colour;
+  .autocomplete-suggestion {
+    @include govuk-font(19, $weight: normal);
+    padding: 0.25em;
+    &:hover,
+    &:active {
+      background: govuk-colour("light-grey");
+      cursor: pointer;
+    }
+  }
+}
+
+.autocomplete-selected {
+  background:govuk-colour("light-grey");
+}
+
+.address-selector {
+  padding: 1em;
+  margin-bottom: 1.5em;
+  background: govuk-colour("light-grey");
+  @include govuk-font(19, $weight: normal);
+  border-left: 10px solid govuk-colour("dark-blue");
+}
+
+table {
+  tbody {
+    tr {
+      td {
+        &.right-align {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+/* Expandable table row */
+
+.js-enabled .expand-table-row {
+  display: inline-block;
+  color: #005ea5;
+  cursor: pointer;
+  position: relative;
+}
+
+.js-enabled .expand-table-row span {
+  text-decoration: underline;
+}
+
+.js-enabled .expand-table-row:visited {
+  color: #005ea5;
+}
+
+.js-enabled .expand-table-row:focus {
+  outline: 3px solid #ffbf47;
+}
+
+.js-enabled .expand-table-row:hover {
+  color: #2b8cc4;
+}
+
+.expandble-cell-content {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  padding: 0.78947em;
+  text-align: left;
+  border-left-style: solid;
+  border-color: #bfc1c3;
+  border-left-width: 5px;
+}
+
+.expandble-cell-content .expandble-cell-content--first-heading {
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+
+.select-min-width-pfc-table {
+  min-width: 123px;
+}
+
+.arrow {
+  color: #005ea5;
+  cursor: pointer;
+  display: none;
+}
+
+@media (min-width: 40.0625em) {
+  .arrow {
+    display: inline-block;
+  }
+}
+
+.js-enabled .expandble-cell--hidden {
+  display: none;
+}
+
+.complete-font{
+  td{
+    font-size: 16px;
+  }
+  .das-no-wrap {
+    white-space: nowrap;
+  }
+}
+/* ====================================== Fixes for full images on Template ================================= */
+.govuk-header__container.remove-blue-line{
+      border-bottom: none;
+      padding-bottom: 10px;
+}
+.govuk-main-wrapper.top-space-fix{
+  margin-top: -10px;
+  padding-top: 0px;
+  margin-bottom: -14px;
+  a:focus{
+    background-color: white;
+    box-shadow: none;
+  }
+}
+.image-demo{
+  outline: none;
+  border: none;
+    margin-bottom: -14px;
+    
+}
+
+.autocomplete__option {
+  @include govuk-font(19, $weight: normal);
+}
