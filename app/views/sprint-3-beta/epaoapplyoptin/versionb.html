@@ -35,43 +35,13 @@
                              <th class="govuk-table__header" scope="row">Effective to</th>
                              <td class="govuk-table__cell">
      Expiry date not set                        </td></tr>
+     <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Version</th>
+      <td class="govuk-table__cell">
+1.0                        </td></tr>
     </tbody>
   </table>
-  <table class="govuk-table govuk-!-margin-bottom-7">
-    <tbody class="govuk-table__body">
-   
-                         {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-{{ govukCheckboxes({
-  idPrefix: "Version",
-  name: "Version",
-  fieldset: {
-    legend: {
-      text: "Please select which versions and assessment plans you can assess",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  hint: {
-    text: "Select all that apply."
-  },
-  items: [
-    {
-      value: "Version 1.0, Version 1.1 - Assessment plan 1 (PDF)",
-      text: "Version 1.0, Version 1.1 - Assessment plan 1 (PDF)"
-    },
-    {
-      value: "Version 1.2, Version 1.3 - Assessment plan 2 (PDF)",
-      text: "Version 1.2, Version 1.3 - Assessment plan 2 (PDF)"
-    }
-  ]
-}) }}
-<tr class="govuk-table__row">
-  <td class="govuk-table__cell">
-</td>
-</tr>
-                     </tbody>
-                 </table>
+  
                  
                 
       <form action="versiona" method="post">
@@ -84,7 +54,7 @@
                                      <div class="govuk-checkboxes__item">
                                          <input class="govuk-checkboxes__input" name="IsConfirmed" type="checkbox" data-val="true" data-val-required="The IsConfirmed field is required." id="IsConfirmed" value="true">
                                          <label class="govuk-label govuk-checkboxes__label" for="IsConfirmed">
-                                             By continuing with this application you are confirming you have read the assessment plan.
+                                          By continuing, you confirm you have <a class="govuk-link-no--visited-state" href="#">found the chosen standard and version(s)</a>, and read the relevant assessment plans.
                                          </label>
                                      </div>
                                  </div>

@@ -1,0 +1,74 @@
+{% extends "layout-epaoapply.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+
+     
+
+{% block content %}
+<div class="govuk-width-container">
+        
+
+
+
+     <a href="#" class="govuk-back-link">Return to standard details</a>
+     <main class="govuk-main-wrapper " id="main-content" role="main">
+         <div class="govuk-grid-row">
+             <div class="govuk-grid-column-two-thirds">
+     
+     
+                 <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
+                         <span class="govuk-caption-l govuk-!-margin-bottom-2">Confirm you want to opt-in:</span>
+                     Animal trainer
+                 </h1>
+                 <p class="govuk-body-l">Reference: ST0398</p>
+     
+                 <table class="govuk-table govuk-!-margin-bottom-7">
+                     <tbody class="govuk-table__body">
+                         <tr class="govuk-table__row">
+                             <th class="govuk-table__header" scope="row">Effective from</th>
+                             <td class="govuk-table__cell">Today</td>
+                         </tr>
+                         
+     <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Version</th>
+      <td class="govuk-table__cell">
+1.1                        </td></tr>
+    </tbody>
+  </table>
+  
+                 
+                
+      <form action="confirmation" method="post">
+                         <input value="179" type="hidden" data-val="true" data-val-required="The StandardCode field is required." id="StandardCode" name="StandardCode">
+         
+                             <div class="govuk-form-group ">
+         
+         
+                                 
+                             <button type="submit" class="govuk-button">Confirm and opt-in</button>
+         
+                     </form>
+                 </div>
+             </div>
+               </div>
+          
+     </div>
+     
+     </main>
+     
+     
+     
+     
+     
+     
+         </div>
+
+
+       
+
+          
+                   
+{% endblock %}
