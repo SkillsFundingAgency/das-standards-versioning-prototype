@@ -30,6 +30,16 @@ $govuk-assets-path: "/govuk/assets/";
 
 
 
+.app-task-list__items {
+  font-family: "GDS Transport",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 40px;
+  list-style: none;
+  padding-left: 0;
+  text-size-adjust: 100%;
+}
+
 .das-float-left {
   float: left;
 }
