@@ -185,7 +185,10 @@
                  <li><a href="/sprint-12/manage-apprentice-provider/1-dashboard" class="govuk-link govuk-link--no-visited-state">Manage your Apprentices(Provider)</a></li>
 <br>
 
-<li><a href="/sprint-3-beta/epaoapplyoptin/" class="govuk-link govuk-link--no-visited-state">EPOA apply - opt-in</a></li>
+
+<li><a href="/sprint-4-beta/epaoapplynewversion/" class="govuk-link govuk-link--no-visited-state">EPOA apply</a></li>
+<li><a href="/sprint-4-beta/epaoapplyoptin/" class="govuk-link govuk-link--no-visited-state">EPOA apply (opt-in)</a></li>
+
  
 
                
@@ -205,13 +208,16 @@
 <div class="govuk-grid-row">
      <!-- Sprints section starts -->
      <div class="govuk-grid-column-two-thirds">
-          {% include './sprint-3-beta/_summary.html' %}
+          {% include './sprint-4-beta/_summary.html' %}
 
 
 
           <h2 class="govuk-heading-l govuk-!-margin-top-9">
                Sprints
           </h2>
+          {% set sprint4betaHtml %}
+          {% include './sprint-4-beta/_summary.html' %}
+     {% endset %}
           {% set sprint3betaHtml %}
           {% include './sprint-3-beta/_summary.html' %}
      {% endset %}
@@ -288,7 +294,17 @@
                
                
                
-                     
+               {
+                    heading: {
+                         text: "Sprint 4 Beta"
+                    },
+                    content: {
+                         html: sprint4betaHtml
+                    },
+                    summary: {
+                         html: '3rd Mar — 17th Mar 2021'
+                    }
+               },      
                {
                     heading: {
                          text: "Sprint 3 Beta"
