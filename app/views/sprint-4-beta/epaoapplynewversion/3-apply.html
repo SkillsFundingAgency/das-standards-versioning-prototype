@@ -1,4 +1,4 @@
-{% extends "layout-epaoapply.html" %}
+{% extends "layout-epaoapplyapp.html" %}
 
 {% block pageTitle %}
      GOV.UK Prototype Kit
@@ -13,14 +13,14 @@
 
 
 
-     <a href="#" class="govuk-back-link">Return to standards search</a>
+     <a href="2-details" class="govuk-back-link">Return to standard details</a>
      <main class="govuk-main-wrapper " id="main-content" role="main">
          <div class="govuk-grid-row">
              <div class="govuk-grid-column-two-thirds">
      
      
                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
-                         <span class="govuk-caption-l govuk-!-margin-bottom-2">Confirm you want to offer the standard:</span>
+                         <span class="govuk-caption-l govuk-!-margin-bottom-2">Confirm you want to offer standard version:</span>
                      Animal trainer
                  </h1>
                  <p class="govuk-body-l">Reference: ST0398</p>
@@ -29,74 +29,35 @@
                      <tbody class="govuk-table__body">
                          <tr class="govuk-table__row">
                              <th class="govuk-table__header" scope="row">Effective from</th>
-                             <td class="govuk-table__cell">22 November 2018</td>
+                             <td class="govuk-table__cell">22 March 2021</td>
                          </tr>
                          <tr class="govuk-table__row">
-                             <th class="govuk-table__header" scope="row">Effective to</th>
-                             <td class="govuk-table__cell">
-     Expiry date not set                        </td></tr>
+                            <th class="govuk-table__header" scope="row">Effective to</th>
+                            <td class="govuk-table__cell">Expiry date not set</td>
+                        </tr>
+     <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">Version</th>
+      <td class="govuk-table__cell">
+1.2                       </td></tr>
     </tbody>
   </table>
-  <table class="govuk-table govuk-!-margin-bottom-7">
-    <tbody class="govuk-table__body">
-   
-                         {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-{{ govukCheckboxes({
-  idPrefix: "Version",
-  name: "Version",
-  fieldset: {
-    legend: {
-      text: "Please select which versions you can assess",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  hint: {
-    text: "Select all that apply."
-  },
-  items: [
-    {
-      value: "Version 1.0",
-      text: "Version 1.0"
-    },
-    {
-      value: "Version 1.1",
-      text: "Version 1.1"
-    },
-    {
-      value: "Version 1.2",
-      text: "Version 1.2"
-    },
-    {
-      value: "Version 1.3",
-      text: "Version 1.3"
-    }
-  ]
-}) }}
-<tr class="govuk-table__row">
-  <td class="govuk-table__cell">
-</td>
-</tr>
-                     </tbody>
-                 </table>
+  
                  
                 
-      <form action="versionb" method="post">
+      <form action="4-appoverview" method="post">
                          <input value="179" type="hidden" data-val="true" data-val-required="The StandardCode field is required." id="StandardCode" name="StandardCode">
          
                              <div class="govuk-form-group ">
          
-         
-                                 <div class="govuk-checkboxes">
+         <div class="govuk-checkboxes">
                                      <div class="govuk-checkboxes__item">
                                          <input class="govuk-checkboxes__input" name="IsConfirmed" type="checkbox" data-val="true" data-val-required="The IsConfirmed field is required." id="IsConfirmed" value="true">
                                          <label class="govuk-label govuk-checkboxes__label" for="IsConfirmed">
-                                             By continuing with this application you are confirming you have <a class="govuk-link--no-visited-state" href="#" >read the assessment plan</a> (PDF).
+                                          By continuing, you confirm you have <a class="govuk-link--no-visited-state" href="4-questions">found the chosen standard version</a>, and read the relevant assessment plan.
                                          </label>
                                      </div>
-                                 </div>
-                             </div>
+                                 </div><br><br>
+                                 
                              <button type="submit" class="govuk-button">Confirm and apply</button>
          
                      </form>
