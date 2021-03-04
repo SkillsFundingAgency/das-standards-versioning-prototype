@@ -1,0 +1,229 @@
+{% extends "layout-staffadmin.html" %}
+
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+        
+
+
+    <a class="govuk-back-link" href="index">Return to dashboard</a>
+    
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+    
+        <h1 class="govuk-heading-xl">Standard applications</h1>
+    
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <!-- tabs -->
+                <div class="govuk-tabs" data-module="tabs">
+                    <ul class="govuk-tabs__list" role="tablist">
+                        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" role="presentation">
+                            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#new" id="tab_new" role="tab" aria-controls="new" tabindex="0" aria-selected="true">
+                                New (13)
+                            </a>
+                        </li>
+                        <li class="govuk-tabs__list-item" role="presentation">
+                            <a class="govuk-tabs__tab" href="#in-progress" id="tab_in-progress" role="tab" aria-controls="in-progress" tabindex="-1" aria-selected="false">
+                                In progress (11)
+                            </a>
+                        </li>
+                        <li class="govuk-tabs__list-item" role="presentation">
+                            <a class="govuk-tabs__tab" href="#feedback" id="tab_feedback" role="tab" aria-controls="feedback" tabindex="-1" aria-selected="false">
+                                Feedback (11)
+                            </a>
+                        </li>
+                        <li class="govuk-tabs__list-item" role="presentation">
+                            <a class="govuk-tabs__tab" href="#approved" id="tab_approved" role="tab" aria-controls="approved" tabindex="-1" aria-selected="false">
+                                Approved (233)
+                            </a>
+                        </li>
+                    </ul>
+                    <section class="govuk-tabs__panel" id="new" role="tabpanel" aria-labelledby="tab_new">
+                        <div id="new-standard-applications">
+    
+    
+    <h2 class="govuk-heading-m">New</h2>
+    
+    <p class="govuk-body">
+        Showing
+    1 - 10 of     12<text> applications</text>
+    </p>
+    
+    <table class="govuk-table govuk-table--small">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-third">
+                    <a class="new-sort govuk-link das-no-wrap" data-sortcolumn="OrganisationName" data-sortdirection="Desc" href="#">Organisation</a>
+                </th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                    <a class="new-sort govuk-link das-no-wrap" data-sortcolumn="StandardReference" data-sortdirection="Desc" href="#">Reference</a>
+                </th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                    <a class="new-sort govuk-link das-no-wrap" data-sortcolumn="StandardName" data-sortdirection="Desc" href="#">Standard and version</a>
+                </th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                    <a class="sorted-descending new-sort govuk-link das-no-wrap" data-sortcolumn="SubmittedDate" data-sortdirection="Asc" href="#">Date submitted</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+            
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                    <a class="govuk-link--no-visited-state" href="#">
+                        City and Guilds
+                    </a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0398</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">Animal trainer<br><p class="govuk-body-s">Version 1.1, 1.2</p></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric das-no-wrap">03 March 2021</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                    <a class="govuk-link--no-visited-state" href="#">
+                        University of Derby
+                    </a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0128</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">Software development technician<br><p class="govuk-body-s">Version 1.0</p></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric das-no-wrap">08 February 2021</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                    <a class="govuk-link--no-visited-state" href="#">
+                        University of Gloucestershire
+                    </a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0358</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">Non-destructive testing (NDT) operator<br><p class="govuk-body-s">Version 1.1</p></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric das-no-wrap">04 February 2021</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                    <a class="govuk-link--no-visited-state" href="#">
+                        University of Derby
+                    </a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0580</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">Brewer<br><p class="govuk-body-s">Version 1.0</p></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric das-no-wrap">04 February 2021</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                    <a class="govuk-link--no-visited-state" href="#">
+                        Naren Org3
+                    </a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0303</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">Plumbing and domestic heating technician<br><p class="govuk-body-s">Version 1.3</p></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric das-no-wrap">30 January 2021</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                    <a class="govuk-link--no-visited-state" href="#">
+                        BCS, The Chartered Institute for IT
+                    </a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0257</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">Large goods vehicle (LGV) driver<br><p class="govuk-body-s">Version 1.1</p></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric das-no-wrap">05 August 2020</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                    <a class="govuk-link--no-visited-state" href="#">
+                        BCS, The Chartered Institute for IT
+                    </a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0453</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">Water treatment technician<br><p class="govuk-body-s">Version 1.2</p></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric das-no-wrap">08 July 2020</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                    <a class="govuk-link--no-visited-state" href="#">
+                        CROYDON WITH TALENT LIMITED
+                    </a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0474</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">Motor finance specialist<br><p class="govuk-body-s">Version 1.1</p></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric das-no-wrap">14 February 2020</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                    <a class="govuk-link--no-visited-state" href="#">
+                        British Institute of Facilities Management
+                    </a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0195</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">Food and drink maintenance engineer<br><p class="govuk-body-s">Version 1.0</p></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric das-no-wrap">10 February 2020</td>
+            </tr>
+        </tbody>
+    </table>
+        <form method="get" action="/StandardApplication/ChangeApplicationsPerPageNewApplications#new">
+            <div class="das-flex-space-around">
+                <div>
+                    <select class="new-per-page govuk-select govuk-!-margin-right-2" data-val="true" data-val-required="The Items Per Page field is required." id="ItemsPerPage" name="ItemsPerPage"><option selected="selected" value="10">10</option>
+    <option value="50">50</option>
+    <option value="100">100</option>
+    <option value="500">500</option>
+    </select>
+                    <label for="ApplicationsPerPage">Applications per page</label>
+                </div>
+                <div class="das-pagination-links">
+    
+                    <span class="govuk-!-margin-left-3">1</span>
+                    <a class="new-page govuk-link govuk-!-margin-left-3" aria-label="Go to new page 2" data-pageindex="2" data-all-route-data="null" href="#">2</a>
+            <a class="new-page govuk-link govuk-!-margin-left-3" aria-label="Next new page" data-pageindex="2" data-all-route-data="null" href="#">Next »</a>
+                </div>
+            </div>
+            
+        </form>
+                        </div>
+                    </section>
+                    <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="in-progress" role="tabpanel" aria-labelledby="tab_in-progress">
+                        <div id="in-progress-standard-applications">
+    
+    
+    <h2 class="govuk-heading-m">In progress</h2>
+    
+    
+    
+    
+    <h2 class="govuk-heading-m">Feedback</h2>
+    
+    
+    
+    <h2 class="govuk-heading-m">Approved</h2>
+    
+    
+        </tbody>
+    </table>
+        
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+       
+    </main>
+    
+    
+        </div>
+
+
+
+
+
+{% endblock %}
+
+
