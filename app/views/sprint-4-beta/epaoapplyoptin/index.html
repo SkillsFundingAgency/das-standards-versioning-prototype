@@ -6,10 +6,22 @@ About - GOV.UK Prototype Kit
 
 {% block content %}
 
-<div class="govuk-width-container">
+
         
+    {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
+    {% set html %}
+      <p class="govuk-notification-banner__heading">
+        You can now choose to opt in or apply for a version of an already approved standard by going to 
+        <a class="govuk-notification-banner__link" href="1-standards">Standards approved to assess</a>.
+      </p>
+    {% endset %}
+    
+    {{ govukNotificationBanner({
+      html: html
+    }) }}
 
+    <div class="govuk-width-container">
 
 
     <main class="govuk-main-wrapper " id="main-content" role="main">
