@@ -19,7 +19,7 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">     
 
-            <form type="post" asp-method="Option" class="apprentice-option-form" action="9-amend2" method="post" novalidate="novalidate">
+            <form type="post" asp-method="Option" class="apprentice-option-form" action="9b-amend" method="post" novalidate="novalidate">
                
 
                
@@ -29,18 +29,21 @@
                     <fieldset class="govuk-fieldset" aria-describedby="options-conditional-hint">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                             <h1 class="govuk-heading-xl">
-                                What version did the apprentice take?
+                                Did the apprentice take a learning option?
                             </h1>
                         </legend>
-                       
+                        <p class="govuk-body">
+                            You may know options as 'occupational options', 'pathways', 'specialisms' or 'specialist functions'.
+                        </p>
                         <span id="options-conditional-hint" class="govuk-hint">
-                            The version will appear on the certificate.
+                            The option will appear on the certificate.
                         </span>
+                        {% from "govuk/components/radios/macro.njk" import govukRadios %}
                         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
                         {{ govukRadios({
-                          idPrefix: "chooseversion",
-                          name: "chooseversion",
+                          idPrefix: "choose-option",
+                          name: "choose-option",
                           fieldset: {
                             legend: {
                               text: "",
@@ -53,24 +56,18 @@
     
     
                           items: [
-                            {
-                              value: "1.0",
-                              text: "Version 1.0"
-    
-                            },
     
     
                             {
-                              value: "1.1",
-                              text: "Version 1.1"
+                              value: "Nurse",
+                              text: "Nurse"
                             },
     
-    
-    
-                              {
-                                value: "1.2",
-                                text: "Version 1.2"
+                            {
+                                value: "Lead nurse",
+                                text: "Lead nurse"
                             }
+    
                           ]
                         }) }}
 

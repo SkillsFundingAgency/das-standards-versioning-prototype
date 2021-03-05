@@ -39,65 +39,41 @@
                             The option will appear on the certificate.
                         </span>
                         {% from "govuk/components/radios/macro.njk" import govukRadios %}
-{% from "govuk/components/input/macro.njk" import govukInput %}
+
+                    {{ govukRadios({
+                      idPrefix: "choose-option",
+                      name: "choose-option",
+                      fieldset: {
+                        legend: {
+                          text: "",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--m"
+                        }
+                      },
 
 
 
-{% set yesHtml %}
-{{ govukInput({
-  id: "yes",
-  name: "yes",
-  type: "tel",
-  classes: "govuk-!-width-two-third",
-  label: {
-    text: "What was the option?"
-  }
-}) }}
-{% endset -%}
 
-{% set noHtml %}
-{{ govukInput({
-  id: "no",
-  name: "no",
-  type: "tel",
-  classes: "govuk-!-width-one-third",
-  label: {
-    text: ""
-  }
-}) }}
-{% endset -%}
+                      items: [
 
-{{ govukRadios({
-  idPrefix: "contact",
-  name: "contact",
-  fieldset: {
-    legend: {
-      text: "",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  hint: {
-    text: ""
-  },
-  items: [
-    
-    {
-      value: "Yes",
-      text: "Yes",
-      conditional: {
-        html: yesHtml
-      }
-    },
-    {
-      value: "no",
-      text: "No",
-      conditional: {
-       
-      }
-    }
-  ]
-}) }}
+
+                        {
+                          value: "Domiciliary Care",
+                          text: "Domiciliary Care"
+                        },
+
+                        {
+                            value: "Community support worker",
+                            text: "Community support worker"
+                        },
+                        {
+                          value: "Healthcare Support Worker",
+                          text: "Healthcare Support Worker"
+
+                        }
+
+                      ]
+                    }) }}
 
                 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 

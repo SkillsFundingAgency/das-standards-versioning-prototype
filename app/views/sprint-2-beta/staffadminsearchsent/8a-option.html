@@ -13,13 +13,13 @@
 <div class="govuk-width-container">
         
 
-    <a class="govuk-back-link" href="7-amend1">Back</a>
+    <a class="govuk-back-link" href="5-amend1">Back</a>
 
 <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">     
 
-            <form type="post" asp-method="Option" class="apprentice-option-form" action="11-amend3" method="post" novalidate="novalidate">
+            <form type="post" asp-method="Option" class="apprentice-option-form" action="9a-amend" method="post" novalidate="novalidate">
                
 
                
@@ -39,65 +39,37 @@
                             The option will appear on the certificate.
                         </span>
                         {% from "govuk/components/radios/macro.njk" import govukRadios %}
-{% from "govuk/components/input/macro.njk" import govukInput %}
+                        {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-
-
-{% set yesHtml %}
-{{ govukInput({
-  id: "yes",
-  name: "yes",
-  type: "tel",
-  classes: "govuk-!-width-two-third",
-  label: {
-    text: "What was the option?"
-  }
-}) }}
-{% endset -%}
-
-{% set noHtml %}
-{{ govukInput({
-  id: "no",
-  name: "no",
-  type: "tel",
-  classes: "govuk-!-width-one-third",
-  label: {
-    text: ""
-  }
-}) }}
-{% endset -%}
-
-{{ govukRadios({
-  idPrefix: "contact",
-  name: "contact",
-  fieldset: {
-    legend: {
-      text: "",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  hint: {
-    text: ""
-  },
-  items: [
+                        {{ govukRadios({
+                          idPrefix: "choose-option",
+                          name: "choose-option",
+                          fieldset: {
+                            legend: {
+                              text: "",
+                              isPageHeading: true,
+                              classes: "govuk-fieldset__legend--m"
+                            }
+                          },
     
-    {
-      value: "Yes",
-      text: "Yes",
-      conditional: {
-        html: yesHtml
-      }
-    },
-    {
-      value: "no",
-      text: "No",
-      conditional: {
-       
-      }
-    }
-  ]
-}) }}
+    
+    
+    
+                          items: [
+    
+    
+                            {
+                              value: "Nurse",
+                              text: "Nurse"
+                            },
+    
+                            {
+                                value: "Lead nurse",
+                                text: "Lead nurse"
+                            }
+    
+                          ]
+                        }) }}
 
                 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 

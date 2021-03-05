@@ -17,7 +17,7 @@
 <div class="govuk-width-container">
         
 
-    <a class="govuk-back-link" href="8-options">Back to details</a>
+    <a class="govuk-back-link" href="4-details">Back to details</a>
 
 <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
@@ -113,25 +113,20 @@
                     </dd>
                 </div>
                 
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key">
-                            Option
-                        </dt>
-                        <dd class="govuk-summary-list__value">
-                            {% if (data['yes']) %}
-                        <td class="govuk-table__cell">{{ data['yes'] }}</td>
-                      {% endif %}
-
-                      {% if (data['no']) %}
-                        <td class="govuk-table__cell"></td>
-                      {% endif %}
-                        </dd>
-                        <dd class="govuk-summary-list__actions">
-                            <a class="govuk-link govuk-link--no-visited-state" href="8-option">
-                                Change<span class="govuk-visually-hidden"> option</span>
-                            </a>
-                        </dd>
-                    </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Option
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['choose-option'] }}
+                       </td>
+                    
+                    </dd>
+                    <dd class="govuk-summary-list__actions"><a class="govuk-link govuk-link--no-visited-state" href="8a-option">
+                        Change<span class="govuk-visually-hidden"> option</span>
+                    </a>
+                    </dd>
+                </div>
                     <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
                             Grade

@@ -12,10 +12,11 @@
 {% block content %}
 
 
+
 <div class="govuk-width-container">
         
 
-    <a class="govuk-back-link" href="6-option">Back to details</a>
+    <a class="govuk-back-link" href="8-version">Back to details</a>
 
 <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
@@ -38,7 +39,7 @@
                         Given name
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        Adell
+                        Abram
                     </dd>
                     <dd class="govuk-summary-list__actions">
                         <a class="govuk-link govuk-link--no-visited-state" href="#">
@@ -52,7 +53,7 @@
                         Family name
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        Aavang
+                        Aamot
                     </dd>
                     <dd class="govuk-summary-list__actions">
                         <a class="govuk-link govuk-link--no-visited-state" href="#">
@@ -66,7 +67,7 @@
                         <abbr title="Unique learner number">ULN</abbr>
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        6666086706
+                        7278214419
                     </dd>
                     <dd class="govuk-summary-list__actions">
                     </dd>
@@ -83,7 +84,7 @@
                         Standard
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        Adult care worker (119)
+                        Healthcare assistant practitioner (102)
                     </dd>
                     <dd class="govuk-summary-list__actions">
                     </dd>
@@ -93,7 +94,7 @@
                         Level
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        2
+                        5
                     </dd>
                     <dd class="govuk-summary-list__actions">
                     </dd>
@@ -103,9 +104,12 @@
                         Version
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        1.0
+                        {{ data['chooseversion'] }}
                     </dd>
                     <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="6-version">
+                            Change<span class="govuk-visually-hidden"> version</span>
+                        </a>
                     </dd>
                 </div>
                 <div class="govuk-summary-list__row">
@@ -113,13 +117,12 @@
                         Option
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        {{ data['choose-option'] }}
-                       </td>
-                    
+                        
                     </dd>
-                    <dd class="govuk-summary-list__actions"><a class="govuk-link govuk-link--no-visited-state" href="6-option">
-                        Change<span class="govuk-visually-hidden"> option</span>
-                    </a>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="8b-option">
+                            Change<span class="govuk-visually-hidden"> option</span>
+                        </a>
                     </dd>
                 </div>
                 <div class="govuk-summary-list__row">
@@ -127,7 +130,7 @@
                         Grade
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        Fail
+                        Pass
                     </dd>
                     <dd class="govuk-summary-list__actions">
                         <a class="govuk-link govuk-link--no-visited-state" href="#">
@@ -139,10 +142,10 @@
 
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                        Fail date
+                        Achievement date
                     </dt>
                     <dd class="govuk-summary-list__value">
-                        15 February 2021
+                        01 January 2019
                     </dd>
                     <dd class="govuk-summary-list__actions">
                         <a class="govuk-link govuk-link--no-visited-state" href="#">
@@ -153,12 +156,71 @@
 
             </dl>
 
-           
+            <h2 class="govuk-heading-m">
+                We'll send the certificate to:
+            </h2>
 
-                <form type="post" action="8-confirmation" method="post">
-                    
-                    <button type="submit" class="govuk-button">Confirm and submit</button>
-                </form>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Raj
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="#">
+                            Change<span class="govuk-visually-hidden"> recipient name</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Department
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        IT
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="#">
+                            Change<span class="govuk-visually-hidden"> department</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Organisation
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Skills Funding Agency
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="#">
+                            Change<span class="govuk-visually-hidden"> organisation</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Address
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Cheylesmore House<br>
+5 Quinton Road<br>
+                                                Coventry<br>
+                        CV1 2WT
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state" href="#">
+                            Change<span class="govuk-visually-hidden"> address</span>
+                        </a>
+                    </dd>
+                </div>
+            </dl>
+
+                <form method="post" action="sentprinterconfirmation">
+                   
+                    <button class="govuk-button">Confirm reprint</button></form>
         </div>
     </div>
 </main>
@@ -167,13 +229,12 @@
 
 
 
-
-
-
-
-
-
 {% endblock %}
+
+
+
+
+
 
 
 

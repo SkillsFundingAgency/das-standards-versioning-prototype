@@ -10,20 +10,16 @@
 
 
 {% block content %}
-
-
-
-
 <div class="govuk-width-container">
         
 
-    <a class="govuk-back-link" href="7-amend1">Back</a>
+    <a class="govuk-back-link" href="5-amend1">Back</a>
 
 <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">     
 
-            <form type="post" asp-method="Option" class="apprentice-option-form" action="9-amend2" method="post" novalidate="novalidate">
+            <form type="post" asp-method="Option" class="apprentice-option-form" action="7a-amend" method="post" novalidate="novalidate">
                
 
                
@@ -33,75 +29,43 @@
                     <fieldset class="govuk-fieldset" aria-describedby="options-conditional-hint">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                             <h1 class="govuk-heading-xl">
-                                Did the apprentice take a learning option?
+                                What version did the apprentice take?
                             </h1>
                         </legend>
-                        <p class="govuk-body">
-                            You may know options as 'occupational options', 'pathways', 'specialisms' or 'specialist functions'.
-                        </p>
+                       
                         <span id="options-conditional-hint" class="govuk-hint">
-                            The option will appear on the certificate.
+                            The version will appear on the certificate.
                         </span>
                         {% from "govuk/components/radios/macro.njk" import govukRadios %}
-{% from "govuk/components/input/macro.njk" import govukInput %}
 
-
-
-{% set yesHtml %}
-{{ govukInput({
-  id: "yes",
-  name: "yes",
-  type: "tel",
-  classes: "govuk-!-width-two-third",
-  label: {
-    text: "What was the option?"
-  }
-}) }}
-{% endset -%}
-
-{% set noHtml %}
-{{ govukInput({
-  id: "no",
-  name: "no",
-  type: "tel",
-  classes: "govuk-!-width-one-third",
-  label: {
-    text: ""
-  }
-}) }}
-{% endset -%}
-
-{{ govukRadios({
-  idPrefix: "contact",
-  name: "contact",
-  fieldset: {
-    legend: {
-      text: "",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  hint: {
-    text: ""
-  },
-  items: [
+                        {{ govukRadios({
+                          idPrefix: "chooseversion",
+                          name: "chooseversion",
+                          fieldset: {
+                            legend: {
+                              text: "",
+                              isPageHeading: true,
+                              classes: "govuk-fieldset__legend--m"
+                            }
+                          },
     
-    {
-      value: "Yes",
-      text: "Yes",
-      conditional: {
-        html: yesHtml
-      }
-    },
-    {
-      value: "no",
-      text: "No",
-      conditional: {
-       
-      }
-    }
-  ]
-}) }}
+    
+    
+    
+                          items: [
+                            {
+                              value: "1.0",
+                              text: "Version 1.0"
+    
+                            },
+    
+    
+                            {
+                              value: "1.1",
+                              text: "Version 1.1"
+                            }
+                          ]
+                        }) }}
 
                 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 

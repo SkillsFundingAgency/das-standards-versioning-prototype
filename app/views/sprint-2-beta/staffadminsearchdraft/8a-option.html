@@ -17,13 +17,13 @@
 <div class="govuk-width-container">
         
 
-    <a class="govuk-back-link" href="5-amend">Back</a>
+    <a class="govuk-back-link" href="7a-amend">Back</a>
 
 <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">     
 
-            <form type="post" asp-method="Option" class="apprentice-option-form" action="" method="post" novalidate="novalidate">
+            <form type="post" asp-method="Option" class="apprentice-option-form" action="9-amend2" method="post" novalidate="novalidate">
                
 
                
@@ -33,43 +33,46 @@
                     <fieldset class="govuk-fieldset" aria-describedby="options-conditional-hint">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                             <h1 class="govuk-heading-xl">
-                                What version did the apprentice take?
+                                Did the apprentice take a learning option?
                             </h1>
                         </legend>
-                       
+                        <p class="govuk-body">
+                            You may know options as 'occupational options', 'pathways', 'specialisms' or 'specialist functions'.
+                        </p>
                         <span id="options-conditional-hint" class="govuk-hint">
-                            The version will appear on the certificate.
+                            The option will appear on the certificate.
                         </span>
                         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-                        {{ govukRadios({
-                          idPrefix: "chooseversion",
-                          name: "chooseversion",
-                          fieldset: {
-                            legend: {
-                              text: "",
-                              isPageHeading: true,
-                              classes: "govuk-fieldset__legend--m"
-                            }
-                          },
-    
-    
-    
-    
-                          items: [
-                            {
-                              value: "1.0",
-                              text: "Version 1.0"
-    
-                            },
-    
-    
-                            {
-                              value: "1.1",
-                              text: "Version 1.1"
-                            }
-                          ]
-                        }) }}
+                    {{ govukRadios({
+                      idPrefix: "choose-option",
+                      name: "choose-option",
+                      fieldset: {
+                        legend: {
+                          text: "",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--m"
+                        }
+                      },
+
+
+
+
+                      items: [
+
+
+                        {
+                          value: "Overground lines",
+                          text: "Overground lines"
+                        },
+
+                        {
+                            value: "Underground lines",
+                            text: "Underground lines"
+                        }
+
+                      ]
+                    }) }}
 
                 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
@@ -89,7 +92,6 @@
 
 
     </div>
-
 
 
 

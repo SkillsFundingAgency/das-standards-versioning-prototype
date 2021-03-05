@@ -97,6 +97,50 @@ router.post('/sprint-1-beta/epao1/2a-options', function (req, res) {
 
 
 
+// Re-direct from multiple  radios showing version options
+router.post('/sprint-2-beta/staffadminsearchdraft/6-version', function (req, res) {
+
+    let chooseversions = req.session.data['chooseversion']
+
+    console.log(req.session.data['chooseversion'])
+
+    //Option 1
+    if (chooseversions=== '1.0') {
+        res.redirect('/sprint-2-beta/staffadminsearchdraft/7a-amend')
+    }
+    //Option 2
+    else if (chooseversions=== '1.1') {
+        res.redirect('/sprint-2-beta/staffadminsearchdraft/7b-amend')
+    }
+
+    //end
+})
+
+
+
+
+// Re-direct from multiple  radios showing version options
+router.post('/sprint-2-beta/staffadminsearchsent/6-version', function (req, res) {
+
+    let chooseversions = req.session.data['chooseversion']
+
+    console.log(req.session.data['chooseversion'])
+
+    //Option 1
+    if (chooseversions=== '1.0') {
+        res.redirect('/sprint-2-beta/staffadminsearchsent/7a-amend')
+    }
+    //Option 2
+    else if (chooseversions=== '1.1') {
+        res.redirect('/sprint-2-beta/staffadminsearchsent/7b-amend')
+    }
+
+    //end
+})
+
+
+
+
 
 
 
