@@ -27,8 +27,14 @@ $govuk-assets-path: "/govuk/assets/";
 
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+#dreapta {
+  float:right;
+}
 
-
+.govuk-panel--confirmation {
+  color: #fff;
+  background: #28a197;
+}
 .govuk-tabs__panel {
   margin-bottom: 30px;
 }
