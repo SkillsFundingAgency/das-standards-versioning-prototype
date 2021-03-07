@@ -6,18 +6,6 @@ About - GOV.UK Prototype Kit
 
 {% block content %}
 
-{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
-
-    {% set html %}
-      <p class="govuk-notification-banner__heading">
-        You can now opt into or apply for a version of an already approved standard by going to 
-        <a class="govuk-notification-banner__link" href="1-standards">Standards approved to assess</a>.
-      </p>
-    {% endset %}
-    
-    {{ govukNotificationBanner({
-      html: html
-    }) }}
 
 <div class="govuk-width-container">
         
@@ -39,7 +27,7 @@ About - GOV.UK Prototype Kit
                             <div class="dashboard-box__body">
                                 <ul class="govuk-list">
                                     <li>
-                                        <a class="govuk-link--no-visited-state" href="1-standards">Standards approved to assess</a>
+                                        <a class="govuk-link--no-visited-state" href="1-standards">Standard applications</a>
                                     </li>
                                     <li>
                                         <a class="govuk-link--no-visited-state" href="#">Apply to assess a standard</a>

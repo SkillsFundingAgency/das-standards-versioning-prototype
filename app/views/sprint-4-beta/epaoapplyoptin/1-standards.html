@@ -1,191 +1,575 @@
-{% extends "layout-epaoapplystandards.html" %}
-
-{% block pageTitle %}
-     GOV.UK Prototype Kit
-{% endblock %}
+<head>
+    
+    
 
 
+
+
+    <!--[if !IE 8]><!-->
      
-
-{% block content %}
-
-<div class="govuk-width-container">
+    <link rel="stylesheet" href="https://pp-admin.apprenticeships.education.gov.uk/stylesheets/govuk-frontend-2.13.0.min.css">
+    <!--<![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" href="/stylesheets/govuk-frontend-ie8-2.13.0.min.css"><![endif]-->
+    <!--[if lt IE 9]><script src="/javascripts/html5shiv.min.js"></script><![endif]-->
+    
+    
+    
+    
+    
+    
+        <link rel="stylesheet" href="https://pp-admin.apprenticeships.education.gov.uk/stylesheets/application.min.css">
+    
+    
+    
+    
+    
+    </head>
+    
+    
+    {% block content %}
+    
+    
+    <body class="govuk-template__body  js-enabled">
+    
+        <script>
+            document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+        </script>
+    
         
-
-
-
-
-
-
-    <main class="govuk-main-wrapper " id="main-content" role="main">
-        <form method="post" action="details" class="">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-                <h1 class="govuk-heading-xl">Standards</h1>
-            </div>
-        </div>
     
+        <header class="govuk-header " role="banner" data-module="header">
+            <div class="govuk-header__container govuk-width-container govuk-header__container--das-epao">
+                <div class="govuk-header__logo">
+                    <a href="https://www.gov.uk" class="govuk-header__link govuk-header__link--homepage">
+                        <span class="govuk-header__logotype">
     
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <table class="govuk-table govuk-table--small responsive">
-                        <thead class="govuk-table__head">
-                            <tr class="govuk-table__row">
-                                <th class="govuk-table__header" scope="col">
-                                    Standard
-                                </th>
-                                <th class="govuk-table__header govuk-table__header--numeric" scope="col">
-                                    Reference
-                                </th>
-                                <th class="govuk-table__header govuk-table__header--numeric" scope="col">
-                                    Level
-                                </th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                <td data-label="Standard name" class="govuk-table__cell das-no-wrap">
-                                    <a class="govuk-link--no-visited-state" href="/sprint-4-beta/epaoapplyoptin/2-details">Animal trainer </a><strong class="govuk-tag govuk-tag--blue govuk-!-margin-left-5">
-                                        New version available
-                                      </strong>
-                                </td>
-                                <td data-label="Standard code" class="govuk-table__cell govuk-table__cell--numeric">
-                                    ST0398
-                                </td>
-                                <td data-label="Standard level" class="govuk-table__cell govuk-table__cell--numeric">
-                                    4
-                                </td>
-                               
-                                
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td data-label="Standard name" class="govuk-table__cell das-no-wrap">
-                                    <a class="govuk-link--no-visited-state" href="#">Actuary</a>
-                                </td>
-                                <td data-label="Standard code" class="govuk-table__cell govuk-table__cell--numeric">
-                                    ST0255
-                                </td>
-                                <td data-label="Standard level" class="govuk-table__cell govuk-table__cell--numeric">
-                                    7
-                                </td>
-                                
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td data-label="Standard name" class="govuk-table__cell das-no-wrap">
-                                    <a class="govuk-link--no-visited-state" href="#"> Advanced carpentry and joinery</a>
-                                <td data-label="Standard code" class="govuk-table__cell govuk-table__cell--numeric">
-                                    ST0240
-                                </td>
-                                <td data-label="Standard level" class="govuk-table__cell govuk-table__cell--numeric">
-                                    3
-                                </td>
-                                
-                            </tr>
-                            
-                            <tr class="govuk-table__row">
-                                <td data-label="Standard name" class="govuk-table__cell das-no-wrap">
-                                    <a class="govuk-link--no-visited-state" href="#">Arborist</a>
-                                </td>
-                                <td data-label="Standard code" class="govuk-table__cell govuk-table__cell--numeric">
-                                    ST0180
-                                </td>
-                                <td data-label="Standard level" class="govuk-table__cell govuk-table__cell--numeric">
-                                    2
-                                </td>
-                                
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td data-label="Standard name" class="govuk-table__cell das-no-wrap">
-                                    <a class="govuk-link--no-visited-state" href="#"> Brewer</a>
-                                </td>
-                                <td data-label="Standard code" class="govuk-table__cell govuk-table__cell--numeric">
-                                    ST0294
-                                </td>
-                                <td data-label="Standard level" class="govuk-table__cell govuk-table__cell--numeric">
-                                    4
-                                </td>
-                                
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td data-label="Standard name" class="govuk-table__cell das-no-wrap">
-                                    <a class="govuk-link--no-visited-state" href="#"> Broadcast and media systems engineer (integrated degree)</a>
-                                </td>
-                                <td data-label="Standard code" class="govuk-table__cell govuk-table__cell--numeric">
-                                    ST0354
-                                </td>
-                                <td data-label="Standard level" class="govuk-table__cell govuk-table__cell--numeric">
-                                    6
-                                </td>
-                                
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td data-label="Standard name" class="govuk-table__cell das-no-wrap">
-                                    <a class="govuk-link--no-visited-state" href="#">Business administrator</a>
-                                </td>
-                                <td data-label="Standard code" class="govuk-table__cell govuk-table__cell--numeric">
-                                    ST0196
-                                </td>
-                                <td data-label="Standard level" class="govuk-table__cell govuk-table__cell--numeric">
-                                    3
-                                </td>
-                                
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td data-label="Standard name" class="govuk-table__cell das-no-wrap">
-                                    <a class="govuk-link--no-visited-state" href="#"> Business fire safety advisor</a>
-                                </td>
-                                <td data-label="Standard code" class="govuk-table__cell govuk-table__cell--numeric">
-                                    ST0250
-                                </td>
-                                <td data-label="Standard level" class="govuk-table__cell govuk-table__cell--numeric">
-                                    3
-                                </td>
-                                
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td data-label="Standard name" class="govuk-table__cell das-no-wrap">
-                                    <a class="govuk-link--no-visited-state" href="#"> Carpentry and joinery</a>
-                                </td>
-                                <td data-label="Standard code" class="govuk-table__cell govuk-table__cell--numeric">
-                                    ST0239
-                                </td>
-                                <td data-label="Standard level" class="govuk-table__cell govuk-table__cell--numeric">
-                                    2
-                                </td>
-                                
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td data-label="Standard name" class="govuk-table__cell das-no-wrap">
-                                    <a class="govuk-link--no-visited-state" href="#">Chartered manager (degree)</a>
-                                </td>
-                                <td data-label="Standard code" class="govuk-table__cell govuk-table__cell--numeric">
-                                    ST0355
-                                </td>
-                                <td data-label="Standard level" class="govuk-table__cell govuk-table__cell--numeric">
-                                    6
-                                </td>
-                                
-                            </tr>
-                        </tbody>
-                    </table>
+                            <svg role="presentation" focusable="false" class="govuk-header__logotype-crown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 97" height="32" width="36">
+                                <path fill="currentColor" fill-rule="evenodd" d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"></path>
+                                <image src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image"></image>
+                            </svg>
+                            <span class="govuk-header__logotype-text">
+                                GOV.UK
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                <div class="govuk-header__content">
+                    <a href="/" class="govuk-header__link govuk-header__link--service-name">
+                        Apprenticeship assessment service
+                    </a>
                 </div>
             </div>
-    </form>
-       
+        </header>
+    
+    
+            <div class="das-user-panel">
+                <div class="govuk-width-container">
+                    <div class="das-user-panel__content">
+                        <span class="govuk-body-s das-user-panel__item das-user-panel__item--grow">
+    
+                            <p class="govuk-!-margin-top-0 govuk-!-margin-bottom-0 das-no-wrap">
+                                <span class="govuk-visually-hidden">Signed in as </span>
+                                Preprod Epao008<br>
+<strong>City and Guilds(London/ILM)</strong> (EPAO0008)
+                            </p>
+                        </span>
+                        <span class="govuk-body-s das-user-panel__item">
+                            <a class="govuk-link govuk-link--white" href="#">Contact</a>
+                        </span>
+                        <span class="govuk-body-s das-user-panel__item">
+                            <a class="govuk-link govuk-link--white" href="#">Email preferences</a>
+                        </span>
+                        <span class="govuk-body-s das-user-panel__item">
+                            <a class="govuk-link govuk-link--white" href="#">Sign out</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="govuk-width-container">
+                <div class="govuk-phase-banner govuk-phase-banner--no-border">
+                    <p class="govuk-phase-banner__content">
+                        <strong class="govuk-tag govuk-phase-banner__content__tag ">
+                            beta
+                        </strong>
+                        <span class="govuk-phase-banner__text">
+                            This is a new service – your <a class="govuk-link--no-visited-state"  href="#">feedback</a> will help us to improve it.
+                        </span>
+                    </p>
+                </div>
+            </div>
+        <nav class="app-navigation">
+            <ul class="app-navigation__list">
+                <li>
+                    <a id="Home" href="index">Home</a>
+                </li>
+                <li>
+                    <a id="Pipeline" href="#">Pipeline</a>
+                </li>
+                <li>
+                    <a id="Record a grade" href="#">Record a grade</a>
+                </li>
+                <li>
+                    <a id="Completed assessments" href="#">Completed assessments</a>
+                </li>
+                <li class="app-navigation--current-page">
+                    <a id="Standards" href="1-standards">Standards</a>
+                </li>
+                <li>
+                    <a id="Organisation details" href="#">Organisation details</a>
+                </li>
+            </ul>
+        </nav>
+    
+        <div class="govuk-width-container">
+            
+    
+    
+    <a class="govuk-back-link" href="index">Return to dashboard</a>
+    
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+    
+        <h1 class="govuk-heading-xl">Standard applications</h1>
+    
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <!-- tabs -->
+                <div class="govuk-tabs" data-module="tabs">
+                    <ul class="govuk-tabs__list" role="tablist">
+                        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" role="presentation">
+                            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#approved" id="tab_approved" role="tab" aria-controls="approved" tabindex="0" aria-selected="true">
+                                Approved (234)
+                            </a>
+                        </li>
+                        
+                        <li class="govuk-tabs__list-item" role="presentation">
+                            <a class="govuk-tabs__tab" href="#in-progress" id="tab_in-progress" role="tab" aria-controls="in-progress" tabindex="-1" aria-selected="false">
+                                In progress (11)
+                            </a>
+                        </li>
+                        <li class="govuk-tabs__list-item" role="presentation">
+                            <a class="govuk-tabs__tab" href="#submitted" id="tab_submitted" role="tab" aria-controls="submitted" tabindex="-1" aria-selected="false">
+                               Submitted (11)
+                            </a>
+                        </li>
+                        
+                    </ul>
+
+                    <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="in-progress" role="tabpanel" aria-labelledby="tab_in-progress">
+                        <div id="in-progress-standard-applications">
+    
+    
+    <h2 class="govuk-heading-m">In progress</h2>
+    
+    <p class="govuk-body">
+        Showing
+    1 - 10 of     11<text> applications</text>
+    </p>
+    
+    <table class="govuk-table govuk-table--small">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                
+                <th scope="col" class="govuk-table__header govuk-table__header">
+                    Name of Standard
+                </th>
+
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                    Reference
+                </th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                    Level
+                </th>
+               
+                
+                    
+            
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+               
+                
+                <td class="govuk-table__cell "><a class="govuk-link--no-visited-state" href="#">Animal technologist</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0058</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+               
+                   
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Brewer</a></td>
+                
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0580</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">6</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Marine Pilot</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0427</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+               
+                    
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Arborist</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0223</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+                
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Gas engineering operative</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0155</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+               
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Advanced butcher</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0077</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+                
+                    
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Financial Adviser</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0374</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+               
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Actuarial technician</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0004</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">7</td>
+                
+                   
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Non-destructive testing (NDT) operator</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0358</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+               
+                   
+            </tr>
+        </tbody>
+    </table>
+      
+            <div class="das-flex-space-around">
+                <div>
+                    <select class="in-progress-per-page govuk-select govuk-!-margin-right-2" data-val="true" data-val-required="The Items Per Page field is required." id="ItemsPerPage" name="ItemsPerPage"><option selected="selected" value="10">10</option>
+    
+    </select>
+                    <label for="ApplicationsPerPage">Applications per page</label>
+                </div>
+                <div class="das-pagination-links">
+    
+                    <span class="govuk-!-margin-left-3">1</span>
+                    <a class="govuk-link--no-visited-state govuk-!-margin-left-3" href="#">2</a>
+            <a class="govuk-link--no-visited-state govuk-!-margin-left-3" href="#">Next »</a>
+                </div>
+            </div>
+           
+        
+                        </div>
+                    </section>
+                    <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="submitted" role="tabpanel" aria-labelledby="tab_submitted">
+                        <div id="submitted-standard-applications">
+    
+    
+    <h2 class="govuk-heading-m">Submitted</h2>
+    
+    <p class="govuk-body">
+        Showing
+    1 - 10 of     11<text> applications</text>
+    </p>
+    
+    <table class="govuk-table govuk-table--small">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                
+                <th scope="col" class="govuk-table__header govuk-table__header">
+                    Name of Standard
+                </th>
+
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                    Reference
+                </th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                    Level
+                </th>
+               
+                
+                    
+            
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+               
+                
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Animal technologist</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0058</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+               
+                   
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Brewer</a></td>
+                
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0580</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">6</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Marine Pilot</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0427</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+               
+                    
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Arborist</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0223</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+                
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Gas engineering operative</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0155</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+               
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Advanced butcher</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0077</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+                
+                    
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Financial Adviser</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0374</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+               
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Actuarial technician</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0004</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">7</td>
+                
+                   
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Non-destructive testing (NDT) operator</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0358</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+               
+                   
+            </tr>
+        </tbody>
+    </table>
+            <div class="das-flex-space-around">
+                <div>
+                    <select class="feedback-per-page govuk-select govuk-!-margin-right-2" data-val="true" data-val-required="The Items Per Page field is required." id="ItemsPerPage" name="ItemsPerPage"><option selected="selected" value="10">10</option>
+    
+    </select>
+                    <label for="ApplicationsPerPage">Applications per page</label>
+                </div>
+                <div class="das-pagination-links">
+    
+                    <span class="govuk-!-margin-left-3">1</span>
+                    <a class="govuk-link--no-visited-state govuk-!-margin-left-3"  href="#">2</a>
+            <a class="govuk-link--no-visited-state govuk-!-margin-left-3" href="#">Next »</a>
+                </div>
+            </div>
+            
+        
+                        </div>
+                    </section>
+                    <section class="govuk-tabs__panel" id="approved" role="tabpanel" aria-labelledby="tab_approved">
+                        <div id="approved-organisation-applications">
+    
+    
+    <h2 class="govuk-heading-m">Approved</h2>
+    
+    <p class="govuk-body">
+        Showing
+    1 - 10 of     234<text> applications</text>
+    </p>
+    
+    <table class="govuk-table govuk-table--small">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                
+                <th scope="col" class="govuk-table__header govuk-table__header">
+                    Name of Standard
+                </th>
+
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                    Reference
+                </th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                    Level
+                </th>
+               
+                
+                    
+            
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+               
+                
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="2-details">Animal trainer</a><strong class="govuk-tag govuk-tag--blue govuk-!-margin-left-8">
+                    New version available
+                  </strong></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0058</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+               
+                   
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Brewer</a></td>
+                
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0580</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">6</td>
+            </tr>
+            
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Marine Pilot</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0427</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+               
+                    
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Arborist</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0223</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+                
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Gas engineering operative</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0155</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+               
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Advanced butcher</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0077</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+                
+                    
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Financial Adviser</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0374</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+               
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Actuarial technician</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0004</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">7</td>
+                
+                   
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Non-destructive testing (NDT) operator</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">ST0358</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+               
+                   
+            </tr>
+        </tbody>
+    </table>
+        
+            <div class="das-flex-space-around">
+                <div>
+                    <select class="approved-per-page govuk-select govuk-!-margin-right-2"  id="ItemsPerPage" name="ItemsPerPage"><option selected="selected" value="10">10</option>
+    
+    </select>
+                    <label for="ApplicationsPerPage">Applications per page</label>
+                </div>
+                <div class="das-pagination-links">
+    
+                    <span class="govuk-!-margin-left-3">1</span>
+                    <a class="govuk-link--no-visited-state govuk-!-margin-left-3"  href="#">2</a>
+                    <a class="govuk-link--no-visited-state govuk-!-margin-left-3"  href="#">3</a>
+                    <a class="govuk-link--no-visited-state govuk-!-margin-left-3"  href="#">4</a>
+                    <a class="govuk-link--no-visited-state govuk-!-margin-left-3"  href="#">5</a>
+                    <a class="govuk-link--no-visited-state govuk-!-margin-left-3"  href="#">6</a>
+                    <a class="govuk-link--no-visited-state govuk-!-margin-left-3"  href="#">Next »</a>
+                </div>
+            </div>
+            
+        
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" id="ControllerName" name="ControllerName">
     </main>
     
     
-    
-    
-    
-    
-    
-    
-    
         </div>
-
-          
-                   
-{% endblock %}
-
+    
+    
+        <footer class="govuk-footer " role="contentinfo">
+            <div class="govuk-width-container ">
+                <div class="govuk-footer__meta">
+                    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+                        <svg role="presentation" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+                            <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+                        </svg>
+                        <span class="govuk-footer__licence-description">
+                            All content is available under the
+                            <a class="govuk-footer__link" href="#" rel="license">
+                                Open Government Licence v3.0
+                            </a>, except where otherwise stated
+                        </span>
+                    </div>
+                    <div class="govuk-footer__meta-item">
+                        <a class="govuk-footer__link govuk-footer__copyright-logo" href="#">
+                            ©
+                            Crown copyright
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+       
+        
+        
+        <script src="https://pp-admin.apprenticeships.education.gov.uk/javascripts/application.min.js"></script>
+        
+    
+        
+        
+        
+        <script src="https://pp-admin.apprenticeships.education.gov.uk/javascripts/das-application-service.min.js"></script>
+    
+        
+    
+    
+    
+    
+    <style>.tb_button {padding:1px;cursor:pointer;border-right: 1px solid #8b8b8b;border-left: 1px solid #FFF;border-bottom: 1px solid #fff;}.tb_button.hover {borer:2px outset #def; background-color: #f8f8f8 !important;}.ws_toolbar {z-index:100000} .ws_toolbar .ws_tb_btn {cursor:pointer;border:1px solid #555;padding:3px}   .tb_highlight{background-color:yellow} .tb_hide {visibility:hidden} .ws_toolbar img {padding:2px;margin:0px}</style></body>
+    
+        
+        
+            
+    
+    
+    </body>
+    
+    
+    
+    
+    
+    {% endblock %}
+    
+    
+    
+       
