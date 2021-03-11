@@ -46,92 +46,10 @@
 
 
 
-                        {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 
 
-                        {% set emailHtml %}
-                        {{ govukInput({
-                          id: "contact-by-email",
-                          name: "contact-by-email",
-                          type: "email",
-                          spellcheck: false,
-                          classes: "govuk-!-width-one-third",
-                          label: {
-                            text: "Enter version number"
-                          }
-                        }) }}
-
-                        {{ govukButton({
-                          text: "Check version",
-                          classes: "govuk-button--secondary"
-                        }) }}
-                        {% endset -%}
-
-                        {{ govukRadios({
-                          idPrefix: "sign-in",
-                          name: "sign-in",
-                          fieldset: {
-                            legend: {
-                              text: "Would you like to start on the latest version of the standard?",
-                              isPageHeading: true,
-                              classes: "govuk-fieldset__legend--s"
-                            }
-                          },
-
-                          items: [
-                            {
-                              value: "yes",
-                              text: "Yes, I would like the latest version",
-                              hint: {
-                                text: "The apprentice will automatically be on the latest version if the start date is in the future"
-                              }
-                            },
-                            {
-                              value: "no",
-                              text: "No, I would like to enter an older version",
-                              hint: {
-                                text: ""
-                              },
-                              conditional: {
-                                 html: emailHtml
-                               }
-                            }
-                          ]
-                        }) }}
-
-
-
-
-                                                {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-
-
-                                                {{ govukRadios({
-                                                  idPrefix: "sign-in",
-                                                  name: "sign-in",
-                                                  fieldset: {
-                                                    legend: {
-                                                      text: "Select an option for Mechanical?",
-                                                      isPageHeading: true,
-                                                      classes: "govuk-fieldset__legend--s"
-                                                    }
-                                                  },
-
-                                                  items: [
-                                                    {
-                                                      value: "yes",
-                                                      text: "Option 1"
-                                                    },
-                                                    {
-                                                      value: "no",
-                                                      text: "Option 2"
-                                                    }
-                                                  ]
-                                                }) }}
-
-
-                        <div class="js-hidden-version-select">
+                    <!--    <div class="js-hidden-version-select">
                           {{ govukRadios({
                             idPrefix: "versions",
                             name: "versions",
@@ -163,7 +81,7 @@
                               }
                             ]
                           }) }}
-                        </div>
+                        </div>-->
 
 
 
@@ -219,6 +137,89 @@
                                 </div>
                             </fieldset>
                         </div>
+
+
+                        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+
+
+                        {% set enterVersionNumber %}
+                        {{ govukInput({
+                          id: "contact-by-email",
+                          name: "contact-by-email",
+                          type: "email",
+                          spellcheck: false,
+                          classes: "govuk-!-width-one-third",
+                          label: {
+                            text: "Enter the version number of the standard"
+                          }
+                        }) }}
+
+                        {{ govukButton({
+                          text: "Check version",
+                          classes: "govuk-button--secondary"
+                        }) }}
+                        {% endset -%}
+
+                        {{ govukRadios({
+                          idPrefix: "sign-in",
+                          name: "sign-in",
+                          fieldset: {
+                            legend: {
+                              text: "Would you like to start on the latest version of the standard?",
+                              isPageHeading: true,
+                              classes: "govuk-fieldset__legend--s"
+                            }
+                          },
+
+                          items: [
+                            {
+                              value: "yes",
+                              text: "Yes, I would like the latest version of the standard",
+                              hint: {
+                                text: "The apprentice will automatically be on the latest version if the start date is in the future"
+                              }
+
+                            },
+                            {
+                              value: "no",
+                              text: "No, I would like to enter an older version of the standard",
+                              hint: {
+                                text: ""
+                              },
+                              conditional: {
+                                 html: enterVersionNumber
+
+                               }
+                            }
+                          ]
+                        }) }}
+
+
+                        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+                        {{ govukRadios({
+                          idPrefix: "sign-in",
+                          name: "sign-in",
+                          fieldset: {
+                            legend: {
+                              text: "Select an option for the standard",
+                              isPageHeading: true,
+                              classes: "govuk-fieldset__legend--s"
+                            }
+                          },
+
+                          items: [
+                            {
+                              value: "yes",
+                              text: "Option 1"
+                            },
+                            {
+                              value: "no",
+                              text: "Option 2"
+                            }
+                          ]
+                        }) }}
+
                         <div class="govuk-form-group ">
                             <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Total agreed apprenticeship price (excluding VAT)</label>
                             <span id="price-hint" class="govuk-hint">
