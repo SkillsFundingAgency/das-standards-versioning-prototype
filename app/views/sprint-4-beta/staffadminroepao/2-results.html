@@ -1,0 +1,71 @@
+{% extends "layout-staffadmin.html" %}
+
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+
+
+<div class="govuk-width-container">
+        
+
+
+    <a class="govuk-back-link" href="1-search">Return to organisation search</a>
+    
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+    
+        <div class="govuk-grid-row govuk-!-margin-bottom-6">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
+                    Organisation search results
+                </h1>
+                <span class="govuk-caption-xl">Number of results: 1</span>
+            </div>
+        </div>
+    
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <table class="govuk-table govuk-table--s das-table--responsive">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="col">Name</th>
+                                <th class="govuk-table__header" scope="col">ID</th>
+                                <th class="govuk-table__header govuk-table__header--numeric" scope="col">UKPRN</th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell" data-label="Name"><a class="govuk-link" href="3-details">City and Guilds</a></td>
+                                    <td class="govuk-table__cell" data-label="ID">EPA0008</td>
+                                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="UKPRN">10009931</td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <a class="govuk-button" href="#">Add new<span class="visually-hidden"> organisation</span></a>
+            </div>
+        </div>
+    
+    </main>
+        </div>
+
+
+
+
+
+{% endblock %}
+
+
+
