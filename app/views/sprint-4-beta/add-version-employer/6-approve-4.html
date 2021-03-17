@@ -1,0 +1,248 @@
+
+<!--OLD
+<a href="/sprint-12/add-apprentice1/6a-approve" class="image-demo">
+  <img src="/public/images/Jrny-6.png" width="auto" height="auto" />
+</a>
+-->
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <a class="govuk-back-link" href="5-add-full-details">Back</a>
+<main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">
+                Approve apprentice details
+                <span class="govuk-caption-xl"></span>
+            </h1>
+        </div>
+    </div>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h2 class="govuk-heading-l">Standard details</h2>
+                <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Standard
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            	Power network craftsperson
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Level
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            3
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Version
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                           1.1
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Option
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          Overhead Lines
+                        </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Provider
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Southampton Academy
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Training start date
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            01/04/2021
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Training end date
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            13/04/2023
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Total apprenticeship training price (excluding VAT)
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            &pound;1,500
+                        </dd>
+                    </div>
+                  </dl>
+                  <p>
+                    <!--<a href="https://securefunding.pp-eas.apprenticeships.education.gov.uk/accounts/KK6WKG/reservations/79D8GJ/select?cohortReference=JKBRLW&amp;transferSenderId=" class="govuk-link add-apprentice">Add another apprentice</a>-->
+                    <a class="govuk-link das-float-right" href="/KK6WKG/unapproved/JKBRLW/delete">Delete and exit</a>
+                 </p>
+            </div>
+        </div>
+
+
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h2 class="govuk-heading-l">Apprentice details</h2>
+                <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Name
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            John Doe
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Date of birth
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            07 March 1975
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Organisation
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                             Tiles House LTD
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Options
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+
+
+                          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+              {{ govukRadios({
+                classes: "govuk-radios--small",
+                idPrefix: "changed-name",
+                name: "changed-name",
+                fieldset: {
+                  legend: {
+                    text: "",
+                    isPageHeading: false,
+                    classes: "govuk-fieldset__legend--m"
+                  }
+                },
+                items: [
+                  {
+                    value: "month",
+                    text: "Option 1"
+                  },
+                  {
+                    value: "month",
+                    text: "Option 2"
+                  },
+                  {
+                    value: "month",
+                    text: "Option 3"
+                  },
+                  {
+                    value: "month",
+                    text: "Option 4"
+                  }
+                ]
+
+              }) }}
+                        </dd>
+
+
+                    </div>
+                </dl>
+                <p>
+                  <a href="https://securefunding.pp-eas.apprenticeships.education.gov.uk/accounts/KK6WKG/reservations/79D8GJ/select?cohortReference=JKBRLW&amp;transferSenderId=" class="govuk-link add-apprentice">Add another apprentice</a>
+                  <a class="govuk-link das-float-right" href="/KK6WKG/unapproved/JKBRLW/delete">Edit this apprentice</a>
+               </p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="govuk-form-group  ">
+           <fieldset class="govuk-fieldset">
+               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                   <h3 class="govuk-fieldset__heading">Approve these details?</h3>
+               </legend>
+               <span class="field-validation-valid govuk-error-message" data-valmsg-for="Selection" data-valmsg-replace="true" id="error-message-Selection"></span>
+               <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                   <div class="govuk-radios__item">
+                       <input class="govuk-radios__input" id="radio-approve" name="selection" type="radio" value="Approve" data-aria-controls="conditional-approve">
+                       <label class="govuk-label govuk-radios__label" for="radio-approve">
+                           Yes, approve and notify training provider
+                       </label>
+                   </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-approve">
+                           <div class="govuk-form-group">
+                               <label class="govuk-label" for="approve-details">
+                                   Leave SOUTHAMPTON ENGINEERING TRAINING ASSOCIATION LIMITED (THE) a message (optional)
+                               </label>
+                               <textarea class="govuk-textarea" id="approve-details" name="approvemessage" rows="5"></textarea>
+                           </div>
+                       </div>
+                   <div class="govuk-radios__item">
+                       <input class="govuk-radios__input" id="radio-send" name="selection" type="radio" value="Send" data-aria-controls="conditional-send">
+                       <label class="govuk-label govuk-radios__label" for="radio-send">
+                           No, request changes from training provider
+                       </label>
+                   </div>
+                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-send">
+                       <div class="govuk-form-group">
+                           <label class="govuk-label" for="send-details">
+                               Leave SOUTHAMPTON ENGINEERING TRAINING ASSOCIATION LIMITED (THE) a message (optional)
+                           </label>
+                           <textarea class="govuk-textarea" id="send-details" name="sendmessage" rows="5"></textarea>
+                       </div>
+                   </div>
+               </div>
+           </fieldset>
+       </div>
+       <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <a class="govuk-button" href="#">Save and Submit</a>
+                <p>
+                  <a href="#" class="govuk-link">Save and exit</a>
+               </p>
+            </div>
+        </div>
+      </main>
+  </div>
+
+
+
+
+
+
+
+{% endblock %}
