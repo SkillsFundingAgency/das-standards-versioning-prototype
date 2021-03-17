@@ -9,13 +9,13 @@
      max-height: 4.075em;
      &.epao {
           background: none;
-          display: inline-block;
+          display: block;
           width: 100%;
           .epao-details {
                background: $govuk-link-colour;
                color: white;
                padding: 20px 0;
-               display: inline-block;
+               display: block;
                width: 100%;
                p, a {
                     color: white;
@@ -34,14 +34,14 @@
                }
           }
           .beta-details {
-               display: inline-block;
+               display: block;
                width: 100%;
                .govuk-phase-banner {
                     border-bottom: none;
                }
           }
           .nav {
-               display: inline-block;
+               display: block;
                width: 100%;
                background: #f0f3f7;
               
@@ -57,7 +57,7 @@
 
                          color: $govuk-focus-text-colour;
                          background-color: $govuk-focus-colour;
-                         border-bottom: 5px solid $govuk-focus-text-colour;
+                        
                     }
                     &.selected {
                          background: none;
@@ -79,8 +79,8 @@
           text-align: left;
      }
      ul {
-          //display: inline-block;
-          display: block;
+          display: inline-block;
+          
           width: 100%;
           // float: left;
           margin: 0;
