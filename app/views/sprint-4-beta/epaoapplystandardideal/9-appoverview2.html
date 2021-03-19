@@ -1,0 +1,94 @@
+{% extends "layout-epaoapplyapp.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+
+     
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+        
+
+
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <h1 class="govuk-heading-xl">Application overview</h1>
+  
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                   Standard
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Animal trainer
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Reference
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    ST0398
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Version
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['choose-version'] }}
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Status
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <p class="govuk-body"><strong class="govuk-tag govuk-tag--yellow">
+                        Pending completion
+                      </strong></p>
+                   
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Questions
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p class="govuk-body">0 of 37 completed           &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="govuk-link govuk-link--no-visited-state" href="7-questions">
+                        Change
+                    </a></p>
+                    
+                  </div>
+              </dl>
+          
+   
+  </main>
+  
+  
+  <p class="govuk-body">By submitting your answers, you confirm that you have the authority to act on behalf of the organisation.</p>
+  <form action="10-success" method="post">
+      <input type="hidden" id="Id" name="Id" value="7fc9ec05-1f0e-4b39-b18e-8aa003761c04">
+      <input type="hidden" id="sequenceNo" name="sequenceNo" value="2">
+      <div class="govuk-form-group">
+          <button type="submit" class="govuk-button">
+              Accept and submit
+          </button>
+      </div>
+  <input name="__RequestVerificationToken" type="hidden" value="CfDJ8FLxvfMD0WxPgEp5Al5BipD3JLqFIOi8qyQwK6gB5Gd0FJgVTfO2R5JAGCnJCRf6hWeJc1As9zv7p2mrDdNhFYdQfgP3OBI_vige9uMY-g-Dh6Pmh4To9eontn89ixoHMU7STB8LsN14I2UAwL26AJWVV4UlggO7HLfif6vnm0mg4XgRtPSM0Yc40j2yPHW59A"></form>
+  <p class="govuk-body">
+      <a class="govuk-link--no-visited-state" href="#">
+          Cancel your application for this standard
+      </a>
+  </p>
+  
+  
+      </div>
+
+          
+                   
+{% endblock %}
