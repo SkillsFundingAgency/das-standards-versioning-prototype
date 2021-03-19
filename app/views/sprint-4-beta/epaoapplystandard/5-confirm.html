@@ -41,33 +41,31 @@
     <tbody class="govuk-table__body">
    
       <form method="post" action="6-appoverview" class="">
-                         {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-{{ govukCheckboxes({
-  idPrefix: "choose-version",
-  name: "choose-version",
-  classes: "govuk-checkboxes--small",
-  fieldset: {
-    legend: {
-      text: "Which versions you can assess",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  hint: {
-    text: "Select all that apply."
-  },
-  items: [
-    {
-      value: "1.0",
-      text: "Version 1.0"
-    },
-    {
-      value: "1.1",
-      text: "Version 1.1"
-    }
-  ]
-}) }}
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <div class="govuk-hint">
+               Select all that apply
+              </div>
+            </legend>
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="version1.0" name="organisation" type="checkbox" value="1.0">
+                <label class="govuk-label govuk-checkboxes__label" for="version1.0">
+                 Version 1.0 <a class="govuk-link--no-visited-state" href="#">(read the assessment plan)</a>
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="version1.1" name="organisation" type="checkbox" value="1.1">
+                <label class="govuk-label govuk-checkboxes__label" for="version1.1">
+                 Version 1.1 <a class="govuk-link--no-visited-state" href="#">(read the assessment plan)</a>
+                </label>
+              </div>
+             
+            </div>
+        
+          </fieldset>
+        </div>
 <tr class="govuk-table__row">
   <td class="govuk-table__cell">
 </td>
@@ -86,7 +84,7 @@
                                      <div class="govuk-checkboxes__item">
                                          <input class="govuk-checkboxes__input" name="IsConfirmed" type="checkbox" data-val="true" data-val-required="The IsConfirmed field is required." id="IsConfirmed" value="true">
                                          <label class="govuk-label govuk-checkboxes__label" for="IsConfirmed">
-                                             By continuing, you confirm you have <a class="govuk-link--no-visited-state" href="6-appoverview" >found the chosen standard and version(s)</a>, and read the relevant assessment plans.
+                                             By continuing, you confirm you have read and understood the relevant assessment plan(s).
                                          </label>
                                      </div>
                                  </div>
