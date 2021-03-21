@@ -10,6 +10,47 @@
        
     {% block content %}
 
+    <style>
+        .page-navigation .counter{
+            font-size: 0.9em;
+        }
+       .page-navigation .next {
+           text-align: right;
+           width: 100%;
+           margin-right: 0;
+          
+         }
+         
+         
+         .page-navigation .previous, .page-navigation .next {
+           display: inline-block;
+           float: right;
+           font-size: 1em;
+          
+           overflow: hidden;
+          
+           text-decoration: none;
+           vertical-align: top;
+           margin-right: 0;
+           box-sizing: border-box;
+       
+           
+         }
+       
+         .govuk-link:link {
+           color: #1d70b8;
+       }
+         
+         .govuk-link:hover {
+           color: #003078;
+       }
+         
+       
+         
+         
+         </style>
+       
+
     <a class="govuk-back-link" href="index">Return to dashboard</a>
     
     <main class="govuk-main-wrapper " id="main-content" role="main">
@@ -42,7 +83,7 @@
            
             
             <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="6-details">Animal trainer</a></td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">ST0058</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">ST0398</td>
             <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
            
                
@@ -102,7 +143,21 @@
         </tr>
     </tbody>
 </table>
+<div class="govuk-grid-column-full">
+    <div class="page-navigation">
 
+
+            <a class="govuk-link--no-visited-state next" href="#">
+              
+                <span class="description">Next <span class="hide-mob">page</span><br>
+                
+                <span class="counter">Page <span class="nextPage">2</span> of <span class="totalPage">7</span>
+              
+           
+          
+        </a>
+    </div>
+</div>
 </main>
     
     
