@@ -1,0 +1,166 @@
+{% extends "layout-epaoapplystandards.html" %}
+
+    {% block pageTitle %}
+         GOV.UK Prototype Kit
+    {% endblock %}
+
+
+
+
+       
+    {% block content %}
+    <style>
+        .page-navigation .counter{
+            font-size: 0.9em;
+        }
+       .page-navigation .next {
+           text-align: right;
+           width: 100%;
+           margin-right: 0;
+          
+         }
+         
+         
+         .page-navigation .previous, .page-navigation .next {
+           display: inline-block;
+           float: right;
+           font-size: 1em;
+          
+           overflow: hidden;
+          
+           text-decoration: none;
+           vertical-align: top;
+           margin-right: 0;
+           box-sizing: border-box;
+       
+           
+         }
+       
+         .govuk-link:link {
+           color: #1d70b8;
+       }
+         
+         .govuk-link:hover {
+           color: #003078;
+       }
+         
+       
+         
+         
+         </style>
+
+    <a class="govuk-back-link" href="index">Return to dashboard</a>
+    
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+    
+        <h1 class="govuk-heading-xl">Approved standards and versions</h1>
+
+    <table class="govuk-table govuk-table--small">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                
+                <th scope="col" class="govuk-table__header govuk-table__header">
+                    Standard
+                </th>
+
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                    Reference
+                </th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                    Level
+                </th>
+               
+                
+                    
+            
+            </tr>
+        </thead>
+
+    <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+           
+            
+            <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="7-details">Animal trainer</a><strong class="govuk-tag govuk-tag--blue govuk-!-margin-left-8">
+                New version available
+              </strong></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">ST0398</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+           
+               
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Brewer</a></td>
+            
+            <td class="govuk-table__cell govuk-table__cell--numeric">ST0580</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">6</td>
+        </tr>
+        
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Marine Pilot</a></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">ST0427</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+           
+                
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Arborist</a></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">ST0223</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Gas engineering operative</a></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">ST0155</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+           
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Advanced butcher</a></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">ST0077</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            
+                
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Financial Adviser</a></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">ST0374</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+           
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Actuarial technician</a></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">ST0004</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">7</td>
+            
+               
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-table__cell"><a class="govuk-link--no-visited-state" href="#">Non-destructive testing (NDT) operator</a></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">ST0358</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+           
+               
+        </tr>
+    </tbody>
+</table>
+<div class="govuk-grid-column-full">
+    <div class="page-navigation">
+
+
+            <a class="govuk-link--no-visited-state next" href="#">
+              
+                <span class="description">Next <span class="hide-mob">page</span><br>
+                
+                <span class="counter">Page <span class="nextPage">2</span> of <span class="totalPage">7</span>
+              
+           
+          
+        </a>
+    </div>
+</div>
+</main>
+    
+    
+</div>
+
+    {% endblock %}
