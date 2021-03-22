@@ -1,0 +1,129 @@
+
+<!--OLD
+<a href="/sprint-12/add-apprentice1/6a-approve" class="image-demo">
+  <img src="/public/images/Jrny-6.png" width="auto" height="auto" />
+</a>
+-->
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<img src="/public/images/Employer-Nav.png"  width="auto" height="auto" />
+<div class="govuk-width-container">
+
+    <div class="das-js-back-link"></div>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Confirm deletion</h1>
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                Deleting this apprentice will completely remove all the details associated with them, including their reference.
+            </strong>
+        </div>
+        <form method="post" action="6-approve">
+            <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Training provider
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        SOUTHAMPTON ENGINEERING TRAINING ASSOCIATION LIMITED (THE)
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Reference
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        6PNLBG
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Number of apprentices
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        2
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Standard
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      2 x Power network craftsperson
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Version
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                       1.1
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Level
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                       3
+                    </dd>
+                </div>
+
+            </dl>
+            <div class="govuk-form-group  ">
+
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        <h2 class="govuk-fieldset__heading govuk-!-margin-bottom-3">
+                            Are you sure you want to delete all apprentice details?
+                        </h2>
+                    </legend>
+                    <div class="govuk-radios">
+                        <span class="field-validation-valid govuk-error-message" data-valmsg-for="ConfirmDeletion" data-valmsg-replace="true" id="error-message-ConfirmDeletion"></span>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="confirm-yes" name="ConfirmDeletion" type="radio" value="true">
+                            <label class="govuk-label govuk-radios__label" for="confirm-yes">
+                                Yes, delete all apprentice details
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="confirm-no" name="ConfirmDeletion" type="radio" value="false">
+                            <label class="govuk-label govuk-radios__label" for="confirm-no">
+                                No, don't delete all apprentice details
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button id="continue-button" class="govuk-button" type="submit">Save and continue</button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8M3HnWbcAPpNnzvSmkJUsJXsm1Kg28di8fA8dMfMc0z9yTcqnuFpKMnUQVMr36irhakYcY-uSZT7SgHkr9Do6yRrPWmHMweNrGcDJmO_3Dhwsm3uXo3ixGgN3sfyZTgG6g8ThOmEnOoebqIqC_zx_qPWySUTDEVBSgnwwcriTJbV0p2DvnB2FxflCr_kWI6Ynw" /></form>
+    </div>
+</div>
+
+
+        </main>
+    </div>
+
+
+
+
+
+
+
+{% endblock %}

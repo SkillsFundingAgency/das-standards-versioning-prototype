@@ -7,45 +7,65 @@
 {% extends "layout-image.html" %}
 
 {% block pageTitle %}
-          emp summary v mismatch
+     GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
 {% endblock %}
 
 {% block content %}
-
+<img src="/public/images/Employer-Nav.png"  width="auto" height="auto" />
 <div class="govuk-width-container">
     <a class="govuk-back-link" href="5-add-full-details">Back</a>
 <main class="govuk-main-wrapper " id="main-content" role="main">
-  <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-          <h1 class="govuk-heading-xl">
-              Approve apprentice details
-              <span class="govuk-caption-xl"></span>
-          </h1>
-      </div>
-  </div>
-<div class="govuk-warning-text">
-  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-  <p>
-  <strong class="govuk-warning-text__text">
-    <span class="govuk-warning-text__assistive">Warning</span>
-    Based on the start date enetered for Jane Doe, the current standard version requested is not available.
-    The available standard version has been selected for you below. <br /><br /> You can either:
-
-      <ul>
-        <li style="text-align:left">accept this standard version by clicking the Save and Submit button</li>
-        <li style="text-align:left"><a href="">edit</a> to alter the start date for the apprentice</li>
-      </ul>
-
-</p>
-  </strong>
-</div>
-
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            <h2 class="govuk-heading-l">Apprenticeship details</h2>
+            <!--<h1 class="govuk-heading-xl">
+                Select standard options
+                <span class="govuk-caption-xl"></span>
+            </h1>-->
+        </div>
+    </div>
+
+
+
+
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+    {{ govukRadios({
+      idPrefix: "where-do-you-live",
+      name: "where-do-you-live",
+      fieldset: {
+        legend: {
+          text: "Select the standard option for Jane Doe",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+    text: "Where options are available in a standard, only one is to be chosen.
+    If you are unsure, select to be confirmed at a later date."
+  },
+      items: [
+        {
+          value: "england",
+          text: "Street cabling"
+        },
+        {
+          value: "scotland",
+          text: "Network cabling"
+        },
+        {
+          value: "scotland",
+          text: "To be confirmed at a later date"
+        }
+      ]
+    }) }}
+<!--
+<h2>Appenticeship details</h2>
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
             <dl class="govuk-summary-list">
 
 
@@ -92,14 +112,46 @@
               </div>
               <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                      Version
+                    Apprentice Name
                   </dt>
                   <dd class="govuk-summary-list__value">
-                     1.1
+                     Jane Doe
                   </dd>
               </div>
+
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Date or Birth
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     12 March 1980
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Training dates
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     Sep 2021 to Mar 2023
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Price
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     &pound;1500
+                  </dd>
+              </div>
+
+
+
+
+
             </div>
-        </div>
+        </div>-->
+
+<!--
               <table class="govuk-table das-table--responsive">
                 <thead class="govuk-table__head">
                     <tr class="govuk-table__row">
@@ -152,14 +204,19 @@
                     </div>
                 </div>
             </fieldset>-->
-            <br />
-            <br />
+
+
+
+
+
+
+
 
        <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
-                <a class="govuk-button" href="#">Save and Submit</a>
+                <a class="govuk-button" href="6-approve">Save and Submit</a>
                 <p>
-                  <a href="#" class="govuk-link">Save and exit</a>
+                <!--  <a href="#" class="govuk-link">Save and exit</a>-->
                </p>
 
       </main>

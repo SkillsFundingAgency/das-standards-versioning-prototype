@@ -14,21 +14,63 @@
 {% endblock %}
 
 {% block content %}
-
+<img src="/public/images/Employer-Nav.png"  width="auto" height="auto" />
 <div class="govuk-width-container">
     <a class="govuk-back-link" href="5-add-full-details">Back</a>
 <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-xl">
-                Approve apprentice details
+            <!--<h1 class="govuk-heading-xl">
+                Select standard options
                 <span class="govuk-caption-xl"></span>
-            </h1>
+            </h1>-->
         </div>
     </div>
+
+
+
+
+    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Select the Standard option
+      </h1>
+    </legend>
+    <div id="sign-in-hint" class="govuk-hint">
+    Where options are available in a standard, only one is to be chosen. If you are unsure, please select the option, to be confirmed at a later date.
+    </div>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" checked="checked" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in">
+          Street cabling
+        </label>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+          Network cabling
+        </label>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+          To be confirmed at a later date
+        </label>
+
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+<!--
+<h2>Appenticeship details</h2>
     <div class="govuk-grid-row">
+
         <div class="govuk-grid-column-two-thirds">
-            <h2 class="govuk-heading-l">Apprenticeship details</h2>
             <dl class="govuk-summary-list">
 
 
@@ -75,17 +117,46 @@
               </div>
               <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                      Version
+                    Apprentice Name
                   </dt>
                   <dd class="govuk-summary-list__value">
-                     1.1
+                     Jane Doe
                   </dd>
               </div>
 
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Date or Birth
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     12 March 1980
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Training dates
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     Sep 2021 to Mar 2023
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Price
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     &pound;1500
+                  </dd>
+              </div>
+
+
+
+
+
             </div>
-        </div>
+        </div>-->
 
-
+<!--
               <table class="govuk-table das-table--responsive">
                 <thead class="govuk-table__head">
                     <tr class="govuk-table__row">
@@ -140,37 +211,17 @@
             </fieldset>-->
 
 
-            {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-{{ govukRadios({
-  classes: "govuk-radios--small",
-  idPrefix: "changed-name",
-  name: "changed-name",
-  fieldset: {
-    legend: {
-      text: "Filter",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-  items: [
-    {
-      value: "month",
-      text: "Monthly"
-    },
-    {
-      value: "year",
-      text: "Yearly"
-    }
-  ]
-}) }}
-            
+
+
+
+
 
        <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
-                <a class="govuk-button" href="#">Save and Submit</a>
+                <a class="govuk-button" href="6-approve">Save and Submit</a>
                 <p>
-                  <a href="#" class="govuk-link">Save and exit</a>
+                <!--  <a href="#" class="govuk-link">Save and exit</a>-->
                </p>
 
       </main>

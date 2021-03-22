@@ -10,6 +10,7 @@
 {% block content %}
 <img src="/public/images/Employer-Nav.png"  width="auto" height="auto" />
 
+
 <div class="govuk-width-container">
 
     <a href="#" class="govuk-back-link">Back</a>
@@ -23,12 +24,77 @@
 
                   <h1 class="govuk-heading-xl">Add apprenticeship details</h1>
                   <div class="govuk-inset-text">
-
+                      <p class="govuk-body">You must add the apprentice’s first and last names - fill in as many other fields as you can. You'll be able to return later to make changes or add more information.</p>
                       <p class="govuk-body">You'll only be able to authorise payments for this apprentice once all the fields have been completed - either by yourself or your training provider</p>
                   </div>
 
 
-                  <form action="6-approve-1user-1-apprenticeshipv1" method="post">
+                  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Training provider
+        </legend>
+        <div>
+            <span class="govuk-label">SOUTHAMPTON ENGINEERING TRAINING ASSOCIATION LIMITED (THE)</span>
+        </div>
+    </fieldset>
+</div>
+                  <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                  Apprentice name
+                              </legend>
+                              <div class="govuk-form-group ">
+                                  <label class="govuk-label" for="FirstName">First name</label>
+                                  <span class="field-validation-valid govuk-error-message" data-valmsg-for="FirstName" data-valmsg-replace="true" id="error-message-FirstName"></span>
+                                  <input class="govuk-input" type="text" id="FirstName" name="FirstName" value="" />
+                              </div>
+                              <div class="govuk-form-group ">
+                                  <label class="govuk-label" for="LastName">Last name</label>
+                                  <span class="field-validation-valid govuk-error-message" data-valmsg-for="LastName" data-valmsg-replace="true" id="error-message-LastName"></span>
+                                  <input class="govuk-input" type="text" id="LastName" name="LastName" value="" />
+                              </div>
+                          </fieldset>
+                      </div>
+                      <div class="govuk-form-group  ">
+                          <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                  Date of birth
+                              </legend>
+                              <span id="dob-hint" class="govuk-hint">
+                                  For example, 31 3 1980
+                              </span>
+                              <span class="field-validation-valid govuk-error-message" data-valmsg-for="DateOfBirth" data-valmsg-replace="true" id="error-message-DateOfBirth"></span>
+                              <div class="govuk-date-input">
+                                  <div class="govuk-date-input__item">
+                                      <div class="govuk-form-group">
+                                          <label class="govuk-label govuk-date-input__label" for="BirthDay">Day</label>
+                                          <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" min="1" max="31" class="govuk-input govuk-date-input__input govuk-input--width-2 length-limit" id="BirthDay" name="BirthDay" value="">
+                                      </div>
+                                  </div>
+                                  <div class="govuk-date-input__item">
+                                      <div class="govuk-form-group">
+                                          <label class="govuk-label govuk-date-input__label" for="BirthMonth">Month</label>
+                                          <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2 length-limit" id="BirthMonth" name="BirthMonth" value="">
+                                      </div>
+                                  </div>
+                                  <div class="govuk-date-input__item">
+                                      <div class="govuk-form-group">
+                                          <label class="govuk-label govuk-date-input__label" for="BirthYear">Year</label>
+                                          <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4" min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4 length-limit" id="BirthYear" name="BirthYear" value="">
+                                      </div>
+                                  </div>
+                              </div>
+                          </fieldset>
+                      </div>
+
+
+
+
+
+
+
+                  <form action="5b-select-options" method="post">
 
 
                         {{ govukInput({

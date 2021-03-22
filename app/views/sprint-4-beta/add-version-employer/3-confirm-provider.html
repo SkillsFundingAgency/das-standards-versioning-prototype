@@ -8,10 +8,74 @@
 {% endblock %}
 
 {% block content %}
+<img src="/public/images/Employer-Nav.png"  width="auto" height="auto" />
 
-<a href="/sprint-12/add-apprentice1/3a-confirm-provider" class="image-demo">
-  <img src="/public/images/Jrny-3.png" width="auto" height="auto" />
-</a>
+<div class="govuk-width-container">
 
+   <a class="govuk-back-link" href="/KK6WKG/unapproved/add/select-provider?AccountLegalEntityHashedId=79D8GJ" id="back-link">Back</a>
+       <main class="govuk-main-wrapper " id="main-content" role="main">
+
+
+
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+
+       <h1 class="govuk-heading-xl">Confirm training provider</h1>
+
+       <p class="govuk-body-l">UK Provider Reference Number <strong>'10005760'</strong> matches:</p>
+
+       <h2 class="govuk-heading-l govuk-!-margin-bottom-0">SOUTHAMPTON ENGINEERING TRAINING ASSOCIATION LIMITED (THE)</h2>
+       <dl class="das-definition-list das-definition-list--inline  das-definition-list--muted govuk-!-margin-bottom-7">
+           <dt class="das-definition-list__title">UKPRN 10005760</dt>
+
+       </dl>
+
+       <form action="3a-confirm-provider" method="post">
+
+
+<input type="hidden" id="AccountHashedId" name="AccountHashedId" value="KK6WKG">
+<input type="hidden" id="AccountLegalEntityHashedId" name="AccountLegalEntityHashedId" value="79D8GJ">
+<input type="hidden" id="ReservationId" name="ReservationId" value="">
+<input type="hidden" id="CourseCode" name="CourseCode" value="">
+<input type="hidden" id="StartMonthYear" name="StartMonthYear" value="">
+<input type="hidden" data-val="true" data-val-required="The ProviderId field is required." id="ProviderId" name="ProviderId" value="10005760">
+<input type="hidden" id="ProviderName" name="ProviderName" value="Bournemouth University">
+<input type="hidden" id="TransferSenderId" name="TransferSenderId" value="">
+
+
+           <div class="govuk-form-group  ">
+               <fieldset class="govuk-fieldset">
+                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                       <h1 class="govuk-fieldset__heading">
+                           Is this the main provider of the apprenticeship training?
+                       </h1>
+                   </legend>
+                   <div class="govuk-radios">
+                       <div class="govuk-radios__item">
+                           <input class="govuk-radios__input" id="UseThisProvider" name="UseThisProvider" type="radio" value="true">
+                           <label class="govuk-label govuk-radios__label" for="UseThisProvider">
+                               Yes, use SOUTHAMPTON ENGINEERING TRAINING ASSOCIATION LIMITED (THE).
+                           </label>
+                       </div>
+                       <div class="govuk-radios__item">
+                           <input class="govuk-radios__input" id="UseThisProvider-no" name="UseThisProvider" type="radio" value="false">
+                           <label class="govuk-label govuk-radios__label" for="UseThisProvider-no">
+                               No, change UK Provider Reference Number
+                           </label>
+                       </div>
+                   </div>
+               </fieldset>
+           </div>
+
+           <button id="continue-button" type="submit" class="govuk-button">Continue</button>
+       <input name="__RequestVerificationToken" type="hidden" value="CfDJ8M3HnWbcAPpNnzvSmkJUsJXgTt5b2DWzYNdBE0Ka5t7HECDEycNCXoBpxtjKBGJMw6ISKjD6PUDYVxzqGmiS47lHlvMHN3PgVMjbkZ-OdmDxaUxtdVQovhc8zROAI4cJb0RPhdDRXnOZnxYft1RQxqCfmvz8jIOl_pvNnY4-StfUUSaPKYz2jxIbNF603UCwmg" /></form>
+   </div>
+</div>
+
+
+       </main>
+   </div>
 
 {% endblock %}
