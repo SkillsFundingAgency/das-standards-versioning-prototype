@@ -1,0 +1,128 @@
+
+<!--OLD
+<a href="/sprint-12/add-apprentice1/6a-approve" class="image-demo">
+  <img src="/public/images/Jrny-6.png" width="auto" height="auto" />
+</a>
+-->
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<img src="/public/images/Employer-Nav.png"  width="auto" height="auto" />
+<div class="govuk-width-container">
+
+    <div class="das-js-back-link"></div>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-column-two-thirds das-notification govuk-!-margin-bottom-4 das-notification--success" tabindex="-1">
+    <h3 class="das-notification__heading">Apprentice record deleted</h3>
+</div>
+
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-width-container">
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-">
+        <div class="govuk-width-container">
+            <h1 class="govuk-heading-xl">Apprentice requests</h1>
+
+            <a href="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/KK6WKG/apprentices/inform" class="govuk-button"> Add new apprentice </a>
+
+            <div class="das-tabs-boxes">
+                <ul class="das-tabs-boxes__list">
+
+    <li class="das-tabs-boxes__list-item  das-tabs-boxes__list-item--selected">
+        <span class="das-tabs-boxes__tab" href="/KK6WKG/unapproved/review" id="Review">
+            <span class="das-tabs-boxes__figure">2</span>
+            <span class="das-text-capitalise">Ready to review</span>
+        </span>
+    </li>
+
+
+
+    <li class="das-tabs-boxes__list-item">
+        <a class="das-tabs-boxes__tab" href="/KK6WKG/unapproved/with-training-provider" id="WithProvider">
+            <span class="das-tabs-boxes__figure">9</span>
+            <span class="das-tabs-boxes__text das-text-capitalise">With training providers</span>
+        </a>
+    </li>
+
+
+
+    <li class="das-tabs-boxes__list-item">
+        <a class="das-tabs-boxes__tab" href="/KK6WKG/unapproved/draft" id="Draft">
+            <span class="das-tabs-boxes__figure">13</span>
+            <span class="das-tabs-boxes__text das-text-capitalise">Drafts</span>
+        </a>
+    </li>
+
+
+
+    <li class="das-tabs-boxes__list-item">
+        <a class="das-tabs-boxes__tab" href="/KK6WKG/unapproved/with-transfer-sender" id="WithTransferSender">
+            <span class="das-tabs-boxes__figure">0</span>
+            <span class="das-tabs-boxes__text das-text-capitalise">With transfer sending employers</span>
+        </a>
+    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <table class="govuk-table das-table--responsive">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header das-table-cell-width-25">Training provider</th>
+                        <th scope="col" class="govuk-table__header das-table-cell-width-10">Reference</th>
+                        <th scope="col" class="govuk-table__header das-table-cell-width-25 govuk-table__header--numeric">Number of apprentices</th>
+                        <th scope="col" class="govuk-table__header das-table-cell-width-25">Last Message</th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--numeric das-table-cell-width-15"></th>
+                    </tr>
+                </thead>
+
+                <tbody class="govuk-table__body">
+
+                        <tr class="govuk-table__row" data-cohort="VGBYY6">
+                            <td class="govuk-table__cell" data-label="Training provider">SOUTHAMPTON ENGINEERING TRAINING ASSOCIATION LIMITED (THE)</td>
+                            <td class="govuk-table__cell" data-label="Reference">VGBYY6</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                            <td class="govuk-table__cell" data-label="Last Message">hello</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                                <a class="govuk-link cohort-details-link" href="/KK6WKG/unapproved/VGBYY6">Details</a>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row" data-cohort="KKKBJ7">
+                            <td class="govuk-table__cell" data-label="Training provider">SOUTHAMPTON ENGINEERING TRAINING ASSOCIATION LIMITED (THE)</td>
+                            <td class="govuk-table__cell" data-label="Reference">KKKBJ7</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                            <td class="govuk-table__cell" data-label="Last Message">No message added</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                                <a class="govuk-link cohort-details-link" href="/KK6WKG/unapproved/KKKBJ7">Details</a>
+                            </td>
+                        </tr>
+
+                </tbody>
+            </table>
+    </div>
+</div>
+
+
+        </main>
+    </div>
+
+
+
+
+{% endblock %}

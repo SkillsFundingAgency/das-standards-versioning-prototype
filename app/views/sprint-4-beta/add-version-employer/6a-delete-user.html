@@ -1,0 +1,94 @@
+
+<!--OLD
+<a href="/sprint-12/add-apprentice1/6a-approve" class="image-demo">
+  <img src="/public/images/Jrny-6.png" width="auto" height="auto" />
+</a>
+-->
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<img src="/public/images/Employer-Nav.png"  width="auto" height="auto" />
+<div class="govuk-width-container">
+
+   <div class="das-js-back-link"></div>
+       <main class="govuk-main-wrapper " id="main-content" role="main">
+
+
+
+
+
+       <div class="govuk-grid-row">
+           <div class="govuk-grid-column-two-thirds">
+
+
+
+               <h1 class="govuk-heading-xl">Delete the apprentice Jane Doe?</h1>
+               <form method="post" action="6-approve">
+
+                   <input id="AccountHashedId" name="AccountHashedId" type="hidden" value="KK6WKG" />
+                   <input id="DraftApprenticeshipHashedId" name="DraftApprenticeshipHashedId" type="hidden" value="7G8KXB" />
+                   <input id="CohortReference" name="CohortReference" type="hidden" value="WDY8NN" />
+                   <input data-val="true" data-val-required="The Origin field is required." id="Origin" name="Origin" type="hidden" value="CohortDetails" />
+
+                   <div class="govuk-form-group ">
+                       <fieldset class="govuk-fieldset">
+                               <div class="govuk-warning-text">
+                                   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                                   <strong class="govuk-warning-text__text">
+                                       <span class="govuk-warning-text__assistive">Warning</span>
+                                       Deleting this apprentice will completely remove all the details associated with them, including their reference.
+                                   </strong>
+                               </div>
+
+                           <div class="govuk-radios">
+                               <div class="govuk-radios__item">
+                                   <input value="true" type="radio" class="govuk-radios__input" id="confirmDelete-true" data-val="true" data-val-required="Confirm if you would like to delete this apprentice" name="ConfirmDelete" />
+                                   <label class="govuk-label govuk-radios__label" for="confirmDelete-true">
+                                       Yes, delete this apprentice
+                                   </label>
+
+                               </div>
+
+                               <div class="govuk-radios__item">
+
+                                   <input value="false" type="radio" class="govuk-radios__input" id="confirmDelete-false" name="ConfirmDelete" />
+                                   <label class="govuk-label govuk-radios__label" for="confirmDelete-false">
+                                       No, don't delete this apprentice
+                                   </label>
+
+                               </div>
+
+                           </div>
+                       </fieldset>
+                   </div>
+
+                   <button class="govuk-button" type="submit" id="continue-button" data-module="govuk-button">
+                       Confirm
+                   </button>
+               <input name="__RequestVerificationToken" type="hidden" value="CfDJ8M3HnWbcAPpNnzvSmkJUsJWvIt-1POHK6Yq3Fypv4M8EHkgxz1WMfZCs9JH1t3B3TvPReSO3h-6LIhAXiqzfGOOmznf6yFwbl8gUQoekN6dInBpX9Kr42IbclCGD6PXlVpXbhlxxhSJOjCMbkdMzLwrEMGw6Wa61N2LfvZepo0oIK-lcfcjDWi9QnPHwBd5l6A" /></form>
+
+           </div>
+       </div>
+
+   </main>
+</div>
+
+
+       </main>
+   </div>
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -10,7 +10,6 @@
 {% block content %}
 <img src="/public/images/Employer-Nav.png"  width="auto" height="auto" />
 
-
 <div class="govuk-width-container">
 
     <a href="#" class="govuk-back-link">Back</a>
@@ -47,12 +46,12 @@
                               <div class="govuk-form-group ">
                                   <label class="govuk-label" for="FirstName">First name</label>
                                   <span class="field-validation-valid govuk-error-message" data-valmsg-for="FirstName" data-valmsg-replace="true" id="error-message-FirstName"></span>
-                                  <input class="govuk-input" type="text" id="FirstName" name="FirstName" value="" />
+                                  <input class="govuk-input" type="text" id="FirstName" name="FirstName" value="Jane" />
                               </div>
                               <div class="govuk-form-group ">
                                   <label class="govuk-label" for="LastName">Last name</label>
                                   <span class="field-validation-valid govuk-error-message" data-valmsg-for="LastName" data-valmsg-replace="true" id="error-message-LastName"></span>
-                                  <input class="govuk-input" type="text" id="LastName" name="LastName" value="" />
+                                  <input class="govuk-input" type="text" id="LastName" name="LastName" value="Doe" />
                               </div>
                           </fieldset>
                       </div>
@@ -69,19 +68,19 @@
                                   <div class="govuk-date-input__item">
                                       <div class="govuk-form-group">
                                           <label class="govuk-label govuk-date-input__label" for="BirthDay">Day</label>
-                                          <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" min="1" max="31" class="govuk-input govuk-date-input__input govuk-input--width-2 length-limit" id="BirthDay" name="BirthDay" value="">
+                                          <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" min="1" max="31" class="govuk-input govuk-date-input__input govuk-input--width-2 length-limit" id="BirthDay" name="BirthDay" value="15">
                                       </div>
                                   </div>
                                   <div class="govuk-date-input__item">
                                       <div class="govuk-form-group">
                                           <label class="govuk-label govuk-date-input__label" for="BirthMonth">Month</label>
-                                          <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2 length-limit" id="BirthMonth" name="BirthMonth" value="">
+                                          <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2 length-limit" id="BirthMonth" name="BirthMonth" value="April">
                                       </div>
                                   </div>
                                   <div class="govuk-date-input__item">
                                       <div class="govuk-form-group">
                                           <label class="govuk-label govuk-date-input__label" for="BirthYear">Year</label>
-                                          <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4" min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4 length-limit" id="BirthYear" name="BirthYear" value="">
+                                          <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4" min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4 length-limit" id="BirthYear" name="BirthYear" value="1990">
                                       </div>
                                   </div>
                               </div>
@@ -94,7 +93,7 @@
 
 
 
-                  <form action="5b-select-options" method="post">
+                  <form action="5b-populated-select-options" method="post">
 
 
                         {{ govukInput({
@@ -107,7 +106,7 @@
                           hint: {
                             text: "Start typing to search apprenticeships"
                           },
-                          value: ""
+                          value: "Power network craftsperson"
                         }) }}
 
 
@@ -165,13 +164,13 @@
                                     <div class="govuk-date-input__item">
                                         <div class="govuk-form-group">
                                             <label class="govuk-label govuk-date-input__label" for="StartMonth">Month</label>
-                                            <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="StartMonth" name="StartMonth" value="">
+                                            <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="StartMonth" name="StartMonth" value="09">
                                         </div>
                                     </div>
                                     <div class="govuk-date-input__item">
                                         <div class="govuk-form-group">
                                             <label class="govuk-label govuk-date-input__label" for="StartYear">Year</label>
-                                            <input min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" id="StartYear" name="StartYear" value="">
+                                            <input min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" id="StartYear" name="StartYear" value="2021">
                                         </div>
                                     </div>
                                 </div>
@@ -190,14 +189,14 @@
                                     <div class="govuk-date-input__item">
                                         <div class="govuk-form-group">
                                             <label class="govuk-label govuk-date-input__label" for="EndMonth">Month</label>
-                                            <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="EndMonth" name="EndMonth" value="">
+                                            <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="EndMonth" name="EndMonth" value="03">
                                         </div>
                                     </div>
                                     <div class="govuk-date-input__item">
                                         <div class="govuk-form-group">
                                             <label class="govuk-label govuk-date-input__label" for="EndYear">Year</label>
 
-                                            <input min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" id="EndYear" name="EndYear" value="">
+                                            <input min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" id="EndYear" name="EndYear" value="2023">
                                         </div>
                                     </div>
                                 </div>
@@ -212,7 +211,7 @@
                                 Enter the price, including any end-point assessment costs, in whole pounds. For example, for £1,500 enter 1500
                             </span>
                             <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true" id="error-message-Cost"></span>
-                            <input class="govuk-input govuk-input--width-5" type="number" id="Cost" name="Cost" value="">
+                            <input class="govuk-input govuk-input--width-5" type="number" id="Cost" name="Cost" value="1400">
                         </div>
                         <div class="govuk-character-count" data-module="character-count" data-maxlength="20">
                             <div class="govuk-form-group ">
