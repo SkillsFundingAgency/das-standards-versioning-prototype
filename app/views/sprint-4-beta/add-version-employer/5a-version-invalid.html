@@ -21,7 +21,7 @@
   <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
           <h1 class="govuk-heading-xl">
-               Version Unavailable
+               Select a standard version
               <span class="govuk-caption-xl"></span>
           </h1>
       </div>
@@ -31,21 +31,17 @@
   <p>
   <strong class="govuk-warning-text__text">
     <span class="govuk-warning-text__assistive">Warning</span>
-    Based on the start date entered for Jane Doe, the current standard version requested is not available.
-    The available standard version has been selected for you below. <br /><br /> You can either:
+    There are 2 standard versions available on the dates you've chosen.
 
-      <ul>
-        <li style="text-align:left">accept this standard version by clicking the Accept and Submit button</li>
-        <li style="text-align:left"><a href="">edit</a> to alter the start date for the apprentice</li>
-      </ul>
+Select a version or go back to edit the apprentice details.
 
 </p>
   </strong>
 </div>
-
+<!--
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <!--  <h2 class="govuk-heading-l">Apprenticeship details</h2>-->
+
             <dl class="govuk-summary-list">
               <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
@@ -117,34 +113,43 @@
                      Sept 2021
                   </dd>
           </div>
-              <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                      Requested Version
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                     1.0 &nbsp; &nbsp;(could put text here stating dates available?)
-                  </dd>
-                </div>
 
-
-
-              <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                      Available Version
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                     1.1 &nbsp; &nbsp;(highlight change)
-                  </dd>
-              </div>
 
             </div>
-        </div>
+        </div>-->
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+        idPrefix: "where-do-you-live",
+        name: "where-do-you-live",
+        fieldset: {
+        legend: {
+          text: "Select a version for Power network craftsperson ",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+        },
+        hint: {
+        text: "Select one option"
+        },
+        items: [
+        {
+          value: "england",
+          text: "Version 1.0 "
+        },
+        {
+          value: "scotland",
+          text: "Version 1.1"
+        }
+
+        ]
+        }) }}
 
        <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
-                <a class="govuk-button" href="#">Accept and Continue</a>
+                <a class="govuk-button" href="5b-select-options">Confirm and Continue</a>
                 <p>
-                  <a href="5-populated-add-full-details" class="govuk-link">Edit apprentice</a>
+                  <a href="5b-select-options" class="govuk-link">Edit apprentice</a>
                </p>
 
       </main>

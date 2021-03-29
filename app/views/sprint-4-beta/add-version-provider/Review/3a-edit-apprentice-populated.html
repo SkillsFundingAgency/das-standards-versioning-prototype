@@ -1,0 +1,222 @@
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+
+    <a href="#" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+
+
+
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">Edit apprentice details</h1>
+                        <div class="govuk-inset-text">
+                            <p class="govuk-body">You can only receive payments for this apprentice if:</p>
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>all the fields have been completed - either by yourself or the employer</li>
+                                <li>the data matches the individualised learner record (ILR) data you send us</li>
+                            </ul>
+                        </div>
+
+
+                  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Employer
+        </legend>
+        <div>
+            <span class="govuk-label">Coventry City Council</span>
+        </div>
+    </fieldset>
+</div>
+                  <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                  Apprentice name
+                              </legend>
+                              <div class="govuk-form-group ">
+                                  <label class="govuk-label" for="FirstName">First name</label>
+                                  <span class="field-validation-valid govuk-error-message" data-valmsg-for="FirstName" data-valmsg-replace="true" id="error-message-FirstName"></span>
+                                  <input class="govuk-input" type="text" id="FirstName" name="FirstName" value="Jane" />
+                              </div>
+                              <div class="govuk-form-group ">
+                                  <label class="govuk-label" for="LastName">Last name</label>
+                                  <span class="field-validation-valid govuk-error-message" data-valmsg-for="LastName" data-valmsg-replace="true" id="error-message-LastName"></span>
+                                  <input class="govuk-input" type="text" id="LastName" name="LastName" value="Doe" />
+                              </div>
+                          </fieldset>
+                      </div>
+                      <div class="govuk-form-group  ">
+                          <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                  Date of birth
+                              </legend>
+                              <span id="dob-hint" class="govuk-hint">
+                                  For example, 31 3 1980
+                              </span>
+                              <span class="field-validation-valid govuk-error-message" data-valmsg-for="DateOfBirth" data-valmsg-replace="true" id="error-message-DateOfBirth"></span>
+                              <div class="govuk-date-input">
+                                  <div class="govuk-date-input__item">
+                                      <div class="govuk-form-group">
+                                          <label class="govuk-label govuk-date-input__label" for="BirthDay">Day</label>
+                                          <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" min="1" max="31" class="govuk-input govuk-date-input__input govuk-input--width-2 length-limit" id="BirthDay" name="BirthDay" value="15">
+                                      </div>
+                                  </div>
+                                  <div class="govuk-date-input__item">
+                                      <div class="govuk-form-group">
+                                          <label class="govuk-label govuk-date-input__label" for="BirthMonth">Month</label>
+                                          <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2 length-limit" id="BirthMonth" name="BirthMonth" value="April">
+                                      </div>
+                                  </div>
+                                  <div class="govuk-date-input__item">
+                                      <div class="govuk-form-group">
+                                          <label class="govuk-label govuk-date-input__label" for="BirthYear">Year</label>
+                                          <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4" min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4 length-limit" id="BirthYear" name="BirthYear" value="1990">
+                                      </div>
+                                  </div>
+                              </div>
+                          </fieldset>
+                      </div>
+
+
+
+
+
+
+
+                  <form action="5b-populated-select-options" method="post">
+
+
+                        {{ govukInput({
+                          id: "standards",
+                          name: "standards",
+                          label: {
+                            text: "Add an apprenticeship",
+                            classes: "govuk-label--s"
+                          },
+                          hint: {
+                            text: "Start typing to search apprenticeships"
+                          },
+                          value: "Power network craftsperson"
+                        }) }}
+
+
+                        <div class="govuk-form-group  ">
+                            <fieldset class="govuk-fieldset" aria-describedby="start-date-hint" role="group">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                    Planned training start date
+                                </legend>
+                                <span id="start-date-hint" class="govuk-hint">
+                                    For example, 09 2017
+                                </span>
+                                <span class="field-validation-valid govuk-error-message" data-valmsg-for="StartDate" data-valmsg-replace="true" id="error-message-StartDate"></span>
+                                <div class="govuk-date-input">
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="StartMonth">Month</label>
+                                            <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="StartMonth" name="StartMonth" value="09">
+                                        </div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="StartYear">Year</label>
+                                            <input min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" id="StartYear" name="StartYear" value="2021">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="govuk-form-group  ">
+                            <fieldset class="govuk-fieldset" aria-describedby="finish-date-hint" role="group">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                    Planned training end date
+                                </legend>
+                                <span id="finish-date-hint" class="govuk-hint">
+                                    For example, 09 2019
+                                </span>
+                                <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate" data-valmsg-replace="true" id="error-message-EndDate"></span>
+                                <div class="govuk-date-input">
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="EndMonth">Month</label>
+                                            <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="EndMonth" name="EndMonth" value="03">
+                                        </div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="EndYear">Year</label>
+
+                                            <input min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" id="EndYear" name="EndYear" value="2023">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+
+
+                        <div class="govuk-form-group ">
+                            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Total agreed apprenticeship price (excluding VAT)</label>
+                            <span id="price-hint" class="govuk-hint">
+                                Enter the price, including any end-point assessment costs, in whole pounds. For example, for £1,500 enter 1500
+                            </span>
+                            <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true" id="error-message-Cost"></span>
+                            <input class="govuk-input govuk-input--width-5" type="number" id="Cost" name="Cost" value="1400">
+                        </div>
+                        <div class="govuk-character-count" data-module="character-count" data-maxlength="20">
+                            <div class="govuk-form-group ">
+                                <label class="govuk-label govuk-!-font-weight-bold" for="Reference">Reference (optional)</label>
+                                <span class="govuk-hint">
+                                    Add a reference, such as employee number or location - this won't be seen by the training provider
+                                </span>
+                                <span class="field-validation-valid govuk-error-message" data-valmsg-for="Reference" data-valmsg-replace="true" id="error-message-Reference"></span>
+
+                                <input maxlength="20" class="govuk-input govuk-!-width-three-quarters js-character-count" type="text" id="Reference" name="Reference" value="">
+                            </div>
+                        </div>
+
+                        <div class="govuk-inset-text">
+        <p class="govuk-body govuk-!-font-weight-bold">End-point assessments</p>
+        <p class="govuk-body">We'll ask the employer to confirm the <a class="govuk-link" href="https://www.gov.uk/government/publications/using-the-register-of-apprentice-assessment-organisations" target="_blank" title="Opens in a new window">apprentice assessment organisation</a> for this apprentice. We'll do this before the end of the apprenticeship.</p>
+    </div>
+                        <button id="continue-button" type="submit" class="govuk-button">Save and continue</button>
+                        <p class="govuk-body govuk-!-margin-bottom-0">
+                                       <a class="govuk-body govuk-link" href="https://pp-pas.apprenticeships.education.gov.uk/10005760/apprentices/M8W8YK/details">Cancel changes</a>
+                                   </p>
+                    </form>
+                  </div>
+            </div>
+      </main>
+</div>
+
+
+{% endblock %}
+
+
+{% block pageScripts %}
+
+<script src="/public/javascripts/standards.js"></script>
+<script>
+  $(function(){
+    $(".js-hidden-version-select").hide();
+    $('#standards').autocomplete({
+      lookup: standardData,
+      onSelect: function (suggestion) {
+        $(".js-hidden-version-select").show();
+        $('#versions-hint').html('Choose a version for the standard: ' + suggestion.value);
+      }
+    });
+  });
+</script>
+{% endblock %}

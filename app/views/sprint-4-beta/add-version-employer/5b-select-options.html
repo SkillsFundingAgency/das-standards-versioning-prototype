@@ -30,37 +30,42 @@
 
 
 
+
+
+
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-    {{ govukRadios({
-      idPrefix: "where-do-you-live",
-      name: "where-do-you-live",
-      fieldset: {
-        legend: {
-          text: "Select the standard option for Jane Doe",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--l"
-        }
-      },
-      hint: {
-    text: "Where options are available in a standard, only one is to be chosen.
-    If you are unsure, select to be confirmed at a later date."
+{{ govukRadios({
+  idPrefix: "where-do-you-live",
+  name: "where-do-you-live",
+  fieldset: {
+    legend: {
+      text: "Select an option",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
   },
-      items: [
-        {
-          value: "england",
-          text: "Street cabling"
-        },
-        {
-          value: "scotland",
-          text: "Network cabling"
-        },
-        {
-          value: "scotland",
-          text: "To be confirmed at a later date"
-        }
-      ]
-    }) }}
+  hint: {
+text: "You must choose an option where it is available for a standard. If you're unsure, confirm at a later date."
+},
+  items: [
+    {
+      value: "england",
+      text: "Advanced butchery"
+    },
+    {
+      value: "scotland",
+      text: "Temperature control"
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "abroad",
+      text: "Confirm option at a later date"
+    }
+  ]
+}) }}
 <!--
 <h2>Appenticeship details</h2>
     <div class="govuk-grid-row">
