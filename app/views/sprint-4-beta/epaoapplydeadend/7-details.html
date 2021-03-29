@@ -1,0 +1,71 @@
+{% extends "layout-epaoapplystandards.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+
+     
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <a href="1-standards" class="govuk-back-link">Return to approved standards and versions</a>
+<main class="govuk-main-wrapper " id="main-content" role="main">
+<h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
+    <span class="govuk-caption-l govuk-!-margin-bottom-2">Standard details</span>
+Animal trainer
+</h1>
+<p class="govuk-body-l">Reference: ST0398</p>
+
+<p class="govuk-body">Depending if there are any changes in the assessment plan, you can choose to either opt in or apply to assess a standard version. For more information on this standard please visit the <a class="govuk-link--no-visited-state" href="#">iFATE website</a>.</p>
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      What does it mean to opt in or apply for a standard version?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    You can opt into a new standard version if you've already been approved for a different version with the same assessment plan.<br>
+    This means you'll be automatically approved and won't have to answer questions about your organisation's assessment capabilities and capacity.
+    <br><br>
+    You can apply for a new standard version if you've already been approved for a different version of the same standard.<br>
+    This means you won't have to answer as many questions to get approved. 
+  </div>
+  </details>
+
+<table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m"></p>
+    </caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Version</th>
+        <th scope="col" class="govuk-table__header govuk-!-width-one-half">Status</th>
+        <th scope="col" class="govuk-table__header govuk-!-width-one-half">Action</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+     
+      
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">1.2</th>
+        <td class="govuk-table__cell">Not yet applied</td>
+        <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="/sprint-4-beta/epaoapplynewversion/3-apply">Apply for standard version</a></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">1.1</th>
+        <td class="govuk-table__cell">Approved</td>
+        <td class="govuk-table__cell"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">1.0</th>
+        <td class="govuk-table__cell">Approved</td>
+        <td class="govuk-table__cell"></td>
+      </tr>
+    </tbody>
+  </table>
+  
+</main>
+</div>
+                   
+{% endblock %}
