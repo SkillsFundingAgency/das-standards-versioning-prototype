@@ -1,0 +1,89 @@
+{% extends "layout-epao.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+     <div id="service-title-section" class="epao-page">
+
+          <div class="govuk-width-container">
+
+               <div class="govuk-grid-row dashboard-title">
+                    <div class="govuk-grid-column-two-thirds">
+                         <h1 class="govuk-heading-xl">
+                              Record a grade
+                         </h1>
+                    </div>
+               </div>
+
+          </div>
+
+     </div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <div class="banner blue">
+                    <h1 class="govuk-heading-m">Record all assessments</h1>
+                    <p>Record all end point assessments grades. Record a 'fail' if a fail is defined in the assessment plan.</p>
+               </div>
+               <form method="post" action="1-confirm" class="check-answers-page">
+
+                    {% from "govuk/components/input/macro.njk" import govukInput %}
+
+                    {{ govukInput({
+                         label: {
+                              text: "Family name",
+                              classes: "govuk-label--m",
+                              isPageHeading: true
+                         },
+                         classes: "govuk-input--width-20",
+                         hint: {
+                              text: "For example smith"
+                         },
+                         id: "epao-family-name",
+                         name: "epao-family-name"
+                    }) }}
+
+                    {{ govukInput({
+                         label: {
+                              text: "Unique learner number (ULN)",
+                              classes: "govuk-label--m",
+                              isPageHeading: false
+                         },
+                         classes: "govuk-input--width-10",
+                         hint: {
+                              text: "For example, 1234567890"
+                         },
+                         id: "epao-uln",
+                         name: "epao-uln"
+                    }) }}
+
+                    {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+                    {{ govukDetails({
+                         summaryText: "What is a ULN?",
+                         text: "Text"
+                    }) }}
+
+                   
+
+                    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                    {{ govukButton({
+                         text: "Continue"
+                    }) }}
+
+                   
+
+               </form>
+
+          </div>
+     </div>
+</div>
+{% endblock %}
