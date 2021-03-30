@@ -106,7 +106,7 @@
                           hint: {
                             text: "Start typing to search apprenticeships"
                           },
-                          value: "Power network craftsperson"
+                          value: "Power network craftsperson, Version 1.0, Level 2" 
                         }) }}
 
 
@@ -151,28 +151,44 @@
 
 
 
-                        <div class="govuk-form-group  ">
+                        <div class="govuk-form-group ">
                             <fieldset class="govuk-fieldset" aria-describedby="start-date-hint" role="group">
                                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                                     Planned training start date
                                 </legend>
                                 <span id="start-date-hint" class="govuk-hint">
-                                    For example, 09 2017
+                                    For example, 01 09 2021
                                 </span>
                                 <span class="field-validation-valid govuk-error-message" data-valmsg-for="StartDate" data-valmsg-replace="true" id="error-message-StartDate"></span>
+
                                 <div class="govuk-date-input">
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="StartMonth">Day</label>
+                                            <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="StartMonth" name="StartMonth" value="1">
+                                        </div>
+                                    </div>
+
                                     <div class="govuk-date-input__item">
                                         <div class="govuk-form-group">
                                             <label class="govuk-label govuk-date-input__label" for="StartMonth">Month</label>
                                             <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="StartMonth" name="StartMonth" value="09">
                                         </div>
                                     </div>
+
                                     <div class="govuk-date-input__item">
                                         <div class="govuk-form-group">
                                             <label class="govuk-label govuk-date-input__label" for="StartYear">Year</label>
                                             <input min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" id="StartYear" name="StartYear" value="2021">
                                         </div>
                                     </div>
+
+                                </div>
+
+                            </fieldset>
+                        </div>
+
+
                                 </div>
                             </fieldset>
                         </div>
