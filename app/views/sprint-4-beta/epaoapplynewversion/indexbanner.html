@@ -6,10 +6,22 @@ About - GOV.UK Prototype Kit
 
 {% block content %}
 
+
 <div class="govuk-width-container">
         
 
+    {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
+    {% set html %}
+      <p class="govuk-notification-banner__heading">
+        You can now opt into or apply for a version of an already approved standard by going to 
+        <a class="govuk-notification-banner__link" href="1-standards">Approved standards and versions</a>.
+      </p>
+    {% endset %}
+    
+    {{ govukNotificationBanner({
+      html: html
+    }) }}
 
 
     <main class="govuk-main-wrapper " id="main-content" role="main">
@@ -26,10 +38,10 @@ About - GOV.UK Prototype Kit
                             <div class="dashboard-box__body">
                                 <ul class="govuk-list">
                                     <li>
-                                        <a class="govuk-link--no-visited-state" href="#">Approved standards and versions</a>
+                                        <a class="govuk-link--no-visited-state" href="1-standards">Approved standards and versions</a>
                                     </li>
                                     <li>
-                                        <a class="govuk-link--no-visited-state" href="/sprint-4-beta/epaoapplystandard/1-startpage">Apply to assess a standard</a>
+                                        <a class="govuk-link--no-visited-state" href="/sprint-4-beta/epaoapplydeadend/1-startpage">Apply to assess a standard</a>
                                     </li>
                                     <li>
                                         <a class="govuk-link--no-visited-state" href="#">Withdraw from a standard</a>
