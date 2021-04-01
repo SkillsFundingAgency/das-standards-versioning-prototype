@@ -35,13 +35,13 @@
                Who's working on this project?
           </h2>
           <ul class="govuk-list govuk-list--bullet">
-               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="#" title="Link to Tahi's profile on Confluence">Tahi Gichigi</a> &ndash; Content Designer</li>
+               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/spaces/DAS/pages/107224028/Research+Clan" title="Link to Mayurs profile on Confluence">Mayur Shah</a> &ndash; User Researcher</li>
                <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/spaces/DAS/pages/1070924516/Interaction+Design+Clan" title="Link to Victor's profile on Confluence">Victor Ivan</a> &ndash; Interaction Designer</li>
                <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/spaces/DAS/pages/1070924516/Interaction+Design+Clan" title="Link to Ricky's profile on Confluence">Ricky Lee Saunders</a> &ndash; Interaction Designer</li>
+               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="#" title="Link to Emma's profile on Confluence">Emma Challinor</a> &ndash; Content Designer</li>
 
-
-               <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/wiki/people/5b18ff545f02415b9f02adf5" title="Link to Rob's profile on Confluence">Rob Langdon</a> &ndash; Interaction Designer</li> -->
-               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/spaces/DAS/pages/107224028/Research+Clan" title="Link to Mayurs profile on Confluence">Mayur Shah</a> &ndash; User Researcher</li>
+              
+                
           </ul>
      </div>
      <!-- Two thirds header section ends -->
@@ -80,7 +80,7 @@
                          <tbody class='govuk-table__body'>
                               <tr class='govuk-table__row'>
                                    <td class='govuk-table__cell'>Building clickable prototypes for EPAO's, Staff admin, Employers and Providers.</td>
-                                   <td class='govuk-table__cell'>To account for all possible scenarios where versioning is involved and test with real users for insights that will inform future design decisions and a seamless integration of Standard Versioning.</td>
+                                   <td class='govuk-table__cell'>To account for all possible scenarios where versioning is involved and test with real users for insights that will inform future design decisions and help provide a seamless integration of Standard versioning.</td>
                               </tr>
                          </tbody>
                     </table>"
@@ -236,13 +236,16 @@
 <div class="govuk-grid-row">
      <!-- Sprints section starts -->
      <div class="govuk-grid-column-two-thirds">
-          {% include './sprint-5-beta/_summary.html' %}
+          {% include './sprint-6-beta/_summary.html' %}
 
 
 
           <h2 class="govuk-heading-l govuk-!-margin-top-9">
                Sprints
           </h2>
+          {% set sprint6betaHtml %}
+          {% include './sprint-6-beta/_summary.html' %}
+          {% endset %}
           {% set sprint5betaHtml %}
           {% include './sprint-5-beta/_summary.html' %}
      {% endset %}
@@ -325,9 +328,17 @@
 
 
 
-
-
-
+               {
+                    heading: {
+                         text: "Sprint 6 Beta"
+                    },
+                    content: {
+                         html: sprint6betaHtml
+                    },
+                    summary: {
+                         html: '31st Mar — 14th Apr 2021'
+                    }
+               },
                {
                     heading: {
                          text: "Sprint 5 Beta"
