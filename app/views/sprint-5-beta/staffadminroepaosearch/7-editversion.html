@@ -1,0 +1,186 @@
+{% extends "layout-staffadmin.html" %}
+
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+
+
+<div class="govuk-width-container">
+    <a class="govuk-back-link" href="5-standard">Return to view organisation standard</a>
+    <br><br><br><br>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+    
+    
+     
+    
+                <h1 class="govuk-heading-xl">Edit an organisation standard version</h1>
+    
+                <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Standard
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Unified communications technician 
+                        </dd>
+                        </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                         Reference
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            ST01350
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          Version
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            1.5
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Effective from
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            01 August 2018
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Effective to
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                           
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Date approved on register
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            05 November 2016
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Status
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Live
+                        </dd>
+                    </div>
+
+</dl>
+
+<h2 class="govuk-heading-l">New organisation standard version details</h2>
+    
+<div class="govuk-form-group error-message-container">
+    <span class="govuk-error-message field-validation-valid" data-valmsg-for="EffectiveFrom" data-valmsg-replace="true"></span>
+    <span class="govuk-error-message field-validation-valid" data-valmsg-for="EffectiveFromDay" data-valmsg-replace="true"></span>
+    <span class="govuk-error-message field-validation-valid" data-valmsg-for="EffectiveFromMonth" data-valmsg-replace="true"></span>
+    <span class="govuk-error-message field-validation-valid" data-valmsg-for="EffectiveFromYear" data-valmsg-replace="true"></span>
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        Effective from
+    </legend>
+
+    <div class="govuk-date-input">
+        <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="EffectiveFromDay">
+                    Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2 js-integers-only" type="text" maxlength="2" id="EffectiveFromDay" name="EffectiveFromDay" value="1">
+            </div>
+        </div>
+        <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="EffectiveFromMonth">
+                    Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2 js-integers-only" type="text" maxlength="2" id="EffectiveFromMonth" name="EffectiveFromMonth" value="8">
+            </div>
+        </div>
+        <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="EffectiveFromYear">
+                    Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4 js-integers-only" type="text" maxlength="4" id="EffectiveFromYear" name="EffectiveFromYear" value="2018">
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="govuk-form-group error-message-container">
+    <span class="govuk-error-message field-validation-valid" data-valmsg-for="EffectiveTo" data-valmsg-replace="true"></span>
+    <span class="govuk-error-message field-validation-valid" data-valmsg-for="EffectiveToDay" data-valmsg-replace="true"></span>
+    <span class="govuk-error-message field-validation-valid" data-valmsg-for="EffectiveToMonth" data-valmsg-replace="true"></span>
+    <span class="govuk-error-message field-validation-valid" data-valmsg-for="EffectiveToYear" data-valmsg-replace="true"></span>
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        Effective to
+    </legend>
+
+    <div class="govuk-date-input">
+        <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="EffectiveToDay">
+                    Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2 js-integers-only" type="text" maxlength="2" id="EffectiveToDay" name="EffectiveToDay" value="">
+            </div>
+        </div>
+        <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="EffectiveToMonth">
+                    Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2 js-integers-only" type="text" maxlength="2" id="EffectiveToMonth" name="EffectiveToMonth" value="">
+            </div>
+        </div>
+        <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="EffectiveToYear">
+                    Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4 js-integers-only" type="text" maxlength="4" id="EffectiveToYear" name="EffectiveToYear" value="">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+   </div>
+   </div>
+
+
+   <a class="govuk-button govuk-!-margin-right-1" href="8-editapp" type="submit" name="ActionChoice" value="Save">Save</a>
+   <a class="govuk-button govuk-button--secondary" href="6-editapp">Cancel</a>
+
+
+
+</div>
+
+{% endblock %}
+
+
+
+
