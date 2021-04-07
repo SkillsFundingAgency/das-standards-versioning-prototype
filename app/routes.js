@@ -5,7 +5,7 @@ const router = express.Router()
 
 
 // Re-direct from multiple  radios showing version options
-router.post('/sprint-11/epao3/2-choose-version', function (req, res) {
+router.post('/sprint-11/epao3/2-chooseversion.html', function (req, res) {
 
     let chooseversionoption = req.session.data['chooseversionoption']
 
@@ -13,15 +13,15 @@ router.post('/sprint-11/epao3/2-choose-version', function (req, res) {
 
     //Option 1
     if (chooseversionoption === 'Version 1.0') {
-        res.redirect('/sprint-11/epao3/2-confirm-apprentice1')
+        res.redirect('/sprint-11/epao3/2-confirm-apprentice1.html')
     }
     //Option 2
     else if (chooseversionoption === 'Version 1.1') {
-        res.redirect('/sprint-11/epao3/2-confirm-apprentice2')
+        res.redirect('/sprint-11/epao3/2-confirm-apprentice2.html')
     }
     //Option 3
     else if (chooseversionoption === 'Version 1.2') {
-        res.redirect('/sprint-11/epao3/2-confirm-apprentice3')
+        res.redirect('/sprint-11/epao3/2-confirm-apprentice3.html')
     }
     //end
 })
@@ -140,6 +140,26 @@ router.post('/sprint-2-beta/staffadminsearchsent/6-version', function (req, res)
 
 
 
+
+
+// Re-direct from multiple  radios showing version options
+router.post('/sprint-2-beta/epao3/2-choose-version.html', function (req, res) {
+
+    let chooseversionoptions = req.session.data['chooseversionoptions']
+
+    console.log(req.session.data['chooseversionoptions'])
+
+    //Option 1
+    if (chooseversionoptions === 'Version 1.0') {
+        res.redirect('/sprint-2-beta/epao3/2-confirm-apprentice1')
+    }
+    //Option 2
+    else if (chooseversionoptions === 'Version 1.1') {
+        res.redirect('/sprint-2-beta/epao3/2-confirm-apprentice2')
+    }
+
+    //end
+})
 
 
 
