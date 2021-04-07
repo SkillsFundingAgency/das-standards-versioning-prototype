@@ -13,7 +13,7 @@
                     <div class="govuk-grid-column-two-thirds">
                          <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
                          <h1 class="govuk-heading-xl">
-                           Choose the option for Gas network craftsperson {{ data['changeversion'] }}
+                          Which version of the Gas network craftsperson standard did you assess?
                          </h1>
                     </div>
                </div>
@@ -31,11 +31,19 @@
 
                <form method="post" action="3-declaration" class="">
 
+
+
+
+
+
+
+
+
                     {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
                     {{ govukRadios({
-                      idPrefix: "choose-option",
-                      name: "choose-option",
+                      idPrefix: "change-version",
+                      name: "change-version",
                       fieldset: {
                         legend: {
                           text: "",
@@ -43,30 +51,22 @@
                           classes: "govuk-fieldset__legend--m"
                         }
                       },
-
-
-
-
                       items: [
-
-
                         {
-                          value: "Gas Fitter",
-                          text: "Gas Fitter"
-                        },
+                          value: "1.0",
+                          text: "Version 1.0",
+                          hint: {
+                            text: "Failed on 1 April 2018"}
+                            
 
-                        {
-                            value: "Emergency Response Craftsperson",
-                            text: "Emergency Response Craftsperson"
                         },
                         {
-                          value: "Electrical & Instrumentation",
-                          text: "Electrical & Instrumentation"
-
+                          value: "1.1",
+                          text: "Version 1.1"
                         }
-
                       ]
                     }) }}
+
 
 
                     {% from "govuk/components/button/macro.njk" import govukButton %}
@@ -75,7 +75,9 @@
                          text: "Confirm and continue"
                     }) }}
 
-                   
+                    <p>
+                         <a href="index">Search again</a> if this isn't the correct apprentice.
+                    </p>
 
                </form>
           </div>
@@ -83,4 +85,3 @@
 
 </div>
 {% endblock %}
-
