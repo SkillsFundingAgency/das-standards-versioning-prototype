@@ -5,7 +5,7 @@ const router = express.Router()
 
 
 // Re-direct from multiple  radios showing version options
-router.post('/sprint-11/epao3/2-confirm-apprentice1', function (req, res) {
+router.post('/sprint-11/epao3/2-choose-version', function (req, res) {
 
     let chooseversionoption = req.session.data['chooseversionoption']
 
