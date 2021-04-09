@@ -1,0 +1,308 @@
+
+<!--OLD
+<a href="/sprint-12/add-apprentice1/6a-approve" class="image-demo">
+  <img src="/public/images/Jrny-6.png" width="auto" height="auto" />
+</a>
+-->
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<img src="/public/images/Employer-Nav.png"  width="auto" height="auto" />
+
+<div class="govuk-width-container">
+    <a class="govuk-back-link" href="5-add-full-details">Back</a>
+<main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <!--<h1 class="govuk-heading-xl">
+                Select standard options
+                <span class="govuk-caption-xl"></span>
+            </h1>-->
+        </div>
+    </div>
+
+
+
+    <h1 class="govuk-heading-xl">Manage your apprentices</h1>
+
+            <div class="govuk-grid-row govuk-!-margin-bottom-2">
+                <div class="govuk-grid-column-two-thirds">
+                        <p class="govuk-body">7 apprentice records, 1 with alerts</p>
+
+                </div>
+                <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet">
+                    <a class="govuk-body govuk-link" aria-label="Download all data" href="manage/csv">Download all data (CSV)</a>
+                </div>
+            </div>
+            <table class="govuk-table das-table--responsive das-table--double-arrows">
+                <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/KK6WKG/apprentices?ReverseSort=False&amp;SortField=FirstName">
+                            Apprentice name
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/KK6WKG/apprentices?ReverseSort=False&amp;SortField=CourseName">
+                            Apprenticeship training course
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/KK6WKG/apprentices?ReverseSort=False&amp;SortField=DataLockStatus">
+                            Version
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/KK6WKG/apprentices?ReverseSort=False&amp;SortField=StartDate">
+                            Planned start date
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/KK6WKG/apprentices?ReverseSort=False&amp;SortField=EndDate">
+                            Planned end date
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/KK6WKG/apprentices?ReverseSort=False&amp;SortField=ProviderName">
+                            Training provider
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/KK6WKG/apprentices?ReverseSort=False&amp;SortField=ApprenticeshipStatus">
+                            Status
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/KK6WKG/apprentices?ReverseSort=False&amp;SortField=DataLockStatus">
+                            Alerts
+                        </a>
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link"
+                               href="manage/CoC-Summary">
+                                Solomon Gold001
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Able seafarer (deck), Level 2
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            1.1
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Nov 2020
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Nov 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Training provider">
+                            PETERBOROUGH REGIONAL COLLEGE
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Live
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                                <a class="govuk-link"
+                                   href="manage/CoC-Summary">
+                                    Changes pending
+                                </a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link"
+                               href="manage/CoC-Summary">
+                                Darren Silcox
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Motor vehicle service and maintenance technician (light vehicle), Level 3
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            1.2
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Jan 2022
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Jan 2025
+                        </td>
+                        <td class="govuk-table__cell" data-label="Training provider">
+                            SOUTHAMPTON ENGINEERING TRAINING ASSOCIATION LIMITED (THE)
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Waiting to start
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link"
+                               href="../CoC-Summary">
+                                Faizal Status
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Accident Repair Technician, Level 3
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            1.0
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Mar 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Mar 2024
+                        </td>
+                        <td class="govuk-table__cell" data-label="Training provider">
+                            SOUTHAMPTON ENGINEERING TRAINING ASSOCIATION LIMITED (THE)
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Stopped
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link"
+                               href="../CoC-Summary">
+                                Faizal Test
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Advanced Beauty Therapist, Level 3
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            1.0
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Jan 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Feb 2024
+                        </td>
+                        <td class="govuk-table__cell" data-label="Training provider">
+                            SOUTHAMPTON ENGINEERING TRAINING ASSOCIATION LIMITED (THE)
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Stopped
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link"
+                               href="/CoC-Summary">
+                                Faizal Test 2
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Automotive Glazing Technician, Level 3
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            1.2
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Apr 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Apr 2024
+                        </td>
+                        <td class="govuk-table__cell" data-label="Training provider">
+                            SOUTHAMPTON ENGINEERING TRAINING ASSOCIATION LIMITED (THE)
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Paused
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link"
+                               href="/CoC-Summary">
+                                Joe Bloggs
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Air traffic controller, Level 5
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            1.2
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Feb 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Apr 2024
+                        </td>
+                        <td class="govuk-table__cell" data-label="Training provider">
+                            SOUTHAMPTON ENGINEERING TRAINING ASSOCIATION LIMITED (THE)
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Live
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link"
+                               href="/KK6WKG/apprentices/667PLX/details">
+                                Live  Status
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Advanced butcher, Level 3
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            1.1
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Jan 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Jan 2025
+                        </td>
+                        <td class="govuk-table__cell" data-label="Training provider">
+                            SOUTHAMPTON ENGINEERING TRAINING ASSOCIATION LIMITED (THE)
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Stopped
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+
+            </main>
+        </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

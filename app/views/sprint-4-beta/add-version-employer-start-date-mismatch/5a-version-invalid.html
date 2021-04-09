@@ -1,0 +1,164 @@
+
+<!--OLD
+<a href="/sprint-12/add-apprentice1/6a-approve" class="image-demo">
+  <img src="/public/images/Jrny-6.png" width="auto" height="auto" />
+</a>
+-->
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+          emp summary v mismatch
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<img src="/public/images/Employer-Nav.png"  width="auto" height="auto" />
+<div class="govuk-width-container">
+    <a class="govuk-back-link" href="5-add-full-details">Back</a>
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-xl">
+               Select a standard version
+              <span class="govuk-caption-xl"></span>
+          </h1>
+      </div>
+  </div>
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <p>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    There are 2 standard versions available on the dates you've chosen.
+
+Select a version or go back to edit the apprentice details.
+
+</p>
+  </strong>
+</div>
+<!--
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Organisation
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                       Tiles House LTD
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Reference
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                       JKBRLW
+                  </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Apprentice
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     John Doe
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Date of Birth
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     7 March 1980
+                  </dd>
+              </div>
+
+
+
+
+
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Provider
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                      Bournemouth University
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Standard
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                        Power network craftsperson
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Level
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                      3
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Requested Start Date
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     Sept 2021
+                  </dd>
+          </div>
+
+
+            </div>
+        </div>-->
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+        idPrefix: "where-do-you-live",
+        name: "where-do-you-live",
+        fieldset: {
+        legend: {
+          text: "Select a version for Power network craftsperson ",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+        },
+        hint: {
+        text: "Select one option"
+        },
+        items: [
+        {
+          value: "england",
+          text: "Version 1.0 "
+        },
+        {
+          value: "scotland",
+          text: "Version 1.1"
+        }
+
+        ]
+        }) }}
+
+       <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <a class="govuk-button" href="5b-select-options">Confirm and Continue</a>
+                <p>
+                  <a href="5-populated-add-full-details" class="govuk-link">Edit apprentice</a>
+               </p>
+
+      </main>
+  </div>
+
+
+
+
+
+
+
+{% endblock %}

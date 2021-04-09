@@ -1,0 +1,69 @@
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<img src="/public/images/Employer-Nav.png"  width="auto" height="auto" />
+<div class="govuk-width-container">
+
+
+   <a class="govuk-back-link" href="/KK6WKG/unapproved/add/confirm-provider?AccountLegalEntityHashedId=79D8GJ&amp;ProviderId=10005760" id="back-link">Back</a>
+       <main class="govuk-main-wrapper " id="main-content" role="main">
+
+
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+
+       <h1 class="govuk-heading-xl">Start adding apprentices</h1>
+
+       <p class="govuk-body-l">You can start adding details of your apprentices or ask your training provider to add them for you.</p>
+       <p class="govuk-body-l">If you ask your training provider to add them, you need to check and agree the details before any payments are made.</p>
+
+       <form action="5-add-full-details" method="post">
+
+
+<input type="hidden" id="AccountHashedId" name="AccountHashedId" value="KK6WKG">
+<input type="hidden" id="AccountLegalEntityHashedId" name="AccountLegalEntityHashedId" value="79D8GJ">
+<input type="hidden" id="ReservationId" name="ReservationId" value="">
+<input type="hidden" id="CourseCode" name="CourseCode" value="">
+<input type="hidden" id="StartMonthYear" name="StartMonthYear" value="">
+<input type="hidden" data-val="true" data-val-required="The ProviderId field is required." id="ProviderId" name="ProviderId" value="10005760">
+<input type="hidden" id="TransferSenderId" name="TransferSenderId" value="">
+<input type="hidden" id="LegalEntityName" name="LegalEntityName" value="DEPARTMENT OF EDUCATION  LTD">
+
+           <div class="govuk-form-group  ">
+               <fieldset class="govuk-fieldset">
+                   <div class="govuk-radios">
+                       <div class="govuk-radios__item">
+                           <input class="govuk-radios__input" id="WhoIsAddingApprentices" name="WhoIsAddingApprentices" type="radio" value="Employer">
+                           <label class="govuk-label govuk-radios__label" for="WhoIsAddingApprentices">
+                               I will add apprentices
+                           </label> </div>
+                       <div class="govuk-radios__item">
+                           <input class="govuk-radios__input" id="WhoIsAddingApprentices-Provider" name="WhoIsAddingApprentices" type="radio" value="Provider">
+                           <label class="govuk-label govuk-radios__label" for="WhoIsAddingApprentices-Provider">
+                               I would like my provider to add apprentices
+                           </label>
+                       </div>
+                   </div>
+               </fieldset>
+           </div>
+
+           <button id="continue-button" type="submit" class="govuk-button">Continue</button>
+       <input name="__RequestVerificationToken" type="hidden" value="CfDJ8M3HnWbcAPpNnzvSmkJUsJVeQhDxqKhEHDuKAB-LIdWEWzOJDAkAcyakg_BX5B1esYE7daJmx3MiDn3Krvvjh4zxkxiv7X2aV3TmURWbMB4gRI8-2nJIz34iUFWDXfl9f8NDoKfBAQ4wHB6NsD_Ulkj-tGefuekqLtVro1jEJ4OgBpQLbHttFHCJy2hSB7ruVA" /></form>
+   </div>
+</div>
+
+
+       </main>
+   </div>
+
+
+{% endblock %}
