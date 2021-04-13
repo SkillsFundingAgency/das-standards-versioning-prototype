@@ -1,0 +1,76 @@
+{% extends "layout-epaoapplyhome.html" %}
+
+{% block pageTitle %}
+About - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+
+
+
+
+    <a class="govuk-back-link" href="2a.html">Back</a>
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">    
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" action="4">
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                                <h1 class="govuk-fieldset__heading">
+                                    What are you withdrawing from?
+                                </h1>
+                            </legend>
+
+                            <div class="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="TypeOfWithdrawal" name="TypeOfWithdrawal" type="radio" value="StandardWithdrawal">
+                                    <label class="govuk-label govuk-radios__label" for="withdrawal-type">
+                                        Assessing a specific standard or version(s) of that standard
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="TypeOfWithdrawal-2" name="TypeOfWithdrawal" type="radio" value="OrganisationWithdrawal">
+                                    <label class="govuk-label govuk-radios__label" for="withdrawal-type-2">
+                                        The register of end-point assessment organisations
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <button class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
+                        Save and continue
+                    </button>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MqGfJC9H8RPvDmXQiAsUKdxHZgcDo3hdutMUFod6el0yUUfW8DgHNr0jpfZGMbVeg_-MIjqrJkfhlL3bdhvfxr6J_Mzk1mDEjKGCeFf6wEVnGWrnh2kF956u23HWvw5Oft0tP-Mde-_wQk1OHT-qxXigDN-45EYpket9nYYzT9cimYrj6pBNCmO0S2p051SjA" /></form>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+    
+    
+        {% endblock %}
+
+
+
+    
+    
+    
+    
+    
+       
