@@ -1,0 +1,85 @@
+{% extends "layout-epao.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+
+<div class="govuk-width-container">
+        
+
+
+
+
+
+     <a class="govuk-back-link" href="index">Back</a>
+     <main class="govuk-main-wrapper " id="main-content" role="main">
+         <div class="govuk-grid-row">
+             <div class="govuk-grid-column-two-thirds">
+                 <h1 class="govuk-heading-xl">We cannot find the apprentice details</h1>
+
+                 <p class="govuk-heading-m">Check the:</p>
+                 <ul class="govuk-list govuk-list--bullet">
+                     <li>spelling of the family name</li>
+                     <li><abbr title="Unique learner number">ULN</abbr> is correct for the apprentice</li>
+                 </ul>
+
+                 <p class="govuk-body"><a class="govuk-link--no-visited-state" href="index">Search again</a></p>
+
+                 <details class="govuk-details">
+                     <summary class="govuk-details__summary">
+                         <span class="govuk-details__summary-text">
+                             Why we can't find the apprentice
+                         </span>
+                     </summary>
+                     <div class="govuk-details__text">
+                         <p class="govuk-body">The most common reasons we can't find the apprentice are:</p>
+                         <ul class="govuk-list govuk-list--bullet">
+                             <li>the apprentice's details have changed, but the Individualised Learner Record (ILR) is not up to date</li>
+                             <li>the <abbr title="Unique learner number">ULN</abbr> given to you by the training provider does not match what we have in our system</li>
+                            
+                         </ul>
+                         <p class="govuk-body">The correct details need to be agreed between you, the employer and the training provider. The training provider may need to update the Individualised Learner Record (ILR).</p>
+                     </div>
+                 </details>
+             </div>
+         </div>
+     </main>
+
+
+
+
+
+
+
+
+
+
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+     {% endblock %}
+
+{% block pageScripts %}
+<script>
+  window.DASFrontend.expandableTable.init();
+</script>
+{% endblock %}

@@ -29,9 +29,17 @@ $govuk-assets-path: "/govuk/assets/";
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 
+
+.colorata {
+  padding-top: 30px;
+  
+  
+}
+
 .colorat {
-  border-top: 5px solid #0b0c0c;
-  background-color:#f3f2f1;
+  border-top: 1px solid #b1b4b6;
+  border-bottom: 1px solid #b1b4b6;
+  padding-bottom: 30px;
 }
 
 #dreapta {

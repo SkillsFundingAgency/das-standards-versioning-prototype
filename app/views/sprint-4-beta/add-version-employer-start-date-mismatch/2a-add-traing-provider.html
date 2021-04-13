@@ -1,0 +1,84 @@
+
+<!--OLD
+<a href="/sprint-12/add-apprentice1/6a-approve" class="image-demo">
+  <img src="/public/images/Jrny-6.png" width="auto" height="auto" />
+</a>
+-->
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+          emp summary v mismatch
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+
+<img src="/public/images/Employer-Nav.png"  width="auto" height="auto" />
+<div class="govuk-width-container">
+
+
+        <a href="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/KK6WKG/apprentices/inform" id="back-link" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+
+            <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+        <h1 class="govuk-heading-xl">Add training provider details</h1>
+
+        <form action="3-confirm-provider" method="post">
+
+
+<input type="hidden" id="AccountHashedId" name="AccountHashedId" value="KK6WKG">
+<input type="hidden" data-val="true" data-val-required="&#x27;Account Legal Entity Hashed Id&#x27; must not be empty." id="AccountLegalEntityHashedId" name="AccountLegalEntityHashedId" value="79D8GJ">
+<input type="hidden" id="ReservationId" name="ReservationId" value="">
+<input type="hidden" id="CourseCode" name="CourseCode" value="">
+<input type="hidden" id="StartMonthYear" name="StartMonthYear" value="">
+<input type="hidden" id="TransferSenderId" name="TransferSenderId" value="" />
+<input type="hidden" id="LegalEntityName" name="LegalEntityName" value="DEPARTMENT OF EDUCATION  LTD" />
+
+
+
+            <div class="govuk-form-group ">
+                <label class="govuk-heading-s " for="error-message-ProviderId">
+                    UK Provider Reference Number
+                </label>
+
+                <input class="govuk-input " id="error-message-ProviderId" type="text" name="ProviderId" value="" />
+            </div>
+
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        What is a UK Provider Reference Number?
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    A UK Provider Reference Number (UKPRN) is a unique, 8-digit number that identifies a training provider. Your training provider can tell you their UKPRN.
+                </div>
+            </details>
+            <button id="continue-button" type="submit" class="govuk-button">
+                Continue
+            </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8M3HnWbcAPpNnzvSmkJUsJXwxZV0OntVgzEYrGQ0pyd2GiKD7XQ2vOvhUTsRW37s8dijKYctuEx6buRbNRWswB2ozwlh4BUx0BUId3c62oYioHZ8U5ZLdEzSYZz-fEppMr33vC31Uy1mhCmA53M5ciWJFaIKhshar-ISpevDjjBFZfDZu7UvvKVhw_DOsYX9Cg" /></form>
+
+
+    </div>
+</div>
+
+
+        </main>
+    </div>
+
+
+
+
+
+
+
+{% endblock %}

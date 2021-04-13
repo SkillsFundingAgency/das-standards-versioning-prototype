@@ -29,7 +29,7 @@
      <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
 
-               <form method="post" action="3-declaration" class="">
+               <form method="post" action="2-choose-version" class="">
 
                     <table class="govuk-table">
                          <tbody class="govuk-table__body">
@@ -43,43 +43,39 @@
                               </tr>
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Standard</th>
-                                   <td class="govuk-table__cell">Gas network craftsperson</td>
+                                   <td class="govuk-table__cell">Adult care worker</td>
                               </tr>
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Level</th>
-                                   <td class="govuk-table__cell">3</td>
-                              </tr>
+                                   <td class="govuk-table__cell">2</td>
+                              </tr><!--
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Version</th>
                                    <td class="govuk-table__cell">1.0</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">Option</th>
-                                   <td class="govuk-table__cell">None</td>
-                              </tr>
+                              </tr>-->
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Learner start date</th>
-                                   <td class="govuk-table__cell">1 April 2017</td>
+                                   <td class="govuk-table__cell">1 April 2018</td>
                               </tr>
+                              <!--
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Failed date</th>
-                                   <td class="govuk-table__cell">1 April 2018</td>
+                                   <td class="govuk-table__cell">7 November 2020</td>
                               </tr>
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Grade</th>
                                    <td class="govuk-table__cell">Fail</td>
                               </tr>
                               <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">Recorded by</th>
-                                   <td class="govuk-table__cell">Ali Chauhan</td>
+                                   <th scope="row" class="govuk-table__header">Record by</th>
+                                   <td class="govuk-table__cell">Preprod Epao008</td>
                               </tr>
                               <tr class="govuk-table__row">
                                    <th scope="row" class="govuk-table__header">Date recorded</th>
-                                   <td class="govuk-table__cell">1 April 2018</td>
-                              </tr>
+                                   <td class="govuk-table__cell">7 November 2020</td>
+                              </tr>-->
                          </tbody>
                     </table>
-
 
                     <p>If the name, standard or level is incorrect, you need to agree the correct details with the training provider and employer. 
                          Once the training provider updates the Individual Learner Record (ILR), return here and continue.
@@ -87,33 +83,6 @@
                     </p>
 
 
-                    {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-                    {{ govukRadios({
-                      idPrefix: "change-version",
-                      name: "change-version",
-                      fieldset: {
-                        legend: {
-                          text: "Which standard version did you assess?",
-                          isPageHeading: true,
-                          classes: "govuk-fieldset__legend--m"
-                        }
-                      },
-                      items: [
-                        {
-                          value: "1.0",
-                          text: "Version 1.0",
-                          hint: {
-                            text: "Failed on 1 April 2018"}
-                            
-
-                        },
-                        {
-                          value: "1.1",
-                          text: "Version 1.1"
-                        }
-                      ]
-                    }) }}
 
 
                     {% from "govuk/components/button/macro.njk" import govukButton %}

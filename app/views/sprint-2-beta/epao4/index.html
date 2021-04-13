@@ -28,7 +28,7 @@
      <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
 
-               < <div class="banner blue">
+                <div class="banner blue">
                     <h1 class="govuk-heading-m">Record all assessments</h1>
                     <p>Record all end point assessments grades. Record a 'fail' if a fail is defined in the assessment plan.</p>
                </div>
@@ -72,18 +72,7 @@
                          text: "Text"
                     }) }}
 
-                    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-                    {{ govukCheckboxes({
-                         idPrefix: "epao-prviately-funded",
-                         name: "epao-prviately-funded",
-                         items: [
-                              {
-                                   value: "The apprenticeship is privately funded",
-                                   text: "The apprenticeship is privately funded"
-                              }
-                         ]
-                    }) }}
+                   
 
                     {% from "govuk/components/button/macro.njk" import govukButton %}
 
@@ -91,10 +80,7 @@
                          text: "Continue"
                     }) }}
 
-                    {{ govukDetails({
-                         summaryText: "How do I know if the apprenticeship is privately funded?",
-                         text: "Text"
-                    }) }}
+                  
 
                </form>
 

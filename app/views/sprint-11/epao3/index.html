@@ -33,7 +33,7 @@
                     <p>Record all end point assessments grades. Record a 'fail' if a fail is defined in the assessment plan.</p>
                </div>
 
-               <form method="post" action="2-confirm-apprentice" class="check-answers-page">
+               <form method="post" action="1-confirm-apprentice" class="check-answers-page">
 
                     {% from "govuk/components/input/macro.njk" import govukInput %}
 
@@ -72,18 +72,7 @@
                          text: "Text"
                     }) }}
 
-                    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-                    {{ govukCheckboxes({
-                         idPrefix: "epao-prviately-funded",
-                         name: "epao-prviately-funded",
-                         items: [
-                              {
-                                   value: "The apprenticeship is privately funded",
-                                   text: "The apprenticeship is privately funded"
-                              }
-                         ]
-                    }) }}
+                  
 
                     {% from "govuk/components/button/macro.njk" import govukButton %}
 
@@ -91,10 +80,6 @@
                          text: "Continue"
                     }) }}
 
-                    {{ govukDetails({
-                         summaryText: "How do I know if the apprenticeship is privately funded?",
-                         text: "Text"
-                    }) }}
 
                </form>
 

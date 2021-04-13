@@ -32,7 +32,7 @@
      <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
 
-               <form method="post" action="/sprint-11/epao3/2-confirm-apprentice1" class="form">
+               <form method="post" action="/sprint-11/epao3/2-chooseversion" class="form">
 
 
                     <table class="govuk-table">
@@ -137,47 +137,6 @@ Version 1.2
 
 
 
-                    {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-                    {{ govukRadios({
-                      idPrefix: "chooseversionoption",
-                      name: "chooseversionoption",
-                      fieldset: {
-                        legend: {
-                          text: "What version did the apprentice study?",
-                          isPageHeading: true,
-                          classes: "govuk-fieldset__legend--m"
-                        }
-                      },
-
-
-
-
-
-
-
-
-                      items: [
-                        {
-                          value: "Version 1.0",
-                          text: "Version 1.0"
-
-                        },
-
-
-                        {
-                          value: "Version 1.1",
-                          text: "Version 1.1"
-                        },
-
-
-
-                          {
-                            value: "Version 1.2",
-                            text: "Version 1.2"
-                        }
-                      ]
-                    }) }}
 
 
                     {% from "govuk/components/button/macro.njk" import govukButton %}
