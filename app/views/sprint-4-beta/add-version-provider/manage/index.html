@@ -1,0 +1,974 @@
+
+    <!DOCTYPE html>
+    <html lang="en" class="govuk-template ">
+
+    <head><link rel="preconnect" href="https://das-pp-frnt-end.azureedge.net" />
+
+            <!-- Google Tag Manager -->
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TD56SF5');
+</script>
+<!-- End Google Tag Manager -->
+
+        <meta charset="utf-8" />
+        <title>Manage Your Apprentices</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#0b0c0c" />
+
+        <link rel="shortcut icon" href="https://das-pp-frnt-end.azureedge.net/assets/images/favicon.ico" type="image/x-icon" />
+        <link rel="mask-icon" href="https://das-pp-frnt-end.azureedge.net/assets/images/govuk-mask-icon.svg" color="#0b0c0c" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://das-pp-frnt-end.azureedge.net/assets/images/govuk-apple-touch-icon-180x180.png" />
+        <link rel="apple-touch-icon" sizes="167x167" href="https://das-pp-frnt-end.azureedge.net/assets/images/govuk-apple-touch-icon-167x167.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://das-pp-frnt-end.azureedge.net/assets/images/govuk-apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" href="https://das-pp-frnt-end.azureedge.net/assets/images/govuk-apple-touch-icon.png" />
+
+        <!--[if !IE 8]><!-->
+        <link href="https://das-pp-frnt-end.azureedge.net/css/main.css" rel="stylesheet" />
+
+        <!--<![endif]-->
+
+        <meta property="og:image" content="/assets/images/govuk-opengraph-image.png" />
+    </head>
+
+
+    <body class="govuk-template__body">
+
+            <!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TD56SF5"
+            height="0" width="0" style="display: none; visibility: hidden">
+    </iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+        <script>
+        document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+        </script>
+
+<script type="text/javascript">
+        window.zESettings = {
+            webWidget: {
+                contactForm: {
+                    attachments: false
+                },
+                chat: {
+                    menuOptions: {
+                        emailTranscript: false
+                    }
+                },
+                helpCenter: {
+                    filter: {
+                        section: 360002975420
+                    }
+                }
+            }
+        };
+</script>
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=e0730bdd-a32c-4c39-8032-7d7a908eacb4"></script>
+<script id="co-snippet" src="https://embed-euw1.rcrsv.io/Qec2OgXsUy8lsUO1iOuleFAMjl7AcIEGdOojlQjLesShBHx0wrM4xXlR7X1h9bEo?zwwi=1"></script>
+<script type="text/javascript">zE('webWidget', 'helpCenter:setSuggestions', { labels: ['Manage Your Apprentices'] });</script>
+
+        <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+
+<div data-module="cookie-banner" role="region" aria-label="cookie banner" class="das-cookie-banner__wrap">
+    <div class="das-cookie-banner">
+        <div class="das-cookie-banner__wrapper govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <h2 class="govuk-heading-m das-cookie-banner__header">Tell us whether you accept cookies</h2>
+                    <p class="das-cookie-banner__message">We use <a href="https://pp-pas.apprenticeships.education.gov.uk/cookie-details" class="govuk-link govuk-link--no-visited-state">cookies to collect information</a> about how you use this service. We use this information to make the service work as well as possible and improve this service.</p>
+                    <div class="das-cookie-banner__buttons">
+                        <div class="das-cookie-banner__button-wrap das-cookie-banner__button-accept">
+                            <button class="govuk-button das-cookie-banner__button" type="submit" data-accept-cookies="true">Accept all cookies</button>
+                        </div>
+                        <div class="das-cookie-banner__button-wrap das-cookie-banner__button-settings">
+                            <a href="https://pp-pas.apprenticeships.education.gov.uk/cookies" class="govuk-button das-cookie-banner__button" role="button" id="btn-cookie-settings">Set cookie preferences</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="das-cookie-banner__confirmation govuk-width-container" tabindex="-1">
+            <p class="das-cookie-banner__confirmation-message">
+                You've accepted all cookies. You can <a href="https://pp-pas.apprenticeships.education.gov.uk/cookies" class="govuk-link" id="link-cookie-settings">change your cookie settings</a> at any time.
+            </p>
+            <button class="das-cookie-banner__hide-button" data-hide-cookie-banner="true" id="btn-hide-cookie-banner">Hide</button>
+        </div>
+    </div>
+</div>
+
+        <header class="govuk-header das-header--no-border das-header--provider-legacy" role="banner" data-module="header">
+            <div class="govuk-header__container govuk-width-container">
+                <div class="govuk-header__logo">
+                    <a href="/" class="govuk-header__link govuk-header__link--homepage">
+                        <span class="govuk-header__logotype">
+                            <svg role="presentation" focusable="false" class="govuk-header__logotype-crown" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 132 97" height="32" width="36">
+                                <path fill="currentColor" fill-rule="evenodd" d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"></path>
+
+                                <image src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image"></image>
+                            </svg>
+                            <span class="govuk-header__logotype-text">
+                                GOV.UK
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                <div class="govuk-header__content">
+                    <a href="https://pp-pas.apprenticeships.education.gov.uk/" class="govuk-header__link govuk-header__link--service-name">
+                        Apprenticeships
+                    </a>
+                </div>
+            </div>
+        </header>
+
+
+
+    <div class="das-account-header das-account-header--provider">
+        <div class="govuk-width-container">
+            <p class="das-account-header__title">Your training provider account</p>
+            <nav class="das-user-navigation" id="das-user-navigation">
+                <ul class="das-user-navigation__list" role="menu">
+                    <li class="das-user-navigation__list-item">
+                        <a href="https://pp-pas.apprenticeships.education.gov.uk/" class="das-user-navigation__link">Sfstest 10005760</a>
+                    </li>
+                    <li class="das-user-navigation__list-item">
+                        <a href="https://pp-pas.apprenticeships.education.gov.uk/notification-settings" class="das-user-navigation__link">Notification settings</a>
+                    </li>
+                    <li class="das-user-navigation__list-item">
+                        <a href="https://pp-pas.apprenticeships.education.gov.uk/signout" class="das-user-navigation__link">Sign out</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <nav class="das-navigation">
+        <div class="govuk-width-container">
+            <ul class="das-navigation__list" id="navigation">
+                    <li class="das-navigation__list-item">
+                        <a href="https://pp-pas.apprenticeships.education.gov.uk/account" class="das-navigation__link ">Home</a>
+                    </li>
+                                    <li class="das-navigation__list-item">
+                        <a href="https://pp-pas.apprenticeships.education.gov.uk/10005760/apprentices/cohorts" class="das-navigation__link ">Apprentice requests</a>
+                    </li>
+                                    <li class="das-navigation__list-item">
+                        <a href="https://securefunding.pp-pas.apprenticeships.education.gov.uk/10005760/reservations/manage" class="das-navigation__link ">Manage funding</a>
+                    </li>
+                                    <li class="das-navigation__list-item">
+                        <a href="https://pp-pas.apprenticeships.education.gov.uk/10005760/apprentices/manage/all" class="das-navigation__link das-navigation__link--current">Manage your apprentices</a>
+                    </li>
+                                    <li class="das-navigation__list-item">
+                        <a href="https://recruit.pp-pas.apprenticeships.education.gov.uk/10005760" class="das-navigation__link ">Recruit apprentices</a>
+                    </li>
+                                    <li class="das-navigation__list-item">
+                        <a href="https://pp-pas.apprenticeships.education.gov.uk/10005760/agreements" class="das-navigation__link ">Organisations and agreements</a>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+        <div class="govuk-width-container">
+
+
+
+    <a id="back-link" class="govuk-back-link" href="https://pp-pas.apprenticeships.education.gov.uk/account">Back</a>
+
+
+            <main class="govuk-main-wrapper " id="main-content" role="main">
+
+
+<h1 class="govuk-heading-xl">Manage your apprentices</h1>
+
+    <!--    <form method="get" action="/10005760/apprentices">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <div class="govuk-form-group">
+                        <label for="searchTerm" class="govuk-label">Search apprentice name or unique learner number (ULN)</label>
+                        <div class="das-search-form__group">
+                            <input class="govuk-input das-search-form__input" id="searchTerm" name="searchTerm" type="text">
+                            <div class="das-search-form__button-wrap">
+                                <button class="govuk-button das-search-form__button" type="submit">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <  <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <div class="das-pane govuk-!-margin-bottom-3">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-third">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="selectedEmployer">Employer</label>
+                                    <select class="govuk-select govuk-!-width-full" id="selectedEmployer" name="selectedEmployer">
+                                        <option label="All" aria-label="All employers" value="">All</option>
+                                                <option label="AUTOMATION &amp; OPTIMISATION LTD" value="AUTOMATION &amp; OPTIMISATION LTD">AUTOMATION &amp; OPTIMISATION LTD</option>
+                                                <option label="BARBERRY COVENTRY LIMITED" value="BARBERRY COVENTRY LIMITED">BARBERRY COVENTRY LIMITED</option>
+                                                <option label="BLOBAL HOLDINGS  LIMITED" value="BLOBAL HOLDINGS  LIMITED">BLOBAL HOLDINGS  LIMITED</option>
+                                                <option label="BOB LTD." value="BOB LTD.">BOB LTD.</option>
+                                                <option label="COMPLIANCE LIMITED" value="COMPLIANCE LIMITED">COMPLIANCE LIMITED</option>
+                                                <option label="COVENTRY &amp; WARWICKSHIRE CHAMBER OF COMMERCE" value="COVENTRY &amp; WARWICKSHIRE CHAMBER OF COMMERCE">COVENTRY &amp; WARWICKSHIRE CHAMBER OF COMMERCE</option>
+                                                <option label="COVENTRY ACCOUNTANTS LTD" value="COVENTRY ACCOUNTANTS LTD">COVENTRY ACCOUNTANTS LTD</option>
+                                                <option label="Coventry City Council" value="Coventry City Council">Coventry City Council</option>
+                                                <option label="DEPARTMENT OF EDUCATION  LTD" value="DEPARTMENT OF EDUCATION  LTD">DEPARTMENT OF EDUCATION  LTD</option>
+                                                <option label="ESFA  LTD" value="ESFA  LTD">ESFA  LTD</option>
+                                                <option label="ESFA LTD" value="ESFA LTD">ESFA LTD</option>
+                                                <option label="HAPPY LIMITED" value="HAPPY LIMITED">HAPPY LIMITED</option>
+                                                <option label="M5 CORPORATION  LIMITED" value="M5 CORPORATION  LIMITED">M5 CORPORATION  LIMITED</option>
+                                                <option label="Old Park School &amp; Children Centre" value="Old Park School &amp; Children Centre">Old Park School &amp; Children Centre</option>
+                                                <option label="ONA CONSULTING  LTD" value="ONA CONSULTING  LTD">ONA CONSULTING  LTD</option>
+                                                <option label="SCIENCE RESEARCH  LIMITED" value="SCIENCE RESEARCH  LIMITED">SCIENCE RESEARCH  LIMITED</option>
+                                                <option label="SETUP &amp; GROW LTD" value="SETUP &amp; GROW LTD">SETUP &amp; GROW LTD</option>
+                                                <option label="SOMEONE ELSE LIMITED" value="SOMEONE ELSE LIMITED">SOMEONE ELSE LIMITED</option>
+                                                <option label="SUBHA  LIMITED" value="SUBHA  LIMITED">SUBHA  LIMITED</option>
+                                                <option label="TESCO  PLC" value="TESCO  PLC">TESCO  PLC</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="selectedCourse">Apprenticeship training course</label>
+                                    <select class="govuk-select govuk-!-width-full" id="selectedCourse" name="selectedCourse">
+                                        <option label="All" aria-label="All courses" value="">All</option>
+                                                <option label="Abattoir Worker, Level 2 " value="Abattoir Worker, Level 2 ">Abattoir Worker, Level 2 </option>
+                                                <option label="Able seafarer (deck), Level 2 " value="Able seafarer (deck), Level 2 ">Able seafarer (deck), Level 2 </option>
+                                                <option label="Accident Repair Technician, Level 3 " value="Accident Repair Technician, Level 3 ">Accident Repair Technician, Level 3 </option>
+                                                <option label="Accountancy Taxation Professional, Level 7 " value="Accountancy Taxation Professional, Level 7 ">Accountancy Taxation Professional, Level 7 </option>
+                                                <option label="Accounting, Level 2" value="Accounting, Level 2">Accounting, Level 2</option>
+                                                <option label="Accounting, Level 3" value="Accounting, Level 3">Accounting, Level 3</option>
+                                                <option label="Accounting, Level 4" value="Accounting, Level 4">Accounting, Level 4</option>
+                                                <option label="Accounts / Finance Assistant, Level 2 " value="Accounts / Finance Assistant, Level 2 ">Accounts / Finance Assistant, Level 2 </option>
+                                                <option label="Activity Leadership: Coaching, Level 2" value="Activity Leadership: Coaching, Level 2">Activity Leadership: Coaching, Level 2</option>
+                                                <option label="Actuarial technician, Level 4 " value="Actuarial technician, Level 4 ">Actuarial technician, Level 4 </option>
+                                                <option label="Actuary, Level 7 " value="Actuary, Level 7 ">Actuary, Level 7 </option>
+                                                <option label="Adult care worker, Level 2 " value="Adult care worker, Level 2 ">Adult care worker, Level 2 </option>
+                                                <option label="Advanced Baker, Level 3 " value="Advanced Baker, Level 3 ">Advanced Baker, Level 3 </option>
+                                                <option label="Advanced Beauty Therapist, Level 3 " value="Advanced Beauty Therapist, Level 3 ">Advanced Beauty Therapist, Level 3 </option>
+                                                <option label="Advanced butcher, Level 3 " value="Advanced butcher, Level 3 ">Advanced butcher, Level 3 </option>
+                                                <option label="Advanced Carpentry and Joinery, Level 3 " value="Advanced Carpentry and Joinery, Level 3 ">Advanced Carpentry and Joinery, Level 3 </option>
+                                                <option label="Advanced Clinical Practitioner, Level 7 " value="Advanced Clinical Practitioner, Level 7 ">Advanced Clinical Practitioner, Level 7 </option>
+                                                <option label="Advanced credit controller / debt collection specialist, Level 3 " value="Advanced credit controller / debt collection specialist, Level 3 ">Advanced credit controller / debt collection specialist, Level 3 </option>
+                                                <option label="Advanced dairy technologist, Level 5 " value="Advanced dairy technologist, Level 5 ">Advanced dairy technologist, Level 5 </option>
+                                                <option label="Air traffic controller, Level 5 " value="Air traffic controller, Level 5 ">Air traffic controller, Level 5 </option>
+                                                <option label="Aircraft maintenance certifying engineer, Level 4 " value="Aircraft maintenance certifying engineer, Level 4 ">Aircraft maintenance certifying engineer, Level 4 </option>
+                                                <option label="Airside operator, Level 2 " value="Airside operator, Level 2 ">Airside operator, Level 2 </option>
+                                                <option label="Assistant accountant, Level 3 " value="Assistant accountant, Level 3 ">Assistant accountant, Level 3 </option>
+                                                <option label="Associate Ambulance Practitioner, Level 4 " value="Associate Ambulance Practitioner, Level 4 ">Associate Ambulance Practitioner, Level 4 </option>
+                                                <option label="Autocare Technician, Level 2 " value="Autocare Technician, Level 2 ">Autocare Technician, Level 2 </option>
+                                                <option label="Automotive Glazing Technician, Level 3 " value="Automotive Glazing Technician, Level 3 ">Automotive Glazing Technician, Level 3 </option>
+                                                <option label="Aviation ground operative, Level 2 " value="Aviation ground operative, Level 2 ">Aviation ground operative, Level 2 </option>
+                                                <option label="Aviation maintenance mechanic (military), Level 2 " value="Aviation maintenance mechanic (military), Level 2 ">Aviation maintenance mechanic (military), Level 2 </option>
+                                                <option label="Aviation operations manager, Level 4 " value="Aviation operations manager, Level 4 ">Aviation operations manager, Level 4 </option>
+                                                <option label="Baker, Level 2 " value="Baker, Level 2 ">Baker, Level 2 </option>
+                                                <option label="Barbering, Level 2" value="Barbering, Level 2">Barbering, Level 2</option>
+                                                <option label="Beauty Therapist, Level 2 " value="Beauty Therapist, Level 2 ">Beauty Therapist, Level 2 </option>
+                                                <option label="Bespoke Saddler, Level 3 " value="Bespoke Saddler, Level 3 ">Bespoke Saddler, Level 3 </option>
+                                                <option label="Bespoke tailor and cutter, Level 5 " value="Bespoke tailor and cutter, Level 5 ">Bespoke tailor and cutter, Level 5 </option>
+                                                <option label="Bricklayer, Level 2 " value="Bricklayer, Level 2 ">Bricklayer, Level 2 </option>
+                                                <option label="Broadcast production assistant, Level 3 " value="Broadcast production assistant, Level 3 ">Broadcast production assistant, Level 3 </option>
+                                                <option label="Building Services Design Engineer, Level 6 " value="Building Services Design Engineer, Level 6 ">Building Services Design Engineer, Level 6 </option>
+                                                <option label="Building Services Engineering Craftsperson, Level 3 " value="Building Services Engineering Craftsperson, Level 3 ">Building Services Engineering Craftsperson, Level 3 </option>
+                                                <option label="Building Services Engineering Ductwork Installer, Level 2 " value="Building Services Engineering Ductwork Installer, Level 2 ">Building Services Engineering Ductwork Installer, Level 2 </option>
+                                                <option label="Building Services Engineering Installer, Level 2 " value="Building Services Engineering Installer, Level 2 ">Building Services Engineering Installer, Level 2 </option>
+                                                <option label="Bus and Coach Engineering and Maintenance: Electrical, Level 2" value="Bus and Coach Engineering and Maintenance: Electrical, Level 2">Bus and Coach Engineering and Maintenance: Electrical, Level 2</option>
+                                                <option label="Business Administrator, Level 3 " value="Business Administrator, Level 3 ">Business Administrator, Level 3 </option>
+                                                <option label="Butcher, Level 2 " value="Butcher, Level 2 ">Butcher, Level 2 </option>
+                                                <option label="Carpentry and Joinery, Level 2 " value="Carpentry and Joinery, Level 2 ">Carpentry and Joinery, Level 2 </option>
+                                                <option label="Chef De Partie, Level 3 " value="Chef De Partie, Level 3 ">Chef De Partie, Level 3 </option>
+                                                <option label="Children and Young People&#x27;s Workforce, Level 2" value="Children and Young People&#x27;s Workforce, Level 2">Children and Young People&#x27;s Workforce, Level 2</option>
+                                                <option label="Civil Engineer, Level 6 " value="Civil Engineer, Level 6 ">Civil Engineer, Level 6 </option>
+                                                <option label="Commercial Thermal Insulation Operative, Level 2 " value="Commercial Thermal Insulation Operative, Level 2 ">Commercial Thermal Insulation Operative, Level 2 </option>
+                                                <option label="Community Activator Coach, Level 2 " value="Community Activator Coach, Level 2 ">Community Activator Coach, Level 2 </option>
+                                                <option label="Community Sport and Health Officer, Level 3 " value="Community Sport and Health Officer, Level 3 ">Community Sport and Health Officer, Level 3 </option>
+                                                <option label="Compliance / risk officer, Level 3 " value="Compliance / risk officer, Level 3 ">Compliance / risk officer, Level 3 </option>
+                                                <option label="Custody and Detention Officer, Level 3 " value="Custody and Detention Officer, Level 3 ">Custody and Detention Officer, Level 3 </option>
+                                                <option label="Customer service practitioner, Level 2 " value="Customer service practitioner, Level 2 ">Customer service practitioner, Level 2 </option>
+                                                <option label="Dental nurse, Level 3 " value="Dental nurse, Level 3 ">Dental nurse, Level 3 </option>
+                                                <option label="Dental practice manager, Level 4 " value="Dental practice manager, Level 4 ">Dental practice manager, Level 4 </option>
+                                                <option label="Dental technician, Level 5 " value="Dental technician, Level 5 ">Dental technician, Level 5 </option>
+                                                <option label="Digital and technology solutions professional, Level 6 " value="Digital and technology solutions professional, Level 6 ">Digital and technology solutions professional, Level 6 </option>
+                                                <option label="Domestic Heating: Oil-Fired, Solid Fuel or Environmental Options, Level 3" value="Domestic Heating: Oil-Fired, Solid Fuel or Environmental Options, Level 3">Domestic Heating: Oil-Fired, Solid Fuel or Environmental Options, Level 3</option>
+                                                <option label="Driving Goods Vehicles: Van Driver, Level 2" value="Driving Goods Vehicles: Van Driver, Level 2">Driving Goods Vehicles: Van Driver, Level 2</option>
+                                                <option label="Early Years Educator, Level 3 " value="Early Years Educator, Level 3 ">Early Years Educator, Level 3 </option>
+                                                <option label="Electrical / electronic technical support engineer, Level 6 " value="Electrical / electronic technical support engineer, Level 6 ">Electrical / electronic technical support engineer, Level 6 </option>
+                                                <option label="Electrical Power Networks Engineer, Level 4 " value="Electrical Power Networks Engineer, Level 4 ">Electrical Power Networks Engineer, Level 4 </option>
+                                                <option label="Electrical power protection and plant commissioning engineer, Level 4 " value="Electrical power protection and plant commissioning engineer, Level 4 ">Electrical power protection and plant commissioning engineer, Level 4 </option>
+                                                <option label="Electrical, Electronic Product Service and Installation Engineer, Level 3 " value="Electrical, Electronic Product Service and Installation Engineer, Level 3 ">Electrical, Electronic Product Service and Installation Engineer, Level 3 </option>
+                                                <option label="Embedded electronic systems design and development engineer, Level 6 " value="Embedded electronic systems design and development engineer, Level 6 ">Embedded electronic systems design and development engineer, Level 6 </option>
+                                                <option label="Engineer surveyor, Level 4 " value="Engineer surveyor, Level 4 ">Engineer surveyor, Level 4 </option>
+                                                <option label="Engineering Technician, Level 3 " value="Engineering Technician, Level 3 ">Engineering Technician, Level 3 </option>
+                                                <option label="Event Assistant, Level 3 " value="Event Assistant, Level 3 ">Event Assistant, Level 3 </option>
+                                                <option label="Fashion and Textiles: Saddlery, Level 3" value="Fashion and Textiles: Saddlery, Level 3">Fashion and Textiles: Saddlery, Level 3</option>
+                                                <option label="First Officer Pilot, Level 6 " value="First Officer Pilot, Level 6 ">First Officer Pilot, Level 6 </option>
+                                                <option label="Fishmonger, Level 2 " value="Fishmonger, Level 2 ">Fishmonger, Level 2 </option>
+                                                <option label="Food and Drink Advanced Engineer, Level 6 " value="Food and Drink Advanced Engineer, Level 6 ">Food and Drink Advanced Engineer, Level 6 </option>
+                                                <option label="Food and drink advanced process operator, Level 3 " value="Food and drink advanced process operator, Level 3 ">Food and drink advanced process operator, Level 3 </option>
+                                                <option label="Food and Drink: Meat and Poultry Industry Skills, Level 2" value="Food and Drink: Meat and Poultry Industry Skills, Level 2">Food and Drink: Meat and Poultry Industry Skills, Level 2</option>
+                                                <option label="Food and Drink: Meat and Poultry Industry Skills, Level 3" value="Food and Drink: Meat and Poultry Industry Skills, Level 3">Food and Drink: Meat and Poultry Industry Skills, Level 3</option>
+                                                <option label="Food technologist, Level 3 " value="Food technologist, Level 3 ">Food technologist, Level 3 </option>
+                                                <option label="Forest Operative, Level 2 " value="Forest Operative, Level 2 ">Forest Operative, Level 2 </option>
+                                                <option label="Gas network craftsperson, Level 3 " value="Gas network craftsperson, Level 3 ">Gas network craftsperson, Level 3 </option>
+                                                <option label="Geospatial Mapping and Science Degree, Level 6 " value="Geospatial Mapping and Science Degree, Level 6 ">Geospatial Mapping and Science Degree, Level 6 </option>
+                                                <option label="Geospatial Survey Technician, Level 3 " value="Geospatial Survey Technician, Level 3 ">Geospatial Survey Technician, Level 3 </option>
+                                                <option label="Golf greenkeeper, Level 2 " value="Golf greenkeeper, Level 2 ">Golf greenkeeper, Level 2 </option>
+                                                <option label="Hair Professional, Level 2 " value="Hair Professional, Level 2 ">Hair Professional, Level 2 </option>
+                                                <option label="Healthcare assistant practitioner, Level 5 " value="Healthcare assistant practitioner, Level 5 ">Healthcare assistant practitioner, Level 5 </option>
+                                                <option label="Healthcare Science Practitioner, Level 6 " value="Healthcare Science Practitioner, Level 6 ">Healthcare Science Practitioner, Level 6 </option>
+                                                <option label="Healthcare support worker, Level 2 " value="Healthcare support worker, Level 2 ">Healthcare support worker, Level 2 </option>
+                                                <option label="HM Forces Serviceperson (Public Services), Level 2 " value="HM Forces Serviceperson (Public Services), Level 2 ">HM Forces Serviceperson (Public Services), Level 2 </option>
+                                                <option label="Hospitality supervisor, Level 3 " value="Hospitality supervisor, Level 3 ">Hospitality supervisor, Level 3 </option>
+                                                <option label="HR Consultant / Partner, Level 5 " value="HR Consultant / Partner, Level 5 ">HR Consultant / Partner, Level 5 </option>
+                                                <option label="HR Support, Level 3 " value="HR Support, Level 3 ">HR Support, Level 3 </option>
+                                                <option label="IS Business Analyst, Level 4 " value="IS Business Analyst, Level 4 ">IS Business Analyst, Level 4 </option>
+                                                <option label="IT technical salesperson, Level 3 " value="IT technical salesperson, Level 3 ">IT technical salesperson, Level 3 </option>
+                                                <option label="IT, Software, Web and Telecoms Professionals, Level 2" value="IT, Software, Web and Telecoms Professionals, Level 2">IT, Software, Web and Telecoms Professionals, Level 2</option>
+                                                <option label="Junior Estate Agent, Level 2 " value="Junior Estate Agent, Level 2 ">Junior Estate Agent, Level 2 </option>
+                                                <option label="Laboratory Scientist (degree), Level 6 " value="Laboratory Scientist (degree), Level 6 ">Laboratory Scientist (degree), Level 6 </option>
+                                                <option label="Laboratory technician, Level 3 " value="Laboratory technician, Level 3 ">Laboratory technician, Level 3 </option>
+                                                <option label="Land-based Engineering, Level 3" value="Land-based Engineering, Level 3">Land-based Engineering, Level 3</option>
+                                                <option label="Large goods vehicle (LGV) driver, Level 2 " value="Large goods vehicle (LGV) driver, Level 2 ">Large goods vehicle (LGV) driver, Level 2 </option>
+                                                <option label="Manufacturing engineer, Level 6 " value="Manufacturing engineer, Level 6 ">Manufacturing engineer, Level 6 </option>
+                                                <option label="Motor Finance Specialist, Level 3 " value="Motor Finance Specialist, Level 3 ">Motor Finance Specialist, Level 3 </option>
+                                                <option label="Motor vehicle service and maintenance technician (light vehicle), Level 3 " value="Motor vehicle service and maintenance technician (light vehicle), Level 3 ">Motor vehicle service and maintenance technician (light vehicle), Level 3 </option>
+                                                <option label="Network engineer, Level 4 " value="Network engineer, Level 4 ">Network engineer, Level 4 </option>
+                                                <option label="Non-destructive testing (NDT) operator, Level 2 " value="Non-destructive testing (NDT) operator, Level 2 ">Non-destructive testing (NDT) operator, Level 2 </option>
+                                                <option label="Nuclear Operative, Level 2 " value="Nuclear Operative, Level 2 ">Nuclear Operative, Level 2 </option>
+                                                <option label="Nuclear Technician, Level 5 " value="Nuclear Technician, Level 5 ">Nuclear Technician, Level 5 </option>
+                                                <option label="Nursing Associate, Level 5 " value="Nursing Associate, Level 5 ">Nursing Associate, Level 5 </option>
+                                                <option label="Operations / departmental manager, Level 5 " value="Operations / departmental manager, Level 5 ">Operations / departmental manager, Level 5 </option>
+                                                <option label="Outdoor Activity Instructor, Level 3 " value="Outdoor Activity Instructor, Level 3 ">Outdoor Activity Instructor, Level 3 </option>
+                                                <option label="Papermaker, Level 3 " value="Papermaker, Level 3 ">Papermaker, Level 3 </option>
+                                                <option label="Passenger Transport Driver - bus, coach and rail, Level 2 " value="Passenger Transport Driver - bus, coach and rail, Level 2 ">Passenger Transport Driver - bus, coach and rail, Level 2 </option>
+                                                <option label="Playwork, Level 3" value="Playwork, Level 3">Playwork, Level 3</option>
+                                                <option label="Police Community Support Officer, Level 4 " value="Police Community Support Officer, Level 4 ">Police Community Support Officer, Level 4 </option>
+                                                <option label="Policing: Defence Policing, Level 3" value="Policing: Defence Policing, Level 3">Policing: Defence Policing, Level 3</option>
+                                                <option label="Policy Officer, Level 4 " value="Policy Officer, Level 4 ">Policy Officer, Level 4 </option>
+                                                <option label="Print and Printed Packaging: Reprographics, Level 2" value="Print and Printed Packaging: Reprographics, Level 2">Print and Printed Packaging: Reprographics, Level 2</option>
+                                                <option label="Process Automation Engineer, Level 7 " value="Process Automation Engineer, Level 7 ">Process Automation Engineer, Level 7 </option>
+                                                <option label="Professional accounting / taxation technician, Level 4 " value="Professional accounting / taxation technician, Level 4 ">Professional accounting / taxation technician, Level 4 </option>
+                                                <option label="Professional Economist (degree), Level 6 " value="Professional Economist (degree), Level 6 ">Professional Economist (degree), Level 6 </option>
+                                                <option label="Providing Financial Services: General Insurance, Level 2" value="Providing Financial Services: General Insurance, Level 2">Providing Financial Services: General Insurance, Level 2</option>
+                                                <option label="Recruitment Resourcer, Level 2 " value="Recruitment Resourcer, Level 2 ">Recruitment Resourcer, Level 2 </option>
+                                                <option label="Registered Nurse, Level 6 " value="Registered Nurse, Level 6 ">Registered Nurse, Level 6 </option>
+                                                <option label="Rehabilitation Worker (Visual Impairment), Level 5 " value="Rehabilitation Worker (Visual Impairment), Level 5 ">Rehabilitation Worker (Visual Impairment), Level 5 </option>
+                                                <option label="Research Scientist, Level 7 " value="Research Scientist, Level 7 ">Research Scientist, Level 7 </option>
+                                                <option label="Retail team leader, Level 3 " value="Retail team leader, Level 3 ">Retail team leader, Level 3 </option>
+                                                <option label="Retailer, Level 2 " value="Retailer, Level 2 ">Retailer, Level 2 </option>
+                                                <option label="Science manufacturing technician, Level 3 " value="Science manufacturing technician, Level 3 ">Science manufacturing technician, Level 3 </option>
+                                                <option label="Senior chef production cooking, Level 3 " value="Senior chef production cooking, Level 3 ">Senior chef production cooking, Level 3 </option>
+                                                <option label="Senior compliance / risk specialist, Level 6 " value="Senior compliance / risk specialist, Level 6 ">Senior compliance / risk specialist, Level 6 </option>
+                                                <option label="Senior Leader Master&#x27;s Degree Apprenticeship, Level 7 " value="Senior Leader Master&#x27;s Degree Apprenticeship, Level 7 ">Senior Leader Master&#x27;s Degree Apprenticeship, Level 7 </option>
+                                                <option label="Senior Production Chef, Level 3 " value="Senior Production Chef, Level 3 ">Senior Production Chef, Level 3 </option>
+                                                <option label="Social worker (integrated degree), Level 6 " value="Social worker (integrated degree), Level 6 ">Social worker (integrated degree), Level 6 </option>
+                                                <option label="Software developer, Level 4 " value="Software developer, Level 4 ">Software developer, Level 4 </option>
+                                                <option label="Software Development Technician, Level 3 " value="Software Development Technician, Level 3 ">Software Development Technician, Level 3 </option>
+                                                <option label="Software tester, Level 4 " value="Software tester, Level 4 ">Software tester, Level 4 </option>
+                                                <option label="Sports turf operative, Level 2 " value="Sports turf operative, Level 2 ">Sports turf operative, Level 2 </option>
+                                                <option label="Supply chain operator, Level 2 " value="Supply chain operator, Level 2 ">Supply chain operator, Level 2 </option>
+                                                <option label="Survival equipment fitter, Level 3 " value="Survival equipment fitter, Level 3 ">Survival equipment fitter, Level 3 </option>
+                                                <option label="Teacher, Level 6 " value="Teacher, Level 6 ">Teacher, Level 6 </option>
+                                                <option label="Teaching Assistant, Level 3 " value="Teaching Assistant, Level 3 ">Teaching Assistant, Level 3 </option>
+                                                <option label="Team leader / supervisor, Level 3 " value="Team leader / supervisor, Level 3 ">Team leader / supervisor, Level 3 </option>
+                                                <option label="Train Driver, Level 3 " value="Train Driver, Level 3 ">Train Driver, Level 3 </option>
+                                                <option label="Transport planning technician, Level 3 " value="Transport planning technician, Level 3 ">Transport planning technician, Level 3 </option>
+                                                <option label="Travel consultant, Level 3 " value="Travel consultant, Level 3 ">Travel consultant, Level 3 </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="selectedStatus">Status</label>
+                                    <select class="govuk-select govuk-!-width-full" id="selectedStatus" name="selectedStatus">
+                                        <option label="All" aria-label="All statuses" value="">All</option>
+                                                <option label="Waiting to start" value="WaitingToStart">Waiting to start</option>
+                                                <option label="Live" value="Live">Live</option>
+                                                <option label="Paused" value="Paused">Paused</option>
+                                                <option label="Stopped" value="Stopped">Stopped</option>
+                                                <option label="Completed" value="Completed">Completed</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div><div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-third">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="selectedStartDate">Planned start date</label>
+                                    <select class="govuk-select govuk-!-width-full" id="selectedStartDate" name="selectedStartDate">
+                                        <option label="All" aria-label="All start dates" value="">All</option>
+                                                <option label="May 2017" value="2017-05-01">2017-05-01</option>
+                                                <option label="Jun 2017" value="2017-06-01">2017-06-01</option>
+                                                <option label="Aug 2017" value="2017-08-01">2017-08-01</option>
+                                                <option label="Jan 2018" value="2018-01-01">2018-01-01</option>
+                                                <option label="May 2018" value="2018-05-01">2018-05-01</option>
+                                                <option label="Jul 2018" value="2018-07-01">2018-07-01</option>
+                                                <option label="Jan 2019" value="2019-01-01">2019-01-01</option>
+                                                <option label="Feb 2019" value="2019-02-01">2019-02-01</option>
+                                                <option label="Mar 2019" value="2019-03-01">2019-03-01</option>
+                                                <option label="Apr 2019" value="2019-04-01">2019-04-01</option>
+                                                <option label="May 2019" value="2019-05-01">2019-05-01</option>
+                                                <option label="Jun 2019" value="2019-06-01">2019-06-01</option>
+                                                <option label="Jul 2019" value="2019-07-01">2019-07-01</option>
+                                                <option label="Aug 2019" value="2019-08-01">2019-08-01</option>
+                                                <option label="Sep 2019" value="2019-09-01">2019-09-01</option>
+                                                <option label="Oct 2019" value="2019-10-01">2019-10-01</option>
+                                                <option label="Nov 2019" value="2019-11-01">2019-11-01</option>
+                                                <option label="Dec 2019" value="2019-12-01">2019-12-01</option>
+                                                <option label="Jan 2020" value="2020-01-01">2020-01-01</option>
+                                                <option label="Feb 2020" value="2020-02-01">2020-02-01</option>
+                                                <option label="Mar 2020" value="2020-03-01">2020-03-01</option>
+                                                <option label="Apr 2020" value="2020-04-01">2020-04-01</option>
+                                                <option label="May 2020" value="2020-05-01">2020-05-01</option>
+                                                <option label="Jun 2020" value="2020-06-01">2020-06-01</option>
+                                                <option label="Jul 2020" value="2020-07-01">2020-07-01</option>
+                                                <option label="Aug 2020" value="2020-08-01">2020-08-01</option>
+                                                <option label="Sep 2020" value="2020-09-01">2020-09-01</option>
+                                                <option label="Oct 2020" value="2020-10-01">2020-10-01</option>
+                                                <option label="Nov 2020" value="2020-11-01">2020-11-01</option>
+                                                <option label="Dec 2020" value="2020-12-01">2020-12-01</option>
+                                                <option label="Jan 2021" value="2021-01-01">2021-01-01</option>
+                                                <option label="Feb 2021" value="2021-02-01">2021-02-01</option>
+                                                <option label="Mar 2021" value="2021-03-01">2021-03-01</option>
+                                                <option label="Apr 2021" value="2021-04-01">2021-04-01</option>
+                                                <option label="May 2021" value="2021-05-01">2021-05-01</option>
+                                                <option label="Jun 2021" value="2021-06-01">2021-06-01</option>
+                                                <option label="Jul 2021" value="2021-07-01">2021-07-01</option>
+                                                <option label="Aug 2021" value="2021-08-01">2021-08-01</option>
+                                                <option label="Sep 2021" value="2021-09-01">2021-09-01</option>
+                                                <option label="Oct 2021" value="2021-10-01">2021-10-01</option>
+                                                <option label="Nov 2021" value="2021-11-01">2021-11-01</option>
+                                                <option label="Dec 2021" value="2021-12-01">2021-12-01</option>
+                                                <option label="Dec 2021" value="2021-12-31">2021-12-31</option>
+                                                <option label="Jan 2022" value="2022-01-01">2022-01-01</option>
+                                                <option label="Jun 2022" value="2022-06-01">2022-06-01</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="selectedEndDate">Planned end date</label>
+                                    <select class="govuk-select govuk-!-width-full" id="selectedEndDate" name="selectedEndDate">
+                                        <option label="All" aria-label="All end dates" value="">All</option>
+                                                <option label="Apr 2019" value="2019-04-01">2019-04-01</option>
+                                                <option label="Dec 2019" value="2019-12-01">2019-12-01</option>
+                                                <option label="Jan 2020" value="2020-01-01">2020-01-01</option>
+                                                <option label="Feb 2020" value="2020-02-01">2020-02-01</option>
+                                                <option label="Mar 2020" value="2020-03-01">2020-03-01</option>
+                                                <option label="Apr 2020" value="2020-04-01">2020-04-01</option>
+                                                <option label="May 2020" value="2020-05-01">2020-05-01</option>
+                                                <option label="Jun 2020" value="2020-06-01">2020-06-01</option>
+                                                <option label="Jul 2020" value="2020-07-01">2020-07-01</option>
+                                                <option label="Aug 2020" value="2020-08-01">2020-08-01</option>
+                                                <option label="Sep 2020" value="2020-09-01">2020-09-01</option>
+                                                <option label="Oct 2020" value="2020-10-01">2020-10-01</option>
+                                                <option label="Nov 2020" value="2020-11-01">2020-11-01</option>
+                                                <option label="Dec 2020" value="2020-12-01">2020-12-01</option>
+                                                <option label="Jan 2021" value="2021-01-01">2021-01-01</option>
+                                                <option label="Feb 2021" value="2021-02-01">2021-02-01</option>
+                                                <option label="Mar 2021" value="2021-03-01">2021-03-01</option>
+                                                <option label="Apr 2021" value="2021-04-01">2021-04-01</option>
+                                                <option label="May 2021" value="2021-05-01">2021-05-01</option>
+                                                <option label="Jun 2021" value="2021-06-01">2021-06-01</option>
+                                                <option label="Jul 2021" value="2021-07-01">2021-07-01</option>
+                                                <option label="Aug 2021" value="2021-08-01">2021-08-01</option>
+                                                <option label="Sep 2021" value="2021-09-01">2021-09-01</option>
+                                                <option label="Oct 2021" value="2021-10-01">2021-10-01</option>
+                                                <option label="Nov 2021" value="2021-11-01">2021-11-01</option>
+                                                <option label="Dec 2021" value="2021-12-01">2021-12-01</option>
+                                                <option label="Jan 2022" value="2022-01-01">2022-01-01</option>
+                                                <option label="Feb 2022" value="2022-02-01">2022-02-01</option>
+                                                <option label="Mar 2022" value="2022-03-01">2022-03-01</option>
+                                                <option label="Apr 2022" value="2022-04-01">2022-04-01</option>
+                                                <option label="May 2022" value="2022-05-01">2022-05-01</option>
+                                                <option label="Jun 2022" value="2022-06-01">2022-06-01</option>
+                                                <option label="Jul 2022" value="2022-07-01">2022-07-01</option>
+                                                <option label="Aug 2022" value="2022-08-01">2022-08-01</option>
+                                                <option label="Sep 2022" value="2022-09-01">2022-09-01</option>
+                                                <option label="Oct 2022" value="2022-10-01">2022-10-01</option>
+                                                <option label="Nov 2022" value="2022-11-01">2022-11-01</option>
+                                                <option label="Dec 2022" value="2022-12-01">2022-12-01</option>
+                                                <option label="Dec 2022" value="2022-12-31">2022-12-31</option>
+                                                <option label="Jan 2023" value="2023-01-01">2023-01-01</option>
+                                                <option label="Feb 2023" value="2023-02-01">2023-02-01</option>
+                                                <option label="Mar 2023" value="2023-03-01">2023-03-01</option>
+                                                <option label="Apr 2023" value="2023-04-01">2023-04-01</option>
+                                                <option label="May 2023" value="2023-05-01">2023-05-01</option>
+                                                <option label="Jun 2023" value="2023-06-01">2023-06-01</option>
+                                                <option label="Jul 2023" value="2023-07-01">2023-07-01</option>
+                                                <option label="Aug 2023" value="2023-08-01">2023-08-01</option>
+                                                <option label="Sep 2023" value="2023-09-01">2023-09-01</option>
+                                                <option label="Oct 2023" value="2023-10-01">2023-10-01</option>
+                                                <option label="Nov 2023" value="2023-11-01">2023-11-01</option>
+                                                <option label="Dec 2023" value="2023-12-01">2023-12-01</option>
+                                                <option label="Jan 2024" value="2024-01-01">2024-01-01</option>
+                                                <option label="Feb 2024" value="2024-02-01">2024-02-01</option>
+                                                <option label="Mar 2024" value="2024-03-01">2024-03-01</option>
+                                                <option label="Apr 2024" value="2024-04-01">2024-04-01</option>
+                                                <option label="Dec 2024" value="2024-12-01">2024-12-01</option>
+                                                <option label="Jan 2025" value="2025-01-01">2025-01-01</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="govuk-button govuk-!-margin-0" type="submit">Apply filters</button>
+                    </div>
+                </div>
+            </div>
+        </form>-->
+        <div class="govuk-grid-row govuk-!-margin-bottom-2">
+            <div class="govuk-grid-column-two-thirds">
+                    <p class="govuk-body">1006 apprentice records, 30 with alerts</p>
+
+            </div>
+            <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet">
+                <a class="govuk-body govuk-link" aria-label="Download all data" href="/10005760/apprentices/download">Download all data (CSV)</a>
+            </div>
+        </div>
+        <table class="govuk-table das-table--responsive das-table--double-arrows das-table--condensed">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/10005760/apprentices?ReverseSort=False&amp;SortField=FirstName">
+                            Apprentice name
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/10005760/apprentices?ReverseSort=False&amp;SortField=Uln">
+                            ULN
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/10005760/apprentices?ReverseSort=False&amp;SortField=LegalEntityName">
+                            Employer
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/10005760/apprentices?ReverseSort=False&amp;SortField=CourseName">
+                            Apprenticeship training course
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/10005760/apprentices?ReverseSort=False&amp;SortField=CourseName">
+                            Version
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/10005760/apprentices?ReverseSort=False&amp;SortField=StartDate">
+                            Planned start date
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/10005760/apprentices?ReverseSort=False&amp;SortField=EndDate">
+                            Planned end date
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/10005760/apprentices?ReverseSort=False&amp;SortField=PaymentStatus">
+                            Status
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="/10005760/apprentices?ReverseSort=False&amp;SortField=DataLockStatus">
+                            Alerts
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link" href="manage/summary">
+                                CON2819 Scenario1
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="ULN">
+                            5853548858
+                        </td>
+                        <td class="govuk-table__cell" data-label="Employer">
+                            BARBERRY COVENTRY LIMITED
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Abattoir Worker, Level 2
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date" style="text-align:center">
+                            1.0
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Oct 2020
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Oct 2022
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Live
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                                <a class="govuk-link" href="">
+                                    Changes pending
+                                </a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link" href="manage/summary">
+                                Darren Diamond
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="ULN">
+                            4953543482
+                        </td>
+                        <td class="govuk-table__cell" data-label="Employer">
+                            Coventry City Council
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Advanced Baker, Level 3
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date" style="text-align:center">
+                            1.1
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Jan 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Dec 2024
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Live
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                                <a class="govuk-link" href="/">
+                                    Changes for review
+                                </a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link" href="manage/summary">
+                                Demo User
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="ULN">
+                            6744927239
+                        </td>
+                        <td class="govuk-table__cell" data-label="Employer">
+                            Coventry City Council
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Able seafarer (deck), Level 2
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date" style="text-align:center">
+                            1.0
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Aug 2019
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Nov 2020
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Stopped
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link" href="manage/summary">
+                                F_BARqtSHgzd L_CprMetkYmT
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="ULN">
+                            7923468604
+                        </td>
+                        <td class="govuk-table__cell" data-label="Employer">
+                            ESFA  LTD
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Able seafarer (deck), Level 2
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date" style="text-align:center">
+                            1.0
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Dec 2020
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Nov 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Live
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                                <a class="govuk-link" href="/10005760/apprentices/N6RK8X">
+                                    Changes for review
+                                </a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link" href="manage/summary">
+                                F_BFKGSklGHd L_ookFdZDdFV
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="ULN">
+                            6407457490
+                        </td>
+                        <td class="govuk-table__cell" data-label="Employer">
+                            COVENTRY ACCOUNTANTS LTD
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Able seafarer (deck), Level 2
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date" style="text-align:center">
+                            1.0
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Oct 2020
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Dec 2020
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Paused
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                                <a class="govuk-link" href="/10005760/apprentices/8JY67X">
+                                    ILR data mismatch
+                                </a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link" href="manage/summary">
+                                F_bpjPGWJnUM L_SnmsDWHPzh
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="ULN">
+                            6950462629
+                        </td>
+                        <td class="govuk-table__cell" data-label="Employer">
+                            Coventry City Council
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Providing Financial Services: General Insurance, Level 2
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date" style="text-align:center">
+                            1.2
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Oct 2019
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Jan 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Stopped
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                                <a class="govuk-link" href="/10005760/apprentices/K7JJ4D">
+                                    Changes pending
+                                </a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link" href="manage/summary">
+                                F_DyGHiFqoDb L_YfDUrYrWdP
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="ULN">
+                            9417636064
+                        </td>
+                        <td class="govuk-table__cell" data-label="Employer">
+                            Coventry City Council
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Able seafarer (deck), Level 2
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date" style="text-align:center">
+                            1.1
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Dec 2019
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Mar 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Stopped
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link" href="manage/summary">
+                                F_FsPyItOLqv L_vlDuTZdTcx
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="ULN">
+                            1050959719
+                        </td>
+                        <td class="govuk-table__cell" data-label="Employer">
+                            Coventry City Council
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Able seafarer (deck), Level 2
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date" style="text-align:center">
+                            1.0
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Aug 2019
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Nov 2020
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Stopped
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link" href="manage/summary">
+                                F_fyrQUEHsLo L_bnpGgZFhEK
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="ULN">
+                            8108573148
+                        </td>
+                        <td class="govuk-table__cell" data-label="Employer">
+                            Coventry City Council
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Able seafarer (deck), Level 2
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date" style="text-align:center">
+                            1.1
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Aug 2019
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Nov 2020
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Live
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                                <a class="govuk-link" href="summary">
+                                    Changes requested
+                                </a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" data-label="Apprentice name">
+                            <a class="govuk-link" href="manage/summary">
+                                F_ikJhvbQpSX L_gFuhKsqxSS
+                            </a>
+                        </td>
+                        <td class="govuk-table__cell" data-label="ULN">
+                            2250666260
+                        </td>
+                        <td class="govuk-table__cell" data-label="Employer">
+                            Coventry City Council
+                        </td>
+                        <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                            Providing Financial Services: General Insurance, Level 2
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date" style="text-align:center">
+                            1.0
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned start date">
+                            Aug 2019
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Nov 2020
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Live
+                        </td>
+                        <td class="govuk-table__cell" data-label="Alerts">
+                                <a class="govuk-link" href="/10005760/apprentices/YG7GXP">
+                                    ILR data mismatch
+                                </a>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+
+    <nav role="navigation" aria-label="Pagination">
+            <div class="das-pagination__summary">
+                Showing 1 to 10 of 10
+                apprentice records, 7 with alerts
+            </div>
+
+    </nav>
+
+
+            </main>
+
+        </div>
+        <footer class="govuk-footer " role="contentinfo">
+
+            <div class="govuk-width-container ">
+                <div class="govuk-footer__meta">
+                    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+                        <h2 class="govuk-visually-hidden">Support links</h2>
+                        <ul class="govuk-footer__inline-list">
+                            <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="https://pp-pas.apprenticeships.education.gov.uk/help">Help</a></li>
+                            <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="https://www.surveymonkey.co.uk/r/accessmylevysurvey" target="_blank" aria-label="Give feedback">Feedback </a></li>
+                            <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="https://pp-pas.apprenticeships.education.gov.uk/privacy">Privacy</a></li>
+                            <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="https://pp-pas.apprenticeships.education.gov.uk/cookies">Cookies</a></li>
+                            <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="https://pp-pas.apprenticeships.education.gov.uk/terms">Terms and conditions</a></li>
+                            <li class="govuk-footer__inline-list-item">Built by the <a href="http://gov.uk/sfa" target="_blank" class="govuk-footer__link">Education and Skills Funding Agency</a></li>
+                        </ul>
+                        <svg role="presentation" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 483.2 195.7" height="17" width="41">
+                            <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145" />
+                        </svg>
+                        <span class="govuk-footer__licence-description">
+                            All content is available under the
+                            <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+                        </span>
+                    </div>
+                    <div class="govuk-footer__meta-item">
+                        <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push{
+        'event': 'dataLoaded',
+        'vpv': '/apprentices/apprentice',
+        'org': '',
+        'UserID': '',
+        'Account': '10005760'
+            });
+</script>
+
+        <script src="https://das-pp-frnt-end.azureedge.net/libs/govuk-frontend/all.js"></script>
+        <script src="https://das-pp-frnt-end.azureedge.net/libs/jquery/jquery.min.js"></script>
+        <script src="https://das-pp-frnt-end.azureedge.net/js/das-all.js"></script>
+        <script src="https://das-pp-frnt-end.azureedge.net/js/app.min.js"></script>
+        <script>
+        window.GOVUKFrontend.initAll();
+        window.DASFrontend.initAll();
+        </script>
+
+    </body>
+</html>

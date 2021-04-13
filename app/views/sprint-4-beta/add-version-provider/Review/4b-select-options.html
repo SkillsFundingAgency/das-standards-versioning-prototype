@@ -222,7 +222,39 @@
             <input data-val="true" data-val-number="The field ProviderId must be a number." data-val-required="&#39;ProviderId&#39; must not be empty." id="ProviderId" name="ProviderId" type="hidden" value="10005760" />
             <input id="HashedCommitmentId" name="HashedCommitmentId" type="hidden" value="M8W8YK" />
   </form>
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
+{{ govukRadios({
+idPrefix: "where-do-you-live",
+name: "where-do-you-live",
+fieldset: {
+  legend: {
+    text: "Select an option",
+    isPageHeading: true,
+    classes: "govuk-fieldset__legend--l"
+  }
+},
+hint: {
+text: "You must choose an option where it is available for a standard. If you're unsure, confirm at a later date."
+},
+items: [
+  {
+    value: "england",
+    text: "Advanced butchery"
+  },
+  {
+    value: "scotland",
+    text: "Temperature control"
+  },
+  {
+    divider: "or"
+  },
+  {
+    value: "abroad",
+    text: "Confirm option at a later date"
+  }
+]
+}) }}
 
 
     </div>
