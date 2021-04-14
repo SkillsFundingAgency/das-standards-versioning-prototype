@@ -228,42 +228,89 @@
       <main class="govuk-main-wrapper " id="main-content" role="main">
           <div class="govuk-grid-row">
               <div class="govuk-grid-column-two-thirds">
-                  <h1 class="govuk-heading-xl">Which version(s) do you want to withdraw from assessing? </h1>
+                  <h1 class="govuk-heading-xl">Do you want to withdraw from a whole Standard or version(s) of a Standard? </h1>
                   <form action="6.html">
 
                   <p class="govuk-inset-text">
-                    Select the version(s) of the standard you wish to withdraw from. <br /> You can select one or multiple. Selecting all versions will result in withdrawal from the whole standard
+                    Select either the Whole Standard or version(s) of the Standard from which you wish to withdraw.
                   </p>
-                  {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
-{{ govukCheckboxes({
-  idPrefix: "waste",
-  name: "waste",
-  fieldset: {
-    legend: {
-      text: "",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  hint: {
-    text: "."
-  },
-  items: [
-    {
-      value: "carcasses",
-      text: "Version 1.0"
-    },
-    {
-      value: "mines",
-      text: "Version 1.1"
-    },
-    {
-      value: "farm",
-      text: "Version 1.2"
-    }
-  ]
-}) }}
+                  {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+                  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+                  {% set textHtml %}
+                  {{ govukCheckboxes({
+                    idPrefix: "waste",
+                    name: "waste",
+                    fieldset: {
+                      legend: {
+                        text: "",
+                        isPageHeading: true,
+                        classes: "govuk-fieldset__legend--l"
+                      }
+                    },
+                    hint: {
+                      text: "You can select one or multiple versions. Selecting all versions will result in withdrawal from the whole standard."
+                    },
+                    items: [
+                      {
+                        value: "carcasses",
+                        text: "Version 1.0"
+                      },
+                      {
+                        value: "mines",
+                        text: "Version 1.1"
+                      },
+                      {
+                        value: "farm",
+                        text: "Version 1.2"
+                      }
+                    ]
+                  }) }}
+
+                  {% endset -%}
+
+                  {{ govukRadios({
+                    idPrefix: "contact",
+                    name: "contact",
+                    fieldset: {
+                      legend: {
+                        text: "",
+                        isPageHeading: true,
+                        classes: "govuk-fieldset__legend--l"
+                      }
+                    },
+                    hint: {
+                      text: "Select one option."
+                    },
+                    items: [
+
+                      {
+                        value: "phone",
+                        text: "Whole Standard"
+
+                      },
+                      {
+                        value: "text",
+                        text: "Version(s) of the Standard",
+                        conditional: {
+                          html: textHtml
+                        }
+                      }
+                    ]
+                  }) }}
+
+
+
+
+
+
+
+
+
+
+
+
 
 <button class="govuk-button govuk-!-margin-top-4" data-module="govuk-button">
                         Save and continue
@@ -333,7 +380,9 @@
 
 
         <script src="/javascripts/application.min.js"></script>
-
+        <script src="https://design-system.service.gov.uk/javascripts/vendor/iframeResizer.contentWindow.js"></script>
+        <script src="https://design-system.service.gov.uk/javascripts/govuk-frontend-742fa5a510a9c8f6d5329e57467e60c7.js"></script>
+        <script src="https://design-system.service.gov.uk/javascripts/example-149b2c1c72d42e5afd271c8a89fed638.js"></script>
 
 
 
