@@ -1,0 +1,112 @@
+{% extends "layout-staffadmin.html" %}
+
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+
+
+{% block content %}
+<style>
+.govuk-button-group .govuk-link {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.1875;
+    display: inline-block;
+    max-width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+</style>
+
+    <a class="govuk-back-link" href="index">Back</a>
+    
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <form method="post" action="/sprint-9-beta/Automatedwithdrawalversions/confirm" class="">
+                    <h1 class="govuk-heading-xl">Check the withdrawal date</h1>
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                           
+                             <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">Organisation name</dt>
+                                <dd class="govuk-summary-list__value">City and Guilds</dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">Details</dt>
+                                <dd class="govuk-summary-list__value">	Animal trainer (ST0398)<br>Version 1.0, 1.1</dd>
+                            </div>
+                            
+                                                <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">Requested withdrawal date</dt>
+                                <dd class="govuk-summary-list__value">11/04/2021</dd>
+                            </div>
+                                                
+                                        </dl>
+                       
+                                        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+                                        {{ govukRadios({
+                                          classes: "govuk-radios--inline",
+                                          idPrefix: "changed-name",
+                                          name: "changed-name",
+                                          fieldset: {
+                                            legend: {
+                                              text: "Do you approve this withdrawal date?",
+                                              isPageHeading: true,
+                                              classes: "govuk-fieldset__legend--m"
+                                            }
+                                          },
+                                          
+                                          items: [
+                                            {
+                                              value: "yes",
+                                              text: "Yes"
+                                            },
+                                            {
+                                              value: "no",
+                                              text: "No, input date manually"
+                                            }
+                                          ]
+                                        }) }}
+                
+                                        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                                        <div class="govuk-button-group">
+                                          {{ govukButton({
+                                            text: "Continue"
+                                          }) }}
+                                        &nbsp;
+                                        <a id="centru" class="govuk-link govuk-link--no-visted-state" href="#">Return to application overview</a>
+                                        </div>
+                                        </form>
+                            
+            </div>`
+        </div>
+    </main>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
