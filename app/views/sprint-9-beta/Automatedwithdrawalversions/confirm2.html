@@ -38,7 +38,7 @@
         <div class="govuk-grid-row marginal">
             <div class="govuk-grid-column-two-thirds">
     
-                    <h1 class="govuk-heading-xl">Confirm withdrawal date</h1>
+                    <h1 class="govuk-heading-xl">What is the actual withdrawal date?</h1>
                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                            
                              <div class="govuk-summary-list__row">
@@ -62,7 +62,9 @@
                                           <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                                               Actual withdrawal date
                                           </legend>
-                                      
+                                          <div id="passport-issued-hint" class="govuk-hint">
+                                            For example, 27 3 2021
+                                          </div>
                                           <div class="govuk-date-input">
                                               <div class="govuk-date-input__item">
                                                   <div class="govuk-form-group">
@@ -97,10 +99,9 @@
 
                                         <div class="govuk-button-group">
                                           {{ govukButton({
-                                            text: "Confirm and continue"
+                                            text: "Continue"
                                           }) }}
-                                        &nbsp;
-                                        <a class="govuk-link govuk-link--no-visited-state" href="#">Return to application overview</a>
+                                      
                                         </div>
             </div>`
         </div>
