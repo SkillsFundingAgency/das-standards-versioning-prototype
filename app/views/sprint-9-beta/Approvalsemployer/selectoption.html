@@ -1,0 +1,253 @@
+
+<!--OLD
+<a href="/sprint-12/add-apprentice1/6a-approve" class="image-demo">
+  <img src="/public/images/Jrny-6.png" width="auto" height="auto" />
+</a>
+-->
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<img src="/public/images/Employer-Nav.png"  width="auto" height="auto" />
+<div class="govuk-width-container">
+    
+<main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <!--<h1 class="govuk-heading-xl">
+                Select standard options
+                <span class="govuk-caption-xl"></span>
+            </h1>-->
+            <a class="govuk-back-link" href="index">Back</a>   
+    <h1 class="govuk-heading-xl">Select a standard option</h1>
+    <div class="govuk-inset-text">
+        For more information visit <a class="govuk-link govuk-link--no-visited-state" href="#">the iFATE page for this standard (opens in a new tab)</a>.
+       </div>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+           
+             <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Apprenticeship training course</dt>
+                <dd class="govuk-summary-list__value">Academic professional, Level: 7</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Version</dt>
+                <dd class="govuk-summary-list__value">	1.0</dd>
+            </div>
+            
+                                
+                                
+                        </dl>
+
+   
+
+
+
+
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "where-do-you-live",
+  name: "where-do-you-live",
+  fieldset: {
+    legend: {
+      text: "",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+text: "Select an option."
+},
+  items: [
+    {
+      value: "england",
+      text: "Teacher"
+    },
+    {
+      value: "scotland",
+      text: "Head teacher"
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "abroad",
+      text: "Confirm option at a later date"
+    }
+  ]
+}) }}
+<!--
+<h2>Appenticeship details</h2>
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+            <dl class="govuk-summary-list">
+
+
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Organisation
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                       Tiles House LTD
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Reference
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                       JKBRLW
+                  </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Provider
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                      Bournemouth University
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Standard
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                        Power network craftsperson
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Level
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                      3
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Apprentice Name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     Jane Doe
+                  </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Date or Birth
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     12 March 1980
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Training dates
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     Sep 2021 to Mar 2023
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Price
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     &pound;1500
+                  </dd>
+              </div>
+
+
+
+
+
+            </div>
+        </div>-->
+
+<!--
+              <table class="govuk-table das-table--responsive">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header das-table-cell-width-25">Name</th>
+                        <th scope="col" class="govuk-table__header das-table-cell-width-25">Date of birth</th>
+                        <th scope="col" class="govuk-table__header das-table-cell-width-30">Training dates</th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--numeric das-table-cell-width-10">Price</th>
+                        <th scope="col" class="govuk-table__header das-table-cell-width-10"><span class="govuk-visually-hidden">Action</span></th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" data-label="Name">Jane Doe</td>
+                            <td class="govuk-table__cell" data-label="Date of birth">7 Mar 1975</td>
+                            <td class="govuk-table__cell" data-label="Training dates">Sep 2021 to Mar 2023</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Price">&#xA3;1,400                            </td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">
+                                <a class="govuk-link edit-apprentice" href="/KK6WKG/unapproved/GXY4GG/apprentices/JJYDD6">
+                                    Edit
+                                    <span class="govuk-visually-hidden">Colouring By number K's details</span>
+                                </a>
+                                <br /><br />
+                                    <a class="govuk-link delete-apprentice" href="/KK6WKG/unapproved/GXY4GG/apprentices/JJYDD6/Delete?Origin=CohortDetails">
+                                        Delete <span class="govuk-visually-hidden">Colouring By number K's details</span>
+                                    </a>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+<!--
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h2 class="govuk-fieldset__heading">
+                        Standard options for Jane Doe
+                    </h2>
+                </legend>
+                <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="UseThisProvider" name="UseThisProvider" type="radio" value="true">
+                        <label class="govuk-label govuk-radios__label" for="UseThisProvider">
+                          Option 1
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="UseThisProvider-no" name="UseThisProvider" type="radio" value="false">
+                        <label class="govuk-label govuk-radios__label" for="UseThisProvider-no">
+                            Option 2
+                        </label>
+                    </div>
+                </div>
+            </fieldset>-->
+
+
+
+
+
+
+
+        </div>
+    </div>
+       <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <a class="govuk-button" href="6-approve">Save and continue</a>
+                <p>
+                <!--  <a href="#" class="govuk-link">Save and exit</a>-->
+               </p>
+
+      </main>
+  </div>
+
+
+
+
+
+
+
+{% endblock %}
