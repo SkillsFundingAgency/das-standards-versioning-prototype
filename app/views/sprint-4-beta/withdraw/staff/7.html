@@ -1,0 +1,57 @@
+{% extends "layout-staffadmin.html" %}
+
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+        
+
+    <a class="govuk-back-link" href="5.html">
+        Back
+    </a>
+    
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">Complete review</h1>
+    
+                
+                <div class="form-group">
+                    <form class="" action="8" method="post">
+                                <p class="govuk-body">By approving this withdrawal notification, you confirm that you're happy with the information provided and you do not need feedback from the applicant.</p>
+                            <input type="hidden" value="Approve" id="ReturnType" name="ReturnType">
+                            <button class="govuk-button" type="submit">Approve application</button>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KiN1CQ0FRtGkUnyXgzlAToNXsC41saQXps43QwcmNxeLzvke_uWL0aT0FfZ9-7YUJM7CCHWNhIbOC-bbWV78VS0SFchkUicYAl6pz1PEZBaiImCO4Q4GnyxW_DhcDutIvOCLZXAWcuRY_u4dZyJIwKYwN7Pn301QI6MwUu0TITuOJv50bvm0ZwJ-gPGQ4WDUg"></form>
+                </div>
+    
+                <p class="govuk-body">
+                    <a class="govuk-link--no-visited-state" href="#">
+                    Return to application overview
+                    </a>
+                </p>
+            </div>
+        </div>
+    </main>
+        </div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+

@@ -9,39 +9,113 @@
 
 
 
+
 {% block content %}
+<style>
+.govuk-link {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.1875;
+    display: inline-block;
+    max-width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.marginal {
+  padding-top: 0;
+  margin-top: 0;
+}
 
+</style>
 
-<div class="govuk-width-container">
-        
-
-    <a class="govuk-back-link" href="4.html">
-        Back
-    </a>
+    <a class="govuk-back-link marginal" href="index">Back</a>
     
-    <main class="govuk-main-wrapper " id="main-content" role="main">
-        <div class="govuk-grid-row">
+        <div class="govuk-grid-row marginal">
             <div class="govuk-grid-column-two-thirds">
-                <h1 class="govuk-heading-xl">Complete review</h1>
     
-                
-                <div class="form-group">
-                    <form class="js-disable-on-submit" action="6" method="post">
-                                <p class="govuk-body">By approving this withdrawal notification, you confirm that you're happy with the information provided and you do not need feedback from the applicant.</p>
-                            <input type="hidden" value="Approve" id="ReturnType" name="ReturnType">
-                            <button class="govuk-button" type="submit">Approve application</button>
-                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KiN1CQ0FRtGkUnyXgzlAToNXsC41saQXps43QwcmNxeLzvke_uWL0aT0FfZ9-7YUJM7CCHWNhIbOC-bbWV78VS0SFchkUicYAl6pz1PEZBaiImCO4Q4GnyxW_DhcDutIvOCLZXAWcuRY_u4dZyJIwKYwN7Pn301QI6MwUu0TITuOJv50bvm0ZwJ-gPGQ4WDUg"></form>
-                </div>
-    
-                <p class="govuk-body">
-                    <a class="govuk-link--no-visited-state" href="#">
-                    Return to application overview
-                    </a>
-                </p>
+                    <h1 class="govuk-heading-xl">Check the withdrawal date</h1>
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                           
+                             <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">Organisation name</dt>
+                                <dd class="govuk-summary-list__value">City and Guilds</dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">Details</dt>
+                                <dd class="govuk-summary-list__value">	Withdrawal from register</dd>
+                            </div>
+                            
+                                                <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">Requested withdrawal date</dt>
+                                <dd class="govuk-summary-list__value">11/04/2021</dd>
+                            </div>
+                                                
+                                        </dl>
+                       
+                                        <div class="govuk-form-group">
+                                            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                             
+                                                    Do you approve this withdrawal date?
+                                               
+                                              </legend>
+                                             
+                                              <div class="govuk-radios govuk-radios--inline">
+                                                <div class="govuk-radios__item">
+                                                  <input class="govuk-radios__input"   value="^button1^" name="button" type="radio" data-href="7.html">
+                                                  <label class="govuk-label govuk-radios__label" for="button1">
+                                                    Yes
+                                                  </label>
+                                                </div>
+                                                <div class="govuk-radios__item">
+                                                  <input class="govuk-radios__input" value="^button2^"  name="button" type="radio" data-href="6.html">
+                                                  <label class="govuk-label govuk-radios__label" for="button2">
+                                                    No, input date manually
+                                                  </label>
+                                                </div>
+                                              </div>
+                                          
+                                            </fieldset>
+
+
+
+
+
+
+                                          </div>
+
+
+                                          <input class="govuk-button"  value="Continue" type="submit" id="btnFormSubmit">
+                                          &nbsp;
+                                        <a id="centru" class="govuk-link govuk-link--no-visted-state" href="#">Return to application overview</a>
+                                            
+                                          
             </div>
         </div>
-    </main>
+  
         </div>
+        <script type="text/javascript">
+            var submit = document.getElementById('btnFormSubmit');
+            submit.addEventListener('click', submitForm);
+            function submitForm(event){
+            event.preventDefault();
+            event.stopPropagation();
+            var href = '',
+            inputs = this.parentNode.getElementsByTagName('input')
+                for(var i=0;i<inputs.length;i++){
+                     if(inputs[i].getAttribute('name') == 'button' && inputs[i].checked){
+                         href = inputs[i].getAttribute('data-href');
+                         window.location = href;
+                     }
+                }
+            }
+          </script>
+
 
 
 
@@ -52,6 +126,5 @@
 
 
 {% endblock %}
-
 
 

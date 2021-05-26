@@ -9,40 +9,110 @@
 
 
 
+
 {% block content %}
+<style>
+.govuk-button-group .govuk-link {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.1875;
+    display: inline-block;
+    max-width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.marginal {
+  padding-top: 0;
+  margin-top: 0;
+}
+</style>
 
-
-<div class="govuk-width-container">
-        
-
-    <main class="govuk-main-wrapper " id="main-content" role="main">
-        <div class="govuk-grid-row">
+    <a class="govuk-back-link marginal" href="index">Back</a>
+    
+        <div class="govuk-grid-row marginal">
             <div class="govuk-grid-column-two-thirds">
-                <div class="govuk-panel govuk-panel--confirmation">
-                    <h1 class="govuk-panel__title">
-                        You've approved this withdrawal notification
-                    </h1>
-                </div>
-    
-                    <p class="govuk-body">
-                        You've approved this organisation to withdraw from the register of end-point assessment organisations.               </p>
-    
-                        <h2 class="govuk-heading-m">
-                            What happens next            </h2>
-                            <ul class="govuk-list govuk-list--bullet">
-                                <li>We've sent an email to the applicant confirming this approval.</li>
-                                    <li>You'll need to manually remove this organisation from the register of end-point assessment organisations.</li>
-                                
-                            </ul>
-    
-                <p class="govuk-body">
-                    <a class="govuk-link--no-visited-state" href="#">
-                        Return to withdrawal applications             </a>
-                </p>          
+                <form method="post" action="7" class="">
+                    <h1 class="govuk-heading-xl">What is the actual withdrawal date?</h1>
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                           
+                             <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">Organisation name</dt>
+                                <dd class="govuk-summary-list__value">City and Guilds</dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">Details</dt>
+                                <dd class="govuk-summary-list__value">	Withdrawal from register</dd>
+                            </div>
+                            
+                                                <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">Requested withdrawal date</dt>
+                                <dd class="govuk-summary-list__value">11/04/2021</dd>
+                            </div>
+                                                
+                                        </dl>
+                       
+                                        
+                                      
+                                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                              Actual withdrawal date
+                                          </legend>
+                                          <div id="passport-issued-hint" class="govuk-hint">
+                                            For example, 27 3 2021
+                                          </div>
+                                          <div class="govuk-date-input">
+                                              <div class="govuk-date-input__item">
+                                                  <div class="govuk-form-group">
+                                                      <label class="govuk-label govuk-date-input__label" for="EffectiveFromDay">
+                                                          Day
+                                                      </label>
+                                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2 js-integers-only" type="text" maxlength="2" id="EffectiveFromDay" name="EffectiveFromDay" value="">
+                                                  </div>
+                                              </div>
+                                              <div class="govuk-date-input__item">
+                                                  <div class="govuk-form-group">
+                                                      <label class="govuk-label govuk-date-input__label" for="EffectiveFromMonth">
+                                                          Month
+                                                      </label>
+                                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2 js-integers-only" type="text" maxlength="2" id="EffectiveFromMonth" name="EffectiveFromMonth" value="">
+                                                  </div>
+                                              </div>
+                                              <div class="govuk-date-input__item">
+                                                  <div class="govuk-form-group">
+                                                      <label class="govuk-label govuk-date-input__label" for="EffectiveFromYear">
+                                                          Year
+                                                      </label>
+                                                      <input class="govuk-input govuk-date-input__input govuk-input--width-4 js-integers-only" type="text" maxlength="4" id="EffectiveFromYear" name="EffectiveFromYear" value="">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      
+                                      <br><br>
+                                   
+                                     
+                                        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                                        <div class="govuk-button-group">
+                                          {{ govukButton({
+                                            text: "Continue"
+                                          }) }}
+                                        
+                                       
+                                        </div>
+                                        </form>
             </div>
         </div>
-    </main>
+    
         </div>
+
+
+
+
+
 
 
 
@@ -50,6 +120,7 @@
 
 
 {% endblock %}
+
 
 
 
