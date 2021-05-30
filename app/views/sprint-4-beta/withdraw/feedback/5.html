@@ -1,4 +1,3 @@
-
 {% extends "layout-epaoapplyapp.html" %}
 
 {% block pageTitle %}
@@ -8,68 +7,85 @@ About - GOV.UK Prototype Kit
 {% block content %}
 
 
+<style>
+    .app-task-list__items {
+    font-family: "GDS Transport",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-bottom: 40px;
+    list-style: none;
+    padding-left: 0;
+}
+    
 
-
+</style>
     <div class="govuk-width-container">
 
 
 
-<main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
+                <span class="govuk-caption-xl">
+                    ST0005 Adult care worker
+                </span>
 
-                <form method="post">
+            <h1 class="govuk-heading-xl">Withdrawal request overview</h1>
 
-                    <div class="govuk-panel govuk-panel--confirmation">
-                        <h1 class="govuk-panel__title">
-                            Withdrawal notification submitted
-                        </h1>
 
-                        <div class="govuk-panel__body">
-                            Your reference number
-                            <br>
-                            <strong>AAD100524</strong>
+                <p class="govuk-body">
+                    We've provided feedback on the answers we need more information about.  You'll need to open each question to view the feedback.
+                </p>
+                <p class="govuk-body">
+                    Use the feedback to change your answers, then resubmit your application.
+                </p>
+                <p class="govuk-body">
+                    By submitting your answers, you confirm that you have the authority to act on behalf of the organisation.
+                </p>
+
+            <ol class="app-task-list">
+                    <li>
+                        <h2 id="f0c1cfab-d5eb-4226-b3de-4735ad9de941" class="app-task-list__section">Withdrawal request questions</h2>
+                                <ul class="app-task-list__items app-task-list__items--no-number">
+                                        <li class="app-task-list__item">
+                                            <span class="app-task-list__task-name">
+                                                <a aria-describedby="feedback-completed" class="govuk-link" href="/Application/156ae337-7f5a-40ac-b92f-bf0287b51f12/Sequences/4/Sections/6/Pages/6?__redirectAction=Feedback">
+                                                    Reason for withdrawing
+                                                </a>
+                                            </span>
+                                                <strong class="govuk-tag app-task-list__task-custom-tag das-float-right" id="feedback-feedbackTag">Completed</strong>
+                                        </li>
+                                </ul>
+                    </li>
+            </ol>
+
+                <div>
+                    <form action="6" method="post">
+                        <div class="govuk-form-group">
+                            <button type="submit" class="govuk-button">
+                                Submit your answers
+                            </button>
                         </div>
-
-                    </div>
-
-                    <p class="govuk-body">
-                        We have sent you a confirmation email.
-                    </p>
-
-                    <h2 class="govuk-heading-m govuk-!-margin-top-6">
-                        What happens next
-                    </h2>
-
-
-
-
-                        <p class="govuk-body">
-                            We'll review your withdrawal notification within 4 weeks, then email the outcome to you. If any of your answers need clarification, we'll send you a notification by email.
-                        </p>
-                        <p class="govuk-body">
-                            You must not agree to assess any new learners for this standard while we review your withdrawal.
-                        </p>
-                        <p class="govuk-body">
-                            Once you withdraw, your organisation cannot reapply to assess this standard for at least 12 months.
-                        </p>
-
-                    <p class="govuk-body">
-                        <a href="index.html" class="govuk-link govuk-link--no-visited-state">Return to account home</a>
-                    </p>
-                    <p class="govuk-body">
-                        <a href="https://www.smartsurvey.co.uk/s/preview/apply-transaction-complete/96ACE3F403A24C262D02A0EA6D0FA7" target="_blank" class="govuk-link">What do you think of this service?</a> (Takes 60 seconds)
-                    </p>
-                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MqGfJC9H8RPvDmXQiAsUKcOM4u_lAdsYmHlNM2_aVyXCRMlT9zkCXOYTEkIMpQEppMXO9zi_0R_TgGbVuAV3QawptZk8G7MCgg5Ct7SBluJp3skngVLJ5TnCn1I_6jqQMKtITcaTuUKi6j4Y5Pe-QKR28JKV2c_rB6Fn8o5oo_b6YD1S7o-0GCZR7Cta16RVg" /></form>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MqGfJC9H8RPvDmXQiAsUKe3wu9Fte5y6BPj5_t2pYLgdYSbdL9LNdPrcihRXptnDLjkQ77boZtycjZty0BmZbO8HhekmIUDIPBg5bJtiCmUzHitfXsJG9AqTQBYwhm-DB5sHVbfk7JOOmQdxuDjLubhmkBa5dz_Rl3tno79jqIjHFJx4W0rR36ong1aKJUbMw" /></form>
+                </div>
 
         </div>
     </div>
+
+
 </main>
 
 
 
 
 
+
     </div>
+
     {% endblock %}
 

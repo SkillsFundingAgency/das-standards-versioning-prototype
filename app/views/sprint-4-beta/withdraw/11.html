@@ -5,7 +5,20 @@ About - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-
+<style>
+    .app-task-list__items {
+    font-family: "GDS Transport",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-bottom: 40px;
+    list-style: none;
+    padding-left: 0;
+}
+    </style>
 
     <div class="govuk-width-container">
 
@@ -19,7 +32,7 @@ About - GOV.UK Prototype Kit
                     <span class="govuk-caption-xl">
                         ST0005 Adult care worker
                     </span>
-                <h1 class="govuk-heading-xl">Withdrawal notification questions</h1>
+                <h1 class="govuk-heading-xl">Withdrawal request questions</h1>
                 <ol class="app-task-list">
                     <li>
                         <ul class="app-task-list__items app-task-list__items--no-number">
@@ -58,7 +71,7 @@ About - GOV.UK Prototype Kit
                         </ul>
                     </li>
                 </ol>
-                <a href="12" class="govuk-button">Return to application overview</a>
+                <a href="12" class="govuk-button">Return to request overview</a>
         </div>
     </div>
 </main>
