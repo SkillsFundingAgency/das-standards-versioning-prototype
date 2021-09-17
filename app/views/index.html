@@ -236,13 +236,16 @@
 <div class="govuk-grid-row">
      <!-- Sprints section starts -->
      <div class="govuk-grid-column-two-thirds">
-          {% include './sprint-17-beta/_summary.html' %}
+          {% include './sprint-18-beta/_summary.html' %}
 
 
 
           <h2 class="govuk-heading-l govuk-!-margin-top-9">
                Sprints
           </h2>
+          {% set sprint18betaHtml %}
+          {% include './sprint-18-beta/_summary.html' %}
+          {% endset %}
           {% set sprint17betaHtml %}
           {% include './sprint-17-beta/_summary.html' %}
           {% endset %}
@@ -358,6 +361,23 @@
 
 
 
+              
+              
+              
+              
+              
+               {
+
+                    heading: {
+                         text: "Sprint 18 Beta"
+                    },
+                    content: {
+                         html: sprint18betaHtml
+                    },
+                    summary: {
+                         html: '15th Sep — 29th Sep 2021'
+                    }
+               },
                {
 
                     heading: {
